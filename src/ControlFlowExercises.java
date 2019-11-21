@@ -1,15 +1,35 @@
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.Scanner;
 public class ControlFlowExercises {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter a number");
-        int input = sc.nextInt();
-        System.out.printf("What number would you like to go up to? %d%n%n", input);
-        System.out.println("Here is your table!\n");
-        System.out.println("number | squared | cubed");
-        System.out.println("------ | ------- | -----");
-        for (int i = 1; i <= input; i++) {
-            System.out.printf("%d      | %d       | %d\n", i, (i * i), (i * i * i));
-        }
+
+        Boolean another = true;
+        do {
+            System.out.println("Give me a number between 0 and 100");
+            byte gradeNumber = sc.nextByte();
+            if (gradeNumber >= 88) {
+                System.out.println("A");
+            } else if (gradeNumber >= 80) {
+                System.out.println("B");
+            } else if (gradeNumber >= 67) {
+                System.out.println("C");
+            } else if (gradeNumber >= 60) {
+                System.out.println("D");
+            } else if (gradeNumber >= 0) {
+                System.out.println("F");
+            } else {
+                System.out.println("Invalid Input");
+            }
+            System.out.println("Would you like to enter another grade? Enter Yes or No");
+            String answer = sc.next();
+            if (answer.equalsIgnoreCase("yes")) {
+                another = true;
+            } else if (answer.equalsIgnoreCase("no")) {
+                another = false;
+            }
+
+        } while (another);
     }
 }
