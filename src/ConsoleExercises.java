@@ -24,7 +24,7 @@ public class ConsoleExercises {
 //        System.out.println("Enter a sentence");
 //        String sentence = scanner.nextLine();
 ////        scanner.next();
-//        System.out.printf("Your sentence was %s", sentence);
+//        System.out.printf("Your sentence was %s%n", sentence);
 
         System.out.println("Enter the length of your classroom as a number");
         String lengthString = scanner.nextLine();
