@@ -14,6 +14,7 @@ public class StringLecStudent {
 //         *  TO DO: Write the control statements below to check the input
 //         *  String using Java methods.
 //         */
+
 //
 //        //  If the input is an exact match to String name...
 //        //  Print message: "Welcome Jane Doe!"
