@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 public class MethodsExercises {
     static Scanner sc = new Scanner(System.in);
@@ -9,20 +10,21 @@ public class MethodsExercises {
         division(3, 2);
         mod(10, 2);
 //        getInteger(1,10);
-        adventureGame();
+//        adventureGame();
             boolean again;
         do {
             getFactorial();
             System.out.println("Would you like to continue? Enter yes or no");
             String cont = sc.nextLine();
-            if (cont.equalsIgnoreCase("yes")) {
-                again = true;
-            } else {
-                again = false;
-            }
+            again = cont.equalsIgnoreCase("yes");
         } while (again);
 
+        do {
+            System.out.println("How many sides?");
+            rollDice(getInteger(1,100));
 
+            System.out.println("Would you like to continue? Enter yes or no");
+        }while(sc.nextLine().equalsIgnoreCase("yes"));
     }
     public static void addition(int first, int second) {
         System.out.println(first + second);
@@ -58,6 +60,16 @@ public class MethodsExercises {
             }
         }
     }
+
+    public static void rollDice(int sides) {
+        Random random = new Random();
+        int random1 = random.nextInt(sides) + 1;
+        int random2 = random.nextInt(sides) + 1;
+
+        System.out.println("random1 = " + random1);
+        System.out.println("random2 = " + random2);
+    }
+
 
 
     public static void adventureGame(){
