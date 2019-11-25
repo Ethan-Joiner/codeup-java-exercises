@@ -9,6 +9,7 @@ public class HighLow {
              int winningNumber = random.nextInt(100) + 1;
              System.out.println("Give me a number to guess");
              guessGame(getInteger(1,100), winningNumber);
+            System.out.println("Play again?");
         } while(sc.nextLine().equalsIgnoreCase("yes"));
     }
 
