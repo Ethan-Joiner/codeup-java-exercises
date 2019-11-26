@@ -7,10 +7,12 @@ public class Input {
 
 
     public String getString(){
+        scanner.nextLine();
         return scanner.nextLine();
     }
 
     public boolean yesNo() {
+        scanner.nextLine();
         String input = scanner.nextLine();
         return  input.equalsIgnoreCase("yes") ||
                 input.equalsIgnoreCase("y") ||
@@ -27,6 +29,25 @@ public class Input {
             input = scanner.nextInt();
         } while (input < min || input > max);
         return input;
+    };
+
+    public int getInt() {
+        System.out.println("Enter a number");
+        return scanner.nextInt();
+    };
+
+    public double getDouble(double min, double max) {
+        double input;
+        do {
+            System.out.println("Enter a number");
+            input = scanner.nextDouble();
+        } while (input < min || input > max);
+        return input;
+    };
+
+    public double getDouble() {
+        System.out.println("Enter a number");
+        return scanner.nextDouble();
     };
 
     public static void main(String[] args) {
