@@ -2,11 +2,13 @@ public class Person {
     private String name;
 
     public static void main(String[] args) {
-        Person p1 = new Person("Ron");
-        System.out.println(p1.getName());
-        System.out.println("p1.name = " + p1.name);
-        p1.setName("Rolf");
-        System.out.println(p1.name);
+        Person person1 = new Person("John");
+        Person person2 = person1;
+        System.out.println(person1.getName());
+        System.out.println(person2.getName());
+        person2.setName("Jane");
+        System.out.println(person1.getName());
+        System.out.println(person2.getName());
     }
 
     public String getName(){
