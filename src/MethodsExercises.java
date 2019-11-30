@@ -91,7 +91,7 @@ public class MethodsExercises {
 
         int goblinAttack = (int) (Math.random() * 5) + 10;
 
-        int goblinEnrageAttack = (int) (Math.random() * 15) + 20;
+        int goblinEnrageAttack = (int) (Math.random() * 15) + 15;
 
         int fighterClassNum = 0;
         String fighterClass;
@@ -153,7 +153,7 @@ public class MethodsExercises {
                     if (mana >= 15) {
                         currentHealth -= fireball;
                         mana -= 10;
-                        System.out.println("You cast your fireball spell, dealing " + fireball + " damage! The goblin now has " + currentHealth + " health left. Your remaining mana is " + mageMana + ".");
+                        System.out.println("You cast your fireball spell, dealing " + fireball + " damage! The goblin now has " + currentHealth + " health left. Your remaining mana is " + mana + ".");
                     }
                     if (mana < 15) {
                         System.out.println("You need more mana");
