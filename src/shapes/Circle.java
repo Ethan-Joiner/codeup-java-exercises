@@ -6,7 +6,7 @@ public class Circle {
 
     public Circle(double radius){
         this.radius = radius;
-        counter++;
+        this.counter++;
     }
 
     public int showCount() {

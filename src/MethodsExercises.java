@@ -10,21 +10,21 @@ public class MethodsExercises {
         division(3, 2);
         mod(10, 2);
 //        getInteger(1,10);
-//        adventureGame();
+        adventureGame();
             boolean again;
-        do {
-            getFactorial();
-            System.out.println("Would you like to continue? Enter yes or no");
-            String cont = sc.nextLine();
-            again = cont.equalsIgnoreCase("yes");
-        } while (again);
-
-        do {
-            System.out.println("How many sides?");
-            rollDice(getInteger(1,100));
-
-            System.out.println("Would you like to continue? Enter yes or no");
-        }while(sc.nextLine().equalsIgnoreCase("yes"));
+//        do {
+//            getFactorial();
+//            System.out.println("Would you like to continue? Enter yes or no");
+//            String cont = sc.nextLine();
+//            again = cont.equalsIgnoreCase("yes");
+//        } while (again);
+//
+//        do {
+//            System.out.println("How many sides?");
+//            rollDice(getInteger(1,100));
+//
+//            System.out.println("Would you like to continue? Enter yes or no");
+//        }while(sc.nextLine().equalsIgnoreCase("yes"));
     }
     public static void addition(int first, int second) {
         System.out.println(first + second);
@@ -77,7 +77,7 @@ public class MethodsExercises {
 
         int mageAttack = (int) (Math.random() * 10) + 10;
 
-        int fireball = (int) (Math.random() * 10) + 20;
+        int fireball = (int) (Math.random() * 10) + 15;
 
         int mageMana = (int) (Math.random() * 30) + 20;
 
@@ -150,9 +150,15 @@ public class MethodsExercises {
                         }
                     }}
                 if (fightOption.equalsIgnoreCase("fireball")) {
-                    currentHealth -= fireball;
-                    mageMana -= 15;
-                    System.out.println("You cast your fireball spell, dealing " + fireball + " damage! The goblin now has " + currentHealth + " health left. Your remaining mana is " + mageMana + ".");
+                    if (mana >= 15) {
+                        currentHealth -= fireball;
+                        mana -= 10;
+                        System.out.println("You cast your fireball spell, dealing " + fireball + " damage! The goblin now has " + currentHealth + " health left. Your remaining mana is " + mageMana + ".");
+                    }
+                    if (mana < 15) {
+                        System.out.println("You need more mana");
+
+                    }
                     if (currentHealth > 0) {
                         health -= goblinAttack;
                         System.out.println("The fight isn't over yet. The goblin strikes you with its club dealing " + goblinAttack + " damage. Your remaining health is " + health + "!");
