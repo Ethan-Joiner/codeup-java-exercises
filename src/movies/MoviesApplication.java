@@ -14,6 +14,7 @@ public class MoviesApplication {
 
 
 
+
         do {
             System.out.println("What would you like to do? \n");
             System.out.println("0 - exit");
@@ -21,7 +22,9 @@ public class MoviesApplication {
             System.out.println("2 - view movies in the animated category");
             System.out.println("3 - view movies in the drama category");
             System.out.println("4 - view movies in the horror category");
-            System.out.println("5 - view movies in the scifi category\n");
+            System.out.println("5 - view movies in the scifi category");
+            System.out.println("6 - add a movie");
+            System.out.println("7 - search for movie by name\n");
             System.out.println("Enter your choice: ");
             String answer = input.getString();
 
@@ -61,6 +64,23 @@ public class MoviesApplication {
                         System.out.println(movie.getName() + " -- " + movie.getCategory());
                     }
                 }
+                    break;
+                case("6"):
+                    System.out.println("Please enter a name");
+                    String name = input.getString();
+                    System.out.println("Please enter a category");
+                    String category = input.getString();
+                    Movie newMovie[] = addMovie(movies, new Movie(name, category));
+                    movies = newMovie;
+                    break;
+                case("7"):
+                    System.out.println("Enter the name of the movie you're trying to find");
+                    String searchTerm = input.getString();
+                    for (Movie movie : movies) {
+                        if (movie.getName().equalsIgnoreCase(searchTerm)) {
+                            System.out.println(movie.getName() + " -- " + movie.getCategory());
+                        }
+                    }
                     break;
                 default:
                     System.out.println("Invalid entry");
@@ -114,5 +134,10 @@ public class MoviesApplication {
 
 
 
+    }
+    public static Movie[] addMovie(Movie[] moviesList, Movie movie) {
+        Movie[] copy = Arrays.copyOf(moviesList, moviesList.length + 1);
+        copy[copy.length - 1] = movie;
+        return copy;
     }
 }
