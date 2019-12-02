@@ -7,7 +7,7 @@ public class Input {
 
 
     public String getString(){
-        scanner.nextLine();
+//        scanner.nextLine();
         return scanner.nextLine();
     }
 
