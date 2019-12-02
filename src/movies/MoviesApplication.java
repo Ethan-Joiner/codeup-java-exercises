@@ -82,6 +82,25 @@ public class MoviesApplication {
                         }
                     }
                     break;
+                case("8"):
+                    System.out.println("Enter the name of the movie you would like to delete");
+                    String delete = input.getString();
+
+                    int index = -1;
+
+                    for (int i = 0; (i < movies.length) && (index == -1); i++) {
+                        if (movies[i].getName().equalsIgnoreCase(delete)) {
+                            index = i;
+                            int originalPosition = index;
+                            int newPosition = movies.length -1;
+                            Movie temp = movies[originalPosition];
+                            movies[originalPosition] = movies[newPosition];
+                            movies[newPosition] = temp;
+                            Movie deletedMovie[] = deleteMovie(movies);
+                            movies = deletedMovie;
+                        }
+                    }
+                        break;
                 default:
                     System.out.println("Invalid entry");
                     break;
@@ -138,6 +157,10 @@ public class MoviesApplication {
     public static Movie[] addMovie(Movie[] moviesList, Movie movie) {
         Movie[] copy = Arrays.copyOf(moviesList, moviesList.length + 1);
         copy[copy.length - 1] = movie;
+        return copy;
+    }
+    public static Movie[] deleteMovie(Movie[] moviesList) {
+        Movie[] copy = Arrays.copyOf(moviesList, moviesList.length - 1);
         return copy;
     }
 }
