@@ -24,7 +24,8 @@ public class MoviesApplication {
             System.out.println("4 - view movies in the horror category");
             System.out.println("5 - view movies in the scifi category");
             System.out.println("6 - add a movie");
-            System.out.println("7 - search for movie by name\n");
+            System.out.println("7 - search for movie by name");
+            System.out.println("8 - delete movie by name\n");
             System.out.println("Enter your choice: ");
             String answer = input.getString();
 
@@ -86,9 +87,9 @@ public class MoviesApplication {
                     System.out.println("Enter the name of the movie you would like to delete");
                     String delete = input.getString();
 
-                    int index = -1;
+                    int index;
 
-                    for (int i = 0; (i < movies.length) && (index == -1); i++) {
+                    for (int i = 0; (i < movies.length); i++) {
                         if (movies[i].getName().equalsIgnoreCase(delete)) {
                             index = i;
                             int originalPosition = index;
