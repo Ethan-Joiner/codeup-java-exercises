@@ -9,6 +9,5 @@ public class ShapesTest {
         System.out.println("Square's area is " + box2.getArea());
         System.out.println("Square's perimeter is " + box2.getPerimeter());
 
-
     }
 }
