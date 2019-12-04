@@ -25,4 +25,5 @@ public class Rectangle extends Quadrilateral implements Measureable{
     public double getArea() {
         return length * width;
     }
+
 }
