@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class Input {
     private Scanner scanner = new Scanner(System.in);
+    int i;
+    double d;
 
 
     public String getString(){
@@ -31,23 +33,44 @@ public class Input {
         return input;
     };
 
+
     public int getInt() {
         System.out.println("Enter a number");
-        return scanner.nextInt();
+        String in = scanner.nextLine();
+        try {
+            i = Integer.valueOf(in);
+        } catch (NumberFormatException e){
+            e.printStackTrace();;
+            getInt();
+        }
+        return i;
     };
 
     public double getDouble(double min, double max) {
-        double input;
-        do {
-            System.out.println("Enter a number");
-            input = scanner.nextDouble();
-        } while (input < min || input > max);
-        return input;
+        String in;
+        try {
+            do {
+                System.out.println("Enter a number");
+                in = scanner.nextLine();
+                d = Double.valueOf(in);
+            } while (d < min || d > max);
+        } catch (NumberFormatException e){
+            e.printStackTrace();
+            getDouble(min,max);
+        }
+        return d;
     };
 
     public double getDouble() {
         System.out.println("Enter a number");
-        return scanner.nextDouble();
+        String in = scanner.nextLine();
+        try {
+            i = Integer.valueOf(in);
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+            getDouble();
+        }
+        return i;
     };
 
     public static void main(String[] args) {

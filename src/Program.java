@@ -25,6 +25,7 @@ public class Program {
         flipEndChars("WoW");
         flipEndChars("G");
         flipEndChars("dfdkf49824fdfdfjhd");
+        missingLetter("abcefg");
     }
 
     public static boolean getXO (String str) {
@@ -53,4 +54,26 @@ public class Program {
         }
             return noVowel;
     }
+
+    public static String missingLetter(String str) {
+        String alph = "abcdefghijklmnopqrstuvwxyz";
+        String missing = "";
+        for (int i = 0; i < str.length(); i++){
+            for (int j = 0; j < alph.length(); j++){
+                if (alph.charAt(j) == str.charAt(i)){
+                    if (j + 1 != str.length() && i + 1 != str.length() && i + 1 != alph.length()){
+                        if (alph.charAt(j + 1) != str.charAt(i + 1)){
+                            missing += str.charAt(i + 1);
+                        } else {
+                            missing = "No Missing Letter";
+                        }
+                    }
+                }
+            }
+        }
+        System.out.println(missing);
+        return missing;
+    }
+
+
 }
