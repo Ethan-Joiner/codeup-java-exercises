@@ -25,12 +25,18 @@ public class Input {
     }
 
     public int getInt(int min, int max) {
-            int input;
-        do {
-            System.out.println("Enter a number");
-            input = scanner.nextInt();
-        } while (input < min || input > max);
-        return input;
+            String in;
+            try {
+                do {
+                    System.out.println("Enter a number");
+                    in = scanner.nextLine();
+                    i = Integer.valueOf(in);
+                } while (i < min || i > max);
+            } catch (NumberFormatException e) {
+                e.printStackTrace();
+                getInt(min,max);
+            }
+        return i;
     };
 
 
@@ -65,12 +71,36 @@ public class Input {
         System.out.println("Enter a number");
         String in = scanner.nextLine();
         try {
-            i = Integer.valueOf(in);
+            d = Integer.valueOf(in);
         } catch (NumberFormatException e) {
             e.printStackTrace();
             getDouble();
         }
-        return i;
+        return d;
+    };
+
+    public double getBinary() {
+        System.out.println("Enter a number");
+        String in = scanner.nextLine();
+        try {
+            d = Integer.valueOf(in, 2);
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+            getDouble();
+        }
+        return d;
+    };
+
+    public double getHex() {
+        System.out.println("Enter a number");
+        String in = scanner.nextLine();
+        try {
+            d = Integer.valueOf(in, 16);
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+            getDouble();
+        }
+        return d;
     };
 
     public static void main(String[] args) {
