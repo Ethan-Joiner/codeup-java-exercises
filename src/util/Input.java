@@ -71,7 +71,7 @@ public class Input {
         System.out.println("Enter a number");
         String in = scanner.nextLine();
         try {
-            d = Integer.valueOf(in);
+            d = Double.valueOf(in);
         } catch (NumberFormatException e) {
             e.printStackTrace();
             getDouble();
@@ -105,7 +105,6 @@ public class Input {
 
     public static void main(String[] args) {
         Input input = new Input();
-//        System.out.println(input.yesNo());
         System.out.println("input.getInt(10,50) = " + input.getInt(10,50));
     }
 }

@@ -21,11 +21,12 @@ public class Program {
     }
 
     public static void main(String[] args) {
-        flipEndChars("Hello world!");
-        flipEndChars("WoW");
-        flipEndChars("G");
-        flipEndChars("dfdkf49824fdfdfjhd");
-        missingLetter("abcefg");
+//        flipEndChars("Hello world!");
+//        flipEndChars("WoW");
+//        flipEndChars("G");
+//        flipEndChars("dfdkf49824fdfdfjhd");
+//        missingLetter("abdefg");
+        reverseCase("Happy Birthday");
     }
 
     public static boolean getXO (String str) {
@@ -61,13 +62,22 @@ public class Program {
         for (int i = 0; i < str.length(); i++){
             for (int j = 0; j < alph.length(); j++){
                 if (alph.charAt(j) == str.charAt(i)){
+                    System.out.println(alph.charAt(j + 1));
+
                     if (j + 1 != str.length() && i + 1 != str.length() && i + 1 != alph.length()){
                         if (alph.charAt(j + 1) != str.charAt(i + 1)){
-                            missing += str.charAt(i + 1);
+                            missing += alph.charAt(i + j);
+                            System.out.println(missing);
+                            break;
                         } else {
                             missing = "No Missing Letter";
                         }
+                        break;
                     }
+                    break;
+                }
+                if (!missing.equalsIgnoreCase("")){
+                    break;
                 }
             }
         }
@@ -75,5 +85,21 @@ public class Program {
         return missing;
     }
 
+    public static String reverseCase(String str) {
+        String j = "";
+        String reverse = "";
+        for (int i = 0; i < str.length(); i++) {
+            j += str.charAt(i);
+            if (!j.equals(j.toLowerCase())) {
+                reverse += j.toLowerCase();
+                j = "";
+            } else if (!j.equals(j.toUpperCase())) {
+                reverse += j.toUpperCase();
+                j = "";
+            }
+        }
+        System.out.println(reverse);
+        return reverse;
+    }
 
 }
