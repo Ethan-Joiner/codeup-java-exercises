@@ -26,7 +26,8 @@ public class Program {
 //        flipEndChars("G");
 //        flipEndChars("dfdkf49824fdfdfjhd");
 //        missingLetter("abdefg");
-        reverseCase("Happy Birthday");
+//        reverseCase("Happy Birthday");
+        sevenBoom(new int[]{35, 4, 9, 37});
     }
 
     public static boolean getXO (String str) {
@@ -100,6 +101,22 @@ public class Program {
         }
         System.out.println(reverse);
         return reverse;
+    }
+
+    public static String sevenBoom(int[] arr) {
+        String boom = "there is no 7 in the array";
+        for (int num : arr){
+            String number = String.valueOf(num);
+            System.out.println(number);
+            for (int i = 0; i < number.length(); i++){
+                if (number.charAt(i) == '7'){
+                    boom = "Boom!";
+                    break;
+                }
+            }
+        }
+        System.out.println(boom);
+return boom;
     }
 
 }
