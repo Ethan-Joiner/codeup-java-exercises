@@ -27,7 +27,9 @@ public class Program {
 //        flipEndChars("dfdkf49824fdfdfjhd");
 //        missingLetter("abdefg");
 //        reverseCase("Happy Birthday");
-        sevenBoom(new int[]{35, 4, 9, 37});
+//        sevenBoom(new int[]{35, 4, 9, 37});
+//        erase("he##l#hel#llo");
+        lengthen("abcdefg", "ab");
     }
 
     public static boolean getXO (String str) {
@@ -56,8 +58,8 @@ public class Program {
         }
             return noVowel;
     }
-
-    public static String missingLetter(String str) {
+// UNFINISHED
+     public static String missingLetter(String str) {
         String alph = "abcdefghijklmnopqrstuvwxyz";
         String missing = "";
         for (int i = 0; i < str.length(); i++){
@@ -118,5 +120,48 @@ public class Program {
         System.out.println(boom);
 return boom;
     }
+// UNFINISHED
+    public static String erase(String str) {
+        char j = ' ';
+        char k = ' ';
+        String erased = "";
+        for (int i = 0; i < str.length() - 1; i++){
+            j = str.charAt(i);
+            k = str.charAt(i + 1);
+            if (j != '#' && k != '#') {
+                erased += j;
+            }
+        }
+        System.out.println(erased);
+        return erased;
+    }
+
+    public static String lengthen(String str1, String str2) {
+        String longer = "";
+        boolean flag = true;
+        while (flag) {
+            if (str1.length() > str2.length()) {
+                longer = str2;
+                for (int i = 0; i < (str1.length() - str2.length()); i++) {
+                    longer += longer.charAt(i);
+                    System.out.println(longer);
+                }
+            }
+            if (str2.length() > str1.length()) {
+                longer = str1;
+                for (int i = 0; i < (str2.length() - str1.length()); i++) {
+                    longer += longer.charAt(i);
+                    System.out.println(longer);
+                }
+            }
+            if (str1.length() == longer.length() || str2.length() == longer.length()) {
+                flag = false;
+            }
+            System.out.println(longer);
+        }
+            return longer;
+    }
+
+
 
 }
