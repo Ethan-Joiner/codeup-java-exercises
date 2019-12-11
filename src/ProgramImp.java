@@ -13,6 +13,7 @@ public class ProgramImp {
 //        lengthen("abcdefg", "ab");
 //        countWords("Even last night's storm couldn't wake you.");
 //            program.missingNum(new int[]{1, 2, 3, 4, 6, 7, 8, 9, 10});
-            program.reverse(".tnereffid knihT");
+//            program.reverse(".tnereffid knihT");
+        program.societyName(new String[]{"Adam", "Sarah", "Malcolm"});
     }
 }
