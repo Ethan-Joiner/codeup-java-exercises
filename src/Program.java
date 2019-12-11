@@ -182,6 +182,18 @@ return boom;
         return missing;
     }
 
+//    Write a function that returns true if two rooks can attack each other, and false otherwise.
+public static boolean canCapture(String[] rooks) {
+        boolean canAttack = false;
+        if (rooks[0].charAt(0) == rooks[1].charAt(0)){
+            canAttack = true;
+        }
+        if (rooks[0].charAt(1) == rooks[1].charAt(1)){
+            canAttack = true;
+        }
+        return canAttack;
+}
+
 
 
 }
