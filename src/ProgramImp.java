@@ -14,6 +14,7 @@ public class ProgramImp {
 //        countWords("Even last night's storm couldn't wake you.");
 //            program.missingNum(new int[]{1, 2, 3, 4, 6, 7, 8, 9, 10});
 //            program.reverse(".tnereffid knihT");
-        program.societyName(new String[]{"Adam", "Sarah", "Malcolm"});
+//        program.societyName(new String[]{"Adam", "Sarah", "Malcolm"});
+        program.plusSign("+f+d+c+#+f+");
     }
 }

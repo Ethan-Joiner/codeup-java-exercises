@@ -218,4 +218,32 @@ public static boolean canCapture(String[] rooks) {
         System.out.println(secret);
         return secret;
     }
+
+//    Create a function that takes a string as an argument and returns true if each letter in the string is surrounded by a plus sign. Return false otherwise.
+
+    public static boolean plusSign(String str) {
+        boolean isPlus = false;
+        int falseCount = 0;
+        String letters = "abcdefghijklmnopqrstuvwxyz";
+
+        for (int i = 0; i < str.length(); i++){
+            if (str.charAt(i) != '+' && i > 0 && i < str.length() - 1){
+                for (int j = 0; j < letters.length(); j ++){
+                    if (str.charAt(i) == letters.charAt(j)){
+                        if (str.charAt(i - 1) == '+' && str.charAt(i + 1) == '+'){
+                            isPlus = true;
+                        } else {
+                            isPlus = false;
+                            falseCount++;
+                        }
+                    }
+                }
+            }
+        }
+        if (falseCount > 0){
+            isPlus = false;
+        }
+        System.out.println(isPlus);
+        return isPlus;
+    }
 }
