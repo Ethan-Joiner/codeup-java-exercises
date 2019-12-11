@@ -1,4 +1,9 @@
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 public class Program {
+
+//    Take a string and swap the first and last letter, unless they are the same, or the string is too short
     public static String flipEndChars(String s) {
          if (s.length() < 2) {
              System.out.println("Incompatible");
@@ -20,17 +25,7 @@ public class Program {
         }
     }
 
-    public static void main(String[] args) {
-//        flipEndChars("Hello world!");
-//        flipEndChars("WoW");
-//        flipEndChars("G");
-//        flipEndChars("dfdkf49824fdfdfjhd");
-//        missingLetter("abdefg");
-//        reverseCase("Happy Birthday");
-//        sevenBoom(new int[]{35, 4, 9, 37});
-//        erase("he##l#hel#llo");
-        lengthen("abcdefg", "ab");
-    }
+
 
     public static boolean getXO (String str) {
         int x = 0;
@@ -48,7 +43,7 @@ public class Program {
         }
         return equal;
     }
-
+// Method to take in a string and return a string the same but without any vowels
     public static String removeVowels(String s) {
         String noVowel = "";
         for (int i = 0; i < s.length(); i++){
@@ -87,7 +82,7 @@ public class Program {
         System.out.println(missing);
         return missing;
     }
-
+// Method to take in a string and reverse the case of every letter
     public static String reverseCase(String str) {
         String j = "";
         String reverse = "";
@@ -104,7 +99,7 @@ public class Program {
         System.out.println(reverse);
         return reverse;
     }
-
+// Method to take in an array and return boom if 7 appears.
     public static String sevenBoom(int[] arr) {
         String boom = "there is no 7 in the array";
         for (int num : arr){
@@ -136,6 +131,7 @@ return boom;
         return erased;
     }
 
+// Method to take in two strings, and add letters, in order, of the smaller string to itself until they are the same length
     public static String lengthen(String str1, String str2) {
         String longer = "";
         boolean flag = true;
@@ -160,6 +156,30 @@ return boom;
             System.out.println(longer);
         }
             return longer;
+    }
+// Method to take in a string and return amount of words
+    public static int countWords(String s) {
+        int count = 0;
+        String[] arrOfStr = s.split(" ");
+        count = arrOfStr.length;
+        System.out.println(count);
+        return count;
+    }
+// Take in an array of numbers 1-10 missing 1 number and return the missing number
+    public static int missingNum(int[] nums) {
+        int missing = 10;
+        int[] testArray = {1,2,3,4,5,6,7,8,9,10};
+        Arrays.sort(nums);
+        for (int i = 0; i < nums.length; i++){
+            if (nums[i] != testArray[i]){
+                System.out.println(nums[i]);
+                System.out.println(testArray[i]);
+                missing = testArray[i];
+                break;
+            }
+        }
+        System.out.println(missing);
+        return missing;
     }
 
 

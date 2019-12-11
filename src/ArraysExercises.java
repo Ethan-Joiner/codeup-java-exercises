@@ -7,12 +7,13 @@ public class ArraysExercises {
         Person[] people = { new Person("Charlie"), new Person("Dennis"), new Person("Mac")};
 //        System.out.println(Arrays.toString(people));
 
-        for (Person person: people) {
-            System.out.println(person.getName());
-        }
+//        for (Person person: people) {
+//            System.out.println(person.getName());
+//        }
 //        System.out.println(Arrays.toString(addPerson(people, new Person("Dee"))));
 
         Person newPeople[] = addPerson(people, new Person("Dee"));
+        newPeople = addPerson(people, new Person("Waitress"));
 
         for (Person person : newPeople) {
             System.out.println(person.getName());
