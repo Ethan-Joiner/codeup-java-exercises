@@ -246,4 +246,16 @@ public static boolean canCapture(String[] rooks) {
         System.out.println(isPlus);
         return isPlus;
     }
+
+//    Create a function that returns "even" if a number has an even number of factors and "odd" if a number has an odd number of factors.
+
+    public static String factorGroup(int num) {
+        String answer = "even";
+        double sqrt = Math.sqrt(num);
+        if (sqrt % 1 == 0){
+            answer = "odd";
+        }
+        System.out.println(answer);
+        return answer;
+    }
 }

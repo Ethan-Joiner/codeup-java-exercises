@@ -15,6 +15,7 @@ public class ProgramImp {
 //            program.missingNum(new int[]{1, 2, 3, 4, 6, 7, 8, 9, 10});
 //            program.reverse(".tnereffid knihT");
 //        program.societyName(new String[]{"Adam", "Sarah", "Malcolm"});
-        program.plusSign("+f+d+c+#+f+");
+//        program.plusSign("+f+d+c+#+f+");
+        program.factorGroup(16);
     }
 }
