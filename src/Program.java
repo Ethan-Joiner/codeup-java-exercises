@@ -194,6 +194,14 @@ public static boolean canCapture(String[] rooks) {
         return canAttack;
 }
 
+// Create a method that takes a string as its argument and returns the string in reversed order
 
-
+    public static String reverse(final String str) {
+        String reversed = "";
+        for (int i = str.length() - 1; i >= 0; i--){
+            reversed += str.charAt(i);
+        }
+        System.out.println(reversed);
+        return reversed;
+    }
 }
