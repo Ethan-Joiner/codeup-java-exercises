@@ -12,10 +12,10 @@ public class ArraysExercises {
 //        }
 //        System.out.println(Arrays.toString(addPerson(people, new Person("Dee"))));
 
-        Person newPeople[] = addPerson(people, new Person("Dee"));
-        newPeople = addPerson(people, new Person("Waitress"));
+        people = addPerson(people, new Person("Dee"));
+        people = addPerson(people, new Person("Waitress"));
 
-        for (Person person : newPeople) {
+        for (Person person : people) {
             System.out.println(person.getName());
         }
 
