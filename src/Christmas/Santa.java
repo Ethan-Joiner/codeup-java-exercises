@@ -12,6 +12,8 @@ public class Santa {
                 flag = false;
             }
         }
+    Reindeer Dasher = new Reindeer("Dasher");
     }
+
 
 }
