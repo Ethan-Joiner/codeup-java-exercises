@@ -1,5 +1,6 @@
 package Christmas;
 
+import java.util.Arrays;
 import java.util.Scanner;
 public class Santa {
     public static void main(String args[]) {
@@ -31,8 +32,19 @@ public class Santa {
         flightCrew[7] = Blitzen;
         flightCrew[8] = Rudolph;
 
+        flightCrew = addReindeer(flightCrew, new Reindeer("Olive"));
+
+        for(Reindeer deer : flightCrew){
+            System.out.println(deer.name);
+        }
+
     }
-        public static Reindeer[] flightCrew = new Reindeer[9];
+    public static Reindeer[] flightCrew = new Reindeer[9];
+    public static Reindeer[] addReindeer(Reindeer[] many, Reindeer one){
+        Reindeer[] copy = Arrays.copyOf(many, many.length + 1);
+        copy[copy.length -1] = one;
+        return copy;
+    }
 
 
 
