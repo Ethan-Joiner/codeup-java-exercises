@@ -3,20 +3,20 @@ import java.util.Arrays;
 
 public class Program {
 
-//    Take a string and swap the first and last letter, unless they are the same, or the string is too short
+    //    Take a string and swap the first and last letter, unless they are the same, or the string is too short
     public static String flipEndChars(String s) {
-         if (s.length() < 2) {
-             System.out.println("Incompatible");
-             return "Incompatible";
-         } else  if (s.charAt(s.length() - 1) == (s.charAt(0)) && s.length() > 2) {
-             System.out.println("Two's a pair.");
-             return "Two's a pair.";
-         } else {
+        if (s.length() < 2) {
+            System.out.println("Incompatible");
+            return "Incompatible";
+        } else if (s.charAt(s.length() - 1) == (s.charAt(0)) && s.length() > 2) {
+            System.out.println("Two's a pair.");
+            return "Two's a pair.";
+        } else {
             String swap = "";
 
             swap += s.charAt(s.length() - 1);
 
-            for (int i = 1; i < s.length() - 1; i++){
+            for (int i = 1; i < s.length() - 1; i++) {
                 swap += s.charAt(i);
             }
             swap += s.charAt(0);
@@ -26,8 +26,7 @@ public class Program {
     }
 
 
-
-    public static boolean getXO (String str) {
+    public static boolean getXO(String str) {
         int x = 0;
         int o = 0;
         boolean equal = false;
@@ -43,27 +42,29 @@ public class Program {
         }
         return equal;
     }
-// Method to take in a string and return a string the same but without any vowels
+
+    // Method to take in a string and return a string the same but without any vowels
     public static String removeVowels(String s) {
         String noVowel = "";
-        for (int i = 0; i < s.length(); i++){
-            if (s.charAt(i) != 'a' && s.charAt(i) != 'e' && s.charAt(i) != 'i' && s.charAt(i) != 'o' && s.charAt(i) != 'u' && s.charAt(i) != 'A' && s.charAt(i) != 'E' && s.charAt(i) != 'I' && s.charAt(i) != 'O' && s.charAt(i) != 'U'){
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) != 'a' && s.charAt(i) != 'e' && s.charAt(i) != 'i' && s.charAt(i) != 'o' && s.charAt(i) != 'u' && s.charAt(i) != 'A' && s.charAt(i) != 'E' && s.charAt(i) != 'I' && s.charAt(i) != 'O' && s.charAt(i) != 'U') {
                 noVowel += s.charAt(i);
             }
         }
-            return noVowel;
+        return noVowel;
     }
-// UNFINISHED
-     public static String missingLetter(String str) {
+
+    // UNFINISHED
+    public static String missingLetter(String str) {
         String alph = "abcdefghijklmnopqrstuvwxyz";
         String missing = "";
-        for (int i = 0; i < str.length(); i++){
-            for (int j = 0; j < alph.length(); j++){
-                if (alph.charAt(j) == str.charAt(i)){
+        for (int i = 0; i < str.length(); i++) {
+            for (int j = 0; j < alph.length(); j++) {
+                if (alph.charAt(j) == str.charAt(i)) {
                     System.out.println(alph.charAt(j + 1));
 
-                    if (j + 1 != str.length() && i + 1 != str.length() && i + 1 != alph.length()){
-                        if (alph.charAt(j + 1) != str.charAt(i + 1)){
+                    if (j + 1 != str.length() && i + 1 != str.length() && i + 1 != alph.length()) {
+                        if (alph.charAt(j + 1) != str.charAt(i + 1)) {
                             missing += alph.charAt(i + j);
                             System.out.println(missing);
                             break;
@@ -74,7 +75,7 @@ public class Program {
                     }
                     break;
                 }
-                if (!missing.equalsIgnoreCase("")){
+                if (!missing.equalsIgnoreCase("")) {
                     break;
                 }
             }
@@ -82,7 +83,8 @@ public class Program {
         System.out.println(missing);
         return missing;
     }
-// Method to take in a string and reverse the case of every letter
+
+    // Method to take in a string and reverse the case of every letter
     public static String reverseCase(String str) {
         String j = "";
         String reverse = "";
@@ -99,28 +101,30 @@ public class Program {
         System.out.println(reverse);
         return reverse;
     }
-// Method to take in an array and return boom if 7 appears.
+
+    // Method to take in an array and return boom if 7 appears.
     public static String sevenBoom(int[] arr) {
         String boom = "there is no 7 in the array";
-        for (int num : arr){
+        for (int num : arr) {
             String number = String.valueOf(num);
             System.out.println(number);
-            for (int i = 0; i < number.length(); i++){
-                if (number.charAt(i) == '7'){
+            for (int i = 0; i < number.length(); i++) {
+                if (number.charAt(i) == '7') {
                     boom = "Boom!";
                     break;
                 }
             }
         }
         System.out.println(boom);
-return boom;
+        return boom;
     }
-// UNFINISHED
+
+    // UNFINISHED
     public static String erase(String str) {
         char j = ' ';
         char k = ' ';
         String erased = "";
-        for (int i = 0; i < str.length() - 1; i++){
+        for (int i = 0; i < str.length() - 1; i++) {
             j = str.charAt(i);
             k = str.charAt(i + 1);
             if (j != '#' && k != '#') {
@@ -131,7 +135,7 @@ return boom;
         return erased;
     }
 
-// Method to take in two strings, and add letters, in order, of the smaller string to itself until they are the same length
+    // Method to take in two strings, and add letters, in order, of the smaller string to itself until they are the same length
     public static String lengthen(String str1, String str2) {
         String longer = "";
         boolean flag = true;
@@ -155,9 +159,10 @@ return boom;
             }
             System.out.println(longer);
         }
-            return longer;
+        return longer;
     }
-// Method to take in a string and return amount of words
+
+    // Method to take in a string and return amount of words
     public static int countWords(String s) {
         int count = 0;
         String[] arrOfStr = s.split(" ");
@@ -165,13 +170,14 @@ return boom;
         System.out.println(count);
         return count;
     }
-// Take in an array of numbers 1-10 missing 1 number and return the missing number
+
+    // Take in an array of numbers 1-10 missing 1 number and return the missing number
     public static int missingNum(int[] nums) {
         int missing = 10;
-        int[] testArray = {1,2,3,4,5,6,7,8,9,10};
+        int[] testArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         Arrays.sort(nums);
-        for (int i = 0; i < nums.length; i++){
-            if (nums[i] != testArray[i]){
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != testArray[i]) {
                 System.out.println(nums[i]);
                 System.out.println(testArray[i]);
                 missing = testArray[i];
@@ -182,23 +188,23 @@ return boom;
         return missing;
     }
 
-//    Write a function that returns true if two rooks can attack each other, and false otherwise.
-public static boolean canCapture(String[] rooks) {
+    //    Write a function that returns true if two rooks can attack each other, and false otherwise.
+    public static boolean canCapture(String[] rooks) {
         boolean canAttack = false;
-        if (rooks[0].charAt(0) == rooks[1].charAt(0)){
+        if (rooks[0].charAt(0) == rooks[1].charAt(0)) {
             canAttack = true;
         }
-        if (rooks[0].charAt(1) == rooks[1].charAt(1)){
+        if (rooks[0].charAt(1) == rooks[1].charAt(1)) {
             canAttack = true;
         }
         return canAttack;
-}
+    }
 
 // Create a method that takes a string as its argument and returns the string in reversed order
 
     public static String reverse(final String str) {
         String reversed = "";
-        for (int i = str.length() - 1; i >= 0; i--){
+        for (int i = str.length() - 1; i >= 0; i--) {
             reversed += str.charAt(i);
         }
         System.out.println(reversed);
@@ -212,7 +218,7 @@ public static boolean canCapture(String[] rooks) {
     public static String societyName(String[] friends) {
         String secret = "";
         Arrays.sort(friends);
-        for (String friend: friends){
+        for (String friend : friends) {
             secret += friend.charAt(0);
         }
         System.out.println(secret);
@@ -226,11 +232,11 @@ public static boolean canCapture(String[] rooks) {
         int falseCount = 0;
         String letters = "abcdefghijklmnopqrstuvwxyz";
 
-        for (int i = 0; i < str.length(); i++){
-            if (str.charAt(i) != '+' && i > 0 && i < str.length() - 1){
-                for (int j = 0; j < letters.length(); j ++){
-                    if (str.charAt(i) == letters.charAt(j)){
-                        if (str.charAt(i - 1) == '+' && str.charAt(i + 1) == '+'){
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) != '+' && i > 0 && i < str.length() - 1) {
+                for (int j = 0; j < letters.length(); j++) {
+                    if (str.charAt(i) == letters.charAt(j)) {
+                        if (str.charAt(i - 1) == '+' && str.charAt(i + 1) == '+') {
                             isPlus = true;
                         } else {
                             isPlus = false;
@@ -240,7 +246,7 @@ public static boolean canCapture(String[] rooks) {
                 }
             }
         }
-        if (falseCount > 0){
+        if (falseCount > 0) {
             isPlus = false;
         }
         System.out.println(isPlus);
@@ -252,10 +258,43 @@ public static boolean canCapture(String[] rooks) {
     public static String factorGroup(int num) {
         String answer = "even";
         double sqrt = Math.sqrt(num);
-        if (sqrt % 1 == 0){
+        if (sqrt % 1 == 0) {
             answer = "odd";
         }
         System.out.println(answer);
         return answer;
     }
+
+//    Write a function that takes in a string and returns it with all letters shifted one forward, with all vowels capitalized
+//public static String LetterChanges(String str) {
+//    String newStr = “”;
+//    String alpha = “abcdefghijklmnopqrstuvwxyz"";
+//    for (int i = 0; i < str.length() -1; i++){
+//        for(int j = 0; j < alpha.length() - 2; j++){
+//            if (str[i] = alpha[j]){
+//                newStr += alpha[j + 1]
+//            }
+//        }
+//    }
+//    String new2 = “”;
+//    for (int x = 0; i < new.
+//
+//    return new;
+//}
+
+    public static String LetterChanges(String str) {
+        if (str == null || str.length() == 0) return str;
+        String str1 = new String();
+        for (int i = 0; i < str.length(); ++i) {
+            if (str.charAt(i) == 'Z') {
+                str1 += (char) 65;
+            } else if (str.charAt(i) == 'z') {
+                str += (char) 97;
+            } else {
+                str1 += (char) (str.charAt(i) + 1);
+            }
+        }
+        return str1;
+    }
+
 }
