@@ -297,4 +297,12 @@ public class Program {
         return str1;
     }
 
+    public static double exponent(double a, double b){
+        double total = a;
+        for (double i = b; i > 1; i--){
+            total *= a;
+        }
+        return total;
+    }
+
 }

@@ -16,6 +16,7 @@ public class ProgramImp {
 //            program.reverse(".tnereffid knihT");
 //        program.societyName(new String[]{"Adam", "Sarah", "Malcolm"});
 //        program.plusSign("+f+d+c+#+f+");
-        program.factorGroup(16);
+//        program.factorGroup(16);
+        System.out.println(program.exponent(5, 3));
     }
 }
