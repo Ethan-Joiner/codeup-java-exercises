@@ -297,6 +297,7 @@ public class Program {
         return str1;
     }
 
+//    Function to take in a base and an exponent and return the former to the power of the latter
     public static double exponent(double a, double b){
         double total = a;
         for (double i = b; i > 1; i--){
