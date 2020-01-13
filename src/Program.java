@@ -310,7 +310,7 @@ public class Program {
 
 //    Function to combine two arraylists and return sorted
     public ArrayList<Integer> combineSort(ArrayList<Integer> a, ArrayList<Integer> b) {
-        ArrayList<Integer> combo = new ArrayList<Integer>;
+        ArrayList<Integer> combo = new ArrayList<Integer>();
          combo.addAll(a);
          combo.addAll(b);
         Collections.sort(combo);
