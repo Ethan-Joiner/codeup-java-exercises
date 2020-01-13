@@ -1,5 +1,7 @@
 import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 public class Program {
 
@@ -304,6 +306,15 @@ public class Program {
             total *= a;
         }
         return total;
+    }
+
+//    Function to combine two arraylists and return sorted
+    public ArrayList<Integer> combineSort(ArrayList<Integer> a, ArrayList<Integer> b) {
+        ArrayList<Integer> combo = new ArrayList<Integer>;
+         combo.addAll(a);
+         combo.addAll(b);
+        Collections.sort(combo);
+        return combo;
     }
 
 }

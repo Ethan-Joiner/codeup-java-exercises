@@ -17,6 +17,6 @@ public class ProgramImp {
 //        program.societyName(new String[]{"Adam", "Sarah", "Malcolm"});
 //        program.plusSign("+f+d+c+#+f+");
 //        program.factorGroup(16);
-        System.out.println(program.exponent(5, 3));
+        System.out.println(program.exponent(5, 2.53626));
     }
 }
