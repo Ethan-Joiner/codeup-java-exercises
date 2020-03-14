@@ -269,8 +269,8 @@ public class Program {
 
 //    Write a function that takes in a string and returns it with all letters shifted one forward, with all vowels capitalized
 public static String LetterChanges(String str) {
-    String newStr = “”;
-    String alpha = “abcdefghijklmnopqrstuvwxyz";
+    String newStr = "";
+    String alpha = "abcdefghijklmnopqurtuvwxyz";
     for (int i = 0; i < str.length() -1; i++){
         for(int j = 0; j < alpha.length() - 2; j++){
             if (str[i] = alpha[j]){
