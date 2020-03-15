@@ -279,9 +279,9 @@ public static String LetterChanges(String str) {
         }
     }
     String new2 = “”;
-    for (int x = 0; i < new.
+//    for (int x = 0; i < new.
 
-    return new;
+    return newStr;
 }
 
     public static String LetterChanges(String str) {
