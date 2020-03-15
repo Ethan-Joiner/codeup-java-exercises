@@ -273,7 +273,8 @@ public static String LetterChanges(String str) {
     String alpha = "abcdefghijklmnopqurtuvwxyz";
     for (int i = 0; i < str.length(); i++){
         for(int j = 0; j < alpha.length(); j++){
-            if (str.charAt(i) == alpha.charAt(i)){
+            if (str.charAt(i) == alpha.charAt(j)){
+                if(str.charAt(i) == "a")
                 newStr += alpha.charAt(j + 1);
             }
         }
