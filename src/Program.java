@@ -299,28 +299,29 @@ public class Program {
         return str1;
     }
 
-//    Function to take in a base and an exponent and return the former to the power of the latter
-    public static double exponent(double a, double b){
+    //    Function to take in a base and an exponent and return the former to the power of the latter
+    public static double exponent(double a, double b) {
         double total = a;
-        for (double i = b; i > 1; i--){
+        for (double i = b; i > 1; i--) {
             total *= a;
         }
         return total;
     }
 
-//    Function to combine two arraylists and return sorted
+    //    Function to combine two arraylists and return sorted
     public ArrayList<Integer> combineSort(ArrayList<Integer> a, ArrayList<Integer> b) {
         ArrayList<Integer> combo = new ArrayList<Integer>();
-         combo.addAll(a);
-         combo.addAll(b);
+        combo.addAll(a);
+        combo.addAll(b);
         Collections.sort(combo);
         return combo;
     }
-}
 
-//    Create a function that takes an array of numbers and returns the sum of the two lowest positive numbers.
-public class Challenge {
+
+    //    Create a function that takes an array of numbers and returns the sum of the two lowest positive numbers.
     public static int sumTwoSmallestNums(int[] arr) {
 
+        Arrays.sort(arr);
+        return arr[0] + arr[1];
     }
 }
