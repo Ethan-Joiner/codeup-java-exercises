@@ -321,7 +321,13 @@ public class Program {
     //    Create a function that takes an array of numbers and returns the sum of the two lowest positive numbers.
     public static int sumTwoSmallestNums(int[] arr) {
 
+        ArrayList<Integer> positives = new ArrayList<>();
         Arrays.sort(arr);
-        return arr[0] + arr[1];
+        for (int value : arr) {
+            if (value > 0) {
+                positives.add(value);
+            }
+        }
+        return positives.get(0) + positives.get(1);
     }
 }
