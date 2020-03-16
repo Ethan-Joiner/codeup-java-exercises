@@ -268,21 +268,21 @@ public class Program {
     }
 
 //    Write a function that takes in a string and returns it with all letters shifted one forward, with all vowels capitalized
-public static String LetterChanges(String str) {
-    String newStr = "";
-    String alpha = "abcdefghijklmnopqurtuvwxyz";
-    for (int i = 0; i < str.length(); i++){
-        for(int j = 0; j < alpha.length(); j++){
-            if (str.charAt(i) == alpha.charAt(j)){
-                if(str.charAt(i) == "a")
-                newStr += alpha.charAt(j + 1);
-            }
-        }
-    }
-    String new2 = “”;
-//    for (int x = 0; i < new.
-    return newStr;
-}
+//public static String LetterChanges(String str) {
+//    String newStr = "";
+//    String alpha = "abcdefghijklmnopqurtuvwxyz";
+//    for (int i = 0; i < str.length(); i++){
+//        for(int j = 0; j < alpha.length(); j++){
+//            if (str.charAt(i) == alpha.charAt(j)){
+//                if(str.charAt(i) == "a")
+//                newStr += alpha.charAt(j + 1);
+//            }
+//        }
+//    }
+//    String new2 = “”;
+////    for (int x = 0; i < new.
+//    return newStr;
+//}
 
     public static String LetterChanges(String str) {
         if (str == null || str.length() == 0) return str;
@@ -315,5 +315,12 @@ public static String LetterChanges(String str) {
          combo.addAll(b);
         Collections.sort(combo);
         return combo;
+    }
+}
+
+//    Create a function that takes an array of numbers and returns the sum of the two lowest positive numbers.
+public class Challenge {
+    public static int sumTwoSmallestNums(int[] arr) {
+
     }
 }
