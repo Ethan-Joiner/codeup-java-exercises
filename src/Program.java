@@ -323,6 +323,7 @@ public class Program {
 
         ArrayList<Integer> positives = new ArrayList<>();
         Arrays.sort(arr);
+//        Practice doing more of these types of for loops
         for (int value : arr) {
             if (value > 0) {
                 positives.add(value);
