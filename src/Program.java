@@ -281,7 +281,6 @@ public static String LetterChanges(String str) {
     }
     String new2 = “”;
 //    for (int x = 0; i < new.
-
     return newStr;
 }
 
