@@ -331,4 +331,11 @@ public class Program {
         }
         return positives.get(0) + positives.get(1);
     }
+
+    static int simpleArraySum(int[] ar) {
+        /*
+         * Write your code here.
+         */
+
+    }
 }
