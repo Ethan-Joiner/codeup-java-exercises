@@ -8,7 +8,8 @@ public class Program {
     public static void main(String[] args) {
         int[] numbers = {1, 2, -3, -4, 0};
 
-        plusMinus(numbers);
+//        plusMinus(numbers);
+        staircase(4);
     }
 
     //    Take a string and swap the first and last letter, unless they are the same, or the string is too short
@@ -383,14 +384,18 @@ public class Program {
     static void staircase(int n) {
 
         String step = "";
-        for (int i = 0; i <= n; i++) {
-            if (i < n) {
-                step += " ";
-            } else {
-                step +=
+//        int counter = 0;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n; j++) {
+                if (i < n) {
+                    step += " ";
+                } else {
+                    step += "#";
+                }
             }
+            System.out.println(step);
+            step = "";
         }
-
     }
 
 }
