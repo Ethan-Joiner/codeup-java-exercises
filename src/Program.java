@@ -353,4 +353,11 @@ public class Program {
 
     }
 
+//    Take in an array of numbers and return decimals of positive, negative, and 0
+    static void plusMinus(int[] arr) {
+
+
+
+    }
+
 }
