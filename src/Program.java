@@ -379,4 +379,10 @@ public class Program {
         System.out.println(zeroes / arr.length);
     }
 
+
+    static void staircase(int n) {
+
+
+    }
+
 }
