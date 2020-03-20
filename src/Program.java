@@ -356,8 +356,21 @@ public class Program {
 //    Take in an array of numbers and return decimals of positive, negative, and 0
     static void plusMinus(int[] arr) {
 
-
-
+        int positives = 0;
+        int negatives = 0;
+        int zeroes = 0;
+        for (int value : arr) {
+            if (value > 0) {
+                positives++;
+            } else if (value < 0) {
+                negatives++;
+            } else {
+                zeroes++;
+            }
+        }
+        System.out.println(positives / arr.length);
+        System.out.println(negatives / arr.length);
+        System.out.println(zeroes / arr.length);
     }
 
 }
