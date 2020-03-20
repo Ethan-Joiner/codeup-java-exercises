@@ -457,6 +457,11 @@ public class Program {
         return score;
         
     }
+
+    static String catAndMouse(int x, int y, int z) {
+
+
+    }
     
 
 }
