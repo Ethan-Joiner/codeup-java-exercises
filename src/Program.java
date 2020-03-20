@@ -2,6 +2,18 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
+import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
+import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
+import static java.util.stream.Collectors.toList;
 
 public class Program {
 
@@ -426,5 +438,25 @@ public class Program {
         return blown;
 
     }
+
+    static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
+        
+        Integer alice = 0;
+        int bob = 0;
+        List<Integer> score = new ArrayList<>();
+
+        for (int i = 0; i < a.size(); i++) {
+            if (a.get(i) > b.get(i)) {
+                alice++;
+            } else if (a.get(i) < b.get(i)) {
+                bob++;
+            }
+        }
+        score.add(alice);
+        score.add(bob);
+        return score;
+        
+    }
+    
 
 }
