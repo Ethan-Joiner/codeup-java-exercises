@@ -405,14 +405,13 @@ public class Program {
         int max = 0;
         Arrays.sort(arr);
 
-        for (int i = 1; i < arr.length - 1; i++) {
+        for (int i = 0; i < arr.length - 1; i++) {
             min += arr[i];
         }
-        for (int i = 1; i < arr.length - 1; i++) {
-            min += arr[i];
+        for (int i = 1; i < arr.length; i++) {
+            max += arr[i];
         }
-
-
+        System.out.println(min + " " + max);
     }
 
 }
