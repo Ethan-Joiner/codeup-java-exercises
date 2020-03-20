@@ -5,6 +5,12 @@ import java.util.Collections;
 
 public class Program {
 
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, -3, -4, 0};
+
+        plusMinus(numbers);
+    }
+
     //    Take a string and swap the first and last letter, unless they are the same, or the string is too short
     public static String flipEndChars(String s) {
         if (s.length() < 2) {
@@ -356,9 +362,9 @@ public class Program {
 //    Take in an array of numbers and return decimals of positive, negative, and 0
     static void plusMinus(int[] arr) {
 
-        int positives = 0;
-        int negatives = 0;
-        int zeroes = 0;
+        float positives = 0;
+        float negatives = 0;
+        float zeroes = 0;
         for (int value : arr) {
             if (value > 0) {
                 positives++;
