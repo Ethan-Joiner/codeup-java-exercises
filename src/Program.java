@@ -414,4 +414,17 @@ public class Program {
         System.out.println(min + " " + max);
     }
 
+    static int birthdayCakeCandles(int[] ar) {
+
+        int blown = 1;
+        Arrays.sort(ar);
+        for (int i = ar.length -2; i > 0; i--) {
+            if (ar[i] == ar[i - 1]) {
+                blown ++;
+            }
+        }
+        return blown;
+
+    }
+
 }
