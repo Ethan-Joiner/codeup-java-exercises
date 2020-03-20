@@ -384,10 +384,10 @@ public class Program {
     static void staircase(int n) {
 
         String step = "";
-//        int counter = 0;
+        int count = n;
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n; j++) {
-                if (i < n) {
+                if (j < count) {
                     step += " ";
                 } else {
                     step += "#";
@@ -395,6 +395,7 @@ public class Program {
             }
             System.out.println(step);
             step = "";
+            count--;
         }
     }
 
