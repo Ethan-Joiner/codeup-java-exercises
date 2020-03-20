@@ -460,6 +460,13 @@ public class Program {
 
     static String catAndMouse(int x, int y, int z) {
 
+        if ((z - x) < (z - y)) {
+            return "Cat A";
+        } else if ((z - x) > (z - y)) {
+            return "Cat B";
+        } else {
+            return "Mouse C";
+        }
 
     }
     
