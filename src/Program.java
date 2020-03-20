@@ -399,4 +399,20 @@ public class Program {
         }
     }
 
+//    Take an array of ints and return the minimum and maximum sums from the numbers provided
+    static void miniMaxSum(int[] arr) {
+        int min = 0;
+        int max = 0;
+        Arrays.sort(arr);
+
+        for (int i = 1; i < arr.length - 1; i++) {
+            min += arr[i];
+        }
+        for (int i = 1; i < arr.length - 1; i++) {
+            min += arr[i];
+        }
+
+
+    }
+
 }
