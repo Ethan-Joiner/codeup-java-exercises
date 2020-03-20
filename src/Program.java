@@ -382,6 +382,14 @@ public class Program {
 
     static void staircase(int n) {
 
+        String step = "";
+        for (int i = 0; i <= n; i++) {
+            if (i < n) {
+                step += " ";
+            } else {
+                step +=
+            }
+        }
 
     }
 
