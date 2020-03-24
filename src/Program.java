@@ -467,7 +467,6 @@ public class Program {
         } else {
             return "Mouse C";
         }
-
     }
     
 
