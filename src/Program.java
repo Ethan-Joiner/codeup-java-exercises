@@ -476,4 +476,9 @@ public class Program {
             return "Mouse C";
         }
     }
+// Convert time to military
+    static String timeConversion(String s) {
+
+
+    }
 }
