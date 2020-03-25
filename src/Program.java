@@ -22,7 +22,9 @@ public class Program {
 
 //        plusMinus(numbers);
 //        staircase(4);
+        System.out.println(timeConversion("06:40:03AM"));
         System.out.println(timeConversion("12:40:22AM"));
+
     }
 
     //    Take a string and swap the first and last letter, unless they are the same, or the string is too short
@@ -480,8 +482,11 @@ public class Program {
 // Convert time to military
     static String timeConversion(String s) {
         int hour = Integer.parseInt(s.substring(0, 2));
-        if (hour < 12) {
+        String amOrPm = s.substring(8);
+        System.out.println(amOrPm);
+        if (hour < 12 == amOrPm.equals("PM")) {
             hour += 12;
+
         } else {
             hour -=12;
         }
