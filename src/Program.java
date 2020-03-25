@@ -459,6 +459,11 @@ public class Program {
     }
 
     static String catAndMouse(int x, int y, int z) {
+        int CatA = z - x;
+        int CatB = z - y;
+        if (CatA < 0) {
+            CatA *= -1;
+        }
 
         if ((z - x) < (z - y)) {
             return "Cat A";
