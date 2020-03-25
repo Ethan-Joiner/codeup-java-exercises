@@ -464,10 +464,12 @@ public class Program {
         if (CatA < 0) {
             CatA *= -1;
         }
-
-        if ((z - x) < (z - y)) {
+        if (CatB < 0) {
+            CatB *= -1;
+        }
+        if (CatA < CatB) {
             return "Cat A";
-        } else if ((z - x) > (z - y)) {
+        } else if (CatA > CatB) {
             return "Cat B";
         } else {
             return "Mouse C";
