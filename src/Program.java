@@ -480,7 +480,11 @@ public class Program {
 // Convert time to military
     static String timeConversion(String s) {
         int hour = Integer.parseInt(s.substring(0, 2));
-        hour += 12;
+        if (hour < 12) {
+            hour += 12;
+        } else {
+            hour -=12;
+        }
         String militaryTime = hour + s.substring(2, 8);
         return militaryTime;
 
