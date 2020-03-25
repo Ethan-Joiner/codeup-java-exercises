@@ -21,7 +21,8 @@ public class Program {
         int[] numbers = {1, 2, -3, -4, 0};
 
 //        plusMinus(numbers);
-        staircase(4);
+//        staircase(4);
+        timeConversion("Test");
     }
 
     //    Take a string and swap the first and last letter, unless they are the same, or the string is too short
@@ -479,6 +480,8 @@ public class Program {
 // Convert time to military
     static String timeConversion(String s) {
 
+        String hour = s.substring(0, 1);
+        return hour;
 
     }
 }
