@@ -479,9 +479,10 @@ public class Program {
     }
 // Convert time to military
     static String timeConversion(String s) {
-
-        String hour = s.substring(0, 1);
-        return hour;
+        int hour = Integer.parseInt(s.substring(0, 2));
+        hour += 12;
+        String militaryTime = hour + s.substring(2);
+        return militaryTime;
 
     }
 }
