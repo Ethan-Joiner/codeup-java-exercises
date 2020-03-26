@@ -23,7 +23,8 @@ public class Program {
 //        plusMinus(numbers);
 //        staircase(4);
 //        System.out.println(timeConversion("06:40:03AM"));
-        System.out.println(timeConversion("13:40:22AM"));
+//        System.out.println(timeConversion("13:40:22AM"));
+        System.out.println(hackerrankInString("hacakaeararanaka"));
 
     }
 
@@ -505,7 +506,9 @@ public class Program {
         String hacker = "hackerrank";
         int counter = 0;
         for (int i = 0; i < s.length(); i++){
-            if (s.charAt(i) == hacker.charAt(counter)) {
+            System.out.println("Counter " + counter);
+            System.out.println("Index" + i);
+            if (counter < hacker.length() && s.charAt(i) == hacker.charAt(counter)) {
                 checkingForWord += s.charAt(i);
                 counter++;
             }
