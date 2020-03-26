@@ -501,7 +501,19 @@ public class Program {
 
 //    Take in a string and return Yes or No if it contains the entire spelling of hackerrank
     static String hackerrankInString(String s) {
-
-
+        String checkingForWord = "";
+        String hacker = "hackerrank";
+        int counter = 0;
+        for (int i = 0; i < s.length(); i++){
+            if (s.charAt(i) == hacker.charAt(counter)) {
+                checkingForWord += s.charAt(i);
+                counter++;
+            }
+        }
+        if (checkingForWord.equals(hacker)) {
+            return "YES";
+        } else {
+            return "NO";
+        }
     }
 }
