@@ -520,8 +520,20 @@ public class Program {
 
 //    Test to see if a string contains every letter of the alphabet
     static String pangrams(String s) {
-
-
+        String alpha = "abcdefghijklmnopqrstuvwxyz";
+        int counter = 0;
+        for (int i = 0; i < alpha.length(); i++){
+            for(int j = 0; i < s.length(); i++) {
+                if (alpha.charAt(i) == s.charAt(j)) {
+                    counter++;
+                }
+            }
+        }
+        if (counter == 26) {
+            return "pangram";
+        } else {
+            return "not pangram";
+        }
     }
 
 }
