@@ -24,7 +24,8 @@ public class Program {
 //        staircase(4);
 //        System.out.println(timeConversion("06:40:03AM"));
 //        System.out.println(timeConversion("13:40:22AM"));
-        System.out.println(hackerrankInString("hacakaeararanaka"));
+//        System.out.println(hackerrankInString("hacakaeararanaka"));
+        System.out.println(pangrams("We promptly judged antique ivory buckles for the next prize"));
 
     }
 
@@ -523,10 +524,13 @@ public class Program {
         String alpha = "abcdefghijklmnopqrstuvwxyz";
         int counter = 0;
         for (int i = 0; i < alpha.length(); i++){
-            for(int j = 0; i < s.length(); i++) {
+            for(int j = 0; j < s.length(); j++) {
                 if (alpha.charAt(i) == s.charAt(j)) {
                     counter++;
+                    System.out.println(counter);
                 }
+                if (counter == 26)
+                    break;
             }
         }
         if (counter == 26) {
