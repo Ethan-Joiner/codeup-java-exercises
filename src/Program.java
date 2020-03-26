@@ -22,8 +22,8 @@ public class Program {
 
 //        plusMinus(numbers);
 //        staircase(4);
-        System.out.println(timeConversion("06:40:03AM"));
-        System.out.println(timeConversion("12:40:22AM"));
+//        System.out.println(timeConversion("06:40:03AM"));
+        System.out.println(timeConversion("13:40:22AM"));
 
     }
 
@@ -483,11 +483,11 @@ public class Program {
     static String timeConversion(String s) {
         int hour = Integer.parseInt(s.substring(0, 2));
         String amOrPm = s.substring(8);
+        System.out.println(hour);
         System.out.println(amOrPm);
         if (hour < 12 == amOrPm.equals("PM")) {
             hour += 12;
-
-        } else {
+        } else if (hour >= 12){
             hour -=12;
         }
         String militaryTime;
