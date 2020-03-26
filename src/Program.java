@@ -25,7 +25,7 @@ public class Program {
 //        System.out.println(timeConversion("06:40:03AM"));
 //        System.out.println(timeConversion("13:40:22AM"));
 //        System.out.println(hackerrankInString("hacakaeararanaka"));
-        System.out.println(pangrams("We promptly judged antique ivory buckles for the next prize"));
+        System.out.println(pangrams("We promptly judged antique ivory buckles for the prize"));
 
     }
 
@@ -528,6 +528,7 @@ public class Program {
                 if (alpha.charAt(i) == s.charAt(j)) {
                     counter++;
                     System.out.println(counter);
+//                    break;
                 }
                 if (counter == 26)
                     break;
