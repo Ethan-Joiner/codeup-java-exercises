@@ -498,4 +498,10 @@ public class Program {
         }
         return militaryTime;
     }
+
+//    Take in a string and return Yes or No if it contains the entire spelling of hackerrank
+    static String hackerrankInString(String s) {
+
+
+    }
 }
