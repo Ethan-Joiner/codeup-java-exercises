@@ -485,19 +485,17 @@ public class Program {
         String amOrPm = s.substring(8);
         System.out.println(hour);
         System.out.println(amOrPm);
-        if (hour < 12 == amOrPm.equals("PM")) {
+        if (hour < 12 && amOrPm.equals("PM")) {
             hour += 12;
-        } else if (hour >= 12){
-            hour -=12;
+        } else if (hour >= 12 && amOrPm.equals("AM")){
+            hour -= 12;
         }
         String militaryTime;
         if (hour > 9) {
             militaryTime = hour + s.substring(2, 8);
         } else {
             militaryTime = "0" + hour + s.substring(2, 8);
-
         }
         return militaryTime;
-
     }
 }
