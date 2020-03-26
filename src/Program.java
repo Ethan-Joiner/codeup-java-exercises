@@ -506,8 +506,6 @@ public class Program {
         String hacker = "hackerrank";
         int counter = 0;
         for (int i = 0; i < s.length(); i++){
-            System.out.println("Counter " + counter);
-            System.out.println("Index" + i);
             if (counter < hacker.length() && s.charAt(i) == hacker.charAt(counter)) {
                 checkingForWord += s.charAt(i);
                 counter++;
@@ -519,4 +517,11 @@ public class Program {
             return "NO";
         }
     }
+
+//    Test to see if a string contains every letter of the alphabet
+    static String pangrams(String s) {
+
+
+    }
+
 }
