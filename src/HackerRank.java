@@ -39,7 +39,7 @@ public class HackerRank {
             }
         }
         for (int orange : oranges) {
-            if (houseRange.contains(orange + a)) {
+            if (houseRange.contains(orange + b)) {
                 orangesLanded++;
             }
         }
