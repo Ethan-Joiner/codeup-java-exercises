@@ -10,7 +10,7 @@ public class HackerRank {
     public static List<Integer> gradingStudents(List<Integer> grades) {
         List<Integer> rounded = new ArrayList<>();
         for (int grade : grades) {
-            if (grade < 40) {
+            if (grade < 38) {
                 rounded.add(grade);
             } else if ((grade + 1) % 5 == 0) {
                 grade +=1;
@@ -23,6 +23,5 @@ public class HackerRank {
             }
         }
         return rounded;
-
     }
 }
