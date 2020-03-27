@@ -24,4 +24,10 @@ public class HackerRank {
         }
         return rounded;
     }
+
+//    Description wont copy over and is too long. S-T for house. A apple loc, B oj loc. Print how many of each fall in range
+    static void countApplesAndOranges(int s, int t, int a, int b, int[] apples, int[] oranges) {
+
+
+    }
 }
