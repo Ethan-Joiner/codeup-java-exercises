@@ -12,9 +12,17 @@ public class HackerRank {
         for (int grade : grades) {
             if (grade < 40) {
                 rounded.add(grade);
-            } else if (grade)
+            } else if ((grade + 1) % 5 == 0) {
+                grade +=1;
+                rounded.add(grade);
+            } else if ((grade + 2) % 5 == 0) {
+                grade += 2;
+                rounded.add(grade);
+            } else {
+                rounded.add(grade);
+            }
         }
-        // Write your code here
+        return rounded;
 
     }
 }
