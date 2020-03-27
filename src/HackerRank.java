@@ -27,7 +27,23 @@ public class HackerRank {
 
 //    Description wont copy over and is too long. S-T for house. A apple loc, B oj loc. Print how many of each fall in range
     static void countApplesAndOranges(int s, int t, int a, int b, int[] apples, int[] oranges) {
-
-
+        int applesLanded = 0;
+        int orangesLanded = 0;
+        ArrayList<Integer> houseRange = new ArrayList<>();
+        for (int i = s; i <= t; i++) {
+            houseRange.add(i);
+        }
+        for (int apple : apples) {
+            if (houseRange.contains(apple + a)) {
+                applesLanded++;
+            }
+        }
+        for (int orange : oranges) {
+            if (houseRange.contains(orange + a)) {
+                orangesLanded++;
+            }
+        }
+        System.out.println(applesLanded);
+        System.out.println(orangesLanded);
     }
 }
