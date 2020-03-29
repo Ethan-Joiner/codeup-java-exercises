@@ -52,7 +52,13 @@ public class HackerRank {
 //    Highest that K - height needs to be
     static int hurdleRace(int k, int[] height) {
 
-
+        int dose = 0;
+        for (int hurdle: height) {
+            if (k <= hurdle) {
+                dose = hurdle - k;
+            }
+        }
+        return dose;
     }
 
 }
