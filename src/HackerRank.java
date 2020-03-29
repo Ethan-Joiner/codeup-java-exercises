@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class HackerRank {
@@ -53,10 +54,9 @@ public class HackerRank {
     static int hurdleRace(int k, int[] height) {
 
         int dose = 0;
-        for (int hurdle: height) {
-            if (k <= hurdle) {
-                dose = hurdle - k;
-            }
+        Arrays.sort(height);
+        if (k < height[height.length - 1]) {
+                dose = (height.length - 1) - k;
         }
         return dose;
     }
