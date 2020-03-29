@@ -61,4 +61,10 @@ public class HackerRank {
         return dose;
     }
 
+//    Each letter in the alphabet is assigned a number. Find the highest number times the length of the word
+    static int designerPdfViewer(int[] h, String word) {
+
+
+    }
+
 }
