@@ -56,7 +56,7 @@ public class HackerRank {
         int dose = 0;
         Arrays.sort(height);
         if (k < height[height.length - 1]) {
-                dose = (height.length - 1) - k;
+                dose = (height[height.length - 1]) - k;
         }
         return dose;
     }
