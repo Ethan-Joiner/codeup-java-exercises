@@ -45,6 +45,14 @@ public class HackerRank {
         }
         System.out.println(applesLanded);
         System.out.println(orangesLanded);
+//        Internet broken?
     }
 //    This is still not passing 3 tests with 100k+ tests and saying timeout. Not sure if it is my internet or inefficient code
+
+//    Highest that K - height needs to be
+    static int hurdleRace(int k, int[] height) {
+
+
+    }
+
 }
