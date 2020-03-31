@@ -99,4 +99,10 @@ public class HackerRank {
         maxMin[1] = minCount;
         return maxMin;
     }
+
+//    S is array of numbers to be added, d is total expected, m is how many touching can be considered
+    static int birthday(List<Integer> s, int d, int m) {
+
+
+    }
 }
