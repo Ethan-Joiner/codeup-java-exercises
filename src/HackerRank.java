@@ -99,5 +99,4 @@ public class HackerRank {
         maxMin[1] = minCount;
         return maxMin;
     }
-
 }
