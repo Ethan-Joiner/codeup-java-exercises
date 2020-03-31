@@ -62,18 +62,19 @@ public class HackerRank {
     }
 
 //    Each letter in the alphabet is assigned a number. Find the highest number times the length of the word
-    static int designerPdfViewer(int[] h, String word) {
-        int area;
-        int start = 0;
-        String alpha = "abcdefghijklmnopqrstuvwxyz";
-        for (int i = 0; i < h.length - 1; i ++) {
-            if (h[i] > start && word.contains(alpha[i])) {
-
-            }
-        }
-//        Arrays.sort(h);
-        area = h[h.length - 1] * word.length();
-        return area;
-    }
+//    Come back to this
+//    static int designerPdfViewer(int[] h, String word) {
+//        int area;
+//        int start = 0;
+//        String alpha = "abcdefghijklmnopqrstuvwxyz";
+//        for (int i = 0; i < h.length - 1; i ++) {
+//            if (h[i] > start && word.contains(alpha[i])) {
+//
+//            }
+//        }
+////        Arrays.sort(h);
+//        area = h[h.length - 1] * word.length();
+//        return area;
+//    }
 
 }
