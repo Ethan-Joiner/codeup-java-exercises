@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -79,11 +80,24 @@ public class HackerRank {
 
 //    Tally times highest and lowest are reached from array
     static int[] breakingRecords(int[] scores) {
-        int min;
-        int max;
-        int minCount;
-        int maxCount;
+        int min = scores[0];
+        int max = scores[0];
+        int minCount = 0;
+        int maxCount = 0;
+        int[] maxMin = new int[2];
 
+        for (int i = 1; i < scores.length; i++) {
+            if (scores[i] > max) {
+                maxCount++;
+                max = scores[i];
+            } else if (scores[i] < min) {
+                minCount++;
+                min = scores[i];
+            }
+        }
+        maxMin[0] = max;
+        maxMin[1] = min;
+        return maxMin;
 
 
     }
