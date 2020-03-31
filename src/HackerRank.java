@@ -109,13 +109,13 @@ public class HackerRank {
             for (int j = i; j <= m; j++) {
 //                toBeAdded.add(s.get(j));
                 total += s.get(j);
+                if (total == d) {
+                    counter++;
+                    total = 0;
+                }
             }
-            if (total == d) {
-                counter++;
-            }
+
         }
         return counter;
-
-
     }
 }
