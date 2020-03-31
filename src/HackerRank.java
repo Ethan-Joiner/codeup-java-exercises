@@ -102,14 +102,19 @@ public class HackerRank {
 
 //    S is array of numbers to be added, d is total expected, m is how many touching can be considered
     static int birthday(List<Integer> s, int d, int m) {
-        List<Integer> toBeAdded = new ArrayList<>();
+//        List<Integer> toBeAdded = new ArrayList<>();
+        int total = 0;
         int counter = 0;
         for (int i = 0; i < s.size(); i++) {
-            for (int j = counter; j <= m; j++) {
-                toBeAdded.add(s.get(j));
+            for (int j = i; j <= m; j++) {
+//                toBeAdded.add(s.get(j));
+                total += s.get(j);
             }
-
+            if (total == d) {
+                counter++;
+            }
         }
+        return counter;
 
 
     }
