@@ -95,11 +95,9 @@ public class HackerRank {
                 min = scores[i];
             }
         }
-        maxMin[0] = max;
-        maxMin[1] = min;
+        maxMin[0] = maxCount;
+        maxMin[1] = minCount;
         return maxMin;
-
-
     }
 
 }
