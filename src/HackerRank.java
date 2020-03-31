@@ -79,6 +79,11 @@ public class HackerRank {
 
 //    Tally times highest and lowest are reached from array
     static int[] breakingRecords(int[] scores) {
+        int min;
+        int max;
+        int minCount;
+        int maxCount;
+
 
 
     }
