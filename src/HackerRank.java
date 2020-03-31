@@ -106,15 +106,14 @@ public class HackerRank {
         int total = 0;
         int counter = 0;
         for (int i = 0; i < s.size(); i++) {
-            for (int j = i; j <= m; j++) {
+            for (int j = i; j < m; j++) {
 //                toBeAdded.add(s.get(j));
-                total += s.get(j);
+                total += s.get(i);
                 if (total == d) {
                     counter++;
                     total = 0;
                 }
             }
-
         }
         return counter;
     }
