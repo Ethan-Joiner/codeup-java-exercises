@@ -143,7 +143,7 @@ public class HackerRank {
     static void bonAppetit(List<Integer> bill, int k, int b) {
         int total = 0;
         for (int item: bill) {
-            if (item == k) {
+            if (item == bill.get(k)) {
                 continue;
             } else {
                 total += item;
