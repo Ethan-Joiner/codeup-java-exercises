@@ -125,4 +125,10 @@ public class HackerRank {
         }
         return counter;
     }
+
+//    Take in an array and an int. Find how many pairs in the array are evenly divisible by k
+    static int divisibleSumPairs(int n, int k, int[] ar) {
+
+
+    }
 }
