@@ -5,6 +5,9 @@ import java.util.List;
 
 public class HackerRank {
     public static void main(String[] args) {
+//        int[] test = {2,5,1,3,4,4,3,5,1,1,2,1,4,1,3,3,4,2,1};
+        ArrayList<Integer> testing = new ArrayList<>(Arrays.asList(2,5,1,3,4,4,3,5,1,1,2,1,4,1,3,3,4,2,1));
+        System.out.println(birthday(testing,18,7));
 
     }
 
@@ -105,9 +108,15 @@ public class HackerRank {
         int total = 0;
         int counter = 0;
         for (int i = 0; i < s.size(); i++) {
+            int start = i;
             for (int j = 0; j < m; j++) {
-                total += s.get(i);
+                if (start < s.size()) {
+                    total += s.get(start);
+                    start++;
+                    System.out.println("Start is " + start);
+                }
                 if (total == d) {
+                    System.out.println("I is " + i);
                     counter++;
                     total = 0;
                 }
