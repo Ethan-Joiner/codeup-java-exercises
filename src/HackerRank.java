@@ -141,7 +141,18 @@ public class HackerRank {
 
 //    Take in a list of items charged (bill), add together and remove k, if equals B correct, if not print difference
     static void bonAppetit(List<Integer> bill, int k, int b) {
-
-
+        int total = 0;
+        for (int item: bill) {
+            if (item == k) {
+                continue;
+            } else {
+                total += item;
+            }
+        }
+        if (total / 2 == b) {
+            System.out.println("Bon Appetit");
+        } else {
+            System.out.println(b - (total / 2));
+        }
     }
 }
