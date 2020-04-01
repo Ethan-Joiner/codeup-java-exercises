@@ -112,6 +112,7 @@ public class HackerRank {
                     total = 0;
                 }
             }
+            total = 0;
         }
         return counter;
     }
