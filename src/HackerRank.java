@@ -82,6 +82,7 @@ public class HackerRank {
 //    }
 
 //    Tally times highest and lowest are reached from array
+//    Not sure what the problem is, still failing a couple tests
     static int[] breakingRecords(int[] scores) {
         int min = scores[0];
         int max = scores[0];
