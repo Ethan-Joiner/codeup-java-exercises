@@ -158,4 +158,10 @@ public class HackerRank {
             System.out.println(b - (total / 2));
         }
     }
+
+//    Take in n (length of array) and an array and return the number of pairs
+    static int sockMerchant(int n, int[] ar) {
+
+
+    }
 }
