@@ -165,12 +165,11 @@ public class HackerRank {
 
         Arrays.sort(ar);
         for (int i = 0; i < (n - 1); i ++) {
-
             if (ar[i] == ar[i + 1]) {
-
+                pairs++;
+                i++;
             }
         }
-
         return pairs;
     }
 }
