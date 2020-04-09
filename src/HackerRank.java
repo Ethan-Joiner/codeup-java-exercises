@@ -173,8 +173,11 @@ public class HackerRank {
         return pairs;
     }
 
+//    N is the number of pages in the book, p is the desired page. Write a function to determine the minimum number of page turns. Even numbered pages will be on the left, odds on the right
     static int pageCount(int n, int p) {
+        int turnCount = 0;
 
 
+        return turnCount;
     }
 }
