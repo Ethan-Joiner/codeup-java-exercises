@@ -163,6 +163,10 @@ public class HackerRank {
     static int sockMerchant(int n, int[] ar) {
         int pairs = 0;
 
+        Arrays.sort(ar);
+        for (int i = 0; i < n; i ++) {
+
+        }
 
         return pairs;
     }
