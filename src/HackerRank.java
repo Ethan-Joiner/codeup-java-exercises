@@ -161,7 +161,9 @@ public class HackerRank {
 
 //    Take in n (length of array) and an array and return the number of pairs
     static int sockMerchant(int n, int[] ar) {
+        int pairs = 0;
 
 
+        return pairs;
     }
 }
