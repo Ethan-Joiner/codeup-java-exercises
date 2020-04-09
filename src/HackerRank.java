@@ -172,4 +172,9 @@ public class HackerRank {
         }
         return pairs;
     }
+
+    static int pageCount(int n, int p) {
+
+
+    }
 }
