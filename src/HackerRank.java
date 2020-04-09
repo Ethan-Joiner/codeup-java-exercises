@@ -160,9 +160,9 @@ public class HackerRank {
     }
 
 //    Take in n (length of array) and an array and return the number of pairs
+//    Established pairs at 0. Sorted array to put numbers in order. Ran loop from first number through second to last. If there was a match pairs was in creased by one, and the index was increased by two. If not, the next number was checked
     static int sockMerchant(int n, int[] ar) {
         int pairs = 0;
-
         Arrays.sort(ar);
         for (int i = 0; i < (n - 1); i ++) {
             if (ar[i] == ar[i + 1]) {
