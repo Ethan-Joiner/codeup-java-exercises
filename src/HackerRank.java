@@ -185,4 +185,10 @@ public class HackerRank {
 
         return turnCount;
     }
+
+// N is the number of "valleys" entered. String will containt U (+1) and D(-1). Starting from 0, n should be the number of times it gets below zero
+    static int countingValleys(int n, String s) {
+
+
+    }
 }
