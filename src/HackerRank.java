@@ -206,6 +206,9 @@ public class HackerRank {
 //    Starting at 1, rotate between doubling and adding 1
     static int utopianTree(int n) {
 
+        int height = 0;
 
+
+        return height;
     }
 }
