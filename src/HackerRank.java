@@ -190,6 +190,9 @@ public class HackerRank {
     static int countingValleys(int n, String s) {
         int valleys = 0;
         int position = 0;
+        for (int i = 0; i < s.length(); i ++) {
+
+        }
 
 
         return valleys;
