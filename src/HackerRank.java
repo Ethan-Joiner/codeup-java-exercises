@@ -203,7 +203,7 @@ public class HackerRank {
         return valleys;
     }
 
-//    Starting at 1, rotate between doubling and adding 1
+//    Starting at 1, rotate between doubling and adding 1.
     static int utopianTree(int n) {
         int height = 1;
         for (int i = 1; i <= n; i++) {
