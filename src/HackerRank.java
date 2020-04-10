@@ -178,7 +178,7 @@ public class HackerRank {
         int turnCount = 0;
 //        If the number of total pages - desired page is smaller, start from the back of the book, else start from the front
         if (n - p < n - 1) {
-
+            if (n - p == 1 && )
         } else if (n - p > n - 1) {
 
         }
