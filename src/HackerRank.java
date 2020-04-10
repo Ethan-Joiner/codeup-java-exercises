@@ -219,8 +219,16 @@ public class HackerRank {
     static String angryProfessor(int k, int[] a) {
         int onTime = 0;
         String cancelled = "";
-
-
+        for (int i = 0; i < a.length; i ++){
+            if (a[i] <= 0) {
+                onTime++;
+            }
+        }
+        if (onTime >= k) {
+            cancelled = "NO";
+        } else {
+            cancelled = "YES";
+        }
         return cancelled;
     }
 }
