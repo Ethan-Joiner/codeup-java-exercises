@@ -191,7 +191,6 @@ public class HackerRank {
         int valleys = 0;
         int position = 0;
         for (int i = 0; i < s.length(); i ++) {
-
             if (s.charAt(i) == 'U') {
                 position++;
             } else if (s.charAt(i) == 'D') {
