@@ -215,7 +215,7 @@ public class HackerRank {
         }
         return height;
     }
-// K is number required (at minimum). A is array of numbers that anything <=0 is good and over is bad
+// K is number required (at minimum). A is array of numbers that anything <=0 is good and over is bad.
     static String angryProfessor(int k, int[] a) {
         int onTime = 0;
         String cancelled = "";
