@@ -180,9 +180,7 @@ public class HackerRank {
         if (n - p < n - 1) {
             if (n - p == 1 && )
         } else if (n - p > n - 1) {
-
         }
-
         return turnCount;
     }
 
