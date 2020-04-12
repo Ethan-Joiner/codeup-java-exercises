@@ -235,6 +235,7 @@ public class HackerRank {
     static int beautifulDays(int i, int j, int k) {
         int days = 0;
         String reverse = "";
+        List<Integer> range = new ArrayList<>();
 
 
 
