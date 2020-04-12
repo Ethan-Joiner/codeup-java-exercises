@@ -236,9 +236,7 @@ public class HackerRank {
         int days = 0;
         String reverseOne = "";
         String reverseTwo = "";
-//        List<Integer> range = new ArrayList<>();
         for (int x = i; x <= j; x++) {
-//            range.add(x);
             reverseOne = Integer.toString(x);
             for (int y = reverseOne.length() - 1; y >= 0; y--) {
                 reverseTwo += reverseOne.charAt(y);
