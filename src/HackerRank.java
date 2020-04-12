@@ -231,6 +231,7 @@ public class HackerRank {
         return cancelled;
     }
 
+//    I is start day, j is last day. Test each day by subtracting it from its reverse. If evenly divisible by K then increase days
     static int beautifulDays(int i, int j, int k) {
 
 
