@@ -243,6 +243,7 @@ public class HackerRank {
             }
             if ((Integer.parseInt(reverseOne) - Integer.parseInt(reverseTwo)) % k == 0) {
                 days++;
+                reverseTwo = "";
             }
         }
         return days;
