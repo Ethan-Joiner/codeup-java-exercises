@@ -234,19 +234,19 @@ public class HackerRank {
 //    I is start day, j is last day. Test each day by subtracting it from its reverse. If evenly divisible by K then increase days
     static int beautifulDays(int i, int j, int k) {
         int days = 0;
-        String reverse = "";
+        String reverseOne = "";
+        String reverseTwo = "";
 //        List<Integer> range = new ArrayList<>();
         for (int x = i; x <= j; x++) {
 //            range.add(x);
-            reverse = Integer.toString(x);
-            for (int y = reverse.length() - 1; y >= 0; y--) {
-
+            reverseOne = Integer.toString(x);
+            for (int y = reverseOne.length() - 1; y >= 0; y--) {
+                reverseTwo += reverseOne.charAt(y);
+            }
+            if ((Integer.parseInt(reverseOne) - Integer.parseInt(reverseTwo)) % k == 0) {
+                days++;
             }
         }
-
-
-
         return days;
-
     }
 }
