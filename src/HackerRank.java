@@ -238,6 +238,10 @@ public class HackerRank {
 //        List<Integer> range = new ArrayList<>();
         for (int x = i; x <= j; x++) {
 //            range.add(x);
+            reverse = Integer.toString(x);
+            for (int y = reverse.length() - 1; y >= 0; y--) {
+
+            }
         }
 
 
