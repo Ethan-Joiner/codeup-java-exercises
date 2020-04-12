@@ -230,4 +230,9 @@ public class HackerRank {
         }
         return cancelled;
     }
+
+    static int beautifulDays(int i, int j, int k) {
+
+
+    }
 }
