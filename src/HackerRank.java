@@ -107,6 +107,7 @@ public class HackerRank {
 
 //    S is array of numbers to be added, d is total expected, m is how many touching can be considered
 //    May need to delete and start over. Find on site for refresher
+//    May need help
     static int birthday(List<Integer> s, int d, int m) {
         int total = 0;
         int counter = 0;
