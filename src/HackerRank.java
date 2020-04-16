@@ -202,6 +202,7 @@ public class HackerRank {
     }
 
 //    Starting at 1, rotate between doubling and adding 1.
+//    Passed all tests
     static int utopianTree(int n) {
         int height = 1;
         for (int i = 1; i <= n; i++) {
