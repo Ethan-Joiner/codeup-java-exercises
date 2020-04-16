@@ -185,6 +185,7 @@ public class HackerRank {
     }
 
 // N is the number of "valleys" entered. String will containt U (+1) and D(-1). Starting from 0, n should be the number of times it gets below zero
+//    Passed all tests
     static int countingValleys(int n, String s) {
         int valleys = 0;
         int position = 0;
