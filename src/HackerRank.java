@@ -215,6 +215,7 @@ public class HackerRank {
     }
 // K is number required (at minimum). A is array of numbers that anything <=0 is good and over is bad.
 //    Created empty number variable and empty string variable. Looped through and if conditions were meant increased count
+//    Passed all tests
     static String angryProfessor(int k, int[] a) {
         int onTime = 0;
         String cancelled = "";
