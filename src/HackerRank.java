@@ -232,7 +232,7 @@ public class HackerRank {
     }
 
 //    I is start day, j is last day. Test each day by subtracting it from its reverse. If evenly divisible by K then increase days
-//    Passed initial tests, runtime error for larger ones
+//    Passed initial tests, runtime error for larger ones. Need better way to reverse
     static int beautifulDays(int i, int j, int k) {
         int days = 0;
         String reverseOne = "";
