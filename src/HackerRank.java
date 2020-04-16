@@ -31,6 +31,7 @@ public class HackerRank {
     }
 
 //    Description wont copy over and is too long. S-T for house. A apple loc, B oj loc. Print how many of each fall in range. Must have VERY fast internet to work apparently
+//    Need to find on site to remember error
     static void countApplesAndOranges(int s, int t, int a, int b, int[] apples, int[] oranges) {
         int applesLanded = 0;
         int orangesLanded = 0;
