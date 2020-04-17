@@ -521,6 +521,7 @@ public class Program {
     }
 
 //    Test to see if a string contains every letter of the alphabet
+//    Needs review
     static String pangrams(String s) {
         String alpha = "abcdefghijklmnopqrstuvwxyz";
         int counter = 0;
