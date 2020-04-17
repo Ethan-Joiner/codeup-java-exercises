@@ -465,6 +465,7 @@ public class Program {
     }
 
 //    Comparing distance between 3 objects on a plane
+//    Pretty sure this passed
     static String catAndMouse(int x, int y, int z) {
         int CatA = z - x;
         int CatB = z - y;
