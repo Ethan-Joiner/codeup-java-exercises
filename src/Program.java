@@ -446,7 +446,7 @@ public class Program {
     }
 
     static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
-        
+//        Find problem and add details for memory
         Integer alice = 0;
         int bob = 0;
         List<Integer> score = new ArrayList<>();
