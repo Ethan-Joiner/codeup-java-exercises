@@ -256,4 +256,10 @@ public class HackerRank {
         }
         return days;
     }
+
+    static int viralAdvertising(int n) {
+
+
+    }
+
 }
