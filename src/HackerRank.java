@@ -31,7 +31,7 @@ public class HackerRank {
         return rounded;
     }
 
-//    Description wont copy over and is too long. S-T for house. A apple loc, B oj loc. Print how many of each fall in range. Must have VERY fast internet to work apparently
+//    Description wont copy over and is too long. S-T for house. A apple loc, B oj loc. Print how many of each fall in range.
 //    Need to find on site to remember error
     static void countApplesAndOranges(int s, int t, int a, int b, int[] apples, int[] oranges) {
         int applesLanded = 0;
@@ -52,9 +52,7 @@ public class HackerRank {
         }
         System.out.println(applesLanded);
         System.out.println(orangesLanded);
-//        Internet broken?
     }
-//    This is still not passing 3 tests with 100k+ tests and saying timeout. Not sure if it is my internet or inefficient code
 
 //    Highest that K - height needs to be
 //    Passed all tests
