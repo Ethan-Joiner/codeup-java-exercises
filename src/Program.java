@@ -432,20 +432,24 @@ public class Program {
 
     static int birthdayCakeCandles(int[] ar) {
 //        Passed most, needs review
-
         int blown = 1;
         Arrays.sort(ar);
-        for (int i = ar.length -2; i >= 0; i--) {
+        Collections.reverse(Arrays.asList(ar));
+        for (int i = 0; i < ar.length - 1; i ++) {
             if (ar[i] == ar[i + 1]) {
                 blown ++;
             }
         }
+//        for (int i = ar.length -2; i >= 0; i--) {
+//            if (ar[i] == ar[i + 1]) {
+//                blown ++;
+//            }
+//        }
         return blown;
-
     }
 
+//        Passed all
     static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
-//        Find problem and add details for memory
         Integer alice = 0;
         int bob = 0;
         List<Integer> score = new ArrayList<>();
