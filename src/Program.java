@@ -376,10 +376,9 @@ public class Program {
         return sum;
 
     }
-
+// Passed all
 //    Take in an array of numbers and return decimals of positive, negative, and 0
     static void plusMinus(int[] arr) {
-
         float positives = 0;
         float negatives = 0;
         float zeroes = 0;
@@ -397,9 +396,8 @@ public class Program {
         System.out.println(zeroes / arr.length);
     }
 
-
+// Passed all
     static void staircase(int n) {
-
         String step = "";
         int count = n;
         for (int i = 1; i <= n; i++) {
@@ -417,6 +415,7 @@ public class Program {
     }
 
 //    Take an array of ints and return the minimum and maximum sums from the numbers provided
+//    Passed all
     static void miniMaxSum(int[] arr) {
         long min = 0;
         long max = 0;
@@ -465,7 +464,7 @@ public class Program {
     }
 
 //    Comparing distance between 3 objects on a plane
-//    Pretty sure this passed
+//    Passed all tests
     static String catAndMouse(int x, int y, int z) {
         int CatA = z - x;
         int CatB = z - y;
