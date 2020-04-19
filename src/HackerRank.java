@@ -41,12 +41,12 @@ public class HackerRank {
 //            houseRange.add(i);
 //        }
         for (int apple : apples) {
-            if (houseRange.contains(apple + a)) {
+            if ((apple + a) >= s && (apple + a) <= t) {
                 applesLanded++;
             }
         }
         for (int orange : oranges) {
-            if (houseRange.contains(orange + b)) {
+            if ((orange + b) >= s && (orange + b) <= t) {
                 orangesLanded++;
             }
         }
