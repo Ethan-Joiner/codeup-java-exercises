@@ -484,7 +484,7 @@ public class Program {
         }
     }
 // Convert time to military
-//    Double check for completion
+//    Passed all tests
     static String timeConversion(String s) {
         int hour = Integer.parseInt(s.substring(0, 2));
         String amOrPm = s.substring(8);
