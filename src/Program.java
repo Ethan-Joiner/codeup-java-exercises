@@ -434,17 +434,13 @@ public class Program {
 //        Passed most, needs review
         int blown = 1;
         Arrays.sort(ar);
-        Collections.reverse(Arrays.asList(ar));
-        for (int i = 0; i < ar.length - 1; i ++) {
+        for (int i = ar.length -2; i >= 0; i--) {
             if (ar[i] == ar[i + 1]) {
                 blown ++;
+            } else if (ar[i] != ar[i + 1]) {
+                break;
             }
         }
-//        for (int i = ar.length -2; i >= 0; i--) {
-//            if (ar[i] == ar[i + 1]) {
-//                blown ++;
-//            }
-//        }
         return blown;
     }
 
