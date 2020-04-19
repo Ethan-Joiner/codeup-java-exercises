@@ -36,10 +36,10 @@ public class HackerRank {
     static void countApplesAndOranges(int s, int t, int a, int b, int[] apples, int[] oranges) {
         int applesLanded = 0;
         int orangesLanded = 0;
-        ArrayList<Integer> houseRange = new ArrayList<>();
-        for (int i = s; i <= t; i++) {
-            houseRange.add(i);
-        }
+//        ArrayList<Integer> houseRange = new ArrayList<>();
+//        for (int i = s; i <= t; i++) {
+//            houseRange.add(i);
+//        }
         for (int apple : apples) {
             if (houseRange.contains(apple + a)) {
                 applesLanded++;
@@ -260,6 +260,7 @@ public class HackerRank {
 //    N is number of days. First day start with 5. Divide in half a round down to find daily likes. Likes x 3 for next day.
     static int viralAdvertising(int n) {
         int totalLikes = 0;
+
 
 
         return totalLikes;
