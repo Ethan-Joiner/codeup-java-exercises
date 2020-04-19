@@ -36,10 +36,6 @@ public class HackerRank {
     static void countApplesAndOranges(int s, int t, int a, int b, int[] apples, int[] oranges) {
         int applesLanded = 0;
         int orangesLanded = 0;
-//        ArrayList<Integer> houseRange = new ArrayList<>();
-//        for (int i = s; i <= t; i++) {
-//            houseRange.add(i);
-//        }
         for (int apple : apples) {
             if ((apple + a) >= s && (apple + a) <= t) {
                 applesLanded++;

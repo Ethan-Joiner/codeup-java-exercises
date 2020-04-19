@@ -505,7 +505,7 @@ public class Program {
     }
 
 //    Take in a string and return Yes or No if it contains the entire spelling of hackerrank
-//    Double check completion
+//    Passed all tests
     static String hackerrankInString(String s) {
         String checkingForWord = "";
         String hacker = "hackerrank";
