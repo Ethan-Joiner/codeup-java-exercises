@@ -431,7 +431,7 @@ public class Program {
     }
 
     static int birthdayCakeCandles(int[] ar) {
-//        Passed most, needs review
+//        Passed all tests
         int blown = 1;
         Arrays.sort(ar);
         for (int i = ar.length -2; i >= 0; i--) {
