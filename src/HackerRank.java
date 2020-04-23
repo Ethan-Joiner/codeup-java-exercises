@@ -127,7 +127,7 @@ public class HackerRank {
     }
 
 //    Take in an array and an int. Find how many pairs in the array are evenly divisible by k
-//    Return to this. Need to find on the site
+//    Pretty sure this is passed
     static int divisibleSumPairs(int n, int k, int[] ar) {
         int total = 0;
         for (int i = 0; i < n; i++) {
