@@ -252,7 +252,7 @@ public class HackerRank {
         return days;
     }
 
-//    N is number of days. First day start with 5. Divide in half a round down to find daily likes. Likes x 3 for next day.
+//    N is number of days. First day start with 5. Divide in half a round down to find daily likes. Likes x 3 for next day. Should be ez formula
     static int viralAdvertising(int n) {
         int totalLikes = 0;
 
