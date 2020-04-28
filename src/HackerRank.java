@@ -141,7 +141,7 @@ public class HackerRank {
     }
 
 //    Take in a list of items charged (bill), add together and remove index of k, if equals B correct, if not print difference
-//    Passed 10/12, needs review. Check your math
+//    Passed 10/12, needs review. Check your math. Make sure to cut excess
     static void bonAppetit(List<Integer> bill, int k, int b) {
         int total = 0;
         for (int item: bill) {
