@@ -70,7 +70,6 @@ public class HackerRank {
 //        String alpha = "abcdefghijklmnopqrstuvwxyz";
 //        for (int i = 0; i < h.length - 1; i ++) {
 //            if (h[i] > start && word.contains(alpha[i])) {
-//
 //            }
 //        }
 ////        Arrays.sort(h);
