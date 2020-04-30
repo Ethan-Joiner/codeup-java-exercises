@@ -63,7 +63,7 @@ public class HackerRank {
     }
 
 //    Each letter in the alphabet is assigned a number. Find the highest number times the length of the word
-//    Consider starting over, plan does not work
+//    Consider starting over, plan does not work. No dont give up
 //    static int designerPdfViewer(int[] h, String word) {
 //        int area;
 //        int start = 0;
