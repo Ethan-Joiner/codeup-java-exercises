@@ -254,7 +254,7 @@ public class HackerRank {
 // Eclipse is weird
     static int viralAdvertising(int n) {
         int totalLikes = 0;
-//        String test = "Why isnt this being counted?"
+        String test = "Why isnt this being counted?"
 
 
 
