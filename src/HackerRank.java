@@ -172,15 +172,15 @@ public class HackerRank {
 
 //    N is the number of pages in the book, p is the desired page. Write a function to determine the minimum number of page turns. Even numbered pages will be on the left, odds on the right
 //   Incomplete. Dont overthink. Move down
-    static int pageCount(int n, int p) {
-        int turnCount = 0;
-//        If the number of total pages - desired page is smaller, start from the back of the book, else start from the front
-        if (n - p < n - 1) {
-            if (n - p == 1 && )
-        } else if (n - p > n - 1) {
-        }
-        return turnCount;
-    }
+//    static int pageCount(int n, int p) {
+//        int turnCount = 0;
+////        If the number of total pages - desired page is smaller, start from the back of the book, else start from the front
+//        if (n - p < n - 1) {
+//            if (n - p == 1 && )
+//        } else if (n - p > n - 1) {
+//        }
+//        return turnCount;
+//    }
 
 // N is the number of "valleys" entered. String will containt U (+1) and D(-1). Starting from 0, n should be the number of times it gets below zero
 //    Passed all tests
@@ -255,7 +255,7 @@ public class HackerRank {
 // Eclipse is weird
     static int viralAdvertising(int n) {
         int totalLikes = 0;
-        String test = "Why isnt this being counted?"
+        String test = "Why isnt this being counted?";
 
 
 
