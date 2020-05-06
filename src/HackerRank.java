@@ -12,7 +12,7 @@ public class HackerRank {
     }
 
 //    Take in an array of grades and round up if passing and within 2 points of a multiple of 5
-//    Passed all tests. Testing commit. Testing push.
+//    Passed all tests. Testing commit. Testing push. Testing command line
     public static List<Integer> gradingStudents(List<Integer> grades) {
         List<Integer> rounded = new ArrayList<>();
         for (int grade : grades) {
@@ -251,8 +251,10 @@ public class HackerRank {
     }
 
 //    N is number of days. First day start with 5. Divide in half a round down to find daily likes. Likes x 3 for next day. Should be ez formula
+// Eclipse is weird
     static int viralAdvertising(int n) {
         int totalLikes = 0;
+//        String test = "Why isnt this being counted?"
 
 
 
