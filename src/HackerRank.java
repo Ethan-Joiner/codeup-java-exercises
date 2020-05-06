@@ -105,22 +105,22 @@ public class HackerRank {
     static int birthday(List<Integer> s, int d, int m) {
         int total = 0;
         int counter = 0;
-        for (int i = 0; i < s.size() - m; i++) {
-        	
-//            int start = i;
-//            for (int j = 0; j < m; j++) {
-//                if (start < s.size()) {
-//                    total += s.get(start);
-//                    start++;
-//                    System.out.println("Start is " + start);
-//                }
-//                if (total == d) {
-//                    System.out.println("I is " + i);
-//                    counter++;
-//                    total = 0;
-//                }
-//            }
-            total = 0;
+        for (int i = 0; i < s.size(); i++) {
+            
+            int start = i;
+            for (int j = 0; j < m; j++) {
+                if (start <= s.size() - m) {
+                    total += s.get(start);
+                    start++;
+                    System.out.println("Start is " + start);
+                }
+                
+            }
+            if (total == d) {
+                    System.out.println("I is " + i);
+                    counter++;
+                    total = 0;
+            }
         }
         return counter;
     }
