@@ -105,7 +105,7 @@ public class HackerRank {
     static int birthday(List<Integer> s, int d, int m) {
         int total = 0;
         int counter = 0;
-        for (int i = 0; i < s.size() - m; i++) {
+        for (int i = 0; i < s.size() - (m - 1); i++) {
             
             int start = i;
             for (int j = 0; j < m; j++) {
