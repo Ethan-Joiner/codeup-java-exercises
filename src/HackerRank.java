@@ -247,13 +247,13 @@ public class HackerRank {
     }
 
 //    N is number of days. First day start with 5. Divide in half a round down to find daily likes. Likes x 3 for next day. Should be ez formula
-//    Unsolved
+//    Passed all tests
     static int viralAdvertising(int n) {
         int totalLikes = 0;
         int dailyLikes = 0;
         int dailyShared= 5;
         for (int i = 0; i < n; i ++) {
-        	dailyLikes = Math.floor(dailyShared / 2);
+        	dailyLikes = (int) Math.floor(dailyShared / 2);
         	totalLikes += dailyLikes;
         	dailyShared = dailyLikes * 3;
         }
