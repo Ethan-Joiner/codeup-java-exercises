@@ -250,10 +250,14 @@ public class HackerRank {
 //    Unsolved
     static int viralAdvertising(int n) {
         int totalLikes = 0;
-        String test = "Why isnt this being counted?";
-
-
-
+        int dailyLikes = 0;
+        int dailyShared= 5;
+        for (int i = 0; i < n; i ++) {
+        	dailyLikes = Math.floor(dailyShared / 2);
+        	totalLikes += dailyLikes;
+        	dailyShared = dailyLikes * 3;
+        }
+       
         return totalLikes;
     }
 
