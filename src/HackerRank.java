@@ -261,17 +261,17 @@ public class HackerRank {
 }
 
 // For numbers 1 through 5, find which shows up the most times. If there is a tie, return the lower number
-static int migratoryBirds(List<Integer> arr) {
-	 int winnerBird = 0;
-	 int oneCount = 0;
-	 int twoCount = 0; 
-	 int threeCount = 0;
-	 int fourCount = 0;
-	 int fiveCount = 0;
-	 switch
-	
-	 
-	 
-	return winnerBird;
-
-}
+//static int migratoryBirds(List<Integer> arr) {
+//	 int winnerBird = 0;
+//	 int oneCount = 0;
+//	 int twoCount = 0; 
+//	 int threeCount = 0;
+//	 int fourCount = 0;
+//	 int fiveCount = 0;
+//	 switch
+//	
+//	 
+//	 
+//	return winnerBird;
+//
+//}
