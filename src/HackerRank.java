@@ -284,10 +284,10 @@ static int findDigits(int n) {
 	int total = 0;
 	String digits = Integer.toString(n);
 	for (int i = 0; i < n; i ++) {
-		if (n / Integer.parseInt(digits.charAt(i))) {
+		if (n / (int) digits.charAt(i) % 1 == 0) {
 			total++;
 		}
 	}
 	return total;
-
 }
+
