@@ -300,13 +300,13 @@ static int saveThePrisoner(int n, int m, int s) {
 	int unfortunateOne = 0;
 	int start = s;
 	for (int i = 0; i < m; i ++) {
-		
+		start++;
+		if (start == n) {
+			start = 0;
+		}
 	}
-	
-	
-	
+	unfortunateOne = start;
 	return unfortunateOne;
-
 }
 }
 
