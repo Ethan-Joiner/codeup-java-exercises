@@ -288,12 +288,7 @@ static int findDigits(int n) {
 	String digits = Integer.toString(n);
 	for (int i = 0; i < digits.length(); i ++) {
 		System.out.println(digits.charAt(i));
-		if (digits.charAt(i) == 0 ) {
-			System.out.println("Test");
-
-			total--;
-		}
-		if ((n / (int) digits.charAt(i)) % 1 == 0) {
+		if ((n / (int) digits.charAt(i)) % 1 == 0 && digits.charAt(i) != 48) {
 			total++;
 		}
 	}
