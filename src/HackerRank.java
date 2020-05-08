@@ -282,10 +282,12 @@ public class HackerRank {
 //	Take a number and find how many of the individual digit are evenly divisible
 static int findDigits(int n) {
 	int total = 0;
-	String digits = "";
-	
-	
+	String digits = Integer.toString(n);
+	for (int i = 0; i < n; i ++) {
+		if (n / Integer.parseInt(digits.charAt(i))) {
+			total++;
+		}
+	}
 	return total;
-
 
 }
