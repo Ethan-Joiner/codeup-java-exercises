@@ -282,18 +282,18 @@ public class HackerRank {
 //
 //}
 
-//	Take a number and find how many of the individual digit are evenly divisible
+//	Take a number and find how many of the individual digits are evenly divisible
 static int findDigits(int n) {
 	int total = 0;
 	String digits = Integer.toString(n);
 	for (int i = 0; i < digits.length(); i ++) {
 		System.out.println(digits.charAt(i));
-//		System.out.println((double) (n / (digits.charAt(i) - 48)));
+		System.out.println((n % (digits.charAt(i) - 48)));
 
 //		if ( (float) (n / (digits.charAt(i)) - 48) % 1 == 0 && digits.charAt(i) != 48) {
 //			total++;
 //		}
-		if ((n % (digits.charAt(i)) - 48) == 0 && digits.charAt(i) != 48) {
+		if (n % (digits.charAt(i) - 48) == 0 && digits.charAt(i) != 48) {
 			total++;
 		}
 	}
