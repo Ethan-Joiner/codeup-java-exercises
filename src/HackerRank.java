@@ -283,22 +283,22 @@ public class HackerRank {
 //}
 
 //	Take a number and find how many of the individual digits are evenly divisible
+//    All tests passed
 static int findDigits(int n) {
 	int total = 0;
 	String digits = Integer.toString(n);
 	for (int i = 0; i < digits.length(); i ++) {
-		System.out.println(digits.charAt(i));
-		System.out.println((n % (digits.charAt(i) - 48)));
-
-//		if ( (float) (n / (digits.charAt(i)) - 48) % 1 == 0 && digits.charAt(i) != 48) {
-//			total++;
-//		}
 		if (n % (digits.charAt(i) - 48) == 0 && digits.charAt(i) != 48) {
 			total++;
 		}
 	}
-	System.out.println(total);
 	return total;
+}
+
+// n is prisoners, m is pieces of candy, s is starting position. go in a "circle" until you land at the end and return that number
+static int saveThePrisoner(int n, int m, int s) {
+
+
 }
 }
 
