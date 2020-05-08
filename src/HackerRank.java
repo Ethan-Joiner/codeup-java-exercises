@@ -9,7 +9,7 @@ public class HackerRank {
 //        ArrayList<Integer> testing = new ArrayList<>(Arrays.asList(2,5,1,3,4,4,3,5,1,1,2,1,4,1,3,3,4,2,1));
 //        System.out.println(birthday(testing,18,7));
 //        System.out.println(findDigits(123456789));
-    	System.out.println(saveThePrisoner(3,7,3,));
+    	System.out.println(saveThePrisoner(3,7,3));
     }
 
 
@@ -300,11 +300,12 @@ static int findDigits(int n) {
 static int saveThePrisoner(int n, int m, int s) {
 	int unfortunateOne = 0;
 	int start = s;
-	for (int i = 0; i < m; i ++) {
-		start++;
+	for (int i = 0; i < m - 1; i ++) {
+		System.out.println(start);
 		if (start == n) {
 			start = 0;
 		}
+		start++;
 	}
 	unfortunateOne = start;
 	return unfortunateOne;
