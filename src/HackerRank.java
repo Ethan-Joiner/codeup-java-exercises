@@ -297,7 +297,15 @@ static int findDigits(int n) {
 
 // n is prisoners, m is pieces of candy, s is starting position. go in a "circle" until you land at the end and return that number
 static int saveThePrisoner(int n, int m, int s) {
-
+	int unfortunateOne = 0;
+	int start = s;
+	for (int i = 0; i < m; i ++) {
+		
+	}
+	
+	
+	
+	return unfortunateOne;
 
 }
 }
