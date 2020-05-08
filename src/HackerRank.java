@@ -8,7 +8,8 @@ public class HackerRank {
 //        int[] test = {2,5,1,3,4,4,3,5,1,1,2,1,4,1,3,3,4,2,1};
 //        ArrayList<Integer> testing = new ArrayList<>(Arrays.asList(2,5,1,3,4,4,3,5,1,1,2,1,4,1,3,3,4,2,1));
 //        System.out.println(birthday(testing,18,7));
-        System.out.println(findDigits(123456789));
+//        System.out.println(findDigits(123456789));
+    	System.out.println(saveThePrisoner(3,7,3,));
     }
 
 
