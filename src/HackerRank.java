@@ -281,6 +281,11 @@ public class HackerRank {
 
 //	Take a number and find how many of the individual digit are evenly divisible
 static int findDigits(int n) {
+	int total = 0;
+	String digits = "";
+	
+	
+	return total;
 
 
 }
