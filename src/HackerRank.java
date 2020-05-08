@@ -287,7 +287,11 @@ static int findDigits(int n) {
 	int total = 0;
 	String digits = Integer.toString(n);
 	for (int i = 0; i < digits.length(); i ++) {
-		if ((n / (int) digits.charAt(i)) % 1 == 0 && (int) digits.charAt(i) != 0) {
+		System.out.println(digits.charAt(i));
+		if (digits.charAt(i) == 0 ) {
+			continue;
+		}
+		if ((n / (int) digits.charAt(i)) % 1 == 0) {
 			total++;
 		}
 	}
