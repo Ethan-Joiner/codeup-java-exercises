@@ -299,10 +299,10 @@ static int findDigits(int n) {
 // n is prisoners, m is pieces of candy, s is starting position. go in a "circle" until you land at the end and return that number
 static int saveThePrisoner(int n, int m, int s) {
 	int start = s;
-	for (int i = 0; i < m - 1; i ++) {
+	for (int i = 1; i < m; i ++) {
 		System.out.println(start);
 		if (start == n) {
-			start = 0;
+			start -= n;
 		}
 		start++;
 	}
