@@ -278,3 +278,9 @@ public class HackerRank {
 //	return winnerBird;
 //
 //}
+
+//	Take a number and find how many of the individual digit are evenly divisible
+static int findDigits(int n) {
+
+
+}
