@@ -286,10 +286,11 @@ public class HackerRank {
 static int findDigits(int n) {
 	int total = 0;
 	String digits = Integer.toString(n);
-	System.out.println(digits);
 	for (int i = 0; i < digits.length(); i ++) {
 		System.out.println(digits.charAt(i));
-		if ((n / (int) digits.charAt(i)) % 1 == 0 && digits.charAt(i) != 48) {
+		System.out.println((double) (n / (digits.charAt(i) - 48)));
+
+		if ( (float) (n / (digits.charAt(i)) - 48) % 1 == 0 && digits.charAt(i) != 48) {
 			total++;
 		}
 	}
