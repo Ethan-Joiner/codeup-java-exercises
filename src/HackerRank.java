@@ -338,9 +338,11 @@ return y;
 
 // Should take in a number and print the factorial. How is this a medium problem?
 static void extraLongFactorials(int n) {
-	
-
-
+	long factorial = 1;
+	for (int i = 0; i < n; i ++) {
+		factorial *= i;
+	}
+System.out.println(factorial);
 }
 }
 
