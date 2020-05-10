@@ -324,9 +324,10 @@ public static int indexOfIntArray(int[] array, int key) {
 // Starting at 1, get the index of 1, then the index of that number + 1. Continue through length of array
 static int[] permutationEquation(int[] p) {
 	int[] y = new int[p.length];
-	int counter = 0;
+	int index = 0;
 	for (int i = 1; i <= p.length; i++) {
-		y[i - 1] = indexOfIntArray(p,indexOfIntArray(p,i)) + 1;
+		index = indexOfIntArray(p,i);
+		y[i - 1] = indexOfIntArray(p, index) + 1;
 	}
 return y;
 }
