@@ -13,6 +13,18 @@ public class HackerRank {
 //    	System.out.println(saveThePrisoner(3,7,3));
     	System.out.println(permutationEquation(test));
     }
+    
+ // Just a helper method
+    public static int indexOfIntArray(int[] array, int key) {
+        int returnvalue = -1;
+        for (int i = 0; i < array.length; ++i) {
+            if (key == array[i]) {
+                returnvalue = i;
+                break;
+            }
+        }
+        return returnvalue;
+    }
 
 
     
@@ -312,18 +324,8 @@ static int saveThePrisoner(int n, int m, int s) {
 	return start;
 }
 
-public static int indexOfIntArray(int[] array, int key) {
-    int returnvalue = -1;
-    for (int i = 0; i < array.length; ++i) {
-        if (key == array[i]) {
-            returnvalue = i;
-            break;
-        }
-    }
-    return returnvalue;
-}
-
 // Starting at 1, get the index of 1, then the index of that number + 1. Continue through length of array
+// Passed all tests
 static int[] permutationEquation(int[] p) {
 	int[] y = new int[p.length];
 	int index = 0;
@@ -333,8 +335,5 @@ static int[] permutationEquation(int[] p) {
 	}
 return y;
 }
-System.out.println("i is " + i);
-System.out.println("index of i is " + index);
-System.out.println("index of index is " + (indexOfIntArray(p, index) + 1));
 }
 
