@@ -312,8 +312,11 @@ static int saveThePrisoner(int n, int m, int s) {
 
 // Starting at 1, get the index of 1, then the index of that number + 1. Continue through length of array
 static int[] permutationEquation(int[] p) {
-	int[] y = [p.length()];
+	int[] y = new int[p.length];
 	int counter = 0;
+	for (int i = 0; i < p.length; i++) {
+		
+	}
 
 return y;
 }
