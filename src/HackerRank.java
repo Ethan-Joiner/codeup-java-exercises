@@ -340,7 +340,7 @@ return y;
 // Should take in a number and print the factorial. How is this a medium problem?
 static void extraLongFactorials(int n) {
 	BigInteger f = new BigInteger("1");
-	for (int i = 0; i < n; i ++) {
+	for (int i = 1; i <= n; i ++) {
         f = f.multiply(BigInteger.valueOf(i)); 
 	}
 System.out.println(f);
