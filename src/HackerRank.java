@@ -310,12 +310,23 @@ static int saveThePrisoner(int n, int m, int s) {
 	return start;
 }
 
+public static int indexOfIntArray(int[] array, int key) {
+    int returnvalue = -1;
+    for (int i = 0; i < array.length; ++i) {
+        if (key == array[i]) {
+            returnvalue = i;
+            break;
+        }
+    }
+    return returnvalue;
+}
+
 // Starting at 1, get the index of 1, then the index of that number + 1. Continue through length of array
 static int[] permutationEquation(int[] p) {
 	int[] y = new int[p.length];
 	int counter = 0;
-	for (int i = 0; i < p.length; i++) {
-		
+	for (int i = 1; i <= p.length; i++) {
+		y[i] = indexOfIntArray(p,indexOfIntArray(p,i)) + 1;
 	}
 
 return y;
