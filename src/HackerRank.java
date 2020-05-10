@@ -335,5 +335,12 @@ static int[] permutationEquation(int[] p) {
 	}
 return y;
 }
+
+// Should take in a number and print the factorial. How is this a medium problem?
+static void extraLongFactorials(int n) {
+	
+
+
+}
 }
 
