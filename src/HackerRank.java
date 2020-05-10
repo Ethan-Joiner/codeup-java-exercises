@@ -6,10 +6,12 @@ import java.util.List;
 public class HackerRank {
     public static void main(String[] args) {
 //        int[] test = {2,5,1,3,4,4,3,5,1,1,2,1,4,1,3,3,4,2,1};
+    	int[] test = {2,3,1};
 //        ArrayList<Integer> testing = new ArrayList<>(Arrays.asList(2,5,1,3,4,4,3,5,1,1,2,1,4,1,3,3,4,2,1));
 //        System.out.println(birthday(testing,18,7));
 //        System.out.println(findDigits(123456789));
-    	System.out.println(saveThePrisoner(3,7,3));
+//    	System.out.println(saveThePrisoner(3,7,3));
+    	System.out.println(permutationEquation(test));
     }
 
 
@@ -327,6 +329,8 @@ static int[] permutationEquation(int[] p) {
 	int index = 0;
 	for (int i = 1; i <= p.length; i++) {
 		index = indexOfIntArray(p,i);
+		System.out.println("i is " + i);
+		System.out.println("index of i is " + index);
 		y[i - 1] = indexOfIntArray(p, index) + 1;
 	}
 return y;
