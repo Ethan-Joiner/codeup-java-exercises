@@ -328,9 +328,10 @@ static int[] permutationEquation(int[] p) {
 	int[] y = new int[p.length];
 	int index = 0;
 	for (int i = 1; i <= p.length; i++) {
-		index = indexOfIntArray(p,i);
+		index = indexOfIntArray(p,i) + 1;
 		System.out.println("i is " + i);
 		System.out.println("index of i is " + index);
+		System.out.println("index of index is " + (indexOfIntArray(p, index) + 1));
 		y[i - 1] = indexOfIntArray(p, index) + 1;
 	}
 return y;
