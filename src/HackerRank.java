@@ -1,4 +1,5 @@
 import java.lang.reflect.Array;
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -338,11 +339,11 @@ return y;
 
 // Should take in a number and print the factorial. How is this a medium problem?
 static void extraLongFactorials(int n) {
-	long factorial = 1;
+	BigInteger f = new BigInteger("1");
 	for (int i = 0; i < n; i ++) {
-		factorial *= i;
+        f = f.multiply(BigInteger.valueOf(i)); 
 	}
-System.out.println(factorial);
+System.out.println(f);
 }
 }
 
