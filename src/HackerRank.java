@@ -338,6 +338,7 @@ return y;
 }
 
 // Should take in a number and print the factorial. How is this a medium problem?
+// Passed all tests
 static void extraLongFactorials(int n) {
 	BigInteger f = new BigInteger("1");
 	for (int i = 1; i <= n; i ++) {
