@@ -283,6 +283,7 @@ public class HackerRank {
 
 
 // For numbers 1 through 5, find which shows up the most times. If there is a tie, return the lower number
+//    Incomplete. Why are commits not working
 //static int migratoryBirds(List<Integer> arr) {
 //	 int winnerBird = 0;
 //	 int oneCount = 0;
@@ -302,6 +303,7 @@ public class HackerRank {
 //    All tests passed
 static int findDigits(int n) {
 	int total = 0;
+	int wth = 0;
 	String digits = Integer.toString(n);
 	for (int i = 0; i < digits.length(); i ++) {
 		if (n % (digits.charAt(i) - 48) == 0 && digits.charAt(i) != 48) {
@@ -312,7 +314,7 @@ static int findDigits(int n) {
 }
 
 // n is prisoners, m is pieces of candy, s is starting position. go in a "circle" until you land at the end and return that number
-// Incomplete. Getting runtime error
+// Incomplete. Getting runtime error. Needs to run faster
 static int saveThePrisoner(int n, int m, int s) {
 	int start = s;
 	for (int i = 1; i < m; i ++) {
