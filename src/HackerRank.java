@@ -337,7 +337,8 @@ static int[] permutationEquation(int[] p) {
 return y;
 }
 
-// Should take in a number and print the factorial. How is this a medium problem?
+// Should take in a number and print the factorial.
+// Take a number and multiply it by every number from 1 through it
 // Passed all tests
 static void extraLongFactorials(int n) {
 	BigInteger f = new BigInteger("1");
