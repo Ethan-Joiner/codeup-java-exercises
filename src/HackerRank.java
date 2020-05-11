@@ -326,6 +326,7 @@ static int saveThePrisoner(int n, int m, int s) {
 }
 
 // Starting at 1, get the index of 1, then the index of that number + 1. Continue through length of array
+// Basically start from 1, get the index of where it appears in the array, then get the index of that number
 // Passed all tests
 static int[] permutationEquation(int[] p) {
 	int[] y = new int[p.length];
