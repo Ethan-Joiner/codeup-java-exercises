@@ -303,7 +303,6 @@ public class HackerRank {
 //    All tests passed
 static int findDigits(int n) {
 	int total = 0;
-	int wth = 0;
 	String digits = Integer.toString(n);
 	for (int i = 0; i < digits.length(); i ++) {
 		if (n % (digits.charAt(i) - 48) == 0 && digits.charAt(i) != 48) {
