@@ -283,7 +283,7 @@ public class HackerRank {
 
 
 // For numbers 1 through 5, find which shows up the most times. If there is a tie, return the lower number
-//    Incomplete. Why are commits not working
+//    Incomplete. 
 //static int migratoryBirds(List<Integer> arr) {
 //	 int winnerBird = 0;
 //	 int oneCount = 0;
