@@ -185,7 +185,7 @@ public class HackerRank {
 //    }
 
 //    N is the number of pages in the book, p is the desired page. Write a function to determine the minimum number of page turns. Even numbered pages will be on the left, odds on the right
-//   Incomplete. Dont overthink. Move down
+//   Incomplete. Dont overthink. 
 //    static int pageCount(int n, int p) {
 //        int turnCount = 0;
 ////        If the number of total pages - desired page is smaller, start from the back of the book, else start from the front
