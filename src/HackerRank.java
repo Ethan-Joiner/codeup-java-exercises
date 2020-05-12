@@ -357,8 +357,10 @@ static int minimumDistances(int[] a) {
 	int minDistance = -1;
 	for (int i = 0; i < a.length; i++) {
 		for (int j = i + 1; j < a.length - 1; j++) {
+			System.out.println("test");
 			if (a[i] == a[j]) {
 				distance = j - i;
+				System.out.println("Distance is " + distance);
 				if (distance <= minDistance || minDistance == -1) {
 					minDistance = distance;
 				}
