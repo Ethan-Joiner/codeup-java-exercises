@@ -349,5 +349,10 @@ static void extraLongFactorials(int n) {
 	}
 System.out.println(f);
 }
+
+static int minimumDistances(int[] a) {
+
+
+}
 }
 
