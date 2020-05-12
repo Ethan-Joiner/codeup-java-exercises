@@ -353,15 +353,18 @@ System.out.println(f);
 // Find the smallest distance between two equal numbers in an array
 static int minimumDistances(int[] a) {
 	int distance= 0;
-	
+	int minDistance = 0;
 	for (int i = 0; i < a.length; i++) {
 		for (int j = i + 1; j < a.length - 1; j++) {
-			if (a[i] == a[j])
-		};
+			if (a[i] == a[j]) {
+				distance = j - i;
+				if (distance <= minDistance) {
+					minDistance = distance;
+				}
+			}
+		}
 	}
 	return distance;
-
-
 }
 }
 
