@@ -367,6 +367,9 @@ static int minimumDistances(int[] a) {
 			}
 		}
 	}
+	if (a.length == 2 && a[0] == a[1]) {
+		minDistance = 1;
+	}
 	return minDistance;
 }
 }
