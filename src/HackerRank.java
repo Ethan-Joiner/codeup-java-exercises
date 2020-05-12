@@ -350,7 +350,11 @@ static void extraLongFactorials(int n) {
 System.out.println(f);
 }
 
+// Find the smallest distance between two equal numbers in an array
 static int minimumDistances(int[] a) {
+	int distance = 0;
+	
+	return distance;
 
 
 }
