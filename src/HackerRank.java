@@ -301,6 +301,7 @@ public class HackerRank {
 //}
 
 //	Take a number and find how many of the individual digits are evenly divisible
+//    Had to use math due to char data type holding a numeric value. 
 //    All tests passed
 static int findDigits(int n) {
 	int total = 0;
