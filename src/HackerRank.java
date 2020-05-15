@@ -314,7 +314,7 @@ static int findDigits(int n) {
 }
 
 // n is prisoners, m is pieces of candy, s is starting position. go in a "circle" until you land at the end and return that number
-// Incomplete. Getting runtime error. Needs to run faster
+// Incomplete. Getting runtime error. Needs to run faster.
 static int saveThePrisoner(int n, int m, int s) {
 	int start = s;
 	for (int i = 1; i < m; i ++) {
