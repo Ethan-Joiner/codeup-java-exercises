@@ -352,6 +352,7 @@ System.out.println(f);
 }
 
 // Find the smallest distance between two equal numbers in an array
+// Went through the array with two loops. Each one starts at a number and continues until it finds an equal number. Create a temporary length between until a smaller one is found
 // Passed all tests
 static int minimumDistances(int[] a) {
 	int distance= 0;
