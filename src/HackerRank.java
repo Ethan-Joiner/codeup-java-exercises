@@ -381,6 +381,9 @@ static int howManyGames(int p, int d, int m, int s) {
 	int games = 0;
 	int price = p;
     // Return the number of games you can buy
+	for (int i = s; i > 0; i -= price) {
+		
+	}
 	
 	return games;
 
