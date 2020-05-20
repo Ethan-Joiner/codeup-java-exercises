@@ -375,5 +375,10 @@ static int minimumDistances(int[] a) {
 	}
 	return minDistance;
 }
+
+static int howManyGames(int p, int d, int m, int s) {
+    // Return the number of games you can buy
+
+}
 }
 
