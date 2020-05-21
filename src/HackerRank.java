@@ -384,7 +384,7 @@ static int howManyGames(int p, int d, int m, int s) {
 	int price = p - d;
 	int spent = p;
     // Return the number of games you can buy
-	for (int i = s; i >= price; i -= price) {
+	for (int i = s - p; i >= price; i -= price) {
 		System.out.println("Money " + i);
 		System.out.println("Spent " + spent);
 		System.out.println("Price " + price);
@@ -392,16 +392,20 @@ static int howManyGames(int p, int d, int m, int s) {
 		
 		if (price > m && price - d >= m) {
 			price -= d;
-
 			spent += price;
 			games++;
+			System.out.println("First");
 		} else if (price == m) {
 			spent += price;
 			games++;
+			System.out.println("Second");
+
 		} else if (price > m && price - d <= m) {
 			price = m;
 			spent += price;
 			games++;
+			System.out.println("Third");
+
 		}
 		
 	}
