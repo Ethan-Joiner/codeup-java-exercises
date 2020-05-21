@@ -380,15 +380,14 @@ static int minimumDistances(int[] a) {
 // Initial price is p, subtract by d each time until hitting m. S is your money. Return how many games you can buy
 // This all looks wrong. Try again tomorrow. 
 static int howManyGames(int p, int d, int m, int s) {
-	int games = 1;
+	int games = p > s ? 0 : 1;
 	int price = p;
 	int spent = p;
+	
     // Return the number of games you can buy
 	for (int i = s - p; i >= price; i -= price) {
-		if (p > s) {
-			games = 0;
-		} else 
-		if (price > m && price - d >= m) {
+		
+		 if (price > m && price - d >= m) {
 			price -= d;
 			spent += price;
 			games++;
