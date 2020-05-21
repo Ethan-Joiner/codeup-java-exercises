@@ -384,8 +384,9 @@ static int howManyGames(int p, int d, int m, int s) {
 	int price = p - d;
 	int spent = p;
     // Return the number of games you can buy
-	for (int i = s; i >= price; i -= price) {
+	for (int i = s - p; i >= price; i -= price) {
 		System.out.println(i);
+		System.out.println("Spent " + spent);
 		
 		if (price > m && price - d >= m) {
 			price -= d;
