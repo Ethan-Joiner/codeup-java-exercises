@@ -404,6 +404,11 @@ static int howManyGames(int p, int d, int m, int s) {
 	}
 	return games;
 }
+// x1 and x2 are starting positions. v1 and v2 are increments. return true if they reach the same number in the same number of jumps
+static String kangaroo(int x1, int v1, int x2, int v2) {
+
+
+}
 
 }
 
