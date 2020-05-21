@@ -13,7 +13,8 @@ public class HackerRank {
 //        System.out.println(findDigits(123456789));
 //    	System.out.println(saveThePrisoner(3,7,3));
 //    	System.out.println(permutationEquation(test));
-    	System.out.println(minimumDistances(test));
+//    	System.out.println(minimumDistances(test));
+    	System.out.println(howManyGames(20,3,6,80));
     }
     
  // Just a helper method
@@ -384,6 +385,8 @@ static int howManyGames(int p, int d, int m, int s) {
 	int spent = p;
     // Return the number of games you can buy
 	for (int i = s; i >= price; i -= price) {
+		System.out.println(i);
+		
 		if (price > m && price - d >= m) {
 			price -= d;
 			spent += price;
