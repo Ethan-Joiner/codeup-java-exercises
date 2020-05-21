@@ -378,15 +378,13 @@ static int minimumDistances(int[] a) {
 }
 
 // Initial price is p, subtract by d each time until hitting m. S is your money. Return how many games you can buy
-// This all looks wrong. Try again tomorrow. 
+// Passed all tests 
 static int howManyGames(int p, int d, int m, int s) {
 	int games = p > s ? 0 : 1;
 	int price = p;
 	int spent = p;
-	
     // Return the number of games you can buy
 	for (int i = s - p; i >= price; i -= price) {
-		
 		 if (price > m && price - d >= m) {
 			price -= d;
 			spent += price;
@@ -407,9 +405,5 @@ static int howManyGames(int p, int d, int m, int s) {
 	return games;
 }
 
-//System.out.println("Money " + i);
-//System.out.println("Spent " + spent);
-//System.out.println("Price " + price);
-//System.out.println("Games " + games);
 }
 
