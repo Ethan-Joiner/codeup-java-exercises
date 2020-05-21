@@ -5,7 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class HackerRank {
-    public static void main(String[] args) {
+    private static final int Infinity = 0;
+	public static void main(String[] args) {
 //        int[] test = {2,5,1,3,4,4,3,5,1,1,2,1,4,1,3,3,4,2,1};
     	int[] test = {1,1};
 //        ArrayList<Integer> testing = new ArrayList<>(Arrays.asList(2,5,1,3,4,4,3,5,1,1,2,1,4,1,3,3,4,2,1));
@@ -406,7 +407,18 @@ static int howManyGames(int p, int d, int m, int s) {
 }
 // x1 and x2 are starting positions. v1 and v2 are increments. return true if they reach the same number in the same number of jumps
 static String kangaroo(int x1, int v1, int x2, int v2) {
-
+	String same = "NO";
+	int k1 = x1;
+	int k2 = x2;
+	for (int i = 0; i < 1000000; i++) {
+		k1 += v1;
+		k2 += v2;
+		if (k1 == k2) {
+			same = "YES";
+			break;
+		}	
+	}
+	return same;
 
 }
 
