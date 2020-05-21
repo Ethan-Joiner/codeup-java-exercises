@@ -425,9 +425,10 @@ static String kangaroo(int x1, int v1, int x2, int v2) {
 // Starting at the number a, go through each number testing for square roots until reaching b. return the number
 static int squares(int a, int b) {
 	int totalSquares = 0;
-	for (int i = a; i <= b; i++) {
+	for (int i = a; i <= b;) {
 		if (Math.sqrt(i) % 1 == 0) {
 			totalSquares++;
+			i += Math.sqrt(i) + 2;
 		}
 	}
 	return totalSquares;
