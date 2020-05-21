@@ -381,20 +381,25 @@ static int minimumDistances(int[] a) {
 // This all looks wrong. Try again tomorrow. 
 static int howManyGames(int p, int d, int m, int s) {
 	int games = 1;
-	int price = p;
+	int price = p - d;
 	int spent = p;
     // Return the number of games you can buy
-	for (int i = s - p; i >= price; i -= price) {
-		System.out.println("Money" + i);
+	for (int i = s; i >= price; i -= price) {
+		System.out.println("Money " + i);
 		System.out.println("Spent " + spent);
 		System.out.println("Price " + price);
 		System.out.println("Games " + games);
 		
 		if (price > m && price - d >= m) {
 			price -= d;
+
 			spent += price;
 			games++;
 		} else if (price == m) {
+			spent += price;
+			games++;
+		} else if (price > m && price - d <= m) {
+			price = m;
 			spent += price;
 			games++;
 		}
