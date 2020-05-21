@@ -384,16 +384,17 @@ static int howManyGames(int p, int d, int m, int s) {
 	int spent = p;
     // Return the number of games you can buy
 	for (int i = s; i >= price; i -= price) {
-		if (price >= m && price - d >= m) {
+		if (price > m && price - d >= m) {
 			price -= d;
+			spent += price;
+			games++;
+		} else if (price == m) {
 			spent += price;
 			games++;
 		}
 		
 	}
-	
 	return games;
-
 }
 }
 
