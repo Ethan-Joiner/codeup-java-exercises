@@ -410,7 +410,7 @@ static String kangaroo(int x1, int v1, int x2, int v2) {
 	String same = "NO";
 	int k1 = x1;
 	int k2 = x2;
-	for (int i = 0; i < 1000000; i++) {
+	for (int i = 0; i < 10000; i++) {
 		k1 += v1;
 		k2 += v2;
 		if (k1 == k2) {
@@ -419,7 +419,6 @@ static String kangaroo(int x1, int v1, int x2, int v2) {
 		}	
 	}
 	return same;
-
 }
 
 }
