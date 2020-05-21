@@ -406,6 +406,7 @@ static int howManyGames(int p, int d, int m, int s) {
 	return games;
 }
 // x1 and x2 are starting positions. v1 and v2 are increments. return true if they reach the same number in the same number of jumps
+// Passed all tests
 static String kangaroo(int x1, int v1, int x2, int v2) {
 	String same = "NO";
 	int k1 = x1;
@@ -419,6 +420,12 @@ static String kangaroo(int x1, int v1, int x2, int v2) {
 		}	
 	}
 	return same;
+}
+
+// Starting at the number a, go through each number testing for square roots until reaching b. return the number
+static int squares(int a, int b) {
+
+
 }
 
 }
