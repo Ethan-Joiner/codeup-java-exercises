@@ -429,6 +429,8 @@ static int squares(int a, int b) {
 		if (Math.sqrt(i) % 1 == 0) {
 			totalSquares++;
 			i += Math.sqrt(i) + 2;
+		} else {
+			i++;
 		}
 	}
 	return totalSquares;
