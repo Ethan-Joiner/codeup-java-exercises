@@ -428,6 +428,11 @@ static int squares(int a, int b) {
 
     return totalSquares;
 }
+// a is array of ints, k is the number of shifts, queries is which indices need to be represented. Each shift is taking the last element off and moving it to the front
+static int[] circularArrayRotation(int[] a, int k, int[] queries) {
+
+
+}
 
 }
 
