@@ -19,7 +19,7 @@ public class HackerRank {
 //    	System.out.println(permutationEquation(test));
 //    	System.out.println(minimumDistances(test));
 //    	System.out.println(howManyGames(100,1,1,99));
-    	cardDeck(randomSuit, randomCard);
+    	cardDeck();
     }
     
  // Just a helper method
@@ -459,9 +459,9 @@ static void cardDeck() {
 	}
 	for (int i = 0; i < 2; i ++) {
 		 int randomSuit = (int) (Math.random() * 4);
-		 int randomCard = (int) (Math.random() * 14);
-//	System.out.println(deck[randomSuit][randomCard]);
-	System.out.println(randomSuit);
+		 int randomCard = (int) (Math.random() * 13);
+	System.out.println(deck[randomSuit][randomCard]);
+//	System.out.println(randomSuit);
 	}
 
 	
