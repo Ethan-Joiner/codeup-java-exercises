@@ -437,6 +437,8 @@ static int squares(int a, int b) {
 //}
 
 // Saw this is a question for interviews. Need practice with 2d arrays. I know this is probably bad code
+static int randomSuit = (int) Math.random() * 3;
+static int randomCard = (int) Math.random() * 13;
 static void cardDeck() {
 	String[] suits = {"H", "D", "C", "S"};
 	String[] cards = {"2","3","4","5","6","7","8","9","10","J","Q","K","A"};
@@ -449,10 +451,12 @@ static void cardDeck() {
 	}
 	for (String[] suit : deck) {
 		for (String card: suit) {
-			System.out.println(card);
 		}
 		
 	}
+	System.out.println(deck[randomSuit][randomCard]);
+	System.out.println(deck[randomSuit][randomCard]);
+
 	
 }
 
