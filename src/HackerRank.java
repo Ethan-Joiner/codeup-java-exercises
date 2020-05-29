@@ -15,7 +15,8 @@ public class HackerRank {
 //    	System.out.println(saveThePrisoner(3,7,3));
 //    	System.out.println(permutationEquation(test));
 //    	System.out.println(minimumDistances(test));
-    	System.out.println(howManyGames(100,1,1,99));
+//    	System.out.println(howManyGames(100,1,1,99));
+    	cardDeck();
     }
     
  // Just a helper method
@@ -435,7 +436,7 @@ static int squares(int a, int b) {
 //
 //}
 
-// Saw this is a question for interviews. Need practice with 2d arrays
+// Saw this is a question for interviews. Need practice with 2d arrays. I know this is probably bad code
 static void cardDeck() {
 	String[] suits = {"H", "D", "C", "S"};
 	String[] cards = {"2","3","4","5","6","7","8","9","10","J","Q","K","A"};
