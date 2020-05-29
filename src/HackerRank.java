@@ -435,7 +435,7 @@ static int squares(int a, int b) {
 //
 //}
 
-
+// Saw this is a question for interviews. Need practice with 2d arrays
 static void cardDeck() {
 	
 }
