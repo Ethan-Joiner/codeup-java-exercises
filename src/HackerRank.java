@@ -443,7 +443,7 @@ static void cardDeck() {
 	String[] suits = {"H", "D", "C", "S"};
 	String[] cards = {"2","3","4","5","6","7","8","9","10","J","Q","K","A"};
 	String[][] deck = new String[suits.length][cards.length];
-    int randomSuit = (int) Math.random() * 3;
+    int randomSuit = (int) (Math.random() * 4);
     int randomCard = (int) Math.random() * 13;
 	for (int i = 0; i < deck.length; i++) {
 		for (int j = 0; j < deck[i].length;j++) {
@@ -457,8 +457,8 @@ static void cardDeck() {
 		
 	}
 	for (int i = 0; i < 2; i ++) {
-	System.out.println(deck[randomSuit][randomCard]);
-	System.out.println(deck[randomSuit][randomCard]);
+//	System.out.println(deck[randomSuit][randomCard]);
+	System.out.println(randomSuit);
 	}
 
 	
