@@ -440,7 +440,10 @@ static void cardDeck() {
 	String[] suits = {"H", "D", "C", "S"};
 	String[] cards = {"2","3","4","5","6","7","8","9","10","J","Q","K","A"};
 	String[][] deck = new String[suits.length][cards.length];
-	for (int i = 0; i < suits.length; i++) {
+	for (int i = 0; i < deck.length; i++) {
+		for (int j = 0; j <deck[i].length;j++) {
+			deck[i][j] = suits[i].concat(cards[j]);
+		}
 		
 	}
 	
