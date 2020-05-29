@@ -6,8 +6,7 @@ import java.util.List;
 
 public class HackerRank {
     private static final int Infinity = 0;
-    static int randomSuit = (int) Math.random() * 3;
-    static int randomCard = (int) Math.random() * 13;
+
 	public static void main(String[] args) {
 //        int[] test = {2,5,1,3,4,4,3,5,1,1,2,1,4,1,3,3,4,2,1};
     	int[] test = {1,1};
@@ -444,6 +443,8 @@ static void cardDeck() {
 	String[] suits = {"H", "D", "C", "S"};
 	String[] cards = {"2","3","4","5","6","7","8","9","10","J","Q","K","A"};
 	String[][] deck = new String[suits.length][cards.length];
+    int randomSuit = (int) Math.random() * 3;
+    int randomCard = (int) Math.random() * 13;
 	for (int i = 0; i < deck.length; i++) {
 		for (int j = 0; j < deck[i].length;j++) {
 			deck[i][j] = suits[i].concat(cards[j]);
@@ -455,8 +456,10 @@ static void cardDeck() {
 		}
 		
 	}
+	for (int i = 0; i < 2; i ++) {
 	System.out.println(deck[randomSuit][randomCard]);
 	System.out.println(deck[randomSuit][randomCard]);
+	}
 
 	
 }
