@@ -19,7 +19,7 @@ public class HackerRank {
 //    	System.out.println(permutationEquation(test));
 //    	System.out.println(minimumDistances(test));
 //    	System.out.println(howManyGames(100,1,1,99));
-    	cardDeck();
+    	cardDeck(randomSuit, randomCard);
     }
     
  // Just a helper method
@@ -441,7 +441,7 @@ static int squares(int a, int b) {
 
 // Saw this is a question for interviews. Need practice with 2d arrays. I know this is probably bad code
 
-static void cardDeck(String suit, String card) {
+static void cardDeck(int type, int symbol) {
 	String[] suits = {"H", "D", "C", "S"};
 	String[] cards = {"2","3","4","5","6","7","8","9","10","J","Q","K","A"};
 	String[][] deck = new String[suits.length][cards.length];
@@ -459,7 +459,7 @@ static void cardDeck(String suit, String card) {
 	}
 	for (int i = 0; i < 2; i ++) {
 //	System.out.println(deck[randomSuit][randomCard]);
-	System.out.println(suit);
+	System.out.println(type);
 	}
 
 	
