@@ -10,6 +10,8 @@ public class HackerRank {
 	public static void main(String[] args) {
 //        int[] test = {2,5,1,3,4,4,3,5,1,1,2,1,4,1,3,3,4,2,1};
     	int[] test = {1,1};
+    	int randomSuit = (int) (Math.random() * 4);
+    	int randomCard = (int) (Math.random() * 14);
 //        ArrayList<Integer> testing = new ArrayList<>(Arrays.asList(2,5,1,3,4,4,3,5,1,1,2,1,4,1,3,3,4,2,1));
 //        System.out.println(birthday(testing,18,7));
 //        System.out.println(findDigits(123456789));
@@ -439,12 +441,11 @@ static int squares(int a, int b) {
 
 // Saw this is a question for interviews. Need practice with 2d arrays. I know this is probably bad code
 
-static void cardDeck() {
+static void cardDeck(String suit, String card) {
 	String[] suits = {"H", "D", "C", "S"};
 	String[] cards = {"2","3","4","5","6","7","8","9","10","J","Q","K","A"};
 	String[][] deck = new String[suits.length][cards.length];
-    int randomSuit = (int) (Math.random() * 4);
-    int randomCard = (int) Math.random() * 13;
+ 
 	for (int i = 0; i < deck.length; i++) {
 		for (int j = 0; j < deck[i].length;j++) {
 			deck[i][j] = suits[i].concat(cards[j]);
@@ -458,7 +459,7 @@ static void cardDeck() {
 	}
 	for (int i = 0; i < 2; i ++) {
 //	System.out.println(deck[randomSuit][randomCard]);
-	System.out.println(randomSuit);
+	System.out.println(suit);
 	}
 
 	
