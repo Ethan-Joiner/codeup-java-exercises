@@ -6,12 +6,13 @@ import java.util.List;
 
 public class HackerRank {
     private static final int Infinity = 0;
+	static int randomSuit = (int) (Math.random() * 4);
+	static int randomCard = (int) (Math.random() * 14);
 
 	public static void main(String[] args) {
 //        int[] test = {2,5,1,3,4,4,3,5,1,1,2,1,4,1,3,3,4,2,1};
     	int[] test = {1,1};
-    	int randomSuit = (int) (Math.random() * 4);
-    	int randomCard = (int) (Math.random() * 14);
+    
 //        ArrayList<Integer> testing = new ArrayList<>(Arrays.asList(2,5,1,3,4,4,3,5,1,1,2,1,4,1,3,3,4,2,1));
 //        System.out.println(birthday(testing,18,7));
 //        System.out.println(findDigits(123456789));
