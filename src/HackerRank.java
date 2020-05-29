@@ -437,6 +437,8 @@ static int squares(int a, int b) {
 
 // Saw this is a question for interviews. Need practice with 2d arrays
 static void cardDeck() {
+	String[] suits = {"H", "D", "C", "S"};
+	String[] cards = {"2","3","4","5","6","7","8","9","10","J","Q","K","A"};
 	
 }
 
