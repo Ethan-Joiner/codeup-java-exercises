@@ -461,7 +461,6 @@ static void cardDeck() {
 		 int randomSuit = (int) (Math.random() * 4);
 		 int randomCard = (int) (Math.random() * 13);
 	System.out.println(deck[randomCard][randomSuit]);
-//	System.out.println(randomSuit);
 	}
 
 	
