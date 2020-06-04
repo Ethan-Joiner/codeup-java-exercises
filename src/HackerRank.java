@@ -470,7 +470,7 @@ public static int diagonalDifference(List<List<Integer>> arr) {
 	int difference = 0;
 	int sum1 = 0;
 	int sum2 = 0;
-    // Write your code here
+    // Should be able to do a loop starting at [0,0], and increase the position by 1 on each axis while totalling
 	
 	
 
