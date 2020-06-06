@@ -489,6 +489,12 @@ static int getMoneySpent(int[] keyboards, int[] drives, int b) {
 
 }
 
+//Too long to describe. See website
+static int formingMagicSquare(int[][] s) {
+
+
+}
+
 }
 
 
