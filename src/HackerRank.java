@@ -495,6 +495,12 @@ static int formingMagicSquare(int[][] s) {
 
 }
 
+
+public static int pickingNumbers(List<Integer> a) {
+    // Write your code here
+
+    }
+
 }
 
 
