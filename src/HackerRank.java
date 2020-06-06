@@ -481,6 +481,14 @@ static int migratoryBirds(List<Integer> arr) {
 
 }
 
+// Too long to describe. See website
+static int getMoneySpent(int[] keyboards, int[] drives, int b) {
+    /*
+     * Write your code here.
+     */
+
+}
+
 }
 
 
