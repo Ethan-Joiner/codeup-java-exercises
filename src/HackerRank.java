@@ -501,6 +501,11 @@ public static int pickingNumbers(List<Integer> a) {
 
     }
 
+static int jumpingOnClouds(int[] c, int k) {
+
+
+}
+
 }
 
 
