@@ -472,12 +472,13 @@ public static int diagonalDifference(List<List<Integer>> arr) {
 	int sum2 = 0;
     // Should be able to do a loop starting at [0,0], and increase the position by 1 on each axis while totalling
 	
-	
-
 	return difference;
     }
 
+static int migratoryBirds(List<Integer> arr) {
 
+
+}
 
 }
 
