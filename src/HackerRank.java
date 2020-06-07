@@ -441,6 +441,7 @@ static int squares(int a, int b) {
 
 // Saw this is a question for interviews. Need practice with 2d arrays. I know this is probably bad code
 // Created the cards. Created 2d array for deck. First for loop to populate deck. First forEach loop to split by suit. Second forEach to grab each card individually. Creating random variables for each axis of 2d array. Standard for loop to grab 2 random cards.
+// Incomplete
 static void cardDeck() {
 	String[] suits = {"H", "D", "C", "S"};
 	String[] cards = {"2","3","4","5","6","7","8","9","10","J","Q","K","A"};
@@ -494,6 +495,7 @@ static int getMoneySpent(int[] keyboards, int[] drives, int b) {
 
 //Too long to describe. See website
 static int formingMagicSquare(int[][] s) {
+	
 
 
 }
