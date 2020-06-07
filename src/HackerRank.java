@@ -475,8 +475,11 @@ public static int diagonalDifference(List<List<Integer>> arr) {
 	return difference;
     }
 
-// Take an array of numbers. Return the one that shows up the most. If tired, show the lowest number.
+// Take an array of numbers. Return the one that shows up the most. If tied, show the lowest number.
 static int migratoryBirds(List<Integer> arr) {
+	int mostBird = 0;
+	
+	return mostBird;
 
 
 }
