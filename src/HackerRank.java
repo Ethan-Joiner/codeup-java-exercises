@@ -479,20 +479,23 @@ public static int diagonalDifference(List<List<Integer>> arr) {
 
 // Take an array of numbers. Return the one that shows up the most. If tied, show the lowest number.
 static int migratoryBirds(List<Integer> arr) {
-	int mostBird = 0;
-	int currentNumber = 0;
-	int currentBird = 0;
+	int mostBirdType = arr.get(0);
+	int mostBirdAmount = 0;
+	int currentBirdAmount = 0;
 	
 //	List<Integer> test = new ArrayList<>(Arrays.asList(1,1,1,2,2,3,3,4,4,4));
 
 	Collections.sort(arr);
 	for (int i = 0; i < arr.size(); i++) {
-		currentBird = arr.get(i);
-		currentNumber = arr.lastIndexOf(arr.get(i)) - arr.get(i) + 1;
+		currentBirdAmount = arr.lastIndexOf(arr.get(i)) - arr.get(i) + 1;
+		if (currentBirdAmount > mostBirdAmount) {
+			mostBirdType = arr.get(i);
+			mostBirdAmount = currentBirdAmount;
+		}
+		i = arr.lastIndexOf(arr.get(i));
+		
 	}
-	
-	return mostBird;
-
+	return mostBirdType;
 
 }
 
