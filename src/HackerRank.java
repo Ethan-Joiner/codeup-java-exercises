@@ -11,7 +11,9 @@ public class HackerRank {
 
 	public static void main(String[] args) {
 //        int[] test = {2,5,1,3,4,4,3,5,1,1,2,1,4,1,3,3,4,2,1};
-    	int[] test = {1,1};
+//    	int[] test = {1,1};
+    	List<Integer> test = new ArrayList<>(Arrays.asList(1,2,3,4,5,4,3,2,1,3,4));
+
     
 //        ArrayList<Integer> testing = new ArrayList<>(Arrays.asList(2,5,1,3,4,4,3,5,1,1,2,1,4,1,3,3,4,2,1));
 //        System.out.println(birthday(testing,18,7));
@@ -20,7 +22,8 @@ public class HackerRank {
 //    	System.out.println(permutationEquation(test));
 //    	System.out.println(minimumDistances(test));
 //    	System.out.println(howManyGames(100,1,1,99));
-    	cardDeck();
+//    	cardDeck();
+    	migratoryBirds(test);
     }
     
  // Just a helper method
@@ -483,7 +486,6 @@ static int migratoryBirds(List<Integer> arr) {
 	int mostBirdAmount = 0;
 	int currentBirdAmount = 0;
 	
-//	List<Integer> test = new ArrayList<>(Arrays.asList(1,1,1,2,2,3,3,4,4,4));
 
 	Collections.sort(arr);
 	for (int i = 0; i < arr.size(); i++) {
@@ -507,23 +509,23 @@ static int getMoneySpent(int[] keyboards, int[] drives, int b) {
 
 }
 
-//Too long to describe. See website
-static int formingMagicSquare(int[][] s) {
-	
-
-
-}
-
-
-public static int pickingNumbers(List<Integer> a) {
-    // Write your code here
-
-    }
-
-static int jumpingOnClouds(int[] c, int k) {
-
-
-}
+////Too long to describe. See website
+//static int formingMagicSquare(int[][] s) {
+//	
+//
+//
+//}
+//
+//
+//public static int pickingNumbers(List<Integer> a) {
+//    // Write your code here
+//
+//    }
+//
+//static int jumpingOnClouds(int[] c, int k) {
+//
+//
+//}
 
 }
 
