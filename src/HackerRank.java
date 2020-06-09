@@ -2,6 +2,7 @@ import java.lang.reflect.Array;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class HackerRank {
@@ -479,6 +480,11 @@ public static int diagonalDifference(List<List<Integer>> arr) {
 // Take an array of numbers. Return the one that shows up the most. If tied, show the lowest number.
 static int migratoryBirds(List<Integer> arr) {
 	int mostBird = 0;
+	List<Integer> mostBirds = new ArrayList<>();
+	Collections.sort(arr);
+	for (int i = 0; i < arr.size(); i++) {
+		
+	}
 	
 	return mostBird;
 
