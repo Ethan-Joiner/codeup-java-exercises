@@ -472,6 +472,7 @@ static void cardDeck() {
 	
 }
 // Take the total sum of both diagonals of a 2d matrix, and return the absolute difference
+// Passed all tests
 public static int diagonalDifference(List<List<Integer>> arr) {
 	int difference = 0;
 	int sum1 = 0;
