@@ -480,11 +480,12 @@ public static int diagonalDifference(List<List<Integer>> arr) {
     // Should be able to do a loop starting at [0,0], and increase the position by 1 on each axis while totalling
 	for (int i = 0; i < arr.size(); i++) {
 		sum1 += arr.get(i).get(i);
-		sum2 += arr.get(reversal).get(reversal);
+		sum2 += arr.get(i).get(reversal);
+		System.out.println(sum1);
+		System.out.println(sum2);
 		reversal--;
 	}
-	System.out.println(sum1);
-	System.out.println(sum2);
+
 
 	difference = Math.abs(sum1 - sum2);
 	return difference;
