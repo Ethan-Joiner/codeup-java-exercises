@@ -481,6 +481,7 @@ public static int diagonalDifference(List<List<Integer>> arr) {
     }
 
 // Take an array of numbers. Return the one that shows up the most. If tied, show the lowest number.
+// Passed all tests
 static int migratoryBirds(List<Integer> arr) {
 	int mostBirdType = arr.get(0);
 	int mostBirdAmount = 0;
