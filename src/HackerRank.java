@@ -12,7 +12,7 @@ public class HackerRank {
 	public static void main(String[] args) {
 //        int[] test = {2,5,1,3,4,4,3,5,1,1,2,1,4,1,3,3,4,2,1};
 //    	int[] test = {1,1};
-    	List<Integer> test = new ArrayList<>(Arrays.asList(1,2,3,4,5,4,3,2,1,3,4));
+    	List<List<Integer> >test = new ArrayList<>(Arrays.asList(new ArrayList<>(Arrays.asList(11,2,4)),new ArrayList<>(Arrays.asList(4,5,6)),new ArrayList<>(Arrays.asList(10,8,-12)));
 
     
 //        ArrayList<Integer> testing = new ArrayList<>(Arrays.asList(2,5,1,3,4,4,3,5,1,1,2,1,4,1,3,3,4,2,1));
@@ -23,7 +23,8 @@ public class HackerRank {
 //    	System.out.println(minimumDistances(test));
 //    	System.out.println(howManyGames(100,1,1,99));
 //    	cardDeck();
-     	migratoryBirds(test);
+//     	migratoryBirds(test);
+    	diagonalDifference();
     }
     
  // Just a helper method
@@ -475,8 +476,14 @@ public static int diagonalDifference(List<List<Integer>> arr) {
 	int difference = 0;
 	int sum1 = 0;
 	int sum2 = 0;
+	int reversal = arr.size() - 1;
     // Should be able to do a loop starting at [0,0], and increase the position by 1 on each axis while totalling
-	
+	for (int i = 0; i < arr.size(); i++) {
+		sum1 += arr.get(i).get(i);
+		sum2 += arr.get(reversal).get(reversal);
+		reversal--;
+	}
+	difference = Math.abs(sum1 - sum2);
 	return difference;
     }
 
