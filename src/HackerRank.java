@@ -12,7 +12,7 @@ public class HackerRank {
 	public static void main(String[] args) {
 //        int[] test = {2,5,1,3,4,4,3,5,1,1,2,1,4,1,3,3,4,2,1};
 //    	int[] test = {1,1};
-    	List<List<Integer> >test = new ArrayList<>(Arrays.asList(new ArrayList<>(Arrays.asList(11,2,4)),new ArrayList<>(Arrays.asList(4,5,6)),new ArrayList<>(Arrays.asList(10,8,-12)));
+    	List<List<Integer> >test = new ArrayList<>(Arrays.asList(new ArrayList<>(Arrays.asList(11,2,4)),new ArrayList<>(Arrays.asList(4,5,6)),new ArrayList<>(Arrays.asList(10,8,-12))));
 
     
 //        ArrayList<Integer> testing = new ArrayList<>(Arrays.asList(2,5,1,3,4,4,3,5,1,1,2,1,4,1,3,3,4,2,1));
@@ -24,7 +24,7 @@ public class HackerRank {
 //    	System.out.println(howManyGames(100,1,1,99));
 //    	cardDeck();
 //     	migratoryBirds(test);
-    	diagonalDifference();
+    	diagonalDifference(test);
     }
     
  // Just a helper method
@@ -483,6 +483,9 @@ public static int diagonalDifference(List<List<Integer>> arr) {
 		sum2 += arr.get(reversal).get(reversal);
 		reversal--;
 	}
+	System.out.println(sum1);
+	System.out.println(sum2);
+
 	difference = Math.abs(sum1 - sum2);
 	return difference;
     }
