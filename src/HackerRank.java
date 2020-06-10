@@ -490,7 +490,9 @@ static int migratoryBirds(List<Integer> arr) {
 	Collections.sort(arr);
 	for (int i = 0; i < arr.size(); i++) {
 		System.out.println("Index " + i);
-		currentBirdAmount = arr.lastIndexOf(arr.get(i)) - arr.get(i) + 1;
+		System.out.println("Last Index " + arr.lastIndexOf(arr.get(i)));
+
+		currentBirdAmount = arr.lastIndexOf(arr.get(i)) - i + 1;
 		System.out.println("Current bird amount " + currentBirdAmount);
 		System.out.println("Current bird " + arr.get(i));
 		System.out.println("Most bird amount " + mostBirdAmount);
