@@ -540,10 +540,10 @@ static int getMoneySpent(int[] keyboards, int[] drives, int b) {
 //}
 //
 //
-//public static int pickingNumbers(List<Integer> a) {
-//    // Write your code here
-//
-//    }
+// Take an array of numbers and find the longest length of numbers with an absolute difference of no more than 1
+public static int pickingNumbers(List<Integer> a) {
+
+   }
 //
 //static int jumpingOnClouds(int[] c, int k) {
 //
