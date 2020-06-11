@@ -12,8 +12,8 @@ public class HackerRank {
 	public static void main(String[] args) {
 //        int[] test = {2,5,1,3,4,4,3,5,1,1,2,1,4,1,3,3,4,2,1};
 //    	int[] test = {1,1};
-    	List<List<Integer> >test = new ArrayList<>(Arrays.asList(new ArrayList<>(Arrays.asList(11,2,4)),new ArrayList<>(Arrays.asList(4,5,6)),new ArrayList<>(Arrays.asList(10,8,-12))));
-
+    	// List<List<Integer> >test = new ArrayList<>(Arrays.asList(new ArrayList<>(Arrays.asList(11,2,4)),new ArrayList<>(Arrays.asList(4,5,6)),new ArrayList<>(Arrays.asList(10,8,-12))));
+		List<Integer> test = new ArrayList<>(Arrays.asList(1,2,2,3,1,2));
     
 //        ArrayList<Integer> testing = new ArrayList<>(Arrays.asList(2,5,1,3,4,4,3,5,1,1,2,1,4,1,3,3,4,2,1));
 //        System.out.println(birthday(testing,18,7));
@@ -25,7 +25,8 @@ public class HackerRank {
 //    	cardDeck();
 //     	migratoryBirds(test);
 		// diagonalDifference(test);
-		saveThePrisoner(352926151, 380324688, 94730870);
+		// saveThePrisoner(352926151, 380324688, 94730870);
+		pickingNumbers(test);
     }
     
  // Just a helper method
@@ -546,9 +547,11 @@ public static int pickingNumbers(List<Integer> a) {
 	int currentLongest = 0;
 	int startingPoint = a.get(0);
 	Collections.sort(a);
-	for (int i = 0; i < a.size(); i++) {
+	for (int i = 0; i < a.size() - 1; i++) {
 		if (a.get(i + 1) - startingPoint <= 1){
 			currentLongest++;
+			System.out.println("Current " + currentLongest);
+			System.out.println("Number " + a.get(i));
 		} else {
 			currentLongest = 0;
 			startingPoint = i;
