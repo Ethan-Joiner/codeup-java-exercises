@@ -542,6 +542,15 @@ static int getMoneySpent(int[] keyboards, int[] drives, int b) {
 //
 // Take an array of numbers and find the longest length of numbers with an absolute difference of no more than 1
 public static int pickingNumbers(List<Integer> a) {
+	int longest = 0;
+	int currentLongest = 0;
+	int startingPoint = a.get(0);
+	Collections.sort(a);
+	for (int i = 0; i < a.size(); i++) {
+
+	}
+
+	return longest;
 
    }
 //
