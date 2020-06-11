@@ -545,13 +545,15 @@ static int getMoneySpent(int[] keyboards, int[] drives, int b) {
 public static int pickingNumbers(List<Integer> a) {
 	int longest = 0;
 	int currentLongest = 0;
-	int startingPoint = a.get(0);
 	Collections.sort(a);
+	int startingPoint = a.get(0);
+
 	for (int i = 0; i < a.size() - 1; i++) {
 		if (a.get(i + 1) - startingPoint <= 1){
 			currentLongest++;
 			System.out.println("Current " + currentLongest);
 			System.out.println("Number " + a.get(i));
+			System.out.println("Index " + i);
 		} else {
 			currentLongest = 0;
 			startingPoint = i;
