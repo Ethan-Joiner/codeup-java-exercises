@@ -547,11 +547,17 @@ public static int pickingNumbers(List<Integer> a) {
 	int startingPoint = a.get(0);
 	Collections.sort(a);
 	for (int i = 0; i < a.size(); i++) {
-
+		if (a.get(i + 1) - startingPoint <= 1){
+			currentLongest++;
+		} else {
+			currentLongest = 0;
+			startingPoint = i;
+		}
+		if (currentLongest > longest) {
+			longest = currentLongest;
+		}
 	}
-
 	return longest;
-
    }
 //
 //static int jumpingOnClouds(int[] c, int k) {
