@@ -24,7 +24,8 @@ public class HackerRank {
 //    	System.out.println(howManyGames(100,1,1,99));
 //    	cardDeck();
 //     	migratoryBirds(test);
-    	// diagonalDifference(test);
+		// diagonalDifference(test);
+		saveThePrisoner(352926151, 380324688, 94730870);
     }
     
  // Just a helper method
