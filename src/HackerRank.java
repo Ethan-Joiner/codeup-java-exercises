@@ -5,6 +5,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import jdk.javadoc.internal.doclets.formats.html.SourceToHTMLConverter;
+
 public class HackerRank {
     private static final int Infinity = 0;
 
@@ -557,6 +559,7 @@ public static int pickingNumbers(List<Integer> a) {
 		} else {
 			currentLongest = 0;
 			startingPoint = i;
+			System.out.println("Reset");
 		}
 		if (currentLongest > longest) {
 			longest = currentLongest;
