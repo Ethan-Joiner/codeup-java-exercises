@@ -14,7 +14,7 @@ public class HackerRank {
 //        int[] test = {2,5,1,3,4,4,3,5,1,1,2,1,4,1,3,3,4,2,1};
 //    	int[] test = {1,1};
     	// List<List<Integer> >test = new ArrayList<>(Arrays.asList(new ArrayList<>(Arrays.asList(11,2,4)),new ArrayList<>(Arrays.asList(4,5,6)),new ArrayList<>(Arrays.asList(10,8,-12))));
-		List<Integer> test = new ArrayList<>(Arrays.asList(4,6,5,3,1,3));
+		List<Integer> test = new ArrayList<>(Arrays.asList(4,6,5,3,3,1));
     
 //        ArrayList<Integer> testing = new ArrayList<>(Arrays.asList(2,5,1,3,4,4,3,5,1,1,2,1,4,1,3,3,4,2,1));
 //        System.out.println(birthday(testing,18,7));
@@ -564,6 +564,7 @@ public static int pickingNumbers(List<Integer> a) {
 			longest = currentLongest;
 		}
 	}
+	System.out.println(longest);
 	return longest;
    }
 //
