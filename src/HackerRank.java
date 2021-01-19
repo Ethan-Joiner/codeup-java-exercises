@@ -598,15 +598,19 @@ static int designerPdfViewer(int[] h, String word) {
 	String alpha = "abcdefghijklmnopqrstuvwxyz";
 	int highValue = 0;
 	int result = 0;
-	HashMap<String, String> hash = new HashMap<String, String>();
-
-
-
-	for(int i = 0; i < word.length(); i++){
-
+	HashMap<String, Integer> hash = new HashMap<>();
+	
+	for(int i = 0; i < alpha.length(); i++){
+		hash.put((alpha.charAt(i), h[i]));
 	}
 
-return result;
+	for (int i = 0; i < word.length(); i++) {
+		if (hash.get(word.charAt(i)) > highValue) {
+			highValue = hash.get(word.charAt(i));
+		}
+	}
+
+	return result;
 }
 
 
