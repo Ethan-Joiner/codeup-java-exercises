@@ -593,8 +593,13 @@ return result;
 }
 
 static int designerPdfViewer(int[] h, String word) {
+	String alpha = "abcdefghijklmnopqrstuvwxyz";
+	int highValue = 0;
+	int result = 0;
 
-int result = 0;
+	for(int i = 0; i < word.length(); i++){
+		
+	}
 
 return result;
 }
