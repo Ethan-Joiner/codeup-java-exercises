@@ -598,10 +598,10 @@ static int designerPdfViewer(int[] h, String word) {
 	String alpha = "abcdefghijklmnopqrstuvwxyz";
 	int highValue = 0;
 	int result = 0;
-	HashMap<String, Integer> hash = new HashMap<>();
+	HashMap<Character, Integer> hash = new HashMap<>();
 	
 	for(int i = 0; i < alpha.length(); i++){
-		hash.put((alpha.charAt(i), h[i]));
+		hash.put(alpha.charAt(i), h[i]);
 	}
 
 	for (int i = 0; i < word.length(); i++) {
@@ -609,6 +609,7 @@ static int designerPdfViewer(int[] h, String word) {
 			highValue = hash.get(word.charAt(i));
 		}
 	}
+	result = highValue * word.length();
 
 	return result;
 }
