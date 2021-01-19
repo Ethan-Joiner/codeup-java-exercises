@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.HashMap;
+
 
 
 public class HackerRank {
@@ -596,9 +598,12 @@ static int designerPdfViewer(int[] h, String word) {
 	String alpha = "abcdefghijklmnopqrstuvwxyz";
 	int highValue = 0;
 	int result = 0;
+	HashMap<String, String> hash = new HashMap<String, String>();
+
+
 
 	for(int i = 0; i < word.length(); i++){
-		
+
 	}
 
 return result;
