@@ -9,7 +9,7 @@ import java.util.HashMap;
 
 
 public class HackerRank {
-    private static final int Infinity = 0;
+    // private static final int Infinity = 0;
 
 
 	public static void main(String[] args) {
@@ -29,7 +29,8 @@ public class HackerRank {
 //     	migratoryBirds(test);
 		// diagonalDifference(test);
 		// saveThePrisoner(352926151, 380324688, 94730870);
-		pickingNumbers(test);
+		// pickingNumbers(test);
+		System.out.println(repeatedString("epsxyyflvrrrxzvnoenvpegvuonodjoxfwdmcvwctmekpsnamchznsoxaklzjgrqruyzavshfbmuhdwwmpbkwcuomqhiyvuztwvq", 549382313570L));
     }
     
  // Just a helper method
@@ -621,22 +622,20 @@ static long repeatedString(String s, long n) {
 	long result = 0;
 	int timesAShowUpInString = 0;
 	long numberOfTimesIntoNumber = (long) Math.floor(n / s.length());
-	int remainder = (int) n % s.length();
+	long remainder = n % s.length();
 
 	for(int i = 0; i < s.length(); i++){
 		if(s.charAt(i) == 'a'){
 			timesAShowUpInString++;
 		}
 	}
-	result = timesAShowUpInString + numberOfTimesIntoNumber;
+	result = timesAShowUpInString * numberOfTimesIntoNumber;
 	for(int i = 0; i < remainder;i++){
 		if(s.charAt(i) == 'a'){
 			result++;
 		}
 	}
-	
 	return result;
-
 }
 
 
