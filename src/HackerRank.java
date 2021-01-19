@@ -618,6 +618,7 @@ static int designerPdfViewer(int[] h, String word) {
 }
 
 // S is a string repeated until reaching a length of n. How many times does the letter "a" show up in the total string?
+// Passed all tests
 static long repeatedString(String s, long n) {
 	long result = 0;
 	int timesAShowUpInString = 0;
@@ -635,6 +636,14 @@ static long repeatedString(String s, long n) {
 			result++;
 		}
 	}
+	return result;
+}
+
+// c is an array of numbers with values or either 0 or 1. You can jump up to +2 indices away but can not land on any with a value of 1. What is the minimum amount of jumps needed to reach the end of the array 
+static int jumpingOnClouds(int[] c) {
+	int result = 0;
+
+
 	return result;
 }
 
