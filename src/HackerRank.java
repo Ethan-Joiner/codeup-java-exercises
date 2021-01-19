@@ -618,11 +618,20 @@ static int designerPdfViewer(int[] h, String word) {
 
 // S is a string repeated until reaching a length of n. How many does does the letter "a" show up in the total string?
 static long repeatedString(String s, long n) {
-
-	
 	long result = 0;
-	return result;
+	int currentSpot = 0;
 
+	for(int i = 0; i <= n; i++){
+		if(s.charAt(currentSpot) == 'a'){
+			result++;
+		}
+		if(currentSpot == s.length() - 1) {
+			currentSpot = 0;
+		} else {
+			currentSpot++;
+		}
+	}
+	return result;
 
 }
 
