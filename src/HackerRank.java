@@ -576,16 +576,19 @@ public static int pickingNumbers(List<Integer> a) {
 static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
 int aScore = 0;
 int bScore = 0;
-List<Integer> result;
+List<Integer> result = new ArrayList<>();
 
 for (int i = 0; i < a.size(); i++) {
-if(a.get(i) > b.get(i)) {
+	if(a.get(i) > b.get(i)) {
 	aScore++;
-} else if(a.get(i) < b.get(i)) {
+	} else if(a.get(i) < b.get(i)) {
 	bScore++;
-}
+	}
 }
 
+result.add(aScore);
+result.add(bScore);
+return result;
 
 }
 
