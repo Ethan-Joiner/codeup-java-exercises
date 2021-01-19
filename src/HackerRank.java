@@ -573,6 +573,12 @@ public static int pickingNumbers(List<Integer> a) {
 //
 //}
 
+static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
+
+
+}
+
+
 }
 
 
