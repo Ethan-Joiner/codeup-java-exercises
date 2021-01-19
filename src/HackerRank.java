@@ -575,6 +575,7 @@ public static int pickingNumbers(List<Integer> a) {
 //
 //}
 
+// All tests passed
 static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
 int aScore = 0;
 int bScore = 0;
@@ -594,6 +595,7 @@ return result;
 
 }
 
+// All tests passed
 static int designerPdfViewer(int[] h, String word) {
 	String alpha = "abcdefghijklmnopqrstuvwxyz";
 	int highValue = 0;
@@ -613,6 +615,18 @@ static int designerPdfViewer(int[] h, String word) {
 
 	return result;
 }
+
+// S is a string repeated until reaching a length of n. How many does does the letter "a" show up in the total string?
+static long repeatedString(String s, long n) {
+
+	
+	long result = 0;
+	return result;
+
+
+}
+
+
 
 
 }
