@@ -1,72 +1,72 @@
 // Loop through the following array of Reindeer objects and return an array of Reindeer objects that are “gold” reindeer
 var reindeerList = [
         {
-            name: “Dot”,
+            name: "Dot",
             age: 5,
             isGold: false
         },
         {
-            name: “Dasher”,
+            name: "Dasher",
             age: 8,
             isGold: true
         },
         {
-            name: “Patch”,
+            name: "Patch",
             age: 2,
             isGold: false
         },
         {
-            name: “Rocket”,
+            name: "Rocket",
             age: 6,
             isGold: false
         },
         {
-            name: “Dancer”,
+            name: "Dancer",
             age: 9,
             isGold: true
         },
         {
-            name: “Prancer”,
+            name: "Prancer",
             age: 5,
             isGold: true
         },
         {
-            name: “Groot”,
+            name: "Groot",
             age: 9,
             isGold: false
         },
         {
-            name: “Vixen”,
+            name: "Vixen",
             age: 9,
             isGold: true
         },
         {
-            name: “Comet”,
+            name: "Comet",
             age: 11,
             isGold: true
         },
         {
-            name: “Archie”,
+            name: "Archie",
             age: 3,
             isGold: false
         },
         {
-            name: “Cupid”,
+            name: "Cupid",
             age: 13,
             isGold: true
         },
         {
-            name: “Donder”,
+            name: "Donder",
             age: 16,
             isGold: true
         },
         {
-            name: “Boots”,
+            name: "Boots",
             age: 16,
             isGold: false
         },
         {
-            name: “Blizten”,
+            name: "Blizten",
             age: 16,
             isGold: true
         }
@@ -75,6 +75,6 @@ var reindeerList = [
 
 
 function goldenOnes(x){
-    x.filter(reindeer => isGold)
+    return x.filter(reindeer => isGold)
 }
-goldenOnes(reindeerList);
+console.log(goldenOnes(reindeerList));
