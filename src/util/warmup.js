@@ -74,3 +74,7 @@ var reindeerList = [
 // just to get the juices flowing
 
 
+function goldenOnes(x){
+    x.filter(reindeer => isGold)
+}
+goldenOnes(reindeerList);
