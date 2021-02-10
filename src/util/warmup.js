@@ -74,7 +74,19 @@ var reindeerList = [
 // just to get the juices flowing
 
 
-function goldenOnes(x){
-    return x.filter(reindeer => isGold)
-}
-console.log(goldenOnes(reindeerList));
+// function goldenOnes(x){
+//     let gold =  x.filter(reindeer => reindeerList.isGold);
+//     gold.array.forEach(element => {
+        
+//     });
+// }
+// console.log(goldenOnes(reindeerList));
+
+const reverseString = (string) => {
+    if (string === “”) {
+        return “”;
+    } else {
+        return reverseString(string.substr(1)) + string.charAt(0);
+    }
+};
+console.log(reverseString(“HEYYY”))
