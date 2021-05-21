@@ -266,22 +266,24 @@ public class HackerRank {
 
 //    I is start day, j is last day. Test each day by subtracting it from its reverse. If evenly divisible by K then increase days
 //    Passed initial tests, runtime error for larger ones. Need better way to reverse. Try the formula
-//    static int beautifulDays(int i, int j, int k) {
-//        int days = 0;
-//        String reverseOne = "";
-//        String reverseTwo = "";
-//        for (int x = i; x <= j; x++) {
-//            reverseOne = Integer.toString(x);
-//            for (int y = reverseOne.length() - 1; y >= 0; y--) {
-//                reverseTwo += reverseOne.charAt(y);
-//            }
-//            if ((Integer.parseInt(reverseOne) - Integer.parseInt(reverseTwo)) % k == 0) {
-//                days++;
-//                reverseTwo = "";
-//            }
-//        }
-//        return days;
-//    }
+static int reversDigits(int num)
+{
+	int rev_num = 0;
+	while (num > 0) {
+		rev_num = rev_num * 10 + num % 10;
+		num = num / 10;
+	}
+	return rev_num;
+}
+   static int beautifulDays(int i, int j, int k) {
+       int days = 0;
+       for (int x = i; x <= j; x++) {
+           if (x - reversDigits(x) % k == 0) {
+               days++;
+           }
+       }
+       return days;
+   }
 
 //    N is number of days. First day start with 5. Divide in half a round down to find daily likes. Likes x 3 for next day. Should be ez formula
 //    Passed all tests
@@ -668,7 +670,7 @@ public static int chocolateFeast(int n, int c, int m) {
 	return totalChocolateReceived;
     }
 
-	//Completed:  K is the height one can jump. Height is a list of hurdles. Potion gives +1 jump. How many potions to equal highest hurdle?
+	//Completed: K is the height one can jump. Height is a list of hurdles. Potion gives +1 jump. How many potions to equal highest hurdle?
 	public static int hurdleRace(int k, List<Integer> height) {
 		Collections.sort(height);
 		Collections.reverse(height);
