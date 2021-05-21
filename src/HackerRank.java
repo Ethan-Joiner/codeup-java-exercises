@@ -280,6 +280,7 @@ static int reversDigits(int num)
 	}
 	return rev_num;
 }
+// FINALLY COMPLETE
    static int beautifulDays(int i, int j, int k) {
        int days = 0;
        for (int x = i; x <= j; x++) {
