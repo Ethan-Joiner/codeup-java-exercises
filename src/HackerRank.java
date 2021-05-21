@@ -656,11 +656,12 @@ static int jumpingOnClouds(int[] c) {
 
 // Return total number of chocolate eaten. N is dollars. C is cost per bar. M is how many wrappers per chocolate.
 public static int chocolateFeast(int n, int c, int m) {
-	int chocolateBought = n / c;
-	int wrappers = chocolateBought;
-	int totalChocolateReceived = chocolateBought;
+	int wrappers = n / c;
+	int totalChocolateReceived = n / c;
 	while(wrappers >= m){
-		
+		wrappers = wrappers / m;
+		totalChocolateReceived += wrappers;
+
 	}
 
 
