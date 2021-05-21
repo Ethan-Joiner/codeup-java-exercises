@@ -672,7 +672,12 @@ public static int chocolateFeast(int n, int c, int m) {
 	public static int hurdleRace(int k, List<Integer> height) {
 		Collections.sort(height);
 		Collections.reverse(height);
-		return height.get(0) - k;
+		int answer = 0;
+		if(height.get(0) - k > 0){
+			answer = height.get(0) - k;
+			}
+		return answer;
+		
 		}
 
 // Testing
