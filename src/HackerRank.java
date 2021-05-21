@@ -654,7 +654,7 @@ static int jumpingOnClouds(int[] c) {
 	return result;
 }
 
-// Return total number of chocolate eaten. N is dollars. C is cost per bar. M is how many wrappers per chocolate.
+// COMPLETED: Return total number of chocolate eaten. N is dollars. C is cost per bar. M is how many wrappers per chocolate.
 public static int chocolateFeast(int n, int c, int m) {
 	int wrappers = n / c;
 	int additionalChocolate = 0;
