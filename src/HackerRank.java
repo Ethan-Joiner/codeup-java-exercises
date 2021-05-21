@@ -1,9 +1,13 @@
 import java.lang.reflect.Array;
 import java.math.BigInteger;
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+
+import jdk.javadoc.internal.doclets.formats.html.SourceToHTMLConverter;
+
 import java.util.HashMap;
 
 
@@ -30,8 +34,9 @@ public class HackerRank {
 		// diagonalDifference(test);
 		// saveThePrisoner(352926151, 380324688, 94730870);
 		// pickingNumbers(test);
-		System.out.println(repeatedString("epsxyyflvrrrxzvnoenvpegvuonodjoxfwdmcvwctmekpsnamchznsoxaklzjgrqruyzavshfbmuhdwwmpbkwcuomqhiyvuztwvq", 549382313570L));
-    }
+		// System.out.println(repeatedString("epsxyyflvrrrxzvnoenvpegvuonodjoxfwdmcvwctmekpsnamchznsoxaklzjgrqruyzavshfbmuhdwwmpbkwcuomqhiyvuztwvq", 549382313570L));
+		beautifulDays(20, 23, 6);
+	}
     
  // Just a helper method
     public static int indexOfIntArray(int[] array, int key) {
@@ -278,6 +283,8 @@ static int reversDigits(int num)
    static int beautifulDays(int i, int j, int k) {
        int days = 0;
        for (int x = i; x <= j; x++) {
+		   System.out.println(x);
+		   System.out.println(reversDigits(x));
            if (x - reversDigits(x) % k == 0) {
                days++;
            }
