@@ -654,6 +654,12 @@ static int jumpingOnClouds(int[] c) {
 	return result;
 }
 
+// Return total number of chocolate eaten. N is dollars. C is cost per bar. M is how many wrappers per chocolate.
+public static int chocolateFeast(int n, int c, int m) {
+    // Write your code here
+
+    }
+
 // Testing
 
 
