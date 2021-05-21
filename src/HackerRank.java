@@ -670,8 +670,9 @@ public static int chocolateFeast(int n, int c, int m) {
 
 	// K is the height one can jump. Height is a list of hurdles. Potion gives +1 jump. How many potions to equal highest hurdle?
 	public static int hurdleRace(int k, List<Integer> height) {
-		// Write your code here
-	
+		Collections.sort(height);
+		Collections.reverse(height);
+		return height.get(0) - k;
 		}
 
 // Testing
