@@ -285,7 +285,8 @@ static int reversDigits(int num)
        for (int x = i; x <= j; x++) {
 		   System.out.println(x);
 		   System.out.println(reversDigits(x));
-           if (x - reversDigits(x) % k == 0) {
+		   System.out.println((x - reversDigits(x)) % k);
+           if ((x - reversDigits(x)) % k == 0) {
                days++;
            }
        }
