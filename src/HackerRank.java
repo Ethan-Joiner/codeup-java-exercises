@@ -691,7 +691,13 @@ public static int chocolateFeast(int n, int c, int m) {
 		
 		}
 
-// Testing
+// Receiving a triangle base an area, find the lowest possible height.
+public static int lowestTriangle(int trianglebase, int area) {
+    // Write your code here
+
+    }
+
+}
 
 
 
