@@ -738,8 +738,11 @@ public static int lowestTriangle(int trianglebase, int area) {
 
 			// Long and wordy. Seems like multiply each "route" by length of n - 1
 		public static int connectingTowns(int n, List<Integer> routes) {
-				// Write your code here
-			
+			int total = 1;
+			for(int i = 0; i < n; i++)	{
+				total *= routes.get(i);
+			}	
+			return total;	
 		}	
 
 }
