@@ -35,7 +35,8 @@ public class HackerRank {
 		// saveThePrisoner(352926151, 380324688, 94730870);
 		// pickingNumbers(test);
 		// System.out.println(repeatedString("epsxyyflvrrrxzvnoenvpegvuonodjoxfwdmcvwctmekpsnamchznsoxaklzjgrqruyzavshfbmuhdwwmpbkwcuomqhiyvuztwvq", 549382313570L));
-		beautifulDays(20, 23, 6);
+		// beautifulDays(20, 23, 6);
+		lowestTriangle(6, 30);
 	}
     
  // Just a helper method
@@ -695,16 +696,18 @@ public static int chocolateFeast(int n, int c, int m) {
 public static int lowestTriangle(int trianglebase, int area) {
 	int start = trianglebase;
 	int height = trianglebase;
-	while(true){
+	boolean flag = true;
+	while(flag){
 		if((start * trianglebase) < area){
 			start++;
 		} else if (start * trianglebase >= area && (start - 1) * trianglebase >= area) {
 			height = (start -1) * 2;
 			start--;
 		} else {
-			return height;
+			flag = false;
 		}
 	}
+	return height;
     }
 
 }
