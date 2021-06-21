@@ -728,8 +728,11 @@ public static int lowestTriangle(int trianglebase, int area) {
 
 		// N is the number of people. How many handshakes need to take place for each person to shake each other's hand once?
 		public static int handshake(int n) {
-			// Write your code here
-		
+			int shakes = 0;
+			for(int i = n; i > 0; i--) {
+				shakes += i - 1;
+			}
+			return shakes;
 			}
 
 }
