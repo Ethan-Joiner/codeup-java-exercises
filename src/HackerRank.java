@@ -700,11 +700,14 @@ public static int lowestTriangle(int trianglebase, int area) {
 	while(flag){
 		if((start * trianglebase) < area){
 			start++;
+			break;
 		} else if (start * trianglebase >= area && (start - 1) * trianglebase >= area) {
 			height = (start -1) * 2;
 			start--;
+			break;
 		} else {
 			flag = false;
+			break;
 		}
 	}
 	return height;
