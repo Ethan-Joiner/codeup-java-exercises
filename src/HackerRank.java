@@ -713,11 +713,24 @@ public static int lowestTriangle(int trianglebase, int area) {
 	return height;
     }
 
+	// 
+	public static long halloweenParty(int k) {
+		double cuts = k;
+		long x;
+		// Write your code here
+		if(k % 2 == 0){
+			return (long) Math.pow((cuts / 2),2);
+		} else {
+			return (long) Math.floor(cuts / 2) * (long) Math.ceil(cuts / 2);
+		}
+	
+		}
+
 }
 
 
 
 
-}
+
 
 
