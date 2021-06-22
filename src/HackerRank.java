@@ -36,7 +36,8 @@ public class HackerRank {
 		// pickingNumbers(test);
 		// System.out.println(repeatedString("epsxyyflvrrrxzvnoenvpegvuonodjoxfwdmcvwctmekpsnamchznsoxaklzjgrqruyzavshfbmuhdwwmpbkwcuomqhiyvuztwvq", 549382313570L));
 		// beautifulDays(20, 23, 6);
-		lowestTriangle(6, 30);
+		// lowestTriangle(6, 30);
+		solve(689715240, 759842301);
 	}
     
  // Just a helper method
@@ -748,6 +749,7 @@ public static int lowestTriangle(int trianglebase, int area) {
 		public static long solve(int n, int m) {
 			// Write your code here
 			long x = (n * m) - 1;
+			System.out.println(x);
 			return x;
 			}
 
