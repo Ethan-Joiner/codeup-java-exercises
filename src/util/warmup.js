@@ -231,8 +231,22 @@ function jumpingOnClouds(c) {
 
 // Take an array and find the minimum amount of elements to delete to only have the same number remaining
 function equalizeArray(arr) {
-    // Write your code here
-
+    let mode = 0;
+    let maxMode = 0;
+    let sorted = arr.sort(function(a,b) {
+        return a - b;
+    });
+    for(let i = 0; i < sorted.length; i++){
+        if(arr[i] == arr[i + 1]){
+            mode +=1;
+            if(mode > maxMode) {
+                maxMode = mode;
+            }
+        } else {
+            mode = 0;
+        }
+    }
+    return arr.length - maxMode;
 }
 
 
