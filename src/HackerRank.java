@@ -744,6 +744,12 @@ public static int lowestTriangle(int trianglebase, int area) {
 			}	
 			return total;	
 		}	
+// 		N and M are length nd width of a quadrilateral. How many cuts to cut it into 1x1 pieces. 
+		public static long solve(int n, int m) {
+			// Write your code here
+			long x = (n * m) - 1;
+			return x;
+			}
 
 }
 
