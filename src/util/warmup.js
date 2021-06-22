@@ -91,8 +91,12 @@ const reverseString = (string) => {
 };
 console.log(reverseString(“HEYYY”))
 
-// R is the row, c is the column. Find the number if each alternate between odds and evens
-function strangeGrid(r, c) {
+// Find the inversion across the x axis
+function findPoint(px, py, qx, qy) {
     // Write your code here
-
+    xDistance = qx - px;
+    yDistance = qy - py;
+    console.log(qx + xDistance, qy + yDistance);
+    return [qx + xDistance, qy + yDistance];
 }
+findPoint(1,1,2,2);
