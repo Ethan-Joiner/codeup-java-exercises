@@ -95,6 +95,14 @@ function findPoint(px, py, qx, qy) {
 
 // Find smallest traingle height with given base and area
 function lowestTriangle(trianglebase, area) {
-    // Write your code here
+
+
+}
+
+// Find the most expensive keyboard/drive combo
+function getMoneySpent(keyboards, drives, b) {
+    /*
+     * Write your code here.
+     */
 
 }
