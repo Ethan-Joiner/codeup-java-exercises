@@ -82,21 +82,19 @@ var reindeerList = [
 // }
 // console.log(goldenOnes(reindeerList));
 
-const reverseString = (string) => {
-    if (string === “”) {
-        return “”;
-    } else {
-        return reverseString(string.substr(1)) + string.charAt(0);
-    }
-};
-console.log(reverseString(“HEYYY”))
+
 
 // Find the inversion across the x axis
 function findPoint(px, py, qx, qy) {
-    // Write your code here
-    xDistance = qx - px;
-    yDistance = qy - py;
+    let xDistance = qx - px;
+    let yDistance = qy - py;
     console.log(qx + xDistance, qy + yDistance);
     return [qx + xDistance, qy + yDistance];
+};
+// findPoint(1,1,2,2);
+
+// Find smallest traingle height with given base and area
+function lowestTriangle(trianglebase, area) {
+    // Write your code here
+
 }
-findPoint(1,1,2,2);
