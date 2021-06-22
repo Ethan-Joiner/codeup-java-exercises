@@ -695,16 +695,16 @@ public static int chocolateFeast(int n, int c, int m) {
 
 // Receiving a triangle base an area, find the lowest possible height.
 public static int lowestTriangle(int trianglebase, int area) {
-	int start = trianglebase;
-	int height = trianglebase;
+	int start = trianglebase * 2;
+	int height = trianglebase * 2;
 	boolean flag = true;
 	while(flag){
-		if((start * trianglebase) < area){
+		if(((start / 2) * trianglebase) < area){
 			System.out.println(start);
 			start++;
-		} else if (start * trianglebase >= area && (start - 1) * trianglebase >= area) {
+		} else if ((start / 2) * trianglebase >= area && (start / 2 - 1) * trianglebase >= area) {
 			System.out.println(start);
-			height = (start -1) * 2;
+			height = (start / 2 - 1);
 			start--;
 		} else {
 			System.out.println("Else");
