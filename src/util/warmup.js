@@ -184,7 +184,7 @@ return length;
 
 // cutTheSticks([1,13,3,8,14,9,4,4]);
 
-// Find the fine based on due date versus return date
+// COMPLETED: Find the fine based on due date versus return date
 function libraryFine(d1, m1, y1, d2, m2, y2) {
     let fine = 0;
     if(y1 > y2) {
