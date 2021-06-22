@@ -135,7 +135,7 @@ function getMoneySpent(keyboards, drives, b) {
 // }
 // jumpingOnClouds([0,0,1,0,0,1,1,0], 2);
 
-
+// Completed
 function pageCount(n, p) {
     let turnCount = 0;
     if (n - p == 1 && n % 2 == 1) {
@@ -161,4 +161,10 @@ function pageCount(n, p) {
     return turnCount;
 }
 pageCount(6,5);
+
+// Array of numbers. Subtract the lowest number from all numbers on each iteration. Return array with length of OG array after each iteration
+function cutTheSticks(arr) {
+    
+
+}
 
