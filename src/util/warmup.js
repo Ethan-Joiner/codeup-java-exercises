@@ -199,7 +199,14 @@ function libraryFine(d1, m1, y1, d2, m2, y2) {
 
 // Long and complicated explanation.
 function taumBday(b, w, bc, wc, z) {
-    // Write your code here
-
+    totalCost = 0;
+    if(bc + z < wc) {
+        totalCost = (wc * w) + (wc * b) + (z * b);
+    } else if (wc + z < bc) {
+        totalCost = (bc * b) + (bc * w) + (z * w)
+    } else {
+        totalCost = (bc * b) + (wc * w);
+    }
+    return totalCost;
 }
 
