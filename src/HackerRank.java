@@ -36,7 +36,7 @@ public class HackerRank {
 		// pickingNumbers(test);
 		// System.out.println(repeatedString("epsxyyflvrrrxzvnoenvpegvuonodjoxfwdmcvwctmekpsnamchznsoxaklzjgrqruyzavshfbmuhdwwmpbkwcuomqhiyvuztwvq", 549382313570L));
 		// beautifulDays(20, 23, 6);
-		lowestTriangle(3, 4);
+		lowestTriangle(17, 100);
 		// solve(689715240, 759842301);
 	}
     
@@ -695,25 +695,20 @@ public static int chocolateFeast(int n, int c, int m) {
 
 // Receiving a triangle base an area, find the lowest possible height.
 public static int lowestTriangle(int trianglebase, int area) {
-	int start = trianglebase * 2;
-	int height = trianglebase * 2;
-	boolean flag = true;
-	while(flag){
-		if(((start / 2) * trianglebase) < area){
-			System.out.println(start);
-			start++;
-		} else if ((start / 2) * trianglebase >= area && (start / 2 - 1) * trianglebase >= area) {
-			System.out.println(start);
-			height = ((start / 2) - 1) * 2;
-
-			start--;
-		} else {
-			System.out.println("Else");
-			flag = false;
-		}
-	}
-	System.out.println("Height is " + height);
-	return height;
+	// float start = trianglebase * 2;
+	// float height = trianglebase * 2;
+	// boolean flag = true;
+	// while(flag){
+	// 	if(((start / 2) * trianglebase) < area){
+	// 		start++;
+	// 	} else if ((start / 2) * trianglebase >= area && (start / 2 - 1) * trianglebase >= area) {
+	// 		height = ((start / 2) - 1) * 2;
+	// 		start--;
+	// 	} else {
+	// 		flag = false;
+	// 	}
+	// }
+	// return (int) height;
     }
 
 	// COMPLETED
