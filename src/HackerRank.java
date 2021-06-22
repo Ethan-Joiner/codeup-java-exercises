@@ -704,7 +704,8 @@ public static int lowestTriangle(int trianglebase, int area) {
 			start++;
 		} else if ((start / 2) * trianglebase >= area && (start / 2 - 1) * trianglebase >= area) {
 			System.out.println(start);
-			height = (start / 2 - 1);
+			height = ((start / 2) - 1) * 2;
+
 			start--;
 		} else {
 			System.out.println("Else");
