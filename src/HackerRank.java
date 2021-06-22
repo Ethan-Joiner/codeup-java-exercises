@@ -745,10 +745,10 @@ public static int lowestTriangle(int trianglebase, int area) {
 			}	
 			return total;	
 		}	
-// 		N and M are length nd width of a quadrilateral. How many cuts to cut it into 1x1 pieces. 
+// 		COMPLETED: N and M are length nd width of a quadrilateral. How many cuts to cut it into 1x1 pieces. 
 		public static long solve(int n, int m) {
 			// Write your code here
-			long x = (n * m) - 1;
+			long x = ((long) n * (long) m) - 1;
 			System.out.println(x);
 			return x;
 			}
