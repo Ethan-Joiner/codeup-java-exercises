@@ -201,13 +201,17 @@ function libraryFine(d1, m1, y1, d2, m2, y2) {
 function taumBday(b, w, bc, wc, z) {
     let totalCost = 0;
     if(bc + z < wc) {
-        totalCost = (bc * w) + (bc * b) + (z * w);
+        totalCost = BigInt((bc * w) + (bc * b) + (z * w));
     } else if (wc + z < bc) {
-        totalCost = (wc * b) + (wc * w) + (z * b);
+        totalCost = BigInt((wc * b) + (wc * w) + (z * b));
     } else {
-        totalCost = (bc * b) + (wc * w);
+        totalCost = BigInt((bc * b) + (wc * w));
     }
+    console.log(totalCost);
     return totalCost;
 }
-taumBday(3,6,9,1,1);
+taumBday(736418699, 754161925,
+    912285746, 841360803, 736841333);
+
+
 
