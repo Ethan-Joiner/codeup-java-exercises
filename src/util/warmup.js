@@ -104,19 +104,19 @@ function getMoneySpent(keyboards, drives, b) {
     let kb = [keyboards];
     let dr = [drives];
     let bestprice = -1;
-    for(let i = 0; i < kb.length; i++){
-        for(let j = 0; j < dr.length; j++) {
+    for(let i = 0; i < keyboards.length; i++){
+        for(let j = 0; j < drives.length; j++) {
+            console.log(kb.values.length);
             console.log(keyboards[i] + " keyboard price");
             console.log(drives[j] + " drive price");
             if(keyboards[i] + drives[j] > bestprice && keyboards[i] + drives[j] <= b){
                 bestprice = keyboards[i] + drives[j];
             }
         }
-        console.log(bestprice);
-        return bestprice;
     }
+    console.log(bestprice);
+    return bestprice;
 };
-
 getMoneySpent([1,2,3],[2,4],6);
     /*
      * Write your code here.
