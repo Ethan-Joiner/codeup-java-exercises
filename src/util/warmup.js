@@ -160,11 +160,29 @@ function pageCount(n, p) {
     }
     return turnCount;
 }
-pageCount(6,5);
+// pageCount(6,5);
 
 // Array of numbers. Subtract the lowest number from all numbers on each iteration. Return array with length of OG array after each iteration
 function cutTheSticks(arr) {
-    
+    let length = [arr.length];
+    let newArr = arr.sort();
+    let finalArr = [];
+    let flag = true;
+    while(flag) {
+        console.log(newArr);
+        newArr = newArr.map(x => x - newArr[0]);
+        console.log(newArr + " after map");
+        newArr = newArr.filter(x => x > 0);
+        console.log(newArr + " after filter");
+        if(newArr.length == 0) {
+            flag = false;
+        }
+        length.push(newArr.length);
 
+    }
+    console.log(length + " length");
+return length;
 }
+
+cutTheSticks([5,4,4,2,2,8]);
 
