@@ -90,3 +90,9 @@ const reverseString = (string) => {
     }
 };
 console.log(reverseString(“HEYYY”))
+
+// R is the row, c is the column. Find the number if each alternate between odds and evens
+function strangeGrid(r, c) {
+    // Write your code here
+
+}

@@ -753,6 +753,13 @@ public static int lowestTriangle(int trianglebase, int area) {
 			return x;
 			}
 
+
+			
+		public static int strangeGrid(int r, int c) {
+				// Write your code here
+			
+		}
+
 }
 
 
