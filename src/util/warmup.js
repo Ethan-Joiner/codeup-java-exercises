@@ -199,7 +199,7 @@ function libraryFine(d1, m1, y1, d2, m2, y2) {
 
 // Long and complicated explanation.
 function taumBday(b, w, bc, wc, z) {
-    let totalCost = 0;
+    let totalCost = BigInt(0);
     if(bc + z < wc) {
         totalCost = BigInt((bc * w) + (bc * b) + (z * w));
     } else if (wc + z < bc) {
@@ -210,8 +210,14 @@ function taumBday(b, w, bc, wc, z) {
     console.log(totalCost);
     return totalCost;
 }
-taumBday(736418699, 754161925,
-    912285746, 841360803, 736841333);
+// taumBday(736418699, 754161925,
+//     912285746, 841360803, 736841333);
+
+
+function jumpingOnClouds(c) {
+    // Write your code here
+
+}
 
 
 
