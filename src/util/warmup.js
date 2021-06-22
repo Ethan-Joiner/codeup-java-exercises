@@ -137,7 +137,19 @@ function getMoneySpent(keyboards, drives, b) {
 
 
 function pageCount(n, p) {
-    // Write your code here
-
+    let turnCount = 0;
+    if(Math.abs(n - p) > Math.abs(0 - p)){
+        for(let i = 0; i < p; i += 2) {
+            turnCount++;
+            console.log(turnCount);
+        }
+    } else {
+        for(let i = n; i > p; i -= 2){
+            turnCount++;
+            console.log(turnCount);
+        }
+    }
+    return turnCount;
 }
+pageCount(6,2);
 
