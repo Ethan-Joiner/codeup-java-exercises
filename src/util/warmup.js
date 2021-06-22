@@ -215,8 +215,16 @@ function taumBday(b, w, bc, wc, z) {
 
 
 function jumpingOnClouds(c) {
-    // Write your code here
-
+    let jumps = 0;
+    for(let i = 0; i < c.length; i++) {
+        if(c[i + 1] == 0) {
+            i++;
+            jumps += 1;
+        } else {
+            jumps +=1;
+        }
+    }
+    return jumps;
 }
 
 
