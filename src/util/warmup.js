@@ -142,8 +142,13 @@ function pageCount(n, p) {
         return turnCount;
     } else if (p == 0 || p == 1) {
         return turnCount;    
-    } else if(Math.abs(n - p) > Math.abs(0 - p)){
+    } else if(Math.abs(n - p) >= Math.abs(0 - p)){
         for(let i = 1; i < p; i += 2) {
+            turnCount++;
+            console.log(turnCount);
+        }
+    } else if(n % 2 == 0) {
+        for(let i = n - 1; i >= p; i -= 2){
             turnCount++;
             console.log(turnCount);
         }
