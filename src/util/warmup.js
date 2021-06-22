@@ -137,12 +137,14 @@ function getMoneySpent(keyboards, drives, b) {
 
 
 function pageCount(n, p) {
-    let turnCount = 0;
+    letturnCount = 0;
     if(Math.abs(n - p) > Math.abs(0 - p)){
         for(let i = 0; i < p; i += 2) {
             turnCount++;
             console.log(turnCount);
         }
+    } else if (n - p == 1 && p % 2 == 1) {
+        return turnCount;
     } else {
         for(let i = n; i > p; i -= 2){
             turnCount++;
