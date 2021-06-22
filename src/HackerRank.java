@@ -36,8 +36,8 @@ public class HackerRank {
 		// pickingNumbers(test);
 		// System.out.println(repeatedString("epsxyyflvrrrxzvnoenvpegvuonodjoxfwdmcvwctmekpsnamchznsoxaklzjgrqruyzavshfbmuhdwwmpbkwcuomqhiyvuztwvq", 549382313570L));
 		// beautifulDays(20, 23, 6);
-		// lowestTriangle(6, 30);
-		solve(689715240, 759842301);
+		lowestTriangle(3, 4);
+		// solve(689715240, 759842301);
 	}
     
  // Just a helper method
@@ -700,17 +700,18 @@ public static int lowestTriangle(int trianglebase, int area) {
 	boolean flag = true;
 	while(flag){
 		if((start * trianglebase) < area){
+			System.out.println(start);
 			start++;
-			break;
 		} else if (start * trianglebase >= area && (start - 1) * trianglebase >= area) {
+			System.out.println(start);
 			height = (start -1) * 2;
 			start--;
-			break;
 		} else {
+			System.out.println("Else");
 			flag = false;
-			break;
 		}
 	}
+	System.out.println("Height is " + height);
 	return height;
     }
 
