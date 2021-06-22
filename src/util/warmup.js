@@ -162,27 +162,25 @@ function pageCount(n, p) {
 }
 // pageCount(6,5);
 
-// Array of numbers. Subtract the lowest number from all numbers on each iteration. Return array with length of OG array after each iteration
+// COMPLETED: Array of numbers. Subtract the lowest number from all numbers on each iteration. Return array with length of OG array after each iteration
 function cutTheSticks(arr) {
     let length = [arr.length];
-    let newArr = arr.sort();
+    let newArr = arr.sort(function(a, b) {
+        return a - b;
+      });
     let finalArr = [];
     let flag = true;
     while(flag) {
-        console.log(newArr);
         newArr = newArr.map(x => x - newArr[0]);
-        console.log(newArr + " after map");
         newArr = newArr.filter(x => x > 0);
-        console.log(newArr + " after filter");
         if(newArr.length == 0) {
             flag = false;
+        } else {
+            length.push(newArr.length);
         }
-        length.push(newArr.length);
-
     }
-    console.log(length + " length");
 return length;
 }
 
-cutTheSticks([5,4,4,2,2,8]);
+// cutTheSticks([1,13,3,8,14,9,4,4]);
 
