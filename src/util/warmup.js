@@ -296,7 +296,13 @@ function saveThePrisoner(n, m, s) {
 
 // Count the amount of words in a camelcase string
 function camelcase(s) {
-    
+    let number = 1;
+    for(let i = 0; i < s.length; i++) {
+        if(s.charAt(i) === s.charAt(i).toUpperCase()) {
+            number++;
+        }
+    }
+    return number;
 }
 
 
