@@ -253,9 +253,15 @@ function equalizeArray(arr) {
 
 
 function serviceLane(n, cases) {
-    // Write your code here
+    let maxSizeArr = [];
+    let maxSizeIndividual = 0;
+    console.log(n.length);
 
+
+
+    return maxSize;
 }
+serviceLane([2, 3, 1, 2, 3, 2, 3, 3], [[0, 3], [4, 6], [6, 7], [3, 5], [0, 7]]);
 
 
 
