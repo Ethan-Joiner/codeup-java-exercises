@@ -305,6 +305,7 @@ function camelcase(s) {
     return number;
 }
 
+// COMPLETED
 function minimumNumber(n, password) {
     // Return the minimum number of characters to make the password strong
     let changes = 0;
@@ -319,35 +320,43 @@ function minimumNumber(n, password) {
     let lengthAdd = 0;
 
     for (let number of numbers) {
-        if(password.contains(number)) {
+        if(password.includes(number)) {
             numFlag = 0;
+            console.log("Number found");
             break;
         }
     }
     for (let letter of lower_case) {
-        if(password.contains(letter)) {
+        if(password.includes(letter)) {
             lowerFlag = 0;
+            console.log("Lower found");
             break;
         }
     }
     for (let letter of upper_case) {
-        if(password.contains(letter)) {
+        if(password.includes(letter)) {
             uppFlag = 0;
+            console.log("Upper found");
             break;
         }
     }
     for (let special of special_characters) {
-        if(password.contains(special)) {
+        if(password.includes(special)) {
             specFlag = 0;
+            console.log("Special found");
             break;
         }
     }
+
     if((password.length + specFlag + uppFlag + lowerFlag + numFlag) < 6) {
-        lengthAdd = 6 - password.length + specFlag + uppFlag + lowerFlag + numFlag;
+        lengthAdd = 6 - (password.length + specFlag + uppFlag + lowerFlag + numFlag);
+        console.log(lengthAdd);
     }
     changes = lengthAdd + specFlag + uppFlag + lowerFlag + numFlag;
     return changes;
 }
+
+minimumNumber(3,"Ab1");
 
 
 
