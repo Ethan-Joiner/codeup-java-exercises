@@ -292,7 +292,12 @@ function saveThePrisoner(n, m, s) {
     console.log(deadGuy);
     return deadGuy;
 }
-saveThePrisoner(2, 1, 1);
+// saveThePrisoner(2, 1, 1);
+
+// Count the amount of words in a camelcase string
+function camelcase(s) {
+    
+}
 
 
 
