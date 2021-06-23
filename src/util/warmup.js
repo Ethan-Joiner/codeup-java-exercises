@@ -360,9 +360,18 @@ minimumNumber(3,"Ab1");
 
 // 
 function insertionSort1(n, arr) {
+    let lastDigit = arr[arr.length -1];
+    let dupeIndex = arr[arr.length -2];
+    let newArray = [];
+    for(let i = arr.length - 1; arr[i - 1] > lastDigit; i--){
+        for(let j = arr.length; j > 0; j--) {
+            
+        }
+    };
     // Write your code here
 
 }
+insertionSort1([1,2,4,5,3]);
 
 
 
