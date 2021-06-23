@@ -229,7 +229,7 @@ function jumpingOnClouds(c) {
 }
 // jumpingOnClouds([0, 0, 0, 1, 0, 0])
 
-// Take an array and find the minimum amount of elements to delete to only have the same number remaining
+// COMPLETED: Take an array and find the minimum amount of elements to delete to only have the same number remaining
 function equalizeArray(arr) {
     let mode = 1;
     let maxMode = 1;
@@ -249,7 +249,13 @@ function equalizeArray(arr) {
     console.log(arr.length - maxMode);
     return arr.length - maxMode;
 }
-equalizeArray([37, 32, 97, 35, 76, 62]);
+// equalizeArray([37, 32, 97, 35, 76, 62]);
+
+
+function serviceLane(n, cases) {
+    // Write your code here
+
+}
 
 
 
