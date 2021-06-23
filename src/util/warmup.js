@@ -287,9 +287,12 @@ function equalizeArray(arr) {
 
 
 function saveThePrisoner(n, m, s) {
-    // Write your code here
-
+    let deadGuy = 0;
+    deadGuy = m % n + s - 1;
+    console.log(deadGuy);
+    return deadGuy;
 }
+saveThePrisoner(4,6,2);
 
 
 
