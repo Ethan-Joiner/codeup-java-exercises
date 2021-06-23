@@ -308,7 +308,6 @@ function camelcase(s) {
 function minimumNumber(n, password) {
     // Return the minimum number of characters to make the password strong
     let changes = 0;
-    let pwUpdate = password;
     let numbers = "0123456789";
     let lower_case = "abcdefghijklmnopqrstuvwxyz";
     let upper_case = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -317,6 +316,7 @@ function minimumNumber(n, password) {
     let lowerFlag = 1;
     let uppFlag = 1;
     let specFlag = 1;
+    let lengthAdd = 0;
 
     for (let number of numbers) {
         if(password.contains(number)) {
@@ -342,9 +342,11 @@ function minimumNumber(n, password) {
             break;
         }
     }
-
-
-
+    if((password.length + specFlag + uppFlag + lowerFlag + numFlag) < 6) {
+        lengthAdd = 6 - password.length + specFlag + uppFlag + lowerFlag + numFlag;
+    }
+    changes = lengthAdd + specFlag + uppFlag + lowerFlag + numFlag;
+    return changes;
 }
 
 
