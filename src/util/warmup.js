@@ -273,16 +273,22 @@ function equalizeArray(arr) {
 // serviceLane([2, 3, 1, 2, 3, 2, 3, 3], [[0, 3], [4, 6], [6, 7], [3, 5], [0, 7]]);
 
 
-function serviceLane(n, cases) {
-    let maxSize = 0;
-    for(let i = cases[0]; i < cases[1]; i++) {
-        if (maxSize == 0) {
-            maxSize = n[i];
-        } else if (maxSize > cases[i]) {
-            maxSize = n[i];
-        }
-    }
-    return maxSize;
+// function serviceLane(n, cases) {
+//     let maxSize = 0;
+//     for(let i = cases[0]; i < cases[1]; i++) {
+//         if (maxSize == 0) {
+//             maxSize = n[i];
+//         } else if (maxSize > cases[i]) {
+//             maxSize = n[i];
+//         }
+//     }
+//     return maxSize;
+// }
+
+
+function saveThePrisoner(n, m, s) {
+    // Write your code here
+
 }
 
 
