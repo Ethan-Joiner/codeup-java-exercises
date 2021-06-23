@@ -292,7 +292,7 @@ function saveThePrisoner(n, m, s) {
     console.log(deadGuy);
     return deadGuy;
 }
-saveThePrisoner(4,6,2);
+saveThePrisoner(2, 1, 1);
 
 
 
