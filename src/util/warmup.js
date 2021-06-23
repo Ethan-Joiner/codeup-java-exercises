@@ -259,7 +259,7 @@ function serviceLane(n, cases) {
         for(let i = lane[0]; i < lane[1]; i++){
             if(maxSizeIndividual == 0) {
                 maxSizeIndividual = n[i];
-            } else if (maxSizeIndividual < n[i]) {
+            } else if (maxSizeIndividual > n[i]) {
                 maxSizeIndividual = n[i];
             }    
             }
