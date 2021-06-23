@@ -358,6 +358,12 @@ function minimumNumber(n, password) {
 
 minimumNumber(3,"Ab1");
 
+// 
+function insertionSort1(n, arr) {
+    // Write your code here
+
+}
+
 
 
 
