@@ -445,8 +445,7 @@ if(moves === k || ((k - moves) % 2 == 0 && k > moves) || k / 2 > t.length || k -
 // Find number of squares between two values
 function squares(a, b) {
     let number = 0;
-    for(let i = a; i <= b; i++) {
-        console.log(i + "sqrt is " + Math.sqrt(i));
+    for(let i = Math.ceil(Math.sqrt(a))**2; i <= b; i++) {
         if(Math.sqrt(i) % 1 === 0 ) {
             number +=1;
             i += Math.sqrt(i) * 2;
