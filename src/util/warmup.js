@@ -147,7 +147,7 @@ function jumpingOnClouds(c, k) {
      
     return energy;
 }
-jumpingOnClouds([0,0,1,0,0,1,1,0], 2);
+// jumpingOnClouds([0,0,1,0,0,1,1,0], 2);
 
 // Completed
 function pageCount(n, p) {
@@ -410,21 +410,37 @@ function circularArrayRotation(a, k, queries) {
     return quer;
 }
 
-// Can s === t in k moves?
+// COMPLETED: Can s === t in k moves?
 function appendAndDelete(s, t, k) {
     let moves = 0;
-    for(let i = 0; i < s.length; i++) {
-        if(t[i] !== s[i]) {
-            moves += (t.length - i) + s.length - i;
-        };
-          if(moves === k || (k - moves) % 2 == 0 || k / 2 > t.length) {
-        return "Yes";
+    if(s.length >= t.length){
+        for(let i = 0; i < s.length; i++) {
+         console.log("s@index = " + s[i]);
+         console.log("t@index = " + t[i]);
+          if(t[i] !== s[i]) {
+             moves += (t.length - i) + s.length - i;
+              console.log(moves);
+              break;
+          }
+        } 
     } else {
-        return "No";
+            for(let i = 0; i < t.length; i++) {
+                console.log("s@index = " + s[i]);
+                console.log("t@index = " + t[i]);
+                 if(t[i] !== s[i]) {
+                    moves += (t.length - i) + s.length - i;
+                     console.log(moves);
+                     break;
+        }  
+}
     }
+if(moves === k || ((k - moves) % 2 == 0 && k > moves) || k / 2 > t.length || k - moves === 0) {
+    return "Yes";
+} else {
+    return "No";
 }
 }
-appendAndDelete("testing","tester", 7)
+appendAndDelete("y", "yu", 2)
 
     // for(let i = 0; i < s.length; i++) {
     //     if(t[i] == null) {
