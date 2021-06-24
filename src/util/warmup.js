@@ -383,6 +383,16 @@ function minimumNumber(n, password) {
 
 // a is an array of 3, k is the amount of times to shift, queries are the indices after
 function circularArrayRotation(a, k, queries) {
-
+    let quer = [];
+    let mover;
+    for(let i = 0; i < k; i++) {
+        mover = a[a.length - 1];
+        a.pop();
+        a.unshift(mover);
+    }
+    for(let query of queries) {
+        quer.push(arr[query]);
+    }
+    return quer;
 }
 
