@@ -356,24 +356,28 @@ function minimumNumber(n, password) {
     return changes;
 }
 
-minimumNumber(3,"Ab1");
+// minimumNumber(3,"Ab1");
 
 // 
 function insertionSort1(n, arr) {
     let lastDigit = arr[arr.length -1];
-    let dupeIndex = arr[arr.length -2];
+    let dupeIndex = arr.length -2;
     let newArray = [];
-    for(let i = arr.length - 1; arr[i - 1] > lastDigit; i--){
-        for(let j = arr.length; j > 0; j--) {
-            
+    for(let i = arr.length - 1; i > 0; i--){
+        if(arr[dupeIndex] > lastDigit) {
+            for(let j = arr.length - 1; j >= 0; j--) {
+                if(j !== dupeIndex) {
+                    newArray.unshift(arr[j]);
+                } else {
+                    newArray.unshift(arr[dupeIndex]);
+                    dupeIndex--;
+                }
         }
+        console.log(newArray);
     };
     // Write your code here
 
 }
-insertionSort1([1,2,4,5,3]);
-
-
-
-
+}
+insertionSort1(5,[1,2,4,5,3]);
 
