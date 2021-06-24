@@ -475,12 +475,15 @@ function squares(a, b) {
 // Find longest string of numbers in array a that are <=1 value apart
 function pickingNumbers(a) {
     let longest = 1;
+    let current = 1;
     a.sort(function(a,b) {
         return a-b;
     });
     let num = a[0];
     for (let i = 0; i < a.length; i++) {
-        if()
+        if(a[i] === a[i + 1]) {
+            longest++;
+        }
 
     }
 
