@@ -126,24 +126,28 @@ function jumpingOnClouds(c, k) {
     do {
         if((index + k > (c.length - 1) == 0)) {
             index += k;
+            console.log("Index after jump " + index);
             if(c[index] == 1) {
                 energy -= 3;
             } else {
                 energy -=1;
             }
+            console.log("Energy after jump " + energy);
         } else {
-            index = k - c.length - index;
+            index = k - (c.length - index);
+            console.log("Index after jump " + index);
             if(c[index] == 1) {
                 energy -= 3;
             } else {
                 energy -=1;
             }
+            console.log("Energy after jump " + energy);
         }
     } while(index !== 0);
      
     return energy;
 }
-jumpingOnClouds([0,0,1,0,0,1,1,0], 3);
+jumpingOnClouds([0,0,1,0,0,1,1,0], 2);
 
 // Completed
 function pageCount(n, p) {
@@ -224,19 +228,19 @@ function taumBday(b, w, bc, wc, z) {
 //     912285746, 841360803, 736841333);
 
 // COMPLETED
-function jumpingOnClouds(c) {
-    let jumps = 0;
-    for(let i = 0; i < c.length - 1; i++) {
-        if(c[i + 2] == 0) {
-            i++;
-            jumps += 1;
-        } else {
-            jumps +=1;
-        }
-    }
-    console.log(jumps);
-    return jumps;
-}
+// function jumpingOnClouds(c) {
+//     let jumps = 0;
+//     for(let i = 0; i < c.length - 1; i++) {
+//         if(c[i + 2] == 0) {
+//             i++;
+//             jumps += 1;
+//         } else {
+//             jumps +=1;
+//         }
+//     }
+//     console.log(jumps);
+//     return jumps;
+// }
 // jumpingOnClouds([0, 0, 0, 1, 0, 0])
 
 // COMPLETED: Take an array and find the minimum amount of elements to delete to only have the same number remaining
