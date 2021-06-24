@@ -440,21 +440,10 @@ if(moves === k || ((k - moves) % 2 == 0 && k > moves) || k / 2 > t.length || k -
     return "No";
 }
 }
-appendAndDelete("y", "yu", 2)
+// appendAndDelete("y", "yu", 2)
 
-    // for(let i = 0; i < s.length; i++) {
-    //     if(t[i] == null) {
-    //         moves +=1;
-    //         console.log("Empty space, +1");
-    //         console.log(moves);
-    //     } else if (t[i] !== s[i]){
-    //         moves +=2;
-    //         console.log("Wrong, +2");
-    //         console.log(moves);
-    //     }
-    // }
-    // if(moves === k || (k - moves) % 2 == 0 || k / 2 > t.length) {
-    //     return "Yes";
-    // } else {
-    //     return "No";
-    // }
+// Find number of squares between two values
+function squares(a, b) {
+    // Write your code here
+
+}
