@@ -458,8 +458,32 @@ function squares(a, b) {
 // squares(3,9);
 
 
-// Take in array of binary string, find maximum value and mode of it
-function acmTeam(topic) {
-    // Write your code here
+// int shakes = 0;
+// 			for(int i = n; i > 0; i--) {
+// 				shakes += i - 1;
+// 			}
+// 			return shakes;
+// Take in array of binary strings, find maximum value and mode of it
+// function acmTeam(topic) {
+//     let teams = topic.length;
+//     let winTeams = 0;
+//     let topics = 0;
+//     let answer = [];
+
+// }
+
+// Find longest string of numbers in array a that are <=1 value apart
+function pickingNumbers(a) {
+    let longest = 1;
+    a.sort(function(a,b) {
+        return a-b;
+    });
+    let num = a[0];
+    for (let i = 0; i < a.length; i++) {
+        if()
+
+    }
+
+
 
 }
