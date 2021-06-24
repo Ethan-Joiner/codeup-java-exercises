@@ -455,4 +455,11 @@ function squares(a, b) {
     console.log(number);
     return number;
 }
-squares(3,9);
+// squares(3,9);
+
+
+// Take in array of binary string, find maximum value and mode of it
+function acmTeam(topic) {
+    // Write your code here
+
+}
