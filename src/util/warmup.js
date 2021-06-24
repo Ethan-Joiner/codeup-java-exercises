@@ -446,9 +446,11 @@ if(moves === k || ((k - moves) % 2 == 0 && k > moves) || k / 2 > t.length || k -
 function squares(a, b) {
     let number = 0;
     for(let i = a; i <= b; i++) {
-        if(i / i === 1) {
+        console.log(i + "sqrt is " + Math.sqrt(i));
+        if(Math.sqrt(i) % 1 === 0 ) {
             number +=1;
-            i += i + 1;
+            i += Math.sqrt(i) * 2;
+
         }
     }
     console.log(number);
