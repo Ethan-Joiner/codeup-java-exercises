@@ -410,3 +410,9 @@ function circularArrayRotation(a, k, queries) {
     return quer;
 }
 
+// Can s === t in k moves?
+function appendAndDelete(s, t, k) {
+    // Write your code here
+
+}
+
