@@ -414,10 +414,14 @@ function circularArrayRotation(a, k, queries) {
 function appendAndDelete(s, t, k) {
     let moves = 0;
     for(let i = 0; i < s.length; i++) {
-        if(t[i].isEmpty()) {
+        if(t[i] == null) {
             moves +=1;
-        } else if (t[i] !== letter){
+            console.log("Empty space, +1");
+            console.log(moves);
+        } else if (t[i] !== s[i]){
             moves +=2;
+            console.log("Wrong, +2");
+            console.log(moves);
         }
     }
     if(moves > k) {
@@ -426,4 +430,5 @@ function appendAndDelete(s, t, k) {
         return "Yes";
     }
 }
+appendAndDelete("aaaaaaaaaa","aaaaa", 7)
 
