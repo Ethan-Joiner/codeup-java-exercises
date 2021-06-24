@@ -412,7 +412,14 @@ function circularArrayRotation(a, k, queries) {
 
 // Can s === t in k moves?
 function appendAndDelete(s, t, k) {
-    // Write your code here
-
+    let moves = 0;
+    for(let letter of s) {
+        if(t[letter].isempty()) {
+            moves +=1;
+        } else if (t[letter] !== letter){
+            moves +=2;
+        }
+    }
+    return moves;
 }
 
