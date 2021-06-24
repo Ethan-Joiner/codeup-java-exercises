@@ -120,20 +120,30 @@ function getMoneySpent(keyboards, drives, b) {
 // getMoneySpent([1,2,3],[2,4],6);
  
 // C is an array of 0s and 1s. K is the number to move forward through the array. Start with 100 energy and lose 1 per 0, 3 per 1. Must land on index 0.
-// function jumpingOnClouds(c, k) {
-//     let energy = 100;
-//     for(let i = 0; i < c.length; i += k){
-//         if(c[i] === 1) {
-//             energy -= 3;
-//         } else {
-//             energy -=1;
-//         }
-//     }
-//     console.log(energy);
-//     console.log(10 % 3);
-//     return energy;
-// }
-// jumpingOnClouds([0,0,1,0,0,1,1,0], 2);
+function jumpingOnClouds(c, k) {
+    let energy = 100;
+    let index = 0;
+    do {
+        if((index + k > (c.length - 1) == 0)) {
+            index += k;
+            if(c[index] == 1) {
+                energy -= 3;
+            } else {
+                energy -=1;
+            }
+        } else {
+            index = k - c.length - index;
+            if(c[index] == 1) {
+                energy -= 3;
+            } else {
+                energy -=1;
+            }
+        }
+    } while(index !== 0);
+     
+    return energy;
+}
+jumpingOnClouds([0,0,1,0,0,1,1,0], 3);
 
 // Completed
 function pageCount(n, p) {
