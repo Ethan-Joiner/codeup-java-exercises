@@ -412,7 +412,20 @@ function circularArrayRotation(a, k, queries) {
 
 // Can s === t in k moves?
 function appendAndDelete(s, t, k) {
-    // let moves = 0;
+    let moves = 0;
+    for(let i = 0; i < s.length; i++) {
+        if(t[i] !== s[i]) {
+            moves += (t.length - i) + s.length - i;
+        };
+          if(moves === k || (k - moves) % 2 == 0 || k / 2 > t.length) {
+        return "Yes";
+    } else {
+        return "No";
+    }
+}
+}
+appendAndDelete("testing","tester", 7)
+
     // for(let i = 0; i < s.length; i++) {
     //     if(t[i] == null) {
     //         moves +=1;
@@ -429,6 +442,3 @@ function appendAndDelete(s, t, k) {
     // } else {
     //     return "No";
     // }
-}
-appendAndDelete("aaaaaaaaaa","aaaaa", 7)
-
