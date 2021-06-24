@@ -119,7 +119,7 @@ function getMoneySpent(keyboards, drives, b) {
 };
 // getMoneySpent([1,2,3],[2,4],6);
  
-// C is an array of 0s and 1s. K is the number to move forward through the array. Start with 100 energy and lose 1 per 0, 3 per 1. Must land on index 0.
+// COMPLETED: C is an array of 0s and 1s. K is the number to move forward through the array. Start with 100 energy and lose 1 per 0, 3 per 1. Must land on index 0.
 function jumpingOnClouds(c, k) {
     let energy = 100;
     let index = 0;
