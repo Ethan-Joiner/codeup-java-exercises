@@ -359,25 +359,30 @@ function minimumNumber(n, password) {
 // minimumNumber(3,"Ab1");
 
 // 
-function insertionSort1(n, arr) {
-    let lastDigit = arr[arr.length -1];
-    let dupeIndex = arr.length -2;
-    let newArray = [];
-    for(let i = arr.length - 1; i > 0; i--){
-        if(arr[dupeIndex] > lastDigit) {
-            for(let j = arr.length - 1; j >= 0; j--) {
-                if(j !== dupeIndex) {
-                    newArray.unshift(arr[j]);
-                } else {
-                    newArray.unshift(arr[dupeIndex]);
-                    dupeIndex--;
-                }
-        }
-        console.log(newArray);
-    };
-    // Write your code here
+// function insertionSort1(n, arr) {
+//     let lastDigit = arr[arr.length -1];
+//     let dupeIndex = arr.length -2;
+//     let newArray = [];
+//     for(let i = arr.length - 1; i > 0; i--){
+//         if(arr[dupeIndex] > lastDigit) {
+//             for(let j = arr.length - 1; j >= 0; j--) {
+//                 if(j == dupeIndex + 1) {
+//                     newArray.unshift(arr[j]);
+//                 } else {
+//                     newArray.unshift(arr[dupeIndex]);
+//                     dupeIndex--;
+//                 }
+//         }
+//         console.log(newArray);
+//     };
+
+// }
+// }
+// insertionSort1(5,[1,2,4,5,3]);
+
+
+// a is an array of 3, k is the amount of times to shift, queries are the indices after
+function circularArrayRotation(a, k, queries) {
 
 }
-}
-insertionSort1(5,[1,2,4,5,3]);
 
