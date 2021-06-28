@@ -481,12 +481,18 @@ function pickingNumbers(a) {
     });
     let num = a[0];
     for (let i = 0; i < a.length; i++) {
+        console.log("Num = " + a[i]);
+        console.log("Current Length = " + current);
         if(a[i] === a[i + 1]) {
             current++;
+            if(current > longest) {
+                longest = current;
+            }
+        } else {
+            current = 1;
         }
 
     }
-
-
-
+    console.log(longest);
 }
+pickingNumbers([4,6,5,3,3,1])
