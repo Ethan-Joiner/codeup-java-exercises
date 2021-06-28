@@ -482,7 +482,7 @@ function pickingNumbers(a) {
     let num = a[0];
     for (let i = 0; i < a.length; i++) {
         if(a[i] === a[i + 1]) {
-            longest++;
+            current++;
         }
 
     }
