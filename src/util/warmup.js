@@ -495,4 +495,11 @@ function pickingNumbers(a) {
     }
     console.log(longest);
 }
-pickingNumbers([4,6,5,3,3,1])
+// pickingNumbers([4,6,5,3,3,1])
+
+
+// Given two arrays, find all numbers that have the first array's elements as a factor, and are a factor of the second array's elements
+function getTotalX(a, b) {
+    // Write your code here
+
+}
