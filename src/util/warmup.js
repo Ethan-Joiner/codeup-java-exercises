@@ -472,7 +472,7 @@ function squares(a, b) {
 
 // }
 
-// Find longest string of numbers in array a that are <=1 value apart
+// COMPLETED: Find longest string of numbers in array a that are <=1 value apart
 function pickingNumbers(a) {
     let longest = 1;
     let current = 1;
@@ -524,5 +524,11 @@ function pickingNumbers(a) {
 //     }    
 // }
 // fairRations([1,2]);
+
+// Return a players ranks after each attempt
+function climbingLeaderboard(ranked, player) {
+    // Write your code here
+
+}
 
 
