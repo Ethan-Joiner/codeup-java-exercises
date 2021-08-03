@@ -302,16 +302,22 @@ function equalizeArray(arr) {
 
 function saveThePrisoner(n, m, s) {
     let deadGuy = 0;
-    if((m % n + s - 1) <= n){
+    console.log(m % n + s - 1);
+
+    if((m % n + s - 1) === 0){
+        console.log("t3");
+    deadGuy += n;
+    } else if((m % n + s - 1) <= n){
+        console.log("t1");
     deadGuy = m % n + s - 1;
     } else {
     deadGuy = m % n + s - 1 - n; 
+    console.log("t2");
     }
-    console.log(m % n);
     console.log(deadGuy);
     return deadGuy;
 }
-saveThePrisoner(78, 631228415, 77);
+saveThePrisoner(91, 111224659, 1);
 
 // COMPLETE: Count the amount of words in a camelcase string
 function camelcase(s) {
