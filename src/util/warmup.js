@@ -302,11 +302,16 @@ function equalizeArray(arr) {
 
 function saveThePrisoner(n, m, s) {
     let deadGuy = 0;
+    if((m % n + s - 1) <= n){
     deadGuy = m % n + s - 1;
+    } else {
+    deadGuy = m % n + s - 1 - n; 
+    }
+    console.log(m % n);
     console.log(deadGuy);
     return deadGuy;
 }
-// saveThePrisoner(2, 1, 1);
+saveThePrisoner(78, 631228415, 77);
 
 // COMPLETE: Count the amount of words in a camelcase string
 function camelcase(s) {
@@ -547,6 +552,6 @@ function climbingLeaderboard(ranked, player) {
     }
     return playerRanks;
 }
-climbingLeaderboard([100,90,90,80,75,60], [50,65,77,90,102,103])
+// climbingLeaderboard([100,90,90,80,75,60], [50,65,77,90,102,103])
 
 
