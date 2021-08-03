@@ -507,6 +507,13 @@ function pickingNumbers(a) {
 
 // Given an array of integers, return the amount of increases that must be done to make all numbers even. Can increase two adjacent indices by 1 per movement
 function fairRations(B) {
-    // Write your code here
-
+    let loaves = 0;
+    for(let i = 0; i < B.length; i++){
+        if(B[i] % 2 != 0){
+            B[i] +=1;
+            B[i + 1] +=1;
+            loaves += 2;
+        }
+    }
+    return loaves;
 }
