@@ -538,7 +538,7 @@ function climbingLeaderboard(ranked, player) {
                 secondIndex = j;
                 console.log("Rank Placed");
                 break;
-            } else if (player[i] > ranks[ranks.length - 1]){
+            } else if (player[i] >= ranks[ranks.length - 1]){
                 playerRanks.push(1);
                 secondIndex = j;
                 break;
