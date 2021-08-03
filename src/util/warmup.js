@@ -491,11 +491,11 @@ function pickingNumbers(a) {
         } else {
             current = 1;
         }
-
     }
     console.log(longest);
+    return longest;
 }
-// pickingNumbers([4,6,5,3,3,1])
+pickingNumbers([4,6,5,3,3,1])
 
 
 // Given two arrays, find all numbers that have the first array's elements as a factor, and are a factor of the second array's elements
@@ -506,20 +506,22 @@ function pickingNumbers(a) {
 
 
 // Given an array of integers, return the amount of increases that must be done to make all numbers even. Can increase two adjacent indices by 1 per movement
-function fairRations(B) {
-    let loaves = 0;
-    for(let i = 0; i < B.length; i++){
-        if(B[i] % 2 != 0){
-            B[i] +=1;
-            B[i + 1] +=1;
-            loaves += 2;
-        }
-    }
-    if(loaves = 0){
-        return "No";
-    } else {
-        return loaves;
-    }    
-}
+// function fairRations(B) {
+//     let loaves = 0;
+//     console.log(B.length);
+//     for(let i = 0; i < B.length; i++){
+//         if(B[i] % 2 != 0){
+//             B[i] +=1;
+//             B[i + 1] +=1;
+//             loaves += 2;
+//         }
+//     }
+//     if(loaves == 0){
+//         return "No";
+//     } else {
+//         return loaves;
+//     }    
+// }
+// fairRations([1,2]);
 
 
