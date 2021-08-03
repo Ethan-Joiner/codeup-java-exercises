@@ -499,7 +499,14 @@ function pickingNumbers(a) {
 
 
 // Given two arrays, find all numbers that have the first array's elements as a factor, and are a factor of the second array's elements
-function getTotalX(a, b) {
+// function getTotalX(a, b) {
+//     let answer = 0;
+    
+//     }
+
+
+// Given an array of integers, return the amount of increases that must be done to make all numbers even. Can increase two adjacent indices by 1 per movement
+function fairRations(B) {
     // Write your code here
 
 }
