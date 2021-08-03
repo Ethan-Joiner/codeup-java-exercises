@@ -528,12 +528,22 @@ function pickingNumbers(a) {
 // Return a players ranks after each attempt
 function climbingLeaderboard(ranked, player) {
     let ranks = [...new Set(ranked)];
+    ranks.reverse();
     let playerRanks = [];
     for(let i = 0; i < player.length; i++){
-
+        for(let j = 0; j < ranks.length; j++){
+            if(player[i] < ranks[j]){
+                playerRanks.push(ranks.length - j + 1)
+                break;
+            }
+        }
     }
+    if(player[player.length - 1] > ranks[ranks.length - 1]){
+        playerRanks.push(1);
+    }
+    playerRanks.reverse();
+    console.log(playerRanks);
 
-    console.log(ranks);
     return playerRanks;
 }
 climbingLeaderboard([100,90,90,80,75,60], [50,65,77,90,102])
