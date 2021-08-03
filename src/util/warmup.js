@@ -515,5 +515,11 @@ function fairRations(B) {
             loaves += 2;
         }
     }
-    return loaves;
+    if(loaves = 0){
+        return "No";
+    } else {
+        return loaves;
+    }    
 }
+
+
