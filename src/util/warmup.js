@@ -528,26 +528,25 @@ function pickingNumbers(a) {
 // Return a players ranks after each attempt
 function climbingLeaderboard(ranked, player) {
     let ranks = [...new Set(ranked)];
+    let secondIndex = 0;
     ranks.reverse();
     let playerRanks = [];
     for(let i = 0; i < player.length; i++){
-        for(let j = 0; j < ranks.length; j++){
+        for(let j = secondIndex; j < ranks.length; j++){
             if(player[i] < ranks[j]){
                 playerRanks.push(ranks.length - j + 1)
+                secondIndex = j;
+                console.log("Rank Placed");
                 break;
             } else if (player[i] > ranks[ranks.length - 1]){
                 playerRanks.push(1);
+                secondIndex = j;
                 break;
             }
         }
     }
-    // if(player[player.length - 1] > ranks[ranks.length - 1]){
-    //     playerRanks.push(1);
-    // }
-    console.log(playerRanks);
-
     return playerRanks;
 }
-climbingLeaderboard([100,90,90,80,75,60], [50,65,77,90,102])
+climbingLeaderboard([100,90,90,80,75,60], [50,65,77,90,102,103])
 
 
