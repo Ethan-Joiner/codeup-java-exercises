@@ -535,13 +535,15 @@ function climbingLeaderboard(ranked, player) {
             if(player[i] < ranks[j]){
                 playerRanks.push(ranks.length - j + 1)
                 break;
+            } else if (player[i] > ranks[ranks.length - 1]){
+                playerRanks.push(1);
+                break;
             }
         }
     }
-    if(player[player.length - 1] > ranks[ranks.length - 1]){
-        playerRanks.push(1);
-    }
-    playerRanks.reverse();
+    // if(player[player.length - 1] > ranks[ranks.length - 1]){
+    //     playerRanks.push(1);
+    // }
     console.log(playerRanks);
 
     return playerRanks;
