@@ -632,7 +632,14 @@ function acmTeam(topic) {
     answer.push(teams);
     return answer;
 }
-acmTeam([10101, 11100, 11010, "00101"]);
+// acmTeam([10101, 11100, 11010, "00101"]);
+
+// Encryption
+
+function encryption(s) {
+    // Write your code here
+
+}
 
 
 
