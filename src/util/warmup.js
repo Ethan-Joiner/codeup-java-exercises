@@ -637,9 +637,29 @@ function acmTeam(topic) {
 // Encryption
 
 function encryption(s) {
-    // Write your code here
-
+    let answer = "";
+    let index = 0;
+    let iterationCount = 0;
+    let rows = Math.floor(Math.sqrt(s.length));
+    let columns = Math.ceil(Math.sqrt(s.length));
+    for(let i = index; i+columns <= s.length; i += columns){
+        console.log(s.charAt(i) + " added");
+        answer = answer.concat(s.charAt(i));
+        console.log(answer);
+        iterationCount++;
+        console.log(iterationCount + " iterations");
+        console.log("i = " + i);
+        if(iterationCount == rows){
+            index++;
+            i = index;
+            break;
+        }
+    }
+    
+    console.log(answer);
+    return answer;
 }
+encryption("feedthedog");
 
 
 
