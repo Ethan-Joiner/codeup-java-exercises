@@ -669,4 +669,9 @@ function encryption(s) {
 encryption("roqfqeylxuyxjfyqterizzkhgvngapvudnztsxeprfp");
 
 
+// find number of 3 length arrays where b-a = c-a = d. Must be in ascending order.
+function beautifulTriplets(d, arr) {
+    let numberOfTriplets = 0;
+    let indexTwo = 0;
 
+}
