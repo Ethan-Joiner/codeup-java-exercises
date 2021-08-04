@@ -640,8 +640,9 @@ function encryption(s) {
     let answer = "";
     let index = 0;
     let iterationCount = 0;
-    let rows = Math.floor(Math.sqrt(s.length));
+    // let rows = if(Math.floor(Math.sqrt(s.length))
     let columns = Math.ceil(Math.sqrt(s.length));
+    let rows = Math.floor(Math.sqrt(s.length)) * columns < s.length ? Math.ceil(Math.sqrt(s.length)) : Math.floor(Math.sqrt(s.length));
     for(let i = index; i <= s.length ; i += columns){
         console.log(s.charAt(i) + " added");
         answer = answer.concat(s.charAt(i));
@@ -649,11 +650,13 @@ function encryption(s) {
         iterationCount++;
         console.log(iterationCount + " iterations");
         console.log("i = " + i);
-        console.log(s.length);
         if(iterationCount == rows){
             iterationCount = 0;
             index++;
             i = index - columns;
+            if(i == 0){
+                break;
+            }
             console.log("New Index is " + i);
             if(answer.length != s.length + rows){
             answer = answer.concat(" ");
@@ -663,7 +666,7 @@ function encryption(s) {
     console.log(answer);
     return answer;
 }
-encryption("feedthedog");
+encryption("chillout");
 
 
 
