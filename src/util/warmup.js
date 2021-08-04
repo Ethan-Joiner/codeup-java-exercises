@@ -116,100 +116,99 @@ function getMoneySpent(keyboards, drives, b) {
     }
     console.log(bestprice);
     return bestprice;
-};
+}
 // getMoneySpent([1,2,3],[2,4],6);
  
 // COMPLETED: C is an array of 0s and 1s. K is the number to move forward through the array. Start with 100 energy and lose 1 per 0, 3 per 1. Must land on index 0.
-function jumpingOnClouds(c, k) {
-    let energy = 100;
-    let index = 0;
-    do {
-        if((index + k > (c.length - 1) == 0)) {
-            index += k;
-            console.log("Index after jump " + index);
-            if(c[index] == 1) {
-                energy -= 3;
-            } else {
-                energy -=1;
-            }
-            console.log("Energy after jump " + energy);
-        } else {
-            index = k - (c.length - index);
-            console.log("Index after jump " + index);
-            if(c[index] == 1) {
-                energy -= 3;
-            } else {
-                energy -=1;
-            }
-            console.log("Energy after jump " + energy);
-        }
-    } while(index !== 0);
+// function jumpingOnClouds(c, k) {
+//     let energy = 100;
+//     let index = 0;
+//     do {
+//         if((index + k > (c.length - 1) == 0)) {
+//             index += k;
+//             console.log("Index after jump " + index);
+//             if(c[index] == 1) {
+//                 energy -= 3;
+//             } else {
+//                 energy -=1;
+//             }
+//             console.log("Energy after jump " + energy);
+//         } else {
+//             index = k - (c.length - index);
+//             console.log("Index after jump " + index);
+//             if(c[index] == 1) {
+//                 energy -= 3;
+//             } else {
+//                 energy -=1;
+//             }
+//             console.log("Energy after jump " + energy);
+//         }
+//     } while(index !== 0);
      
-    return energy;
-}
+//     return energy;
+// }
 // jumpingOnClouds([0,0,1,0,0,1,1,0], 2);
 
 // Completed
-function pageCount(n, p) {
-    let turnCount = 0;
-    if (n - p == 1 && n % 2 == 1) {
-        return turnCount;
-    } else if (p == 0 || p == 1) {
-        return turnCount;    
-    } else if(Math.abs(n - p) >= Math.abs(0 - p)){
-        for(let i = 1; i < p; i += 2) {
-            turnCount++;
-            console.log(turnCount);
-        }
-    } else if(n % 2 == 0) {
-        for(let i = n - 1; i >= p; i -= 2){
-            turnCount++;
-            console.log(turnCount);
-        }
-    } else {
-        for(let i = n - 1; i > p; i -= 2){
-            turnCount++;
-            console.log(turnCount);
-        }
-    }
-    return turnCount;
-}
+// function pageCount(n, p) {
+//     let turnCount = 0;
+//     if (n - p == 1 && n % 2 == 1) {
+//         return turnCount;
+//     } else if (p == 0 || p == 1) {
+//         return turnCount;    
+//     } else if(Math.abs(n - p) >= Math.abs(0 - p)){
+//         for(let i = 1; i < p; i += 2) {
+//             turnCount++;
+//             console.log(turnCount);
+//         }
+//     } else if(n % 2 == 0) {
+//         for(let i = n - 1; i >= p; i -= 2){
+//             turnCount++;
+//             console.log(turnCount);
+//         }
+//     } else {
+//         for(let i = n - 1; i > p; i -= 2){
+//             turnCount++;
+//             console.log(turnCount);
+//         }
+//     }
+//     return turnCount;
+// }
 // pageCount(6,5);
 
 // COMPLETED: Array of numbers. Subtract the lowest number from all numbers on each iteration. Return array with length of OG array after each iteration
-function cutTheSticks(arr) {
-    let length = [arr.length];
-    let newArr = arr.sort(function(a, b) {
-        return a - b;
-      });
-    let finalArr = [];
-    let flag = true;
-    while(flag) {
-        newArr = newArr.map(x => x - newArr[0]);
-        newArr = newArr.filter(x => x > 0);
-        if(newArr.length == 0) {
-            flag = false;
-        } else {
-            length.push(newArr.length);
-        }
-    }
-return length;
-}
+// function cutTheSticks(arr) {
+//     let length = [arr.length];
+//     let newArr = arr.sort(function(a, b) {
+//         return a - b;
+//       });
+//     let flag = true;
+//     while(flag) {
+//         newArr = newArr.map(x => x - newArr[0]);
+//         newArr = newArr.filter(x => x > 0);
+//         if(newArr.length == 0) {
+//             flag = false;
+//         } else {
+//             length.push(newArr.length);
+//         }
+//     }
+// return length;
+// }
 
 // cutTheSticks([1,13,3,8,14,9,4,4]);
 
 // COMPLETED: Find the fine based on due date versus return date
-function libraryFine(d1, m1, y1, d2, m2, y2) {
-    let fine = 0;
-    if(y1 > y2) {
-        fine = (y1 - y2) * 10000;
-    } else if (m1 > m2 && y1 == y2) {
-        fine = (m1 - m2) * 500;
-    } else if (d1 > d2 && m1 == m2 && y1 == y2){
-        fine = (d1 - d2) * 15;
-    }
-    return fine;
-}
+// function libraryFine(d1, m1, y1, d2, m2, y2) {
+//     let fine = 0;
+//     if(y1 > y2) {
+//         fine = (y1 - y2) * 10000;
+//     } else if (m1 > m2 && y1 == y2) {
+//         fine = (m1 - m2) * 500;
+//     } else if (d1 > d2 && m1 == m2 && y1 == y2){
+//         fine = (d1 - d2) * 15;
+//     }
+//     return fine;
+// }
 
 // Long and complicated explanation.
 function taumBday(b, w, bc, wc, z) {
@@ -244,25 +243,25 @@ function taumBday(b, w, bc, wc, z) {
 // jumpingOnClouds([0, 0, 0, 1, 0, 0])
 
 // COMPLETED: Take an array and find the minimum amount of elements to delete to only have the same number remaining
-function equalizeArray(arr) {
-    let mode = 1;
-    let maxMode = 1;
-    let sorted = arr.sort(function(a,b) {
-        return a - b;
-    });
-    for(let i = 0; i < sorted.length; i++){
-        if(arr[i] == arr[i + 1]){
-            mode +=1;
-            if(mode > maxMode) {
-                maxMode = mode;
-            }
-        } else {
-            mode = 1;
-        }
-    }
-    console.log(arr.length - maxMode);
-    return arr.length - maxMode;
-}
+// function equalizeArray(arr) {
+//     let mode = 1;
+//     let maxMode = 1;
+//     let sorted = arr.sort(function(a,b) {
+//         return a - b;
+//     });
+//     for(let i = 0; i < sorted.length; i++){
+//         if(arr[i] == arr[i + 1]){
+//             mode +=1;
+//             if(mode > maxMode) {
+//                 maxMode = mode;
+//             }
+//         } else {
+//             mode = 1;
+//         }
+//     }
+//     console.log(arr.length - maxMode);
+//     return arr.length - maxMode;
+// }
 // equalizeArray([37, 32, 97, 35, 76, 62]);
 
 
@@ -299,79 +298,79 @@ function equalizeArray(arr) {
 //     return maxSize;
 // }
 
+// COMPLETED
+// function saveThePrisoner(n, m, s) {
+//     let deadGuy = 0;
+//     console.log(m % n + s - 1);
 
-function saveThePrisoner(n, m, s) {
-    let deadGuy = 0;
-    console.log(m % n + s - 1);
-
-    if((m % n + s - 1) === 0){
-        console.log("t3");
-    deadGuy += n;
-    } else if((m % n + s - 1) <= n){
-        console.log("t1");
-    deadGuy = m % n + s - 1;
-    } else {
-    deadGuy = m % n + s - 1 - n; 
-    console.log("t2");
-    }
-    console.log(deadGuy);
-    return deadGuy;
-}
+//     if((m % n + s - 1) === 0){
+//         console.log("t3");
+//     deadGuy += n;
+//     } else if((m % n + s - 1) <= n){
+//         console.log("t1");
+//     deadGuy = m % n + s - 1;
+//     } else {
+//     deadGuy = m % n + s - 1 - n; 
+//     console.log("t2");
+//     }
+//     console.log(deadGuy);
+//     return deadGuy;
+// }
 // saveThePrisoner(91, 111224659, 1);
 
 // COMPLETE: Count the amount of words in a camelcase string
-function camelcase(s) {
-    let number = 1;
-    for(let i = 0; i < s.length; i++) {
-        if(s.charAt(i) === s.charAt(i).toUpperCase()) {
-            number++;
-        }
-    }
-    return number;
-}
+// function camelcase(s) {
+//     let number = 1;
+//     for(let i = 0; i < s.length; i++) {
+//         if(s.charAt(i) === s.charAt(i).toUpperCase()) {
+//             number++;
+//         }
+//     }
+//     return number;
+// }
 
 // COMPLETED
-function minimumNumber(n, password) {
-    // Return the minimum number of characters to make the password strong
-    let changes = 0;
-    let numbers = "0123456789";
-    let lower_case = "abcdefghijklmnopqrstuvwxyz";
-    let upper_case = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    let special_characters = "!@#$%^&*()-+";
-    let numFlag = 1;
-    let lowerFlag = 1;
-    let uppFlag = 1;
-    let specFlag = 1;
-    let lengthAdd = 0;
+// function minimumNumber(n, password) {
+//     // Return the minimum number of characters to make the password strong
+//     let changes = 0;
+//     let numbers = "0123456789";
+//     let lower_case = "abcdefghijklmnopqrstuvwxyz";
+//     let upper_case = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+//     let special_characters = "!@#$%^&*()-+";
+//     let numFlag = 1;
+//     let lowerFlag = 1;
+//     let uppFlag = 1;
+//     let specFlag = 1;
+//     let lengthAdd = 0;
 
-    for (let number of numbers) {
-        if(password.includes(number)) {
-            numFlag = 0;
-            console.log("Number found");
-            break;
-        }
-    }
-    for (let letter of lower_case) {
-        if(password.includes(letter)) {
-            lowerFlag = 0;
-            console.log("Lower found");
-            break;
-        }
-    }
-    for (let letter of upper_case) {
-        if(password.includes(letter)) {
-            uppFlag = 0;
-            console.log("Upper found");
-            break;
-        }
-    }
-    for (let special of special_characters) {
-        if(password.includes(special)) {
-            specFlag = 0;
-            console.log("Special found");
-            break;
-        }
-    }
+//     for (let number of numbers) {
+//         if(password.includes(number)) {
+//             numFlag = 0;
+//             console.log("Number found");
+//             break;
+//         }
+//     }
+//     for (let letter of lower_case) {
+//         if(password.includes(letter)) {
+//             lowerFlag = 0;
+//             console.log("Lower found");
+//             break;
+//         }
+//     }
+//     for (let letter of upper_case) {
+//         if(password.includes(letter)) {
+//             uppFlag = 0;
+//             console.log("Upper found");
+//             break;
+//         }
+//     }
+//     for (let special of special_characters) {
+//         if(password.includes(special)) {
+//             specFlag = 0;
+//             console.log("Special found");
+//             break;
+//         }
+//     }
 
     if((password.length + specFlag + uppFlag + lowerFlag + numFlag) < 6) {
         lengthAdd = 6 - (password.length + specFlag + uppFlag + lowerFlag + numFlag);
@@ -407,65 +406,65 @@ function minimumNumber(n, password) {
 
 
 // COMPLETED: a is an array of 3, k is the amount of times to shift, queries are the indices after
-function circularArrayRotation(a, k, queries) {
-    let quer = [];
-    let mover;
-    for(let i = 0; i < k; i++) {
-        mover = a[a.length - 1];
-        a.pop();
-        a.unshift(mover);
-    }
-    for(let query of queries) {
-        quer.push(a[query]);
-    }
-    return quer;
-}
+// function circularArrayRotation(a, k, queries) {
+//     let quer = [];
+//     let mover;
+//     for(let i = 0; i < k; i++) {
+//         mover = a[a.length - 1];
+//         a.pop();
+//         a.unshift(mover);
+//     }
+//     for(let query of queries) {
+//         quer.push(a[query]);
+//     }
+//     return quer;
+// }
 
 // COMPLETED: Can s === t in k moves?
-function appendAndDelete(s, t, k) {
-    let moves = 0;
-    if(s.length >= t.length){
-        for(let i = 0; i < s.length; i++) {
-         console.log("s@index = " + s[i]);
-         console.log("t@index = " + t[i]);
-          if(t[i] !== s[i]) {
-             moves += (t.length - i) + s.length - i;
-              console.log(moves);
-              break;
-          }
-        } 
-    } else {
-            for(let i = 0; i < t.length; i++) {
-                console.log("s@index = " + s[i]);
-                console.log("t@index = " + t[i]);
-                 if(t[i] !== s[i]) {
-                    moves += (t.length - i) + s.length - i;
-                     console.log(moves);
-                     break;
-        }  
-}
-    }
-if(moves === k || ((k - moves) % 2 == 0 && k > moves) || k / 2 > t.length || k - moves === 0) {
-    return "Yes";
-} else {
-    return "No";
-}
-}
+// function appendAndDelete(s, t, k) {
+//     let moves = 0;
+//     if(s.length >= t.length){
+//         for(let i = 0; i < s.length; i++) {
+//          console.log("s@index = " + s[i]);
+//          console.log("t@index = " + t[i]);
+//           if(t[i] !== s[i]) {
+//              moves += (t.length - i) + s.length - i;
+//               console.log(moves);
+//               break;
+//           }
+//         } 
+//     } else {
+//             for(let i = 0; i < t.length; i++) {
+//                 console.log("s@index = " + s[i]);
+//                 console.log("t@index = " + t[i]);
+//                  if(t[i] !== s[i]) {
+//                     moves += (t.length - i) + s.length - i;
+//                      console.log(moves);
+//                      break;
+//         }  
+// }
+//     }
+// if(moves === k || ((k - moves) % 2 == 0 && k > moves) || k / 2 > t.length || k - moves === 0) {
+//     return "Yes";
+// } else {
+//     return "No";
+// }
+// }
 // appendAndDelete("y", "yu", 2)
 
 // COMPLETED: Find number of squares between two values
-function squares(a, b) {
-    let number = 0;
-    for(let i = Math.ceil(Math.sqrt(a))**2; i <= b; i++) {
-        if(Math.sqrt(i) % 1 === 0 ) {
-            number +=1;
-            i += Math.sqrt(i) * 2;
+// function squares(a, b) {
+//     let number = 0;
+//     for(let i = Math.ceil(Math.sqrt(a))**2; i <= b; i++) {
+//         if(Math.sqrt(i) % 1 === 0 ) {
+//             number +=1;
+//             i += Math.sqrt(i) * 2;
 
-        }
-    }
-    console.log(number);
-    return number;
-}
+//         }
+//     }
+//     console.log(number);
+//     return number;
+// }
 // squares(3,9);
 
 
@@ -484,29 +483,29 @@ function squares(a, b) {
 // }
 
 // COMPLETED: Find longest string of numbers in array a that are <=1 value apart
-function pickingNumbers(a) {
-    let longest = 1;
-    let current = 1;
-    a.sort(function(a,b) {
-        return a-b;
-    });
-    let num = a[0];
-    for (let i = 0; i < a.length; i++) {
-        console.log("Num = " + a[i]);
-        console.log("Current Length = " + current);
-        if((a[i + 1] - num) <=1) {
-            current++;
-            if(current > longest) {
-                longest = current;
-            }
-        } else {
-            num = a[i + 1]
-            current = 1;
-        }
-    }
-    console.log(longest);
-    return longest;
-}
+// function pickingNumbers(a) {
+//     let longest = 1;
+//     let current = 1;
+//     a.sort(function(a,b) {
+//         return a-b;
+//     });
+//     let num = a[0];
+//     for (let i = 0; i < a.length; i++) {
+//         console.log("Num = " + a[i]);
+//         console.log("Current Length = " + current);
+//         if((a[i + 1] - num) <=1) {
+//             current++;
+//             if(current > longest) {
+//                 longest = current;
+//             }
+//         } else {
+//             num = a[i + 1]
+//             current = 1;
+//         }
+//     }
+//     console.log(longest);
+//     return longest;
+// }
 // pickingNumbers([4,6,5,3,3,1])
 
 
@@ -564,8 +563,18 @@ function climbingLeaderboard(ranked, player) {
 // K is the divisor. S is array of numbers. Return maximum subset of numbers that any two of them added together are not divisible by k
 
 function nonDivisibleSubset(k, s) {
-    // Write your code here
+    let tempLength = 0;
+    let subLength = 0;
+    let secondIndex = 1;
+    for(let i = 0; i < s.length; i++){
+        for(j = secondIndex; j < s.length; j++){
+            if((s[i] + s[j]) % k != 0){
 
+            }
+        }
+    }
+    return subLength;
 }
+nonDivisibleSubset(4,[19,10,12,10,24,25,22])
 
 
