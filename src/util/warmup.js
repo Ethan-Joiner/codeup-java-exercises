@@ -567,14 +567,20 @@ function nonDivisibleSubset(k, s) {
     let maxLength = 0;
     let subLength = 0;
     for(let i = 1; i < s.length; i++){
+        console.log("Test num = " + s[i]);
         for(let j = 0; j < tempArray.length; j++){
+            console.log("Array num = " + tempArray[j]);
             if((s[i] + tempArray[j]) % k != 0){
                 subLength++;
+                console.log("Sub length = " + subLength);
+                console.log("Array Length = " + tempArray.length);
             }
         }
         if(subLength == tempArray.length){
             tempArray.push(s[i])
+            console.log("Temp array = " + tempArray);
         }
+        subLength = 0;
 
     }
     console.log(tempArray);
