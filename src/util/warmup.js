@@ -562,30 +562,37 @@ function climbingLeaderboard(ranked, player) {
 
 // K is the divisor. S is array of numbers. Return maximum subset of numbers that any two of them added together are not divisible by k
 
-function nonDivisibleSubset(k, s) {
-    let tempArray = [s[0]];
-    let maxLength = 0;
-    let subLength = 0;
-    for(let i = 1; i < s.length; i++){
-        console.log("Test num = " + s[i]);
-        for(let j = 0; j < tempArray.length; j++){
-            console.log("Array num = " + tempArray[j]);
-            if((s[i] + tempArray[j]) % k != 0){
-                subLength++;
-                console.log("Sub length = " + subLength);
-                console.log("Array Length = " + tempArray.length);
-            }
-        }
-        if(subLength == tempArray.length){
-            tempArray.push(s[i])
-            console.log("Temp array = " + tempArray);
-        }
-        subLength = 0;
+// function nonDivisibleSubset(k, s) {
+//     let tempArray = [s[0]];
+//     let maxLength = 0;
+//     let subLength = 0;
+//     for(let i = 1; i < s.length; i++){
+//         console.log("Test num = " + s[i]);
+//         for(let j = 0; j < tempArray.length; j++){
+//             console.log("Array num = " + tempArray[j]);
+//             if((s[i] + tempArray[j]) % k != 0){
+//                 subLength++;
+//                 console.log("Sub length = " + subLength);
+//                 console.log("Array Length = " + tempArray.length);
+//             }
+//         }
+//         if(subLength == tempArray.length){
+//             tempArray.push(s[i])
+//             console.log("Temp array = " + tempArray);
+//         }
+//         subLength = 0;
 
-    }
-    console.log(tempArray);
-    return subLength;
+//     }
+//     console.log(tempArray);
+//     return tempArray.length;
+// }
+// nonDivisibleSubset(7,[278, 576, 496, 727, 410, 124, 338, 149, 209, 702, 282, 718, 771, 575, 436]);
+
+// ACM TEAM
+
+function acmTeam(topic) {
+    // Write your code here
+
 }
-nonDivisibleSubset(4,[19,10,12,10,24,25,22])
 
 
