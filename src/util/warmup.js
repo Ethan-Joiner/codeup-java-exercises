@@ -372,13 +372,13 @@ function taumBday(b, w, bc, wc, z) {
 //         }
 //     }
 
-    if((password.length + specFlag + uppFlag + lowerFlag + numFlag) < 6) {
-        lengthAdd = 6 - (password.length + specFlag + uppFlag + lowerFlag + numFlag);
-        console.log(lengthAdd);
-    }
-    changes = lengthAdd + specFlag + uppFlag + lowerFlag + numFlag;
-    return changes;
-}
+//     if((password.length + specFlag + uppFlag + lowerFlag + numFlag) < 6) {
+//         lengthAdd = 6 - (password.length + specFlag + uppFlag + lowerFlag + numFlag);
+//         console.log(lengthAdd);
+//     }
+//     changes = lengthAdd + specFlag + uppFlag + lowerFlag + numFlag;
+//     return changes;
+// }
 
 // minimumNumber(3,"Ab1");
 
@@ -563,16 +563,21 @@ function climbingLeaderboard(ranked, player) {
 // K is the divisor. S is array of numbers. Return maximum subset of numbers that any two of them added together are not divisible by k
 
 function nonDivisibleSubset(k, s) {
-    let tempLength = 0;
+    let tempArray = [s[0]];
+    let maxLength = 0;
     let subLength = 0;
-    let secondIndex = 1;
-    for(let i = 0; i < s.length; i++){
-        for(j = secondIndex; j < s.length; j++){
-            if((s[i] + s[j]) % k != 0){
-
+    for(let i = 1; i < s.length; i++){
+        for(let j = 0; j < tempArray.length; j++){
+            if((s[i] + tempArray[j]) % k != 0){
+                subLength++;
             }
         }
+        if(subLength == tempArray.length){
+            tempArray.push(s[i])
+        }
+
     }
+    console.log(tempArray);
     return subLength;
 }
 nonDivisibleSubset(4,[19,10,12,10,24,25,22])
