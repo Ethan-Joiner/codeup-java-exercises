@@ -591,8 +591,43 @@ function climbingLeaderboard(ranked, player) {
 // ACM TEAM
 
 function acmTeam(topic) {
-    // Write your code here
+    let answer = [];
+    let tempTopics = 0;
+    let topicsKnown = 0;
+    let teams = 0;
+    let secondIndex = 1;
+    for(let i = 0; i < topic.length; i++){
+        for(let j = secondIndex; j < topic.length; j++){
+            if(topic[i].toString()[0] + topic[j].toString()[0] > 0){
+                tempTopics++;
+            }
+            if(topic[i].toString()[1] + topic[j].toString()[1] > 0){
+                tempTopics++;
+            }
+            if(topic[i].toString()[2] + topic[j].toString()[2] > 0){
+                tempTopics++;
+            }
+            if(topic[i].toString()[3] + topic[j].toString()[3] > 0){
+                tempTopics++;
+            }
+            if(topic[i].toString()[4] + topic[j].toString()[4] > 0){
+                tempTopics++;
+            }
+            console.log("Adding " + topic[i] + " to " + topic[j] + " gives " + tempTopics);
+            if(tempTopics > topicsKnown) {
+                topicsKnown = tempTopics;
+                teams = 0;
+                teams++;
+            }
+            if(tempTopics == topicsKnown){
+                teams++;
+            }
 
+
+        }
+    }
 }
+acmTeam([10101, 11100, 11010, "00101"]);
+
 
 
