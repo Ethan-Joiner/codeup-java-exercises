@@ -595,8 +595,9 @@ function acmTeam(topic) {
     let tempTopics = 0;
     let topicsKnown = 0;
     let teams = 0;
-    let secondIndex = 1;
+    let secondIndex = 0;
     for(let i = 0; i < topic.length; i++){
+        secondIndex++;
         for(let j = secondIndex; j < topic.length; j++){
             if(topic[i].toString()[0] + topic[j].toString()[0] > 0){
                 tempTopics++;
@@ -614,18 +615,22 @@ function acmTeam(topic) {
                 tempTopics++;
             }
             console.log("Adding " + topic[i] + " to " + topic[j] + " gives " + tempTopics);
+            if(tempTopics == topicsKnown){
+                teams++;
+            }
             if(tempTopics > topicsKnown) {
                 topicsKnown = tempTopics;
                 teams = 0;
                 teams++;
             }
-            if(tempTopics == topicsKnown){
-                teams++;
-            }
-
-
+           
+            tempTopics = 0;
+            console.log("Teams with most topics = " + teams);
         }
     }
+    answer.push(topicsKnown);
+    answer.push(teams);
+    return answer;
 }
 acmTeam([10101, 11100, 11010, "00101"]);
 
