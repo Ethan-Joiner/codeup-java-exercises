@@ -634,7 +634,7 @@ function acmTeam(topic) {
 }
 // acmTeam([10101, 11100, 11010, "00101"]);
 
-// Encryption
+// COMPLETED: Encryption
 
 function encryption(s) {
     let answer = "";
@@ -643,7 +643,7 @@ function encryption(s) {
     // let rows = if(Math.floor(Math.sqrt(s.length))
     let columns = Math.ceil(Math.sqrt(s.length));
     let rows = Math.floor(Math.sqrt(s.length)) * columns < s.length ? Math.ceil(Math.sqrt(s.length)) : Math.floor(Math.sqrt(s.length));
-    for(let i = index; i <= s.length ; i += columns){
+    for(let i = index; i <= s.length + columns - 1 ; i += columns){
         console.log(s.charAt(i) + " added");
         answer = answer.concat(s.charAt(i));
         console.log(answer);
