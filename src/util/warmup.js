@@ -317,7 +317,7 @@ function saveThePrisoner(n, m, s) {
     console.log(deadGuy);
     return deadGuy;
 }
-saveThePrisoner(91, 111224659, 1);
+// saveThePrisoner(91, 111224659, 1);
 
 // COMPLETE: Count the amount of words in a camelcase string
 function camelcase(s) {
@@ -559,5 +559,13 @@ function climbingLeaderboard(ranked, player) {
     return playerRanks;
 }
 // climbingLeaderboard([100,90,90,80,75,60], [50,65,77,90,102,103])
+
+
+// K is the divisor. S is array of numbers. Return maximum subset of numbers that any two of them added together are not divisible by k
+
+function nonDivisibleSubset(k, s) {
+    // Write your code here
+
+}
 
 
