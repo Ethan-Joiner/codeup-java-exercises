@@ -642,7 +642,7 @@ function encryption(s) {
     let iterationCount = 0;
     let rows = Math.floor(Math.sqrt(s.length));
     let columns = Math.ceil(Math.sqrt(s.length));
-    for(let i = index; i < s.length ; i += columns){
+    for(let i = index; i <= s.length ; i += columns){
         console.log(s.charAt(i) + " added");
         answer = answer.concat(s.charAt(i));
         console.log(answer);
@@ -651,12 +651,13 @@ function encryption(s) {
         console.log("i = " + i);
         console.log(s.length);
         if(iterationCount == rows){
+            iterationCount = 0;
             index++;
             i = index - columns;
             console.log("New Index is " + i);
+            if(answer.length != s.length + rows){
             answer = answer.concat(" ");
-
-
+            }
         }
     }
     console.log(answer);
