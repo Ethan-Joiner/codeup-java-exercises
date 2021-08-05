@@ -669,7 +669,7 @@ function acmTeam(topic) {
 // encryption("roqfqeylxuyxjfyqterizzkhgvngapvudnztsxeprfp");
 
 
-// find number of 3 length arrays where b-a = c-a = d. Must be in ascending order.
+// COMPLETED: find number of 3 length arrays where b-a = c-a = d. Must be in ascending order.
 function beautifulTriplets(d, arr) {
     arr.sort((a,b) => a - b);
     let numberOfTriplets = 0;
