@@ -564,16 +564,13 @@ function climbingLeaderboard(ranked, player) {
 // K is the divisor. S is array of numbers. Return maximum subset of numbers that any two of them added together are not divisible by k
 
 function nonDivisibleSubset(k, s) {
-    let longest = 0;
+    let longest = 1;
     for(let i = 0; i < s.length; i++){
         console.log("First loop comparison number = " + s[i]);
-        let tempArray = [];
-        tempArray.push(s[i]);
-        longest = tempArray.length;
+        let tempArray = [s[i]];
         for(let j = 0; j < s.length; j++){
             console.log("Second Loop comparison number = " + s[j]);
             if(j !== i){
-                if((s[j] + s[i]) % k != 0){
                     if(tempArray.filter(number => (number + s[j]) % k != 0).length == tempArray.length){
                         tempArray.push(s[j]);
                         console.log("Adding " + s[j] + " to array, new value is " + tempArray);
@@ -585,7 +582,7 @@ function nonDivisibleSubset(k, s) {
                         console.log("When compared to " + s[j]);
                         console.log("These numbers do not work: " + tempArray.filter(number => (number + s[j]) % k == 0))
                     }
-                }
+                
             }
         }
     }
@@ -628,8 +625,8 @@ function nonDivisibleSubset(k, s) {
 //     console.log("Answer is = " + longest);
 //     return longest;
 // }
-nonDivisibleSubset(1,
-    [1, 2, 3, 4, 5] );
+nonDivisibleSubset(9,
+    [422346306, 940894801, 696810740, 862741861, 85835055, 313720373] );
 
 // ACM TEAM - Problem Bugged
 
