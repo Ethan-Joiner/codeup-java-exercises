@@ -563,13 +563,7 @@ function climbingLeaderboard(ranked, player) {
 
 // K is the divisor. S is array of numbers. Return maximum subset of numbers that any two of them added together are not divisible by k
 
-// function nonDivisibleSubset(k, s) {
-//     let longest = 0;
-    
-
-// }
 function nonDivisibleSubset(k, s) {
-    let testFlag = 0;
     let longest = 0;
     for(let i = 0; i < s.length; i++){
         console.log("First loop comparison number = " + s[i]);
@@ -577,30 +571,59 @@ function nonDivisibleSubset(k, s) {
         tempArray.push(s[i]);
         for(let j = i + 1; j < s.length; j++){
             console.log("Second Loop comparison number = " + s[j]);
-            testFlag = 0;
             if((s[j] + s[i]) % k != 0){
-                for(let p = 0; p < tempArray.length; p++){
-                    console.log("Temp Array comparison number = " + tempArray[p]);
-                    if((tempArray[p] + s[j]) % k != 0){
-                        testFlag++;
+                if(tempArray.filter(number => (number + s[j]) % k != 0).length == tempArray.length){
+                    tempArray.push(s[j]);
+                    console.log("Adding " + s[j] + " to array, new value is " + tempArray);
+                    if(tempArray.length > longest){
+                        longest = tempArray.length;
+                        console.log("New longest is + " + longest);
                     }
-                    if(testFlag == tempArray.length){
-                        tempArray.push(s[j]);
-                        console.log("New TempArray = " + tempArray);
-                        if(tempArray.length > longest){
-                            longest = tempArray.length;
-                            console.log("New longest is " + longest);
-                        }
-                        break;
+                }
                     }
                 }
             }
-        }
-    }
     console.log("Answer is = " + longest);
     return longest;
 }
-nonDivisibleSubset(7,[278, 576, 496, 727, 410, 124, 338, 149, 209, 702, 282, 718, 771, 575, 436]);
+// function nonDivisibleSubset(k, s) {
+//     let testFlag = 0;
+//     let longest = 0;
+//     for(let i = 0; i < s.length; i++){
+//         console.log("First loop comparison number = " + s[i]);
+//         let tempArray = [];
+//         tempArray.push(s[i]);
+//         for(let j = i + 1; j < s.length; j++){
+//             console.log("Second Loop comparison number = " + s[j]);
+//             testFlag = 0;
+//             if((s[j] + s[i]) % k != 0){
+//                 for(let p = 0; p < tempArray.length; p++){
+//                     console.log("Temp Array comparison number = " + tempArray[p]);
+//                     if((tempArray[p] + s[j]) % k != 0){
+//                         console.log("Passed");
+//                         testFlag++;
+//                     } else {
+//                         console.log("Discarded");
+//                         break;
+//                     }
+//                     if(testFlag == tempArray.length){
+//                         tempArray.push(s[j]);
+//                         console.log("New TempArray = " + tempArray);
+//                         if(tempArray.length > longest){
+//                             longest = tempArray.length;
+//                             console.log("New longest is " + longest);
+//                         }
+//                         break;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+//     console.log("Answer is = " + longest);
+//     return longest;
+// }
+nonDivisibleSubset(5,[
+    770528134, 663501748, 384261537, 800309024, 103668401, 538539662, 385488901, 101262949, 557792122, 46058493] );
 
 // ACM TEAM - Problem Bugged
 
