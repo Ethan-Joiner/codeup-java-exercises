@@ -675,7 +675,11 @@ function beautifulTriplets(d, arr) {
     let numberOfTriplets = 0;
     let tripFlag = 0;
     for(let i = 0; i < arr.length; i++){
+        tripFlag = 0;
         for(let j = i + 1; j < arr.length; j++){
+            console.log("J Loop " + arr[j]);
+            console.log("I Loop " + arr[i]);
+
         if(arr[j] - arr[i] == d){
             tripFlag++;
             console.log("First Number is " + arr[j]);
@@ -689,9 +693,11 @@ function beautifulTriplets(d, arr) {
             tripFlag = 0;
             break;
         }
+        console.log(tripFlag);
+
         }
     }
     console.log(numberOfTriplets);
     return numberOfTriplets;
 }
-beautifulTriplets(3,[1, 2, 4, 5, 7, 8, 10])
+beautifulTriplets(3,[1, 6, 7, 7, 8, 10, 12, 13, 14, 19,]);
