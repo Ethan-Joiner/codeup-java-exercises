@@ -573,7 +573,7 @@ function nonDivisibleSubset(k, s) {
     let longest = 0;
     for(let i = 0; i < s.length; i++){
         console.log("First loop comparison number = " + s[i]);
-        let tempArray = [s[0]];
+        let tempArray = [];
         tempArray.push(s[i]);
         for(let j = i + 1; j < s.length; j++){
             console.log("Second Loop comparison number = " + s[j]);
@@ -586,8 +586,10 @@ function nonDivisibleSubset(k, s) {
                     }
                     if(testFlag == tempArray.length){
                         tempArray.push(s[j]);
+                        console.log("New TempArray = " + tempArray);
                         if(tempArray.length > longest){
-                            longest = tempArray;
+                            longest = tempArray.length;
+                            console.log("New longest is " + longest);
                         }
                         break;
                     }
@@ -595,6 +597,7 @@ function nonDivisibleSubset(k, s) {
             }
         }
     }
+    console.log("Answer is = " + longest);
     return longest;
 }
 nonDivisibleSubset(7,[278, 576, 496, 727, 410, 124, 338, 149, 209, 702, 282, 718, 771, 575, 436]);
