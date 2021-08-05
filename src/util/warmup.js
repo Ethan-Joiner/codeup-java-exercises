@@ -211,21 +211,21 @@ function getMoneySpent(keyboards, drives, b) {
 // }
 
 // COMPLETED: Long and complicated explanation.
-function taumBday(b, w, bc, wc, z) {
-    let totalCost = BigInt(0);
-    if(bc + z < wc) {
-        totalCost = ((BigInt(bc) + BigInt(z)) * BigInt(w)) + BigInt(bc) * BigInt(b);
-    } else if (wc + z < bc) {
-        totalCost = ((BigInt(wc) + BigInt(z)) * BigInt(b)) + BigInt(wc) * BigInt(w);
-    } else {
-        totalCost = (BigInt(bc) * BigInt(b)) + (BigInt(wc) * BigInt(w));
-    }
-    console.log(BigInt(totalCost));
-    return BigInt(totalCost);
-}
-taumBday(736418699, 754161925,
-    912285746, 841360803, 736841333
-    );
+// function taumBday(b, w, bc, wc, z) {
+//     let totalCost = BigInt(0);
+//     if(bc + z < wc) {
+//         totalCost = ((BigInt(bc) + BigInt(z)) * BigInt(w)) + BigInt(bc) * BigInt(b);
+//     } else if (wc + z < bc) {
+//         totalCost = ((BigInt(wc) + BigInt(z)) * BigInt(b)) + BigInt(wc) * BigInt(w);
+//     } else {
+//         totalCost = (BigInt(bc) * BigInt(b)) + (BigInt(wc) * BigInt(w));
+//     }
+//     console.log(BigInt(totalCost));
+//     return BigInt(totalCost);
+// }
+// taumBday(736418699, 754161925,
+//     912285746, 841360803, 736841333
+//     );
 
 // COMPLETED
 // function jumpingOnClouds(c) {
@@ -587,7 +587,25 @@ function climbingLeaderboard(ranked, player) {
 //     console.log(tempArray);
 //     return tempArray.length;
 // }
-// nonDivisibleSubset(7,[278, 576, 496, 727, 410, 124, 338, 149, 209, 702, 282, 718, 771, 575, 436]);
+function nonDivisibleSubset(k, s) {
+    let tempArray = [s[0]];
+    let testFlag = 0;
+    let longest = 0;
+    for(let i = 0; i < s.length; i++){
+        tempArray.push(s[i]);
+        for(let j = i + 1; j < s.length; j++){
+            if(s[j] + s[i] % k != 0){
+                for(let k = 0; k < tempArray.length; k++){
+                    if(tempArray[k] + s[j] % k !=){
+
+                    }
+                }
+            }
+        }
+    }
+    
+}
+nonDivisibleSubset(7,[278, 576, 496, 727, 410, 124, 338, 149, 209, 702, 282, 718, 771, 575, 436]);
 
 // ACM TEAM - Problem Bugged
 
