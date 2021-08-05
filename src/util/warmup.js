@@ -210,21 +210,22 @@ function getMoneySpent(keyboards, drives, b) {
 //     return fine;
 // }
 
-// Long and complicated explanation.
+// COMPLETED: Long and complicated explanation.
 function taumBday(b, w, bc, wc, z) {
     let totalCost = BigInt(0);
     if(bc + z < wc) {
-        totalCost = BigInt((bc * w) + (bc * b) + (z * w));
+        totalCost = ((BigInt(bc) + BigInt(z)) * BigInt(w)) + BigInt(bc) * BigInt(b);
     } else if (wc + z < bc) {
-        totalCost = BigInt((wc * b) + (wc * w) + (z * b));
+        totalCost = ((BigInt(wc) + BigInt(z)) * BigInt(b)) + BigInt(wc) * BigInt(w);
     } else {
-        totalCost = BigInt((bc * b) + (wc * w));
+        totalCost = (BigInt(bc) * BigInt(b)) + (BigInt(wc) * BigInt(w));
     }
-    console.log(totalCost);
-    return totalCost;
+    console.log(BigInt(totalCost));
+    return BigInt(totalCost);
 }
-// taumBday(736418699, 754161925,
-//     912285746, 841360803, 736841333);
+taumBday(736418699, 754161925,
+    912285746, 841360803, 736841333
+    );
 
 // COMPLETED
 // function jumpingOnClouds(c) {
@@ -670,34 +671,34 @@ function acmTeam(topic) {
 
 
 // COMPLETED: find number of 3 length arrays where b-a = c-a = d. Must be in ascending order.
-function beautifulTriplets(d, arr) {
-    arr.sort((a,b) => a - b);
-    let numberOfTriplets = 0;
-    let tripFlag = 0;
-    for(let i = 0; i < arr.length; i++){
-        tripFlag = 0;
-        for(let j = i + 1; j < arr.length; j++){
-            console.log("J Loop " + arr[j]);
-            console.log("I Loop " + arr[i]);
+// function beautifulTriplets(d, arr) {
+//     arr.sort((a,b) => a - b);
+//     let numberOfTriplets = 0;
+//     let tripFlag = 0;
+//     for(let i = 0; i < arr.length; i++){
+//         tripFlag = 0;
+//         for(let j = i + 1; j < arr.length; j++){
+//             console.log("J Loop " + arr[j]);
+//             console.log("I Loop " + arr[i]);
 
-        if(arr[j] - arr[i] == d){
-            tripFlag++;
-            console.log("First Number is " + arr[j]);
-            console.log("Second Number is " + arr[i]);
-        }
-        if(arr[j] - arr[i] == d * 2 && tripFlag == 1){
-            console.log("First Number is " + arr[j]);
-            console.log("Second Number is " + arr[i]);
-            console.log("Triplet Found");
-            numberOfTriplets++;
-            tripFlag = 0;
-            break;
-        }
-        console.log(tripFlag);
+//         if(arr[j] - arr[i] == d){
+//             tripFlag++;
+//             console.log("First Number is " + arr[j]);
+//             console.log("Second Number is " + arr[i]);
+//         }
+//         if(arr[j] - arr[i] == d * 2 && tripFlag == 1){
+//             console.log("First Number is " + arr[j]);
+//             console.log("Second Number is " + arr[i]);
+//             console.log("Triplet Found");
+//             numberOfTriplets++;
+//             tripFlag = 0;
+//             break;
+//         }
+//         console.log(tripFlag);
 
-        }
-    }
-    console.log(numberOfTriplets);
-    return numberOfTriplets;
-}
-beautifulTriplets(3,[1, 6, 7, 7, 8, 10, 12, 13, 14, 19,]);
+//         }
+//     }
+//     console.log(numberOfTriplets);
+//     return numberOfTriplets;
+// }
+// beautifulTriplets(3,[1, 6, 7, 7, 8, 10, 12, 13, 14, 19,]);
