@@ -569,20 +569,26 @@ function nonDivisibleSubset(k, s) {
         console.log("First loop comparison number = " + s[i]);
         let tempArray = [];
         tempArray.push(s[i]);
-        for(let j = i + 1; j < s.length; j++){
+        longest = tempArray.length;
+        for(let j = 0; j < s.length; j++){
             console.log("Second Loop comparison number = " + s[j]);
-            if((s[j] + s[i]) % k != 0){
-                if(tempArray.filter(number => (number + s[j]) % k != 0).length == tempArray.length){
-                    tempArray.push(s[j]);
-                    console.log("Adding " + s[j] + " to array, new value is " + tempArray);
-                    if(tempArray.length > longest){
-                        longest = tempArray.length;
-                        console.log("New longest is + " + longest);
-                    }
-                }
+            if(j !== i){
+                if((s[j] + s[i]) % k != 0){
+                    if(tempArray.filter(number => (number + s[j]) % k != 0).length == tempArray.length){
+                        tempArray.push(s[j]);
+                        console.log("Adding " + s[j] + " to array, new value is " + tempArray);
+                         if(tempArray.length > longest){
+                            longest = tempArray.length;
+                            console.log("New longest is " + longest);
+                        }
+                    } else {
+                        console.log("When compared to " + s[j]);
+                        console.log("These numbers do not work: " + tempArray.filter(number => (number + s[j]) % k == 0))
                     }
                 }
             }
+        }
+    }
     console.log("Answer is = " + longest);
     return longest;
 }
@@ -622,8 +628,8 @@ function nonDivisibleSubset(k, s) {
 //     console.log("Answer is = " + longest);
 //     return longest;
 // }
-nonDivisibleSubset(5,[
-    770528134, 663501748, 384261537, 800309024, 103668401, 538539662, 385488901, 101262949, 557792122, 46058493] );
+nonDivisibleSubset(1,
+    [1, 2, 3, 4, 5] );
 
 // ACM TEAM - Problem Bugged
 
