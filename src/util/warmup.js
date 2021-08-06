@@ -95,10 +95,16 @@ function findPoint(px, py, qx, qy) {
 
 // Find smallest traingle height with given base and area
 function lowestTriangle(trianglebase, area) {
-    return Math.ceil(area / trianglebase) * 2;
-
+    console.log(area / trianglebase);
+    if(area / trianglebase % 1 == 0){
+    console.log("Doubling " + area/trianglebase + " to get " + (area/trianglebase) * 2);
+    Math.ceil(area / trianglebase) * 2;
+    } else {
+    console.log("*Decimal Doubling " + area/trianglebase + " to get " + (area/trianglebase) * 2);
+    Math.ceil((area / trianglebase) * 2);
+    }
 }
-
+lowestTriangle(3,4);
 // Find the most expensive keyboard/drive combo
 function getMoneySpent(keyboards, drives, b) {
     let kb = [keyboards];
@@ -733,18 +739,18 @@ function acmTeam(topic) {
 
 // COMPLETE: Mars Exploration
 
-function marsExploration(s) {
-    let answer = 0;
-    for(let i = 0; i < s.length; i++){
-        if((i == 1 || (i - 1) % 3 == 0) && s[i] !== "O"){
-            console.log("Illegal Character " + s[i] + " at index " + i);
-            answer++;
-        } else if ((i - 1) % 3 !== 0 && s[i] !== "S"){
-            console.log("!Illegal Character " +  s[i] + " at index " + i);
-            answer++;
-        }
-    }
-    console.log(answer);
-    return answer;
-}
-marsExploration("SOSSPSSQSSOR");
+// function marsExploration(s) {
+//     let answer = 0;
+//     for(let i = 0; i < s.length; i++){
+//         if((i == 1 || (i - 1) % 3 == 0) && s[i] !== "O"){
+//             console.log("Illegal Character " + s[i] + " at index " + i);
+//             answer++;
+//         } else if ((i - 1) % 3 !== 0 && s[i] !== "S"){
+//             console.log("!Illegal Character " +  s[i] + " at index " + i);
+//             answer++;
+//         }
+//     }
+//     console.log(answer);
+//     return answer;
+// }
+// marsExploration("SOSSPSSQSSOR");
