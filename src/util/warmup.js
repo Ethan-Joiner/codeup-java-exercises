@@ -762,21 +762,24 @@ function canConstruct(a) {
     for(let i = 0; i < a.length; i++){
         numString += (a[i]);
     }
-    let initialString = numString;
     for(let i = 0; i < numString.length; i++) {
+        if(numString % 3 == 0){
+            answer = "Yes";
+            break;
+        }
         console.log("Loop iteration " + i);
         for(let j = 0; j < numString.length; j++) {
             numString += numString.charAt(i);
             console.log("Added " + numString.charAt(i));
             numString = numString.slice(1);
             console.log("Removed first digit, new string is " + numString);
-        }
-        if(numString % 3 == 0 && numString !== initialString){
-            answer = "Yes";
-            break;
+            if(numString % 3 == 0){
+                answer = "Yes";
+                break;
+            }
         }
     }
     console.log(answer);
     return answer;
 }
-canConstruct([40, 50, 90]);
+canConstruct([1]);
