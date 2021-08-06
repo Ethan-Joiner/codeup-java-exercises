@@ -731,7 +731,7 @@ function acmTeam(topic) {
 // beautifulTriplets(3,[1, 6, 7, 7, 8, 10, 12, 13, 14, 19,]);
 
 
-// Mars Exploration
+// COMPLETE: Mars Exploration
 
 function marsExploration(s) {
     let answer = 0;
