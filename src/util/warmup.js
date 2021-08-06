@@ -801,7 +801,18 @@ function restaurant(l, b) {
 
 // 
 function strangeGrid(r, c) {
-    // Write your code here
-
+    let evenRowAdds = [1,3,5,7,9];
+    let oddRowAdds = [0,2,4,6,8];
+    let answer = 0;
+    if(r == 2){
+        answer = evenRowAdds[c - 1];
+    } else if (r == 1){
+        answer = oddRowAdds[c - 1];
+    } else if(r % 2 == 0) {
+        answer = row / 2 + evenRowAdds[c - 1];
+    } else {
+        answer = Math.floor(row / 2) + oddRowsAdds[c - 1];
+    }
+    return answer;
 }
 
