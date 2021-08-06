@@ -93,15 +93,15 @@ function findPoint(px, py, qx, qy) {
 };
 // findPoint(1,1,2,2);
 
-// Find smallest traingle height with given base and area
+// COMPLETED: Find smallest traingle height with given base and area
 function lowestTriangle(trianglebase, area) {
     console.log(area / trianglebase);
     if(area / trianglebase % 1 == 0){
     console.log("Doubling " + area/trianglebase + " to get " + (area/trianglebase) * 2);
-    Math.ceil(area / trianglebase) * 2;
+    return Math.ceil(area / trianglebase) * 2;
     } else {
     console.log("*Decimal Doubling " + area/trianglebase + " to get " + (area/trianglebase) * 2);
-    Math.ceil((area / trianglebase) * 2);
+    return Math.ceil((area / trianglebase) * 2);
     }
 }
 lowestTriangle(3,4);
