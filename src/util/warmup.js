@@ -94,17 +94,17 @@ function findPoint(px, py, qx, qy) {
 // findPoint(1,1,2,2);
 
 // COMPLETED: Find smallest traingle height with given base and area
-function lowestTriangle(trianglebase, area) {
-    console.log(area / trianglebase);
-    if(area / trianglebase % 1 == 0){
-    console.log("Doubling " + area/trianglebase + " to get " + (area/trianglebase) * 2);
-    return Math.ceil(area / trianglebase) * 2;
-    } else {
-    console.log("*Decimal Doubling " + area/trianglebase + " to get " + (area/trianglebase) * 2);
-    return Math.ceil((area / trianglebase) * 2);
-    }
-}
-lowestTriangle(3,4);
+// function lowestTriangle(trianglebase, area) {
+//     console.log(area / trianglebase);
+//     if(area / trianglebase % 1 == 0){
+//     console.log("Doubling " + area/trianglebase + " to get " + (area/trianglebase) * 2);
+//     return Math.ceil(area / trianglebase) * 2;
+//     } else {
+//     console.log("*Decimal Doubling " + area/trianglebase + " to get " + (area/trianglebase) * 2);
+//     return Math.ceil((area / trianglebase) * 2);
+//     }
+// }
+// lowestTriangle(3,4);
 // Find the most expensive keyboard/drive combo
 function getMoneySpent(keyboards, drives, b) {
     let kb = [keyboards];
@@ -757,6 +757,26 @@ function acmTeam(topic) {
 
 // A is an array of numbers, can they (or the integers that comprise them) be rearranged into a new number divisible by 3?
 function canConstruct(a) {
-    // Return "Yes" or "No" denoting whether you can construct the required number.
-
+    let answer = "No";
+    let numString = "";
+    for(let i = 0; i < a.length; i++){
+        numString += (a[i]);
+    }
+    let initialString = numString;
+    for(let i = 0; i < numString.length; i++) {
+        console.log("Loop iteration " + i);
+        for(let j = 0; j < numString.length; j++) {
+            numString += numString.charAt(i);
+            console.log("Added " + numString.charAt(i));
+            numString = numString.slice(1);
+            console.log("Removed first digit, new string is " + numString);
+        }
+        if(numString % 3 == 0 && numString !== initialString){
+            answer = "Yes";
+            break;
+        }
+    }
+    console.log(answer);
+    return answer;
 }
+canConstruct([40, 50, 90]);
