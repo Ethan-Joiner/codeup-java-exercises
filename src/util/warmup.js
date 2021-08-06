@@ -786,6 +786,15 @@ function canConstruct(a) {
 
 // Cut into largest squares
 function restaurant(l, b) {
-    // Write your code here
-
+    let answer = l * b;
+    if(Math.sqrt(l * b) % 1 == 0){
+        answer = 1;
+    } else if(Math.sqrt(l) % 1 == 0){
+        answer = b;
+    } else if (Math.sqrt(b) % 1 == 0) {
+        answer = l;
+    }
+    console.log(answer);
+    return answer;
 }
+restaurant(38, 751);
