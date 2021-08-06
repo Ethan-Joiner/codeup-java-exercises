@@ -736,9 +736,11 @@ function acmTeam(topic) {
 function marsExploration(s) {
     let answer = 0;
     for(let letter of s){
-        if(letter !== "S" || "O"){
+        if(letter !== "S" && letter !== "O"){
+            console.log(letter);
             answer++;
         }
     }
     return answer;
 }
+marsExploration("SOSSPSSQSSOR");
