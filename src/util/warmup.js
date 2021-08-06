@@ -614,7 +614,7 @@ function nonDivisibleSubset(k, s) {
     console.log("Answer is = " + longest);
     return longest;
 }
-nonDivisibleSubset(9,[422346306, 940894801, 696810740, 862741861, 85835055, 313720373] );
+// nonDivisibleSubset(9,[422346306, 940894801, 696810740, 862741861, 85835055, 313720373] );
 
 // ACM TEAM - Problem Bugged
 
@@ -736,12 +736,15 @@ function acmTeam(topic) {
 function marsExploration(s) {
     let answer = 0;
     for(let i = 0; i < s.length; i++){
-        if((i == 1 ||(i - 1) % 3 == 0) && s[i] !== "O"){
+        if((i == 1 || (i - 1) % 3 == 0) && s[i] !== "O"){
+            console.log("Illegal Character " + s[i] + " at index " + i);
             answer++;
-        } else if (s[i] !== "S"){
-            answer++
+        } else if ((i - 1) % 3 !== 0 && s[i] !== "S"){
+            console.log("!Illegal Character " +  s[i] + " at index " + i);
+            answer++;
         }
     }
+    console.log(answer);
     return answer;
 }
 marsExploration("SOSSPSSQSSOR");
