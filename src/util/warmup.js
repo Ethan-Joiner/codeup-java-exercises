@@ -797,4 +797,5 @@ function restaurant(l, b) {
     console.log(answer);
     return answer;
 }
-restaurant(38, 751);
+restaurant(344, 734);
+
