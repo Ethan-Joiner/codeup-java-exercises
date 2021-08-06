@@ -95,7 +95,7 @@ function findPoint(px, py, qx, qy) {
 
 // Find smallest traingle height with given base and area
 function lowestTriangle(trianglebase, area) {
-
+    return Math.ceil(area / trianglebase) * 2;
 
 }
 
