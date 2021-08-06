@@ -734,6 +734,11 @@ function acmTeam(topic) {
 // Mars Exploration
 
 function marsExploration(s) {
-    // Write your code here
-
+    let answer = 0;
+    for(let letter of s){
+        if(letter !== "S" || "O"){
+            answer++;
+        }
+    }
+    return answer;
 }
