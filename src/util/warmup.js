@@ -754,3 +754,9 @@ function acmTeam(topic) {
 //     return answer;
 // }
 // marsExploration("SOSSPSSQSSOR");
+
+// A is an array of numbers, can they (or the integers that comprise them) be rearranged into a new number divisible by 3?
+function canConstruct(a) {
+    // Return "Yes" or "No" denoting whether you can construct the required number.
+
+}
