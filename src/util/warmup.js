@@ -797,5 +797,11 @@ function restaurant(l, b) {
     console.log(answer);
     return answer;
 }
-restaurant(344, 734);
+// restaurant(344, 734);
+
+// 
+function strangeGrid(r, c) {
+    // Write your code here
+
+}
 
