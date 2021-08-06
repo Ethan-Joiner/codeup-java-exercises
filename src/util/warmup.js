@@ -782,4 +782,10 @@ function canConstruct(a) {
     console.log(answer);
     return answer;
 }
-canConstruct([1]);
+// canConstruct([1]);
+
+// Cut into largest squares
+function restaurant(l, b) {
+    // Write your code here
+
+}
