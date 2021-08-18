@@ -834,19 +834,29 @@ function gameWithCells(n, m) {
 
 // Find maximum number of prime factors in a range of 1 to n
 function isPrime(n){
-    if(n != 1 && (n == 2 || n == 3 && n % 6 == 1 || (n + 1) % 6 == 0)){
+    if(n != 1 && (n == 2 || n == 3 || n % 6 == 1 || (n + 1) % 6 == 0)){
         return true;
     }
 }
 function primeCount(n) {
     let count = 0;
     let currentHigh = 1;
-    for(let i = 1; i < n; i++){
+    if(n == 1){
+        return count;
+    } else if(n < 6){
+        count = 1;
+    } else if (n < 30) {
+        count = 2;
+    } else {
+    count = 3;
+    currentHigh = 30;
+    for(let i = 7; i <= n; i++ ){
         console.log(i + " is prime: " + isPrime(i));
         if(isPrime(i)){
             currentHigh *= i;
+            i++;
             console.log("Current number is " + currentHigh);
-            if(currentHigh < n){
+            if(currentHigh <= n){
                 count++;
                 console.log("Count increased to " + count);
             } else {
@@ -854,7 +864,8 @@ function primeCount(n) {
             }
         }
     }
+}
     console.log(count);
     return count;
 }
-primeCount(3);
+primeCount(1);
