@@ -816,7 +816,19 @@ function restaurant(l, b) {
 
 // 
 function connectingTowns(n, routes) {
+    let answer = 1;
+    for(let i = 0; i < n - 1; i++){
+        answer =  (answer * routes[i]) % 1234567;
+        console.log(answer);
+    }
+    console.log(answer);
+    return answer % 1234567;
+}
+// connectingTowns(11, [473, 264, 845, 374, 782, 809, 188, 35, 253, 635]);
+
+
+// Given dimensions n and m, find how many points are required to touch every square
+function gameWithCells(n, m) {
     // Write your code here
 
 }
-
