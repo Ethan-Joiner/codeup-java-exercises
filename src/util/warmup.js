@@ -879,12 +879,13 @@ function solve(coordinates) {
     let biggestY = 0;
     let smallestX = 0;
     let smallestY = 0;
+    answer = 0;
     for(let i = 0; i < coordinates.length; i ++){
         if(coordinates[i][0] > biggestX) {
             biggestX = coordinates[i][0];
         }
         if(coordinates[i][1] > biggestY) {
-            biggestY = coordinates[i][0];
+            biggestY = coordinates[i][1];
         }
         if(coordinates[i][0] < smallestX) {
             smallestX = coordinates[i][0];
@@ -893,15 +894,23 @@ function solve(coordinates) {
             smallestY = coordinates[i][1];
         }
     }
-    console.log(biggestX);
-    console.log(biggestY);
-    console.log(smallestX);
-    console.log(smallestY);
-    console.log(Math.sqrt(Math.pow(biggestX - smallestX,2) + Math.pow(biggestY - smallestY,2)));
-    return Math.sqrt(Math.pow(biggestX - smallestX,2) + Math.pow(biggestY - smallestY,2));
+    console.log(Math.abs(biggestX - smallestX));
+    console.log(Math.abs(biggestY - smallestY));
+
+    if(Math.abs(biggestX - smallestX) == Math.abs(biggestY - smallestY)){
+        answer = Math.abs(biggestX - smallestX);
+    } else {
+        answer = Math.sqrt(Math.pow(biggestX - smallestX,2) + Math.pow(biggestY - smallestY,2));
 }
-solve([[0, -5],
-    [-7, 0],
-    [0, -6],
-    [-4, 0],
-    [0, 0]]);
+console.log(answer);
+return answer;
+}
+// solve([[0, -5],
+//     [-7, 0],
+//     [0, -6],
+//     [-4, 0],
+//     [0, 0]]);
+solve([[-1, 0],
+        [1, 0],
+        [0, -1],
+        [0, 1]]);
