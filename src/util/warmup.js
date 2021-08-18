@@ -827,7 +827,7 @@ function connectingTowns(n, routes) {
 // connectingTowns(11, [473, 264, 845, 374, 782, 809, 188, 35, 253, 635]);
 
 
-// Given dimensions n and m, find how many points are required to touch every square
+// COMPLETE: Given dimensions n and m, find how many points are required to touch every square
 function gameWithCells(n, m) {
     return Math.ceil(n / 2) * Math.ceil(m / 2);
 }
