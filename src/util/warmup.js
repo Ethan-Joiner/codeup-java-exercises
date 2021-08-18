@@ -870,5 +870,11 @@ function primeCount(n) {
     console.log(count);
     return count;
 }
-primeCount( 614889782588491409
-    );
+// primeCount( 614889782588491409
+//     );
+
+// Take an array of coordinates and find the furthest two points apart
+function solve(coordinates) {
+    // Write your code here
+
+}
