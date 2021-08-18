@@ -893,14 +893,15 @@ function solve(coordinates) {
             smallestY = coordinates[i][1];
         }
     }
-    if(Math.abs(biggestX - smallestX > biggestY - smallestY)){
-        return biggestX - smallestX;
-    } else {
-        return biggestY - smallestY;
-    }
-
+    console.log(biggestX);
+    console.log(biggestY);
+    console.log(smallestX);
+    console.log(smallestY);
+    console.log(Math.sqrt(Math.pow(biggestX - smallestX,2) + Math.pow(biggestY - smallestY,2)));
+    return Math.sqrt(Math.pow(biggestX - smallestX,2) + Math.pow(biggestY - smallestY,2));
 }
-solve([[-1, 0],
-    [1, 0],
-    [0, 1],
-    [0, -1]])
+solve([[0, -5],
+    [-7, 0],
+    [0, -6],
+    [-4, 0],
+    [0, 0]]);
