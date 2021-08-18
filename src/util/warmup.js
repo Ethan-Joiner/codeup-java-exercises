@@ -838,8 +838,8 @@ function isPrime(n){
         return true;
     }
 }
-console.log(isPrime(25));
 function primeCount(n) {
+    console.log(BigInt(n));
     let count = 0;
     let currentHigh = BigInt(1);
     if(n == 1){
@@ -857,7 +857,8 @@ function primeCount(n) {
             currentHigh = BigInt(currentHigh) * BigInt(i);
             i++;
             console.log("Current number is " + currentHigh);
-            if(currentHigh <= n){
+            console.log("Number is " + BigInt(n));
+            if(currentHigh <= BigInt(n)){
                 count++;
                 console.log("Count increased to " + count);
             } else {
@@ -869,4 +870,5 @@ function primeCount(n) {
     console.log(count);
     return count;
 }
-primeCount(614889782588491409);
+primeCount( 614889782588491409
+    );
