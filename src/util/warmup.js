@@ -831,3 +831,9 @@ function connectingTowns(n, routes) {
 function gameWithCells(n, m) {
     return Math.ceil(n / 2) * Math.ceil(m / 2);
 }
+
+// Find maximum number of prime factors in a range of 1 to n
+function primeCount(n) {
+    // Write your code here
+
+}
