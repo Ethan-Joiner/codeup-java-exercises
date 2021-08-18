@@ -879,7 +879,8 @@ function solve(coordinates) {
     let biggestY = 0;
     let smallestX = 0;
     let smallestY = 0;
-    answer = 0;
+    let answer = 0;
+    let hypot = 0;
     for(let i = 0; i < coordinates.length; i ++){
         if(coordinates[i][0] > biggestX) {
             biggestX = coordinates[i][0];
@@ -894,13 +895,15 @@ function solve(coordinates) {
             smallestY = coordinates[i][1];
         }
     }
-    console.log(Math.abs(biggestX - smallestX));
-    console.log(Math.abs(biggestY - smallestY));
-
+    hypot = Math.sqrt(Math.pow(biggestX - smallestX,2) + Math.pow(biggestY - smallestY,2));
     if(Math.abs(biggestX - smallestX) == Math.abs(biggestY - smallestY)){
         answer = Math.abs(biggestX - smallestX);
-    } else {
-        answer = Math.sqrt(Math.pow(biggestX - smallestX,2) + Math.pow(biggestY - smallestY,2));
+    } else if (Math.abs(biggestX - smallestX) < hypot && Math.abs(biggestY - smallestY) < hypot){
+        answer = hypot;
+    } else if (Math.abs(biggestX - smallestX) > Math.abs(biggestY - smallestY)){
+        answer = Math.abs(biggestX - smallestX);
+    } else {   
+        answer = Math.abs(biggestY - smallestY)
 }
 console.log(answer);
 return answer;
