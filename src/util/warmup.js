@@ -842,8 +842,10 @@ function primeCount(n) {
     let count = 0;
     let currentHigh = 1;
     for(let i = 2; i < n; i++){
-        if(isPrime(n)){
+        console.log(i + " is prime: " + isPrime(i));
+        if(isPrime(i)){
             currentHigh *= i;
+            console.log("Current number is " + currentHigh);
             if(currentHigh < n){
                 count++;
             } else {
