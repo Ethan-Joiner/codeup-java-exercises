@@ -943,10 +943,15 @@ function solve(n, operations) {
     for(let i = 0; i < operations.length; i++){
         console.log("Array " + (i + 1));
         for(let j = operations[i][0] - 1; j <= operations[i][1] - 1; j++){
-            total += operations[i][2]        }
-            console.log(total);
+            total += operations[i][2]   
+            console.log("Adding to index " + j);
+            console.log(total);    
+         }
     }
+    console.log("Final total = " + total);
     console.log(total / n);
-    return total / n;
+    return Math.floor(total / n);
 }
-solve(5, [[1, 2, 100], [2, 5, 100], [3, 4, 100]])
+solve(4, [[2, 3, 603],
+    [1, 1, 286],
+    [4, 4, 882]])
