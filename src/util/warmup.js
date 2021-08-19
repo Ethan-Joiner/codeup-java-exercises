@@ -943,6 +943,13 @@ function solve(n, operations) {
     console.log(total / n);
     return Math.floor(total / n);
 }
-solve(4, [[2, 3, 603],
-    [1, 1, 286],
-    [4, 4, 882]])
+}
+// solve(4, [[2, 3, 603],
+//     [1, 1, 286],
+//     [4, 4, 882]])
+
+// Return IsFibo is n is part of the fibonacci sequence, else IsNotFibo
+function isFibo(n) {
+    // Write your code here
+
+}
