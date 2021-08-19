@@ -925,6 +925,13 @@ function solve(a, b, c) {
     } else if ((a + b) % c == 0){
         return "YES"
     } else {
-        return "No"
+        return "NO"
     }
+}
+// solve(131, 264, 30)
+
+// 
+function solve(n, operations) {
+    // Write your code here
+
 }
