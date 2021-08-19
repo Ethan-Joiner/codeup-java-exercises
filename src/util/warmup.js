@@ -920,6 +920,11 @@ return answer;
 
 // Can a and b buckets equal exactly c? Die hard 3
 function solve(a, b, c) {
-    // Write your code here
-
+    if(a == c || b == c){
+        return "YES";
+    } else if ((a + b) % c == 0){
+        return "YES"
+    } else {
+        return "No"
+    }
 }
