@@ -984,11 +984,11 @@ function solve(n) {
 }
 // solve(3);
 
-
+// COMPLETED:
 function solve(balls) {
     let total = 0;
 for(let ball of balls){
     total += ball;
 }
-return total / balls.length;
+return total / 2;
 }
