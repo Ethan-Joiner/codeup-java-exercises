@@ -930,24 +930,15 @@ function solve(a, b, c) {
 }
 // solve(131, 264, 30)
 
-// 
+// COMPLETED
 function solve(n, operations) {
     let arr = new Array(n);
     let total = 0;
-
-    // for(let i = 0; i < n; i++){
-    //     for(let j = operations[i][0] - 1; j < operations[i][1] - 1; j++){
-    //         arr[j] += operations[i][2];
-    //     }
-    // }
     for(let i = 0; i < operations.length; i++){
         console.log("Array " + (i + 1));
-        for(let j = operations[i][0] - 1; j <= operations[i][1] - 1; j++){
-            total += operations[i][2]   
-            console.log("Adding to index " + j);
-            console.log(total);    
-         }
-    }
+        console.log(operations[i][1] + " - " + operations[i][1] + " * " + operations[i][2]);
+        total += (operations[i][1] - operations[i][0] + 1) * operations[i][2];
+
     console.log("Final total = " + total);
     console.log(total / n);
     return Math.floor(total / n);
