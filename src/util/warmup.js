@@ -967,19 +967,25 @@ function profit(b, s, c) {
 function solve(n) {
     let jumps = 0;
     let position = 0;
-    let distance = 0;
     while(position < n){
-        distance++;
         jumps++;
-        position += distance;
-        console.log("Jump distance = " + distance);
+        position += jumps;
+        console.log("Jump distance = " + jumps);
         console.log("New Position = " + position);
         console.log("# of jumps = " + jumps);
     }
     if(position == n){
-        console.log("Go On Bob " + jumps); 
+        console.log("Pass");
+        return "Go On Bob " + jumps; 
     } else {
-        console.log("Better Luck Next Time"); 
+        console.log("Fail");
+        return "Better Luck Next Time"; 
     }
 }
-solve(3);
+// solve(3);
+
+
+function solve(balls) {
+    // Write your code here
+
+}
