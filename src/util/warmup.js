@@ -950,20 +950,9 @@ function solve(n, operations) {
 
 // Return IsFibo is n is part of the fibonacci sequence, else IsNotFibo
 function isFibo(n) {
-    let x = 0;
-    let y = 1;
-    let z;
-    while(x <= n){
-        z = x + y;
-        console.log("z = " + z);
-        x = y;
-        y = z; 
-    }
-    if(n == x){
-        console.log("Is");
+    if(Math.sqrt(5 * n * n + 4) % 1 == 0 || Math.sqrt(5 * n * n - 4) % 1 == 0 || n == 0 || n == 1){
         return "isFibo";
     } else {
-        console.log("Isnt");
         return "isNotFibo";
     }
 }
