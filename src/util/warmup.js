@@ -962,3 +962,9 @@ function isFibo(n) {
 function profit(b, s, c) {
     return b + s - c
 }
+
+// Number of jumps
+function solve(n) {
+    // Write your code here
+
+}
