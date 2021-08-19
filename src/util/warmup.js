@@ -986,6 +986,9 @@ function solve(n) {
 
 
 function solve(balls) {
-    // Write your code here
-
+    let total = 0;
+for(let ball of balls){
+    total += ball;
+}
+return total / balls.length;
 }
