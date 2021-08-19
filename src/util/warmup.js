@@ -965,6 +965,21 @@ function profit(b, s, c) {
 
 // Number of jumps
 function solve(n) {
-    // Write your code here
-
+    let jumps = 0;
+    let position = 0;
+    let distance = 0;
+    while(position < n){
+        distance++;
+        jumps++;
+        position += distance;
+        console.log("Jump distance = " + distance);
+        console.log("New Position = " + position);
+        console.log("# of jumps = " + jumps);
+    }
+    if(position == n){
+        console.log("Go On Bob " + jumps); 
+    } else {
+        console.log("Better Luck Next Time"); 
+    }
 }
+solve(3);
