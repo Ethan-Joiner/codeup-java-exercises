@@ -932,6 +932,21 @@ function solve(a, b, c) {
 
 // 
 function solve(n, operations) {
-    // Write your code here
+    let arr = new Array(n);
+    let total = 0;
 
+    // for(let i = 0; i < n; i++){
+    //     for(let j = operations[i][0] - 1; j < operations[i][1] - 1; j++){
+    //         arr[j] += operations[i][2];
+    //     }
+    // }
+    for(let i = 0; i < operations.length; i++){
+        console.log("Array " + (i + 1));
+        for(let j = operations[i][0] - 1; j <= operations[i][1] - 1; j++){
+            total += operations[i][2]        }
+            console.log(total);
+    }
+    console.log(total / n);
+    return total / n;
 }
+solve(5, [[1, 2, 100], [2, 5, 100], [3, 4, 100]])
