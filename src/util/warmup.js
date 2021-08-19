@@ -875,10 +875,10 @@ function primeCount(n) {
 
 // Take an array of coordinates and find the furthest two points apart
 function solve(coordinates) {
-    let biggestX = 0;
-    let biggestY = 0;
-    let smallestX = 0;
-    let smallestY = 0;
+    let biggestX = coordinates[0][0];
+    let biggestY = coordinates[0][1];
+    let smallestX = coordinates[0][0];
+    let smallestY = coordinates[0][1];
     let answer = 0;
     let hypot = 0;
     for(let i = 0; i < coordinates.length; i ++){
