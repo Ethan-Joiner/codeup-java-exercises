@@ -948,7 +948,7 @@ function solve(n, operations) {
 //     [1, 1, 286],
 //     [4, 4, 882]])
 
-// Return IsFibo is n is part of the fibonacci sequence, else IsNotFibo
+// COMPLETED: Return IsFibo is n is part of the fibonacci sequence, else IsNotFibo
 function isFibo(n) {
     if(Math.sqrt(5 * n * n + 4) % 1 == 0 || Math.sqrt(5 * n * n - 4) % 1 == 0 || n == 0 || n == 1){
         return "isFibo";
@@ -956,4 +956,4 @@ function isFibo(n) {
         return "isNotFibo";
     }
 }
-isFibo(8);
+// isFibo(8);
