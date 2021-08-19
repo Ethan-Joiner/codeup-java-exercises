@@ -957,3 +957,9 @@ function isFibo(n) {
     }
 }
 // isFibo(8);
+
+// Price of burger, price of soda, price of combo. Find fixed profit added
+function profit(b, s, c) {
+    // Return the fixed profit.
+
+}
