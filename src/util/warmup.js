@@ -917,3 +917,9 @@ return answer;
 //         [1, 0],
 //         [0, -1],
 //         [0, 1]]);
+
+// Can a and b buckets equal exactly c? Die hard 3
+function solve(a, b, c) {
+    // Write your code here
+
+}
