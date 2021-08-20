@@ -992,3 +992,9 @@ for(let ball of balls){
 }
 return total / 2;
 }
+
+// 
+function solve(a, m) {
+    // Write your code here
+
+}
