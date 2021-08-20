@@ -3,6 +3,7 @@ import java.math.BigInteger;
 import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Collections;
 import java.util.List;
 
@@ -755,9 +756,11 @@ public static int lowestTriangle(int trianglebase, int area) {
 
 
 			
-		public static int strangeGrid(int r, int c) {
-				// Write your code here
-			
+		public static void Solution(){
+			System.out.println("Hello, World.");
+			System.out.println("Hello, Java.");
+			int x = 5;
+			Calendar.DAY_OF_WEEK_IN_MONTH(4);
 		}
 
 }

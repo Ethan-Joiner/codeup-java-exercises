@@ -755,34 +755,21 @@ function acmTeam(topic) {
 // }
 // marsExploration("SOSSPSSQSSOR");
 
-// A is an array of numbers, can they (or the integers that comprise them) be rearranged into a new number divisible by 3?
+// COMPLETED: A is an array of numbers, can they (or the integers that comprise them) be rearranged into a new number divisible by 3?
+
 function canConstruct(a) {
     let answer = "No";
-    let numString = "";
+    let numString = 0;
     for(let i = 0; i < a.length; i++){
         numString += (a[i]);
     }
-    for(let i = 0; i < numString.length; i++) {
-        if(numString % 3 == 0){
-            answer = "Yes";
-            break;
-        }
-        console.log("Loop iteration " + i);
-        for(let j = 0; j < numString.length; j++) {
-            numString += numString.charAt(i);
-            console.log("Added " + numString.charAt(i));
-            numString = numString.slice(1);
-            console.log("Removed first digit, new string is " + numString);
-            if(numString % 3 == 0){
-                answer = "Yes";
-                break;
-            }
-        }
+    if(numString % 3 == 0){
+        answer = "Yes";
     }
-    console.log(answer);
     return answer;
 }
-// canConstruct([1]);
+// canConstruct([344965
+// ]);
 
 // Cut into largest squares
 function restaurant(l, b) {
@@ -985,16 +972,16 @@ function solve(n) {
 // solve(3);
 
 // COMPLETED:
-function solve(balls) {
-    let total = 0;
-for(let ball of balls){
-    total += ball;
-}
-return total / 2;
-}
+// function solve(balls) {
+//     let total = 0;
+// for(let ball of balls){
+//     total += ball;
+// }
+// return total / 2;
+// }
 
 // 
 function solve(a, m) {
-    // Write your code here
-
+let x = Math.sqrt(a);
 }
+solve(2,2)
