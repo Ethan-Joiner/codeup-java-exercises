@@ -1027,8 +1027,25 @@ function summingSeries(n) {
 
 // Find multiple of N made of only 0 and 9
 function solve(n) {
-    // Write your code here
-
+    let mult = 1;
+    let inc = 1;
+    while(true){
+        mult = n * inc;
+        console.log("Number is " + mult);
+        inc++;
+        let len = mult.length;
+        console.log("Length is " + len);
+        for(let i = 0; i < mult.length;i++){
+            if(mult.charAt(i) == 9 || mult.charAt(i) == 0){
+                console.log("Correct Number Found");
+                len--;
+                if(len == 0){
+                    return mult;
+                }
+            }
+        }
+    }
 }
+solve(5);
    
 
