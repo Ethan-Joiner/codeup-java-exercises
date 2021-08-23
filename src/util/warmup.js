@@ -1009,9 +1009,14 @@ function closestNumber(a, b, x) {
 // 
 function summingSeries(n) {
     let total = 0;
+    let start = 1;
+    // for(let i = 1; i <= n; i++){
+    //     console.log(Math.pow(i,2) + " - " + Math.pow(i-1,2) + " = " + Math.pow(i,2) - Math.pow((i - 1),2) % (Math.pow(10,9) + 7));
+    //     total += Math.pow(i,2) - Math.pow((i - 1),2) % (Math.pow(10,9) + 7);
+    // }
     for(let i = 1; i <= n; i++){
-        console.log(Math.pow(i,2) + " - " + Math.pow(i-1,2) + " = " + Math.pow(i,2) - Math.pow((i - 1),2) % (Math.pow(10,9) + 7));
-        total += Math.pow(i,2) - Math.pow((i - 1),2) % (Math.pow(10,9) + 7);
+        total += start % (Math.pow(10,9) + 7);
+        start += 2;
     }
     console.log(total);
     return total;
