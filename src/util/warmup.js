@@ -1061,5 +1061,11 @@ function solve(n) {
     }
 }
 // solve(5);
+
+// How many divisors of N are evenly divisible by 2?
+function divisors(n) {
+    // Write your code here
+
+}
    
 
