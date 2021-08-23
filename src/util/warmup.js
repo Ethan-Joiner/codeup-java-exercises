@@ -1025,8 +1025,10 @@ function summingSeries(n) {
 // summingSeries(9803332417649065
 //     );
 
-
-function solve(a, b, x, y) {
+// Find multiple of N made of only 0 and 9
+function solve(n) {
     // Write your code here
 
 }
+   
+
