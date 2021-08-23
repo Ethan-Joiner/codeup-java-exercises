@@ -1006,20 +1006,24 @@ let x = Math.sqrt(a);
 //         inc++;
 //     }
 // }
+
+// COMPLETED: 
 function closestNumber(a,b,x){
     let comparitor = Math.pow(a,b);
     let higher = Math.ceil(comparitor / x) * x;
     console.log(higher);
     let lower = Math.floor(comparitor / x) * x;
     console.log(lower);
-    if((higher - comparitor) < (lower - comparitor)){
+    if((higher - comparitor) < Math.abs(lower - comparitor)){
+        console.log("Returning higher value of " + higher);
         return higher;
     } else {
+        console.log("Returning lower value of " + lower);
         return lower;
     }
 }
 
-closestNumber(4, -2, 2)
+// closestNumber(674, 2, 6)
 
 // COMPLETE:
 function summingSeries(n) {
