@@ -1006,7 +1006,7 @@ function closestNumber(a, b, x) {
 }
 // closestNumber(349, 1, 4)
 
-// 
+// COMPLETE:
 function summingSeries(n) {
     let total = 0;
     let start = 1;
@@ -1024,3 +1024,9 @@ function summingSeries(n) {
 }
 // summingSeries(9803332417649065
 //     );
+
+
+function solve(a, b, x, y) {
+    // Write your code here
+
+}
