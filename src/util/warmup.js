@@ -1008,6 +1008,13 @@ function closestNumber(a, b, x) {
 
 // 
 function summingSeries(n) {
-    // Write your code here
+    let total = 0;
+    for(let i = 1; i <= n; i++){
+        console.log(Math.pow(i,2) + " - " + Math.pow(i-1,2) + " = " + Math.pow(i,2) - Math.pow((i - 1),2) % (Math.pow(10,9) + 7));
+        total += Math.pow(i,2) - Math.pow((i - 1),2) % (Math.pow(10,9) + 7);
+    }
+    console.log(total);
+    return total;
 
 }
+summingSeries(3);
