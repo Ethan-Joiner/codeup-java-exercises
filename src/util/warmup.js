@@ -984,4 +984,30 @@ function solve(n) {
 function solve(a, m) {
 let x = Math.sqrt(a);
 }
-solve(2,2)
+// solve(2,2)
+
+// Output the multiple of x that is closest to a^2. If multiple answers, display the smallest one
+function closestNumber(a, b, x) {
+    let inc = 1;
+    let comparitor = Math.pow(a,b);
+    if (comparitor % x == 0){
+        return comparitor;
+    }
+    while(true){
+        if ((comparitor - inc) % x == 0) {
+            console.log("Decrease to " + comparitor - inc);
+            return comparitor - inc;
+        } else if ((comparitor + inc) % x == 0) {
+            console.log("Increase to " + comparitor + inc);
+            return comparitor + inc;
+        }
+        inc++;
+    }
+}
+// closestNumber(349, 1, 4)
+
+// 
+function summingSeries(n) {
+    // Write your code here
+
+}
