@@ -1014,12 +1014,13 @@ function summingSeries(n) {
     //     console.log(Math.pow(i,2) + " - " + Math.pow(i-1,2) + " = " + Math.pow(i,2) - Math.pow((i - 1),2) % (Math.pow(10,9) + 7));
     //     total += Math.pow(i,2) - Math.pow((i - 1),2) % (Math.pow(10,9) + 7);
     // }
-    for(let i = 1; i <= n; i++){
-        total += start % (Math.pow(10,9) + 7);
-        start += 2;
-    }
-    console.log(total);
-    return total;
+    // for(let i = 1; i <= n; i++){
+    //     total += start % (Math.pow(10,9) + 7);
+    //     start += 2;
+    // }
+    console.log((BigInt(n) * BigInt(n)) % BigInt((Math.pow(10,9) + 7)));
+    return (n % (Math.pow(10,9) + 7)) * n % (Math.pow(10,9) + 7);
 
 }
-summingSeries(3);
+// summingSeries(9803332417649065
+//     );
