@@ -1064,8 +1064,23 @@ function solve(n) {
 
 // How many divisors of N are evenly divisible by 2?
 function divisors(n) {
-    // Write your code here
-
+    let count;
+    if(n % 2 == 0){
+        count = 1;
+    } else {
+        count = 0;
+    }
+    for(let i = 0; i <= n / 2; i++){
+        console.log("Checking number " + i);
+        if(n % i == 0){
+            if(i % 2 == 0){
+                count++
+                console.log("Count increased to " + count);
+            }
+        }
+    }
+    return count;
 }
+divisors(9);
    
 
