@@ -986,7 +986,7 @@ let x = Math.sqrt(a);
 }
 // solve(2,2)
 
-// Output the multiple of x that is closest to a^2. If multiple answers, display the smallest one
+// Output the multiple of x that is closest to a^b. If multiple answers, display the smallest one
 function closestNumber(a, b, x) {
     let inc = 1;
     let comparitor = Math.pow(a,b);
@@ -995,16 +995,15 @@ function closestNumber(a, b, x) {
     }
     while(true){
         if ((comparitor - inc) % x == 0) {
-            console.log("Decrease to " + comparitor - inc);
+            console.log("Decrease to " + (comparitor - inc));
             return comparitor - inc;
         } else if ((comparitor + inc) % x == 0) {
             console.log("Increase to " + comparitor + inc);
             return comparitor + inc;
         }
-        inc++;
     }
 }
-// closestNumber(349, 1, 4)
+closestNumber(349, 1, 4)
 
 // COMPLETE:
 function summingSeries(n) {
@@ -1027,34 +1026,20 @@ function summingSeries(n) {
 
 // Find multiple of N made of only 0 and 9
 function solve(n) {
-    let mult = 1;
+    if(n == 3 || n == 9){
+        return 9;
+    }
     let inc = 1;
-    let len;
+    let len = n.toString().length;
+    let start;
     while(true){
-        mult = n * inc;
-        console.log("Number is " + mult);
-        inc++;
-        len = mult.toString().length;
-        console.log("Length is " + len);
+        start = Math.floor(9 * Math.pow(10,len) / n);
+        console.log(start);
+        break;
 
-        for(let i = 0; i < mult.toString().length;i++){
-            console.log("Checking number " + mult.toString().charAt(i));
 
-            if(mult.toString().charAt(i) == 9 || mult.toString().charAt(i) == 0){
-                console.log("Correct Number Found");
-                len--;
-
-                if(len == 0){
-                    console.log("NUMBER FOUND");
-                    return mult;
-                }
-            }
-        }
-        if(mult > 90){
-            break;
-        }
     }
 }
-solve(5);
+// solve(5);
    
 
