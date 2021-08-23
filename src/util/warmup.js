@@ -1007,8 +1007,18 @@ let x = Math.sqrt(a);
 //     }
 // }
 function closestNumber(a,b,x){
-    
+    let comparitor = Math.pow(a,b);
+    let higher = Math.ceil(comparitor / x) * x;
+    console.log(higher);
+    let lower = Math.floor(comparitor / x) * x;
+    console.log(lower);
+    if((higher - comparitor) < (lower - comparitor)){
+        return higher;
+    } else {
+        return lower;
+    }
 }
+
 closestNumber(4, -2, 2)
 
 // COMPLETE:
