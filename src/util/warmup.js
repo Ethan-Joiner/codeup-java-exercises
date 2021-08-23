@@ -992,6 +992,8 @@ function closestNumber(a, b, x) {
     let comparitor = Math.pow(a,b);
     if (comparitor % x == 0){
         return comparitor;
+    } else if (comparitor < 1){
+        return 0;
     }
     while(true){
         if ((comparitor - inc) % x == 0) {
@@ -1001,9 +1003,10 @@ function closestNumber(a, b, x) {
             console.log("Increase to " + comparitor + inc);
             return comparitor + inc;
         }
+        inc++;
     }
 }
-closestNumber(349, 1, 4)
+closestNumber(4, -2, 2)
 
 // COMPLETE:
 function summingSeries(n) {
