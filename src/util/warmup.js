@@ -1029,20 +1029,29 @@ function summingSeries(n) {
 function solve(n) {
     let mult = 1;
     let inc = 1;
+    let len;
     while(true){
         mult = n * inc;
         console.log("Number is " + mult);
         inc++;
-        let len = mult.length;
+        len = mult.toString().length;
         console.log("Length is " + len);
-        for(let i = 0; i < mult.length;i++){
-            if(mult.charAt(i) == 9 || mult.charAt(i) == 0){
+
+        for(let i = 0; i < mult.toString().length;i++){
+            console.log("Checking number " + mult.toString().charAt(i));
+
+            if(mult.toString().charAt(i) == 9 || mult.toString().charAt(i) == 0){
                 console.log("Correct Number Found");
                 len--;
+
                 if(len == 0){
+                    console.log("NUMBER FOUND");
                     return mult;
                 }
             }
+        }
+        if(mult > 90){
+            break;
         }
     }
 }
