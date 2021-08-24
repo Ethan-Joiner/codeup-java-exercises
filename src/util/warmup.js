@@ -1127,8 +1127,13 @@ function solve(n,k){
 
 
 function solve(arr, queries) {
-    // Write your code here
-
+    for(let i = 0; i < queries.length; i++){
+        if(Math.pow(arr[queries[i][0] + 1],arr[queries[i][1] + 1]) % 2 == 0){
+            console.log("Even");
+        } else {
+            console.log("Odd");
+        }
+    }
 }
    
 
