@@ -1193,7 +1193,12 @@ function solve(a, queries) {
         let sals = a;
         sals = sals.map(x => x + queries[i]);
         sals.sort((b,c) => b - c);
-        answer.push(sals[0])
+        if(sals[0] % 2 == 0){
+        answer.push(sals[0] / 2)
+        } else {
+            answer.push(sals[0]);
+
+        }
     }
     return answer;
 }
