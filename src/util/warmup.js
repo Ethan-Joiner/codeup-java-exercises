@@ -1090,7 +1090,20 @@ function divisors(n) {
 
 // Find a ^ b % 10^9 + 7
 function solve(a, b) {
-return Math.pow(a,b) % Math.pow(10,9) + 7;
+    let a2 = a % (Math.pow(10,9) + 7);
+    console.log(a2);
+    let b2 = b % (Math.pow(10,9) + 7);
+    console.log(b2);
+    let c = (BigInt(a2) ** BigInt(b2)).toString();
+    console.log(c);
+    return (Math.pow(BigInt(a2),BigInt(b2)))
+}
+// solve(34543987529435983745230948023948, 3498573497543987543985743989120393097595572309482304)
+
+
+// Reverse Game
+function solve(n,k){
+
 }
    
 
