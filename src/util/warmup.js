@@ -1068,15 +1068,15 @@ function divisors(n) {
     if(n % 2 == 0){
         for (let i = 1; i < Math.sqrt(n) + 1; i++) {
             if ((i % 2 == 0) && (n % i == 0)){
-            console.log("First if inc");
+            console.log("First if inc, counting " + i);
                 count++;
             }
             if ((n % (n / i) == 0) && (n / i) % 2 == 0){
-            console.log("if " + n + " % " + n + " / " + i + " has no remainder");
+            console.log("if " + n + " % " + n + " / " + i + " has no remainder, counting " + i);
                 count++;
             }
-            if ((i * i == n) && (i % 2 == 0)){
-            console.log("Thid if dec");
+            if (((i * i == n) || (i * (i + 1) == n)) && (i % 2 == 0)){
+            console.log("Third if dec, subtracting " + i);
                 count--;
             }
         }
@@ -1086,6 +1086,6 @@ function divisors(n) {
     console.log(count);
     return count;
 }
-divisors(1000);
+divisors(40);
    
 
