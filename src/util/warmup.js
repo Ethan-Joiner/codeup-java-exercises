@@ -1090,8 +1090,7 @@ function divisors(n) {
 
 // Find a ^ b % 10^9 + 7
 function solve(a, b) {
-    // Write your code here
-
+return Math.pow(a,b) % Math.pow(10,9) + 7;
 }
    
 
