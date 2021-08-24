@@ -1188,8 +1188,14 @@ function divisors(n) {
 
 
 function solve(a, queries) {
-
-
+    let answer = [];
+    for(let i = 0; i < queries.length; i++){
+        let sals = a;
+        sals = sals.map(x => x + queries[i]);
+        sals.sort((b,c) => b - c);
+        answer.push(sals[0])
+    }
+    return answer;
 }
    
 
