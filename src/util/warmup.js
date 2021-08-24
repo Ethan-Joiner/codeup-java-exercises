@@ -1129,37 +1129,35 @@ function solve(n,k){
 function solve(arr, queries) {
     let answer = [];
     for(let i = 0; i < queries.length; i++){
-        console.log(arr[queries[i][0] - 1]);
-        console.log(arr[queries[i][1] - 1]);
-        console.log(Math.pow(arr[queries[i][0] - 1],arr[queries[i][1] - 1]));
-        if(arr[queries[i][1] - 1] == 0 && arr[queries[i][0] - 1] % 2 == 0){
+
+        if(arr[queries[i][0] - 1] % 2 == 0){
             console.log("Even");
             answer.push("Even")
-        } else if (arr[queries[i][1] - 1] == 0 && arr[queries[i][0] - 1] % 2 != 0){
+        } else if (arr[queries[i][0] - 1] % 2 != 0){
             console.log("Odd");
             answer.push("Odd")
-        } else 
-        if(Math.pow(arr[queries[i][0] - 1],arr[queries[i][1] - 1]) % 2 == 0){
-            console.log("Even");
-            answer.push("Even");
-        } else {
-            console.log("Odd");
-            answer.push("Odd");
-        }
+        } 
     }
     return answer;
 }
-solve([1, 2, 7, 0, 8],[[
+// solve([6, 5, 6, 9, 3, 7, 4, 5, 2, 5, 4, 7, 4, 4, 3, 0, 8, 8, 6, 8, 8, 4, 3, 1, 4, 9, 2, 0, 9, 8, 9, 2, 6, 6, 4, 9, 5, 0, 3, 8, 7, 1, 7, 2, 7, 2, 2, 6, 1, 0, 9, 1, 5, 9, 4, 9, 0, 7, 1, 7, 7, 1, 1, 5, 9, 7, 7, 6, 7, 3, 6, 5, 6, 3, 9, 4, 8, 1, 2, 9, 3, 9, 0, 1, 8, 5, 0, 4, 6, 3, 8, 5, 6, 1, 1, 5, 9, 8, 4, 8],[[
     
-    2, 4],
-    [1, 2],
-    [2, 3],
-    [2, 4],
-    [3, 5],
-    [1, 3],
-    [3, 4],
-    [1, 3],
-    [3, 5],
-    [3, 4]])
+//     42, 51],
+// [1, 94],
+// [35, 65],
+// [15, 25],
+// [57, 88],
+// [44, 92],
+// [28, 66],
+// [37, 60],
+// [33, 52],
+// [29, 38],
+// [8, 76],
+// [22, 75],
+// [59, 96],
+// [30, 38],
+// [36, 94],
+// [19, 29],
+// [12, 44]])
    
 
