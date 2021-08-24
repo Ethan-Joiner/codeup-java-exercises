@@ -1086,6 +1086,12 @@ function divisors(n) {
     console.log(count);
     return count;
 }
-divisors(40);
+// divisors(40);
+
+// Find a ^ b % 10^9 + 7
+function solve(a, b) {
+    // Write your code here
+
+}
    
 
