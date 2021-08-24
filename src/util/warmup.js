@@ -1103,7 +1103,26 @@ function solve(a, b) {
 
 // Reverse Game
 function solve(n,k){
-
+    let nArray = [];
+    let finalArray = [];
+    for(let i = 0; i < n; i++){
+        nArray.push(i);
+    }
+    for(let i = 0; i < n; i++){
+        console.log("Manipulated array = " + nArray);
+        nArray.reverse();
+        console.log("Manipulated array reversed = " + nArray);
+        finalArray.push(nArray[0]);
+        console.log("Final array = " + finalArray);
+        nArray.shift();
+    }
+    for(let i = 0; i < n; i++){
+        if(finalArray[i] == k){
+            console.log(i);
+            return i;
+        }
+    }
 }
+// solve(5, 2)
    
 
