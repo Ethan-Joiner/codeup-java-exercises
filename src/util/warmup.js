@@ -1127,13 +1127,39 @@ function solve(n,k){
 
 
 function solve(arr, queries) {
+    let answer = [];
     for(let i = 0; i < queries.length; i++){
-        if(Math.pow(arr[queries[i][0] + 1],arr[queries[i][1] + 1]) % 2 == 0){
+        console.log(arr[queries[i][0] - 1]);
+        console.log(arr[queries[i][1] - 1]);
+        console.log(Math.pow(arr[queries[i][0] - 1],arr[queries[i][1] - 1]));
+        if(arr[queries[i][1] - 1] == 0 && arr[queries[i][0] - 1] % 2 == 0){
             console.log("Even");
+            answer.push("Even")
+        } else if (arr[queries[i][1] - 1] == 0 && arr[queries[i][0] - 1] % 2 != 0){
+            console.log("Odd");
+            answer.push("Odd")
+        } else 
+        if(Math.pow(arr[queries[i][0] - 1],arr[queries[i][1] - 1]) % 2 == 0){
+            console.log("Even");
+            answer.push("Even");
         } else {
             console.log("Odd");
+            answer.push("Odd");
         }
     }
+    return answer;
 }
+solve([1, 2, 7, 0, 8],[[
+    
+    2, 4],
+    [1, 2],
+    [2, 3],
+    [2, 4],
+    [3, 5],
+    [1, 3],
+    [3, 4],
+    [1, 3],
+    [3, 5],
+    [3, 4]])
    
 
