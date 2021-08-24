@@ -1124,5 +1124,11 @@ function solve(n,k){
     }
 }
 // solve(5, 2)
+
+
+function solve(arr, queries) {
+    // Write your code here
+
+}
    
 
