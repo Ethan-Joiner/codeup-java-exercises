@@ -1089,57 +1089,83 @@ function divisors(n) {
 // divisors(40);
 
 // Find a ^ b % 10^9 + 7
-function solve(a, b) {
-    let a2 = a % (Math.pow(10,9) + 7);
-    console.log(a2);
-    let b2 = b % (Math.pow(10,9) + 7);
-    console.log(b2);
-    let c = (BigInt(a2) ** BigInt(b2)).toString();
-    console.log(c);
-    return (Math.pow(BigInt(a2),BigInt(b2)))
-}
+// function solve(a, b) {
+//     let a2 = a % (Math.pow(10,9) + 7);
+//     console.log(a2);
+//     let b2 = b % (Math.pow(10,9) + 7);
+//     console.log(b2);
+//     let c = (BigInt(a2) ** BigInt(b2)).toString();
+//     console.log(c);
+//     return (Math.pow(BigInt(a2),BigInt(b2)))
+// }
 // solve(34543987529435983745230948023948, 3498573497543987543985743989120393097595572309482304)
 
 
 // Reverse Game
-function solve(n,k){
-    let nArray = [];
-    let finalArray = [];
-    for(let i = 0; i < n; i++){
-        nArray.push(i);
-    }
-    for(let i = 0; i < n; i++){
-        console.log("Manipulated array = " + nArray);
-        nArray.reverse();
-        console.log("Manipulated array reversed = " + nArray);
-        finalArray.push(nArray[0]);
-        console.log("Final array = " + finalArray);
-        nArray.shift();
-    }
-    for(let i = 0; i < n; i++){
-        if(finalArray[i] == k){
-            console.log(i);
-            return i;
-        }
-    }
-}
+// function solve(n,k){
+//     let nArray = [];
+//     let finalArray = [];
+//     for(let i = 0; i < n; i++){
+//         nArray.push(i);
+//     }
+//     for(let i = 0; i < n; i++){
+//         console.log("Manipulated array = " + nArray);
+//         nArray.reverse();
+//         console.log("Manipulated array reversed = " + nArray);
+//         finalArray.push(nArray[0]);
+//         console.log("Final array = " + finalArray);
+//         nArray.shift();
+//     }
+//     for(let i = 0; i < n; i++){
+//         if(finalArray[i] == k){
+//             console.log(i);
+//             return i;
+//         }
+//     }
+// }
 // solve(5, 2)
 
 
-function solve(arr, queries) {
-    let answer = [];
-    for(let i = 0; i < queries.length; i++){
 
-        if(arr[queries[i][0] - 1] % 2 == 0){
-            console.log("Even");
-            answer.push("Even")
-        } else if (arr[queries[i][0] - 1] % 2 != 0){
-            console.log("Odd");
-            answer.push("Odd")
-        } 
-    }
-    return answer;
-}
+// function solve(arr, queries) {
+//     function find( x, y)
+//     {
+//         if(x>y){ return 1;}
+//         let ans = Math.pow(arr[x],find(x+1,y))
+//         return ans;
+//     }
+//         let answer = [];
+//         for(let i = 0; i < queries.length; i++){
+//             console.log(find(queries[i][0] - 1, queries[i][1] - 1));
+//             if(find(arr[queries[i][0] - 1], arr[queries[i][1] - 1]) % 2 == 0){
+//                 answer.push("Even")
+//             } else {
+//                 answer.push("Odd")
+//             }
+//         }
+//         console.log(answer);
+//         return answer;
+//     }
+// function solve(arr, queries) {
+//     let answer = [];
+//     for(let i = 0; i < queries.length; i++){
+        
+//         if(queries[i][0] > queries[i][1]){
+//             answer.push("Odd");
+//             break;
+//         }
+//         if(arr[queries[i][0] - 1] % 2 == 0){
+//             console.log("Even");
+//             answer.push("Even")
+//         } else {
+//             answer.push("Odd")
+//         }
+//         } 
+//     console.log(0 % 2);
+//     console.log(Math.pow(2,7));
+//     return answer;
+// }
+            
 // solve([6, 5, 6, 9, 3, 7, 4, 5, 2, 5, 4, 7, 4, 4, 3, 0, 8, 8, 6, 8, 8, 4, 3, 1, 4, 9, 2, 0, 9, 8, 9, 2, 6, 6, 4, 9, 5, 0, 3, 8, 7, 1, 7, 2, 7, 2, 2, 6, 1, 0, 9, 1, 5, 9, 4, 9, 0, 7, 1, 7, 7, 1, 1, 5, 9, 7, 7, 6, 7, 3, 6, 5, 6, 3, 9, 4, 8, 1, 2, 9, 3, 9, 0, 1, 8, 5, 0, 4, 6, 3, 8, 5, 6, 1, 1, 5, 9, 8, 4, 8],[[
     
 //     42, 51],
@@ -1159,5 +1185,11 @@ function solve(arr, queries) {
 // [36, 94],
 // [19, 29],
 // [12, 44]])
+
+
+function solve(a, queries) {
+
+
+}
    
 
