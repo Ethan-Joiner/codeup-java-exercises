@@ -1064,23 +1064,28 @@ function solve(n) {
 
 // How many divisors of N are evenly divisible by 2?
 function divisors(n) {
-    let count;
+    let count = 0;;
     if(n % 2 == 0){
-        count = 1;
+        for (let i = 1; i < Math.sqrt(n) + 1; i++) {
+            if ((i % 2 == 0) && (n % i == 0)){
+            console.log("First if inc");
+                count++;
+            }
+            if ((n % (n / i) == 0) && (n / i) % 2 == 0){
+            console.log("if " + n + " % " + n + " / " + i + " has no remainder");
+                count++;
+            }
+            if ((i * i == n) && (i % 2 == 0)){
+            console.log("Thid if dec");
+                count--;
+            }
+        }
     } else {
         count = 0;
     }
-    for(let i = 0; i <= n / 2; i++){
-        console.log("Checking number " + i);
-        if(n % i == 0){
-            if(i % 2 == 0){
-                count++
-                console.log("Count increased to " + count);
-            }
-        }
-    }
+    console.log(count);
     return count;
 }
-divisors(9);
+divisors(1000);
    
 
