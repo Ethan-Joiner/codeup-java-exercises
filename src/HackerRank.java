@@ -40,7 +40,8 @@ public class HackerRank {
 		// beautifulDays(20, 23, 6);
 		// lowestTriangle(3, 4);
 		// solve(689715240, 759842301);
-		getSmallestAndLargest("welcometojava", 3);
+		// getSmallestAndLargest("welcometojava", 3);
+		isAnagram("anagramm", "marganaa");
 	}
     
  // Just a helper method
@@ -811,22 +812,27 @@ public static int lowestTriangle(int trianglebase, int area) {
 		int aCount = 0;
 		int bCount = 0;
 		if(a.length() != b.length()){
-			System.out.println(false);
+			return false;
 		};
 		for(int i = 0; i < alp.length();i++){
 			for(int j = 0; j < a.length(); j++){
+				System.out.println("Alpha letter is " + alp.charAt(i));
+				System.out.println("A letter is " + a.charAt(j));
+				System.out.println("B letter is " + b.charAt(j));
 				if(alp.charAt(i) == a.charAt(j)){
 					aCount++;
+					System.out.println("A count increased to " + aCount);
 				}
 				if(alp.charAt(i) == b.charAt(j)){
 					bCount++;
+					System.out.println("B count increased to " + bCount);
 				}
 			}
 		}
 		if(aCount == bCount){
-			System.out.println(true);
+			return true;
 		} else {
-			System.out.println(false);
+			return false;
 		}
     }
 }
