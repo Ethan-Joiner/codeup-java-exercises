@@ -783,16 +783,17 @@ public static int lowestTriangle(int trianglebase, int area) {
 
 	public static String getSmallestAndLargest(String s, int k) {
 
-		String smallest = "Z";
-		String largest = "a";
-		List<String> arr = new ArrayList<>();
+		String smallest = s.substring(0,k);
+		String largest = s.substring(0,k);
 		for(int i = 0; i < s.length() - k; i++){
-			arr.add(s.substring(i,i+k));
+			if(smallest.compareTo(s.substring(i,i+k)) < 0){
+				smallest = s.substring(i,i+k);
+			}
+			if(largest.compareTo(s.substring(i,i+k)) > 0){
+				largest = s.substring(i,i+k);
+			}
 		}
-		Collections.sort(arr);
-		smallest = arr.get(0);
-		largest = arr.get(arr.size() - 1);
-        return smallest + "\n" + largest;
+		return smallest + "\n" + largest;	
     }
 }
 
