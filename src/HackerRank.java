@@ -807,35 +807,32 @@ public static int lowestTriangle(int trianglebase, int area) {
 	// }
 	// return answer;
 
-	static boolean isAnagram(String a, String b) {
-		String alp = "abcdefghijklmnopqrstuvwxyz";
-		int aCount = 0;
-		int bCount = 0;
-		if(a.length() != b.length()){
-			return false;
-		};
-		for(int i = 0; i < alp.length();i++){
-			System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - -");
-			System.out.println("Alpha letter is " + alp.charAt(i));
-			for(int j = 0; j < a.length(); j++){
-				System.out.println("A letter is " + a.charAt(j));
-				System.out.println("B letter is " + b.charAt(j));
-				if(alp.charAt(i) == a.charAt(j)){
-					aCount++;
-					System.out.println("A count increased to " + aCount);
-				}
-				if(alp.charAt(i) == b.charAt(j)){
-					bCount++;
-					System.out.println("B count increased to " + bCount);
-				}
-			}
-			if(aCount == bCount){
-				return true;
-			} else {
-				return false;
-			}
-		}	
-    }
+	// static boolean isAnagram(String a, String b) {
+    //     String alp = "abcdefghijklmnopqrstuvwxyz";
+    //     int aCount = 0;
+    //     int bCount = 0;
+    //     boolean ans = true;
+    //     if(a.length() != b.length()){
+    //         return false;
+    //     };
+    //     for(int i = 0; i < alp.length();i++){
+    //         for(int j = 0; j < a.length(); j++){
+    //             if(alp.substring(i,i+1).equalsIgnoreCase(a.substring(j,j+1))){
+    //                 aCount++;
+    //             }
+    //             if(alp.substring(i,i+1).equalsIgnoreCase(b.substring(j,j+1))){
+    //                 bCount++;
+    //             }
+    //         }
+    //         if(aCount == bCount){
+    //             ans = true;
+    //         } else {
+    //             ans = false;
+    //             break;
+    //         }
+    //     }    
+    //      return ans;
+    //    }
 }
 
 
