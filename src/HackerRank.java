@@ -815,8 +815,9 @@ public static int lowestTriangle(int trianglebase, int area) {
 			return false;
 		};
 		for(int i = 0; i < alp.length();i++){
+			System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - -");
+			System.out.println("Alpha letter is " + alp.charAt(i));
 			for(int j = 0; j < a.length(); j++){
-				System.out.println("Alpha letter is " + alp.charAt(i));
 				System.out.println("A letter is " + a.charAt(j));
 				System.out.println("B letter is " + b.charAt(j));
 				if(alp.charAt(i) == a.charAt(j)){
@@ -828,12 +829,12 @@ public static int lowestTriangle(int trianglebase, int area) {
 					System.out.println("B count increased to " + bCount);
 				}
 			}
-		}
-		if(aCount == bCount){
-			return true;
-		} else {
-			return false;
-		}
+			if(aCount == bCount){
+				return true;
+			} else {
+				return false;
+			}
+		}	
     }
 }
 
