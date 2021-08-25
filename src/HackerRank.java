@@ -795,6 +795,16 @@ public static int lowestTriangle(int trianglebase, int area) {
 	// 	}
 	// 	return smallest + "\n" + largest;	
     // }
+
+	Scanner sc=new Scanner(System.in);
+    String A=sc.next();
+	String answer = "Yes";
+	for(int i = 0; i < A.length / 2; i++){
+		if(A.charAt(i) != A.charAt(A.length - i - 1)){
+			answer = "No";
+		}
+	}
+	return answer;
 }
 
 
