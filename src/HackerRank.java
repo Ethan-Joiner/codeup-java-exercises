@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.List;
+import java.util.Scanner;
 
 import jdk.javadoc.internal.doclets.formats.html.SourceToHTMLConverter;
 
@@ -756,13 +757,28 @@ public static int lowestTriangle(int trianglebase, int area) {
 
 
 			
-		public static void Solution(){
-			System.out.println("Hello, World.");
-			System.out.println("Hello, Java.");
-			int x = 5;
-			Calendar.DAY_OF_WEEK_IN_MONTH(4);
-		}
+		// public static void Solution(){
+		// 	System.out.println("Hello, World.");
+		// 	System.out.println("Hello, Java.");
+		// 	int x = 5;
+		// 	Calendar.DAY_OF_WEEK_IN_MONTH(4);
+		// }
 
+		public static void Solution(){
+			
+		
+		Scanner sc=new Scanner(System.in);
+        String A=sc.next();
+        String B=sc.next();
+
+		System.out.println(A.length() + B.length());
+        if(A.charAt(0) > B.charAt(0)){
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+        System.out.println(A.substring(0, 1).toUpperCase());
+	}
 }
 
 
