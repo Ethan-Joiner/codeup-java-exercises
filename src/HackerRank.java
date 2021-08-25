@@ -807,7 +807,19 @@ public static int lowestTriangle(int trianglebase, int area) {
 	// return answer;
 
 	static boolean isAnagram(String a, String b) {
-        // Complete the function
+		boolean ans = false;
+		int flag = 0;
+        for(int i = 0; i < a.length(); i++){
+			for(int j = 0; j < b.length(); j++){
+				if(a.substring(i,i+1).equalsIgnoreCase(b.substring(j,j+1))){
+					flag++;
+				}
+			}
+		}
+		if(flag == a.length()){
+			ans = true;
+		}
+		return ans;
     }
 }
 
