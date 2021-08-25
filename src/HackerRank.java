@@ -807,19 +807,27 @@ public static int lowestTriangle(int trianglebase, int area) {
 	// return answer;
 
 	static boolean isAnagram(String a, String b) {
-		boolean ans = false;
-		int flag = 0;
-        for(int i = 0; i < a.length(); i++){
-			for(int j = 0; j < b.length(); j++){
-				if(a.substring(i,i+1).equalsIgnoreCase(b.substring(j,j+1))){
-					flag++;
+		String alp = "abcdefghijklmnopqrstuvwxyz";
+		int aCount = 0;
+		int bCount = 0;
+		if(a.length() != b.length()){
+			System.out.println(false);
+		};
+		for(int i = 0; i < alp.length();i++){
+			for(int j = 0; j < a.length(); j++){
+				if(alp.charAt(i) == a.charAt(j)){
+					aCount++;
+				}
+				if(alp.charAt(i) == b.charAt(j)){
+					bCount++;
 				}
 			}
 		}
-		if(flag == a.length()){
-			ans = true;
+		if(aCount == bCount){
+			System.out.println(true);
+		} else {
+			System.out.println(false);
 		}
-		return ans;
     }
 }
 
