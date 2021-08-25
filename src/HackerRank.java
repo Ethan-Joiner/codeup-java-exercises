@@ -41,7 +41,8 @@ public class HackerRank {
 		// lowestTriangle(3, 4);
 		// solve(689715240, 759842301);
 		// getSmallestAndLargest("welcometojava", 3);
-		isAnagram("anagramm", "marganaa");
+		// isAnagram("anagramm", "marganaa");
+		stringSplit("           YES      leading spaces        are valid,    problemsetters are         evillllll");
 	}
     
  // Just a helper method
@@ -833,6 +834,15 @@ public static int lowestTriangle(int trianglebase, int area) {
     //     }    
     //      return ans;
     //    }
+
+	public static void stringSplit(String s){
+
+		String[] arr = s.split("[, '?.!@]+");
+        System.out.println(arr.length);
+        for(String token : arr)
+        System.out.println(token);
+	};
+
 }
 
 
