@@ -38,8 +38,9 @@ public class HackerRank {
 		// pickingNumbers(test);
 		// System.out.println(repeatedString("epsxyyflvrrrxzvnoenvpegvuonodjoxfwdmcvwctmekpsnamchznsoxaklzjgrqruyzavshfbmuhdwwmpbkwcuomqhiyvuztwvq", 549382313570L));
 		// beautifulDays(20, 23, 6);
-		lowestTriangle(3, 4);
+		// lowestTriangle(3, 4);
 		// solve(689715240, 759842301);
+		getSmallestAndLargest("welcometojava", 3);
 	}
     
  // Just a helper method
@@ -684,16 +685,16 @@ public static int chocolateFeast(int n, int c, int m) {
     }
 
 	//Completed: K is the height one can jump. Height is a list of hurdles. Potion gives +1 jump. How many potions to equal highest hurdle?
-	public static int hurdleRace(int k, List<Integer> height) {
-		Collections.sort(height);
-		Collections.reverse(height);
-		int answer = 0;
-		if(height.get(0) - k > 0){
-			answer = height.get(0) - k;
-			}
-		return answer;
+	// public static int hurdleRace(int k, List<Integer> height) {
+	// 	Collections.sort(height);
+	// 	Collections.reverse(height);
+	// 	int answer = 0;
+	// 	if(height.get(0) - k > 0){
+	// 		answer = height.get(0) - k;
+	// 		}
+	// 	return answer;
 		
-		}
+	// 	}
 
 // Receiving a triangle base an area, find the lowest possible height.
 public static int lowestTriangle(int trianglebase, int area) {
@@ -782,17 +783,15 @@ public static int lowestTriangle(int trianglebase, int area) {
 
 	public static String getSmallestAndLargest(String s, int k) {
 
-		String smallest = "";
-		String largest = "";
+		String smallest = "Z";
+		String largest = "a";
+		List<String> arr = new ArrayList<>();
 		for(int i = 0; i < s.length() - k; i++){
-			if(s.charAt(i) < smallest.charAt(0)){
-				smallest = s.substring(i,i+k);
-			}
-			if(s.charAt(i) > largest.charAt(0)){
-				largest = s.substring(i,i+k);
-			}
+			arr.add(s.substring(i,i+k));
 		}
-
+		Collections.sort(arr);
+		smallest = arr.get(0);
+		largest = arr.get(arr.size() - 1);
         return smallest + "\n" + largest;
     }
 }
