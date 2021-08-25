@@ -781,13 +781,18 @@ public static int lowestTriangle(int trianglebase, int area) {
 	// }
 
 	public static String getSmallestAndLargest(String s, int k) {
-        String smallest = "";
-        String largest = "";
-        
-        // Complete the function
-        // 'smallest' must be the lexicographically smallest substring of length 'k'
-        // 'largest' must be the lexicographically largest substring of length 'k'
-        
+
+		String smallest = "";
+		String largest = "";
+		for(int i = 0; i < s.length() - k; i++){
+			if(s.charAt(i) < smallest.charAt(0)){
+				smallest = s.substring(i,i+k);
+			}
+			if(s.charAt(i) > largest.charAt(0)){
+				largest = s.substring(i,i+k);
+			}
+		}
+
         return smallest + "\n" + largest;
     }
 }
