@@ -8,8 +8,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-import jdk.javadoc.internal.doclets.formats.html.SourceToHTMLConverter;
-
 import java.util.HashMap;
 
 
@@ -22,7 +20,7 @@ public class HackerRank {
 //        int[] test = {2,5,1,3,4,4,3,5,1,1,2,1,4,1,3,3,4,2,1};
 //    	int[] test = {1,1};
     	// List<List<Integer> >test = new ArrayList<>(Arrays.asList(new ArrayList<>(Arrays.asList(11,2,4)),new ArrayList<>(Arrays.asList(4,5,6)),new ArrayList<>(Arrays.asList(10,8,-12))));
-		List<Integer> test = new ArrayList<>(Arrays.asList(4,6,5,3,3,1));
+		// List<Integer> test = new ArrayList<>(Arrays.asList(4,6,5,3,3,1));
     
 //        ArrayList<Integer> testing = new ArrayList<>(Arrays.asList(2,5,1,3,4,4,3,5,1,1,2,1,4,1,3,3,4,2,1));
 //        System.out.println(birthday(testing,18,7));
@@ -278,28 +276,28 @@ public class HackerRank {
 
 //    I is start day, j is last day. Test each day by subtracting it from its reverse. If evenly divisible by K then increase days
 //    Passed initial tests, runtime error for larger ones. Need better way to reverse. Try the formula
-static int reversDigits(int num)
-{
-	int rev_num = 0;
-	while (num > 0) {
-		rev_num = rev_num * 10 + num % 10;
-		num = num / 10;
-	}
-	return rev_num;
-}
+// static int reversDigits(int num)
+// {
+// 	int rev_num = 0;
+// 	while (num > 0) {
+// 		rev_num = rev_num * 10 + num % 10;
+// 		num = num / 10;
+// 	}
+// 	return rev_num;
+// }
 // FINALLY COMPLETE
-   static int beautifulDays(int i, int j, int k) {
-       int days = 0;
-       for (int x = i; x <= j; x++) {
-		   System.out.println(x);
-		   System.out.println(reversDigits(x));
-		   System.out.println((x - reversDigits(x)) % k);
-           if ((x - reversDigits(x)) % k == 0) {
-               days++;
-           }
-       }
-       return days;
-   }
+//    static int beautifulDays(int i, int j, int k) {
+//        int days = 0;
+//        for (int x = i; x <= j; x++) {
+// 		   System.out.println(x);
+// 		   System.out.println(reversDigits(x));
+// 		   System.out.println((x - reversDigits(x)) % k);
+//            if ((x - reversDigits(x)) % k == 0) {
+//                days++;
+//            }
+//        }
+//        return days;
+//    }
 
 //    N is number of days. First day start with 5. Divide in half a round down to find daily likes. Likes x 3 for next day. Should be ez formula
 //    Passed all tests
@@ -338,130 +336,130 @@ static int reversDigits(int num)
 //	Take a number and find how many of the individual digits are evenly divisible
 //    Had to use math due to char data type holding a numeric value. 
 //    All tests passed
-static int findDigits(int n) {
-	int total = 0;
-	String digits = Integer.toString(n);
-	for (int i = 0; i < digits.length(); i ++) {
-		if (n % (digits.charAt(i) - 48) == 0 && digits.charAt(i) != 48) {
-			total++;
-		}
-	}
-	return total;
-}
+// static int findDigits(int n) {
+// 	int total = 0;
+// 	String digits = Integer.toString(n);
+// 	for (int i = 0; i < digits.length(); i ++) {
+// 		if (n % (digits.charAt(i) - 48) == 0 && digits.charAt(i) != 48) {
+// 			total++;
+// 		}
+// 	}
+// 	return total;
+// }
 
 // n is prisoners, m is pieces of candy, s is starting position. go in a "circle" until you land at the end and return that number
 // Incomplete. Getting runtime error. Needs to run faster. Probably a formula for it
-static int saveThePrisoner(int n, int m, int s) {
-	int start = s;
-	for (int i = 1; i < m; i ++) {
-		System.out.println(start);
-		if (start == n) {
-			start -= n;
-		}
-		start++;
-	}
-	return start;
-}
+// static int saveThePrisoner(int n, int m, int s) {
+// 	int start = s;
+// 	for (int i = 1; i < m; i ++) {
+// 		System.out.println(start);
+// 		if (start == n) {
+// 			start -= n;
+// 		}
+// 		start++;
+// 	}
+// 	return start;
+// }
 
 // Starting at 1, get the index of 1, then the index of that number + 1. Continue through length of array
 // Basically start from 1, get the index of where it appears in the array, then get the index of that number
 // Passed all tests
-static int[] permutationEquation(int[] p) {
-	int[] y = new int[p.length];
-	int index = 0;
-	for (int i = 1; i <= p.length; i++) {
-		index = indexOfIntArray(p,i) + 1;
-		y[i - 1] = indexOfIntArray(p, index) + 1;
-	}
-return y;
-}
+// static int[] permutationEquation(int[] p) {
+// 	int[] y = new int[p.length];
+// 	int index = 0;
+// 	for (int i = 1; i <= p.length; i++) {
+// 		index = indexOfIntArray(p,i) + 1;
+// 		y[i - 1] = indexOfIntArray(p, index) + 1;
+// 	}
+// return y;
+// }
 
 // Should take in a number and print the factorial.
 // Take a number and multiply it by every number from 1 through it
 // Passed all tests
-static void extraLongFactorials(int n) {
-	BigInteger f = new BigInteger("1");
-	for (int i = 1; i <= n; i ++) {
-        f = f.multiply(BigInteger.valueOf(i)); 
-	}
-System.out.println(f);
-}
+// static void extraLongFactorials(int n) {
+// 	BigInteger f = new BigInteger("1");
+// 	for (int i = 1; i <= n; i ++) {
+//         f = f.multiply(BigInteger.valueOf(i)); 
+// 	}
+// System.out.println(f);
+// }
 
 // Find the smallest distance between two equal numbers in an array
 // Went through the array with two loops. Each one starts at a number and continues until it finds an equal number. Create a temporary length between until a smaller one is found
 // Passed all tests
-static int minimumDistances(int[] a) {
-	int distance= 0;
-	int minDistance = -1;
-	for (int i = 0; i < a.length; i++) {
-		for (int j = i + 1; j < a.length - 1; j++) {
-			System.out.println("test");
-			if (a[i] == a[j]) {
-				distance = j - i;
-				System.out.println("Distance is " + distance);
-				if (distance <= minDistance || minDistance == -1) {
-					minDistance = distance;
-				}
-			}
-		}
-	}
-	if (a.length == 2 && a[0] == a[1]) {
-		minDistance = 1;
-	}
-	return minDistance;
-}
+// static int minimumDistances(int[] a) {
+// 	int distance= 0;
+// 	int minDistance = -1;
+// 	for (int i = 0; i < a.length; i++) {
+// 		for (int j = i + 1; j < a.length - 1; j++) {
+// 			System.out.println("test");
+// 			if (a[i] == a[j]) {
+// 				distance = j - i;
+// 				System.out.println("Distance is " + distance);
+// 				if (distance <= minDistance || minDistance == -1) {
+// 					minDistance = distance;
+// 				}
+// 			}
+// 		}
+// 	}
+// 	if (a.length == 2 && a[0] == a[1]) {
+// 		minDistance = 1;
+// 	}
+// 	return minDistance;
+// }
 
 // Initial price is p, subtract by d each time until hitting m. S is your money. Return how many games you can buy
 // Passed all tests 
-static int howManyGames(int p, int d, int m, int s) {
-	int games = p > s ? 0 : 1;
-	int price = p;
-	int spent = p;
-    // Return the number of games you can buy
-	for (int i = s - p; i >= price; i -= price) {
-		 if (price > m && price - d >= m) {
-			price -= d;
-			spent += price;
-			games++;
-			System.out.println("First");
-		} else if (price == m) {
-			spent += price;
-			games++;
-			System.out.println("Second");
+// static int howManyGames(int p, int d, int m, int s) {
+// 	int games = p > s ? 0 : 1;
+// 	int price = p;
+// 	int spent = p;
+//     // Return the number of games you can buy
+// 	for (int i = s - p; i >= price; i -= price) {
+// 		 if (price > m && price - d >= m) {
+// 			price -= d;
+// 			spent += price;
+// 			games++;
+// 			System.out.println("First");
+// 		} else if (price == m) {
+// 			spent += price;
+// 			games++;
+// 			System.out.println("Second");
 
-		} else if (price > m && price - d <= m) {
-			price = m;
-			spent += price;
-			games++;
-			System.out.println("Third");
-		} 
-	}
-	return games;
-}
+// 		} else if (price > m && price - d <= m) {
+// 			price = m;
+// 			spent += price;
+// 			games++;
+// 			System.out.println("Third");
+// 		} 
+// 	}
+// 	return games;
+// }
 // x1 and x2 are starting positions. v1 and v2 are increments. return true if they reach the same number in the same number of jumps
 // Passed all tests
-static String kangaroo(int x1, int v1, int x2, int v2) {
-	String same = "NO";
-	int k1 = x1;
-	int k2 = x2;
-	for (int i = 0; i < 10000; i++) {
-		k1 += v1;
-		k2 += v2;
-		if (k1 == k2) {
-			same = "YES";
-			break;
-		}	
-	}
-	return same;
-}
+// static String kangaroo(int x1, int v1, int x2, int v2) {
+// 	String same = "NO";
+// 	int k1 = x1;
+// 	int k2 = x2;
+// 	for (int i = 0; i < 10000; i++) {
+// 		k1 += v1;
+// 		k2 += v2;
+// 		if (k1 == k2) {
+// 			same = "YES";
+// 			break;
+// 		}	
+// 	}
+// 	return same;
+// }
 
 // Starting at the number a, go through each number testing for square roots until reaching b. return the number
 // Need help or get better. Run time must be reduced
-static int squares(int a, int b) {
-    int totalSquares = 0;
+// static int squares(int a, int b) {
+//     int totalSquares = 0;
 
-    return totalSquares;
-}
+//     return totalSquares;
+// }
 // a is array of ints, k is the number of shifts, queries is which indices need to be represented. Each shift is taking the last element off and moving it to the front
 //static int[] circularArrayRotation(int[] a, int k, int[] queries) {
 //
@@ -471,89 +469,82 @@ static int squares(int a, int b) {
 // Saw this is a question for interviews. Need practice with 2d arrays. I know this is probably bad code
 // Created the cards. Created 2d array for deck. First for loop to populate deck. First forEach loop to split by suit. Second forEach to grab each card individually. Creating random variables for each axis of 2d array. Standard for loop to grab 2 random cards.
 // Incomplete
-static void cardDeck() {
-	String[] suits = {"H", "D", "C", "S"};
-	String[] cards = {"2","3","4","5","6","7","8","9","10","J","Q","K","A"};
-	String[][] deck = new String[suits.length][cards.length];
+// static void cardDeck() {
+// 	String[] suits = {"H", "D", "C", "S"};
+// 	String[] cards = {"2","3","4","5","6","7","8","9","10","J","Q","K","A"};
+// 	String[][] deck = new String[suits.length][cards.length];
  
-	for (int i = 0; i < deck.length; i++) {
-		for (int j = 0; j < deck[i].length;j++) {
-			deck[i][j] = suits[i].concat(cards[j]);
-		}
+// 	for (int i = 0; i < deck.length; i++) {
+// 		for (int j = 0; j < deck[i].length;j++) {
+// 			deck[i][j] = suits[i].concat(cards[j]);
+// 		}
 		
-	}
-	for (String[] suit : deck) {
-		for (String card: suit) {
-		}
+// 	}
+// 	for (String[] suit : deck) {
+// 		for (String card: suit) {
+// 		}
 		
-	}
-	for (int i = 0; i < 2; i ++) {
-		 int randomSuit = (int) (Math.random() * 4);
-		 int randomCard = (int) (Math.random() * 13);
-	System.out.println(deck[randomCard][randomSuit]);
-	}
-
-	
-}
+// 	}
+// 	for (int i = 0; i < 2; i ++) {
+// 		 int randomSuit = (int) (Math.random() * 4);
+// 		 int randomCard = (int) (Math.random() * 13);
+// 	System.out.println(deck[randomCard][randomSuit]);
+// 	}	
+// }
 // Take the total sum of both diagonals of a 2d matrix, and return the absolute difference
 // Passed all tests
-public static int diagonalDifference(List<List<Integer>> arr) {
-	int difference = 0;
-	int sum1 = 0;
-	int sum2 = 0;
-	int reversal = arr.size() - 1;
-    // Should be able to do a loop starting at [0,0], and increase the position by 1 on each axis while totalling
-	for (int i = 0; i < arr.size(); i++) {
-		sum1 += arr.get(i).get(i);
-		sum2 += arr.get(i).get(reversal);
-		System.out.println(sum1);
-		System.out.println(sum2);
-		reversal--;
-	}
-
-
-	difference = Math.abs(sum1 - sum2);
-	return difference;
-    }
+// public static int diagonalDifference(List<List<Integer>> arr) {
+// 	int difference = 0;
+// 	int sum1 = 0;
+// 	int sum2 = 0;
+// 	int reversal = arr.size() - 1;
+//     // Should be able to do a loop starting at [0,0], and increase the position by 1 on each axis while totalling
+// 	for (int i = 0; i < arr.size(); i++) {
+// 		sum1 += arr.get(i).get(i);
+// 		sum2 += arr.get(i).get(reversal);
+// 		System.out.println(sum1);
+// 		System.out.println(sum2);
+// 		reversal--;
+// 	}
+// 	difference = Math.abs(sum1 - sum2);
+// 	return difference;
+//     }
 
 // Take an array of numbers. Return the one that shows up the most. If tied, show the lowest number.
 // Passed all tests
-static int migratoryBirds(List<Integer> arr) {
-	int mostBirdType = arr.get(0);
-	int mostBirdAmount = 0;
-	int currentBirdAmount = 0;
+// static int migratoryBirds(List<Integer> arr) {
+// 	int mostBirdType = arr.get(0);
+// 	int mostBirdAmount = 0;
+// 	int currentBirdAmount = 0;
 	
 
-	Collections.sort(arr);
-	for (int i = 0; i < arr.size(); i++) {
-		System.out.println("Index " + i);
-		System.out.println("Last Index " + arr.lastIndexOf(arr.get(i)));
+// 	Collections.sort(arr);
+// 	for (int i = 0; i < arr.size(); i++) {
+// 		System.out.println("Index " + i);
+// 		System.out.println("Last Index " + arr.lastIndexOf(arr.get(i)));
 
-		currentBirdAmount = arr.lastIndexOf(arr.get(i)) - i + 1;
-		System.out.println("Current bird amount " + currentBirdAmount);
-		System.out.println("Current bird " + arr.get(i));
-		System.out.println("Most bird amount " + mostBirdAmount);
-		System.out.println("Most bird " + mostBirdType);
+// 		currentBirdAmount = arr.lastIndexOf(arr.get(i)) - i + 1;
+// 		System.out.println("Current bird amount " + currentBirdAmount);
+// 		System.out.println("Current bird " + arr.get(i));
+// 		System.out.println("Most bird amount " + mostBirdAmount);
+// 		System.out.println("Most bird " + mostBirdType);
 
 
-		if (currentBirdAmount > mostBirdAmount) {
-			mostBirdType = arr.get(i);
-			mostBirdAmount = currentBirdAmount;
-		}
-		i = arr.lastIndexOf(arr.get(i));
+// 		if (currentBirdAmount > mostBirdAmount) {
+// 			mostBirdType = arr.get(i);
+// 			mostBirdAmount = currentBirdAmount;
+// 		}
+// 		i = arr.lastIndexOf(arr.get(i));
 		
-	}
-	return mostBirdType;
-
-}
+// 	}
+// 	return mostBirdType;
+// }
 
 // Too long to describe. See website
-static int getMoneySpent(int[] keyboards, int[] drives, int b) {
-	int moneySpent = 0;
-   
-	return moneySpent;
-
-}
+// static int getMoneySpent(int[] keyboards, int[] drives, int b) {
+// 	int moneySpent = 0;  
+// 	return moneySpent;
+// }
 
 ////Too long to describe. See website
 //static int formingMagicSquare(int[][] s) {
@@ -564,30 +555,30 @@ static int getMoneySpent(int[] keyboards, int[] drives, int b) {
 //
 //
 // Take an array of numbers and find the longest length of numbers with an absolute difference of no more than 1
-public static int pickingNumbers(List<Integer> a) {
-	int longest = 0;
-	int currentLongest = 0;
-	Collections.sort(a);
-	int startingPoint = a.get(0);
+// public static int pickingNumbers(List<Integer> a) {
+// 	int longest = 0;
+// 	int currentLongest = 0;
+// 	Collections.sort(a);
+// 	int startingPoint = a.get(0);
 
-	for (int i = 0; i < a.size() - 1; i++) {
-		if (a.get(i) - startingPoint <= 1){
-			currentLongest++;
-			System.out.println("Current " + currentLongest);
-			System.out.println("Number " + a.get(i));
-			System.out.println("Index " + i);
-		} else {
-			currentLongest = 0;
-			startingPoint = i;
-			System.out.println("Reset");
-		}
-		if (currentLongest > longest) {
-			longest = currentLongest;
-		}
-	}
-	System.out.println(longest);
-	return longest;
-   }
+// 	for (int i = 0; i < a.size() - 1; i++) {
+// 		if (a.get(i) - startingPoint <= 1){
+// 			currentLongest++;
+// 			System.out.println("Current " + currentLongest);
+// 			System.out.println("Number " + a.get(i));
+// 			System.out.println("Index " + i);
+// 		} else {
+// 			currentLongest = 0;
+// 			startingPoint = i;
+// 			System.out.println("Reset");
+// 		}
+// 		if (currentLongest > longest) {
+// 			longest = currentLongest;
+// 		}
+// 	}
+// 	System.out.println(longest);
+// 	return longest;
+//    }
 //
 //static int jumpingOnClouds(int[] c, int k) {
 //
@@ -595,96 +586,94 @@ public static int pickingNumbers(List<Integer> a) {
 //}
 
 // All tests passed
-static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
-int aScore = 0;
-int bScore = 0;
-List<Integer> result = new ArrayList<>();
+// static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
+// int aScore = 0;
+// int bScore = 0;
+// List<Integer> result = new ArrayList<>();
 
-for (int i = 0; i < a.size(); i++) {
-	if(a.get(i) > b.get(i)) {
-	aScore++;
-	} else if(a.get(i) < b.get(i)) {
-	bScore++;
-	}
-}
-
-result.add(aScore);
-result.add(bScore);
-return result;
-
-}
+// for (int i = 0; i < a.size(); i++) {
+// 	if(a.get(i) > b.get(i)) {
+// 	aScore++;
+// 	} else if(a.get(i) < b.get(i)) {
+// 	bScore++;
+// 	}
+// }
+// result.add(aScore);
+// result.add(bScore);
+// return result;
+// }
 
 // All tests passed
-static int designerPdfViewer(int[] h, String word) {
-	String alpha = "abcdefghijklmnopqrstuvwxyz";
-	int highValue = 0;
-	int result = 0;
-	HashMap<Character, Integer> hash = new HashMap<>();
+// static int designerPdfViewer(int[] h, String word) {
+// 	String alpha = "abcdefghijklmnopqrstuvwxyz";
+// 	int highValue = 0;
+// 	int result = 0;
+// 	HashMap<Character, Integer> hash = new HashMap<>();
 	
-	for(int i = 0; i < alpha.length(); i++){
-		hash.put(alpha.charAt(i), h[i]);
-	}
+// 	for(int i = 0; i < alpha.length(); i++){
+// 		hash.put(alpha.charAt(i), h[i]);
+// 	}
 
-	for (int i = 0; i < word.length(); i++) {
-		if (hash.get(word.charAt(i)) > highValue) {
-			highValue = hash.get(word.charAt(i));
-		}
-	}
-	result = highValue * word.length();
+// 	for (int i = 0; i < word.length(); i++) {
+// 		if (hash.get(word.charAt(i)) > highValue) {
+// 			highValue = hash.get(word.charAt(i));
+// 		}
+// 	}
+// 	result = highValue * word.length();
 
-	return result;
-}
+// 	return result;
+// }
 
 // S is a string repeated until reaching a length of n. How many times does the letter "a" show up in the total string?
 // Passed all tests
-static long repeatedString(String s, long n) {
-	long result = 0;
-	int timesAShowUpInString = 0;
-	long numberOfTimesIntoNumber = (long) Math.floor(n / s.length());
-	long remainder = n % s.length();
+// static long repeatedString(String s, long n) {
+// 	long result = 0;
+// 	int timesAShowUpInString = 0;
+// 	long numberOfTimesIntoNumber = (long) Math.floor(n / s.length());
+// 	long remainder = n % s.length();
 
-	for(int i = 0; i < s.length(); i++){
-		if(s.charAt(i) == 'a'){
-			timesAShowUpInString++;
-		}
-	}
-	result = timesAShowUpInString * numberOfTimesIntoNumber;
-	for(int i = 0; i < remainder;i++){
-		if(s.charAt(i) == 'a'){
-			result++;
-		}
-	}
-	return result;
-}
+// 	for(int i = 0; i < s.length(); i++){
+// 		if(s.charAt(i) == 'a'){
+// 			timesAShowUpInString++;
+// 		}
+// 	}
+// 	result = timesAShowUpInString * numberOfTimesIntoNumber;
+// 	for(int i = 0; i < remainder;i++){
+// 		if(s.charAt(i) == 'a'){
+// 			result++;
+// 		}
+// 	}
+// 	return result;
+// }
 
 // c is an array of numbers with values or either 0 or 1. You can jump up to +2 indices away but can not land on any with a value of 1. What is the minimum amount of jumps needed to reach the end of the array 
-static int jumpingOnClouds(int[] c) {
-	int result = 0;
-	for(int i = 0; i < c.length; i++) {
-		if(i == c.length - 1)
-		if(c[i + 2] != 1){
-			i++;
-			result++;
-		} else if (c[i + 1] != 1){
-			result++;
-		}
-	}
-	return result;
-}
+// static int jumpingOnClouds(int[] c) {
+// 	int result = 0;
+// 	for(int i = 0; i < c.length; i++) {
+// 		if(i == c.length - 1)
+// 		if(c[i + 2] != 1){
+// 			i++;
+// 			result++;
+// 		} else if (c[i + 1] != 1){
+// 			result++;
+// 		}
+// 	}
+// 	return result;
+// }
 
 // COMPLETED: Return total number of chocolate eaten. N is dollars. C is cost per bar. M is how many wrappers per chocolate.
-public static int chocolateFeast(int n, int c, int m) {
-	int wrappers = n / c;
-	int additionalChocolate = 0;
-	int totalChocolateReceived = n / c;
-	while(wrappers >= m){
-		additionalChocolate = wrappers / m;
-		totalChocolateReceived += additionalChocolate;
-		wrappers = (wrappers % m) + additionalChocolate;
-		additionalChocolate = 0;
-	}
-	return totalChocolateReceived;
-    }
+// public static int chocolateFeast(int n, int c, int m) {
+// 	int wrappers = n / c;
+// 	int additionalChocolate = 0;
+// 	int totalChocolateReceived = n / c;
+// 	while(wrappers >= m){
+// 		additionalChocolate = wrappers / m;
+// 		totalChocolateReceived += additionalChocolate;
+// 		wrappers = (wrappers % m) + additionalChocolate;
+// 		additionalChocolate = 0;
+// 	}
+// 	return totalChocolateReceived;
+//     }
 
 	//Completed: K is the height one can jump. Height is a list of hurdles. Potion gives +1 jump. How many potions to equal highest hurdle?
 	// public static int hurdleRace(int k, List<Integer> height) {
@@ -699,7 +688,7 @@ public static int chocolateFeast(int n, int c, int m) {
 	// 	}
 
 // Receiving a triangle base an area, find the lowest possible height.
-public static int lowestTriangle(int trianglebase, int area) {
+// public static int lowestTriangle(int trianglebase, int area) {
 	// float start = trianglebase * 2;
 	// float height = trianglebase * 2;
 	// boolean flag = true;
@@ -714,49 +703,48 @@ public static int lowestTriangle(int trianglebase, int area) {
 	// 	}
 	// }
 	// return (int) height;
-	double height = Math.ceil((float) area / (float) trianglebase);
-	System.out.println(height);
-	return (int) height * 2;
-    }
+	// double height = Math.ceil((float) area / (float) trianglebase);
+	// System.out.println(height);
+	// return (int) height * 2;
+    // }
 
 	// COMPLETED
-	public static long halloweenParty(int k) {
-		double cuts = k;
-		long x;
-		// Write your code here
-		if(k % 2 == 0){
-			return (long) Math.pow((cuts / 2),2);
-		} else {
-			return (long) Math.floor(cuts / 2) * (long) Math.ceil(cuts / 2);
-		}
+	// public static long halloweenParty(int k) {
+	// 	double cuts = k;
+	// 	long x;
+	// 	// Write your code here
+	// 	if(k % 2 == 0){
+	// 		return (long) Math.pow((cuts / 2),2);
+	// 	} else {
+	// 		return (long) Math.floor(cuts / 2) * (long) Math.ceil(cuts / 2);
+	// 	}
 	
-		}
+	// }
 
 		// COMPLETED: N is the number of people. How many handshakes need to take place for each person to shake each other's hand once?
-		public static int handshake(int n) {
-			int shakes = 0;
-			for(int i = n; i > 0; i--) {
-				shakes += i - 1;
-			}
-			return shakes;
-			}
+	// public static int handshake(int n) {
+	// 	int shakes = 0;
+	// 	for(int i = n; i > 0; i--) {
+	// 		shakes += i - 1;
+	// 	}
+	// 	return shakes;
+	// }
 
 
 			// Long and wordy. Seems like multiply each "route" by length of n - 1.
-		public static int connectingTowns(int n, List<Integer> routes) {
-			int total = 1;
-			for(int i = 0; i < routes.size(); i++)	{
-				total *= routes.get(i);
-			}	
-			return total;	
-		}	
+	// public static int connectingTowns(int n, List<Integer> routes) {
+	// 	int total = 1;
+	// 	for(int i = 0; i < routes.size(); i++)	{
+	// 		total *= routes.get(i);
+	// 	}	
+	// return total;	
+	// }	
 // 		COMPLETED: N and M are length nd width of a quadrilateral. How many cuts to cut it into 1x1 pieces. 
-		public static long solve(int n, int m) {
-			// Write your code here
-			long x = ((long) n * (long) m) - 1;
-			System.out.println(x);
-			return x;
-			}
+	// public static long solve(int n, int m) {
+	// 	long x = ((long) n * (long) m) - 1;
+	// 	System.out.println(x);
+	// 	return x;
+	// }
 
 
 			
@@ -839,14 +827,11 @@ public static int lowestTriangle(int trianglebase, int area) {
 
 		
 		String[] arr;
-        // Write your code here.
         if(s.isEmpty()){
-			System.out.println("Empty");
-         arr = new String[0];
+        System.out.println(0);
         } else {
-			System.out.println("Not");
-         arr = s.trim().split("[, '?._!@]+");
-        }
+        arr = s.trim().split("[, '?._!@]+");
+        
         System.out.println(arr.length);
         for(String token : arr)
         System.out.println(token);
