@@ -843,14 +843,14 @@ public class HackerRank {
 // }
 // }
 
- public static String comp(String s){
-	try {
-		 Pattern test = Pattern.compile(s);
-		 System.out.println("Valid"); 
-	} catch (Exception e) {
-		System.out.println("Invalid"); 
-	}
- }
+//  public static String comp(String s){
+// 	try {
+// 		 Pattern test = Pattern.compile(s);
+// 		 System.out.println("Valid"); 
+// 	} catch (Exception e) {
+// 		System.out.println("Invalid"); 
+// 	}
+//  }
 }
 
 
