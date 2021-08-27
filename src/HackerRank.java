@@ -7,7 +7,7 @@ import java.util.Calendar;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
-
+import java.util.regex.Pattern;
 import java.util.HashMap;
 
 
@@ -842,6 +842,15 @@ public class HackerRank {
 // 	};
 // }
 // }
+
+ public static String comp(String s){
+	try {
+		 Pattern test = Pattern.compile(s);
+		 System.out.println("Valid"); 
+	} catch (Exception e) {
+		System.out.println("Invalid"); 
+	}
+ }
 }
 
 
