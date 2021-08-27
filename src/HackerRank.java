@@ -40,20 +40,20 @@ public class HackerRank {
 		// solve(689715240, 759842301);
 		// getSmallestAndLargest("welcometojava", 3);
 		// isAnagram("anagramm", "marganaa");
-		stringSplit(" ");
+		stringSplit("                        		");
 	}
     
  // Just a helper method
-    public static int indexOfIntArray(int[] array, int key) {
-        int returnvalue = -1;
-        for (int i = 0; i < array.length; ++i) {
-            if (key == array[i]) {
-                returnvalue = i;
-                break;
-            }
-        }
-        return returnvalue;
-    }
+    // public static int indexOfIntArray(int[] array, int key) {
+    //     int returnvalue = -1;
+    //     for (int i = 0; i < array.length; ++i) {
+    //         if (key == array[i]) {
+    //             returnvalue = i;
+    //             break;
+    //         }
+    //     }
+    //     return returnvalue;
+    // }
 
 
     
@@ -823,20 +823,25 @@ public class HackerRank {
     //      return ans;
     //    }
 
-	public static void stringSplit(String s){
+// 	public static void stringSplit(String s){
 
-		
-		String[] arr;
-        if(s.isEmpty()){
-        System.out.println(0);
-        } else {
-        arr = s.trim().split("[, '?._!@]+");
+// 		if(s == "                        		"){
+// 			System.out.println(0);
+
+// 		} else {
+// 		String[] arr;
+// 		arr = s.trim().split("[, '?._!@]+");
+// 		System.out.println("-" + s + "-");
+//         if(s == "                        		"){
+// 			System.out.println(0);
+//         } else {
         
-        System.out.println(arr.length);
-        for(String token : arr)
-        System.out.println(token);
-	};
-
+//         System.out.println(arr.length);
+//         for(String token : arr)
+//         System.out.println(token);
+// 	};
+// }
+// }
 }
 
 
