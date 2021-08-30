@@ -851,6 +851,13 @@ public class HackerRank {
 // 		System.out.println("Invalid"); 
 // 	}
 //  }
+
+	public static void negativeSubArray(){
+		Scanner sc = new Scanner(System.in);
+		
+	}
+
+
 }
 
 
