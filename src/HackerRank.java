@@ -854,7 +854,23 @@ public class HackerRank {
 
 	public static void negativeSubArray(){
 		Scanner sc = new Scanner(System.in);
-		
+		int[] arr = new int[sc.nextInt()];
+		int subArrs = 0;
+		int tempTotal = 0;
+		for(int i = 0; i < arr.length;i++){
+			arr[i] = sc.nextInt();
+		}
+		for(int i = 0; i < arr.length; i++){
+			for(int j = 0; j < arr.length;j++){
+				tempTotal += arr[j];
+				if(tempTotal < 0){
+					subArrs++;
+				} else {
+					break;
+				}
+			}
+		}
+		System.out.println(subArrs);
 	}
 
 
