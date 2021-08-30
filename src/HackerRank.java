@@ -40,7 +40,8 @@ public class HackerRank {
 		// solve(689715240, 759842301);
 		// getSmallestAndLargest("welcometojava", 3);
 		// isAnagram("anagramm", "marganaa");
-		stringSplit("                        		");
+		// stringSplit("                        		");
+		negativeSubArray();
 	}
     
  // Just a helper method
@@ -854,18 +855,20 @@ public class HackerRank {
 
 	public static void negativeSubArray(){
 		Scanner sc = new Scanner(System.in);
-		int[] arr = new int[sc.nextInt()];
+		int[] arr = [1,-2,4,-5,1];
 		int subArrs = 0;
 		int tempTotal = 0;
-		for(int i = 0; i < arr.length;i++){
-			arr[i] = sc.nextInt();
-		}
+		// for(int i = 0; i < arr.length;i++){
+		// 	arr[i] = sc.nextInt();
+		// }
 		for(int i = 0; i < arr.length; i++){
-			for(int j = 0; j < arr.length;j++){
+			for(int j = i; j < arr.length;j++){
 				tempTotal += arr[j];
+				System.out.println(tempTotal);
 				if(tempTotal < 0){
 					subArrs++;
 				} else {
+					tempTotal = 0;
 					break;
 				}
 			}
