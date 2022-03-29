@@ -45,7 +45,7 @@ public class leetcode {
         }
         return ans;
     }
-}
+
 
 
 // Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
@@ -53,3 +53,22 @@ public class leetcode {
 // You may assume that each input would have exactly one solution, and you may not use the same element twice.
 
 // You can return the answer in any order.
+
+public int[] twoSum(int[] nums, int target) {
+    int[] ans = new int[2];
+    for(int i = 0; i < nums.length; i++){
+        for(int j = 0; i < nums.length; j++){
+            if(i + j == target){
+                ans[0] = i;
+                ans[1] = j;
+                break;
+            }
+        }
+    }
+    return ans;
+        
+}
+
+
+
+}
