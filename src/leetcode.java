@@ -1,23 +1,12 @@
-import java.lang.reflect.Array;
-import java.math.BigInteger;
-import java.sql.SQLOutput;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.Collections;
-import java.util.List;
-import java.util.Scanner;
-import java.util.regex.Pattern;
-import java.util.HashMap;
 
 public class leetcode {
     
 
     public static void main(String[] args) {
-        
+        romanToInt("MCM");
     }
 
-    int romanToInt(String s) {
+    public static int romanToInt(String s) {
         int ans = 0;
         int I = 1;
         int IV = 4;
@@ -29,10 +18,10 @@ public class leetcode {
         int D = 500;    
         int M = 1000;
         for(int i = 0; i < s.length(); i++){
-            // if(s.charAt(i).toString() == "M" && s[i + 1] == "C"){
-
-            // }
-                System.out.println(s.charAt(i));
+            if(s.charAt(i) == 'M' && s.charAt(i +1) == 'C'){
+                ans += 900;
+            }
+                System.out.println(ans);
 
         }
         return ans;
