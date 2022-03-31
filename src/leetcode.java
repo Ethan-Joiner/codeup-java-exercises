@@ -91,12 +91,19 @@ public class leetcode {
 
 // Find the longest substring with no repeating characters
 public int lengthOfLongestSubstring(String s) {
-    String ans = " ";
+    StringBuilder currentLongest = new StringBuilder();
+    int ans = 0;
     for(int i = 0; i < s.length(); i++){
-        
+        if(!currentLongest.toString().contains((Character.toString(s.charAt(i))))){
+            currentLongest.append(s.charAt(i));
+            ans = currentLongest.toString().length();
+            System.out.println(currentLongest);
+            System.out.println(ans);
+        } else {
+            currentLongest.setLength(0);
+        }
     }
-    return ans.length();
-        
+    return ans;     
 }
 
 
