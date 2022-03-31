@@ -4,8 +4,8 @@ public class leetcode {
 
     public static void main(String[] args) {
         // romanToInt("MCMXCIV");
-        int[] testArray = {3,3};
-        twoSum(testArray, 6);
+        // int[] testArray = {3,2,95,4,-3};
+        // twoSum(testArray, 6);
     }
 
     public static int romanToInt(String s) {
@@ -56,18 +56,46 @@ public class leetcode {
 
 // You can return the answer in any order.
 
-public static int[] twoSum(int[] nums, int target) {
-    int[] ans = new int[2];
-    for(int i = 0; i < nums.length; i++){
-        for(int j = (i + 1); j < nums.length; j++){
-            if(nums[i] + nums[j] == target){
-                ans[0] = i;
-                ans[1] = j;
-                return ans;
-            }
-        }
+// public static int[] twoSum(int[] nums, int target) {
+//     int[] ans = new int[2];
+//     for(int i = 0; i < nums.length; i++){
+
+//         for(int j = (i + 1); j < nums.length; j++){
+//             if(nums[i] + nums[j] == target){
+//                 ans[0] = i;
+//                 ans[1] = j;
+//                 return ans;
+//             }
+//         }
+//     }
+//     return ans;
+// }
+
+
+// This is a cheating solution on how to abuse hashmaps. Use it for reference. 
+// public class Solution {
+//     public int[] twoSum(int[] numbers, int target) {
+//         HashMap<Integer,Integer> indexMap = new HashMap<Integer,Integer>();
+//         for(int i = 0; i < numbers.length; i++){
+//             Integer requiredNum = (Integer)(target - numbers[i]);
+//             if(indexMap.containsKey(requiredNum)){
+//                 int toReturn[] = {indexMap.get(requiredNum), i};
+//                 return toReturn;
+//             }
+
+//             indexMap.put(numbers[i], i);
+//         }
+//         return null;
+//     }
+// }
+
+// Find the longest substring with no repeating characters
+public int lengthOfLongestSubstring(String s) {
+    String ans = " ";
+    for(int i = 0; i < s.length(); i++){
+        
     }
-    return ans;
+    return ans.length();
         
 }
 
