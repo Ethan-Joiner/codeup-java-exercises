@@ -6,6 +6,7 @@ public class leetcode {
         // romanToInt("MCMXCIV");
         // int[] testArray = {3,2,95,4,-3};
         // twoSum(testArray, 6);
+        lengthOfLongestSubstring("pwwkew");
     }
 
     public static int romanToInt(String s) {
@@ -90,19 +91,21 @@ public class leetcode {
 // }
 
 // Find the longest substring with no repeating characters
-public int lengthOfLongestSubstring(String s) {
+public static int lengthOfLongestSubstring(String s) {
     StringBuilder currentLongest = new StringBuilder();
     int ans = 0;
     for(int i = 0; i < s.length(); i++){
         if(!currentLongest.toString().contains((Character.toString(s.charAt(i))))){
             currentLongest.append(s.charAt(i));
             ans = currentLongest.toString().length();
-            System.out.println(currentLongest);
-            System.out.println(ans);
+            System.out.println("Current string = " + currentLongest);
+            System.out.println("Current longest = " + ans);
         } else {
             currentLongest.setLength(0);
+            currentLongest.append(s.charAt(i));
         }
     }
+    System.out.println(ans);
     return ans;     
 }
 
