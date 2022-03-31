@@ -98,14 +98,12 @@ public static int lengthOfLongestSubstring(String s) {
         if(!currentLongest.toString().contains((Character.toString(s.charAt(i))))){
             currentLongest.append(s.charAt(i));
             ans = currentLongest.toString().length();
-            System.out.println("Current string = " + currentLongest);
-            System.out.println("Current longest = " + ans);
         } else {
+            String replace = currentLongest.toString().substring((currentLongest.toString().indexOf(i + 1)));
             currentLongest.setLength(0);
-            currentLongest.append(s.charAt(i));
+            currentLongest.append(replace);
         }
     }
-    System.out.println(ans);
     return ans;     
 }
 
