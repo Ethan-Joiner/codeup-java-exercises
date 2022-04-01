@@ -101,8 +101,9 @@ public static int lengthOfLongestSubstring(String s) {
             ans = currentLongest.toString().length();
             System.out.println("Did not contain - " + currentLongest);
         } else {
+            currentLongest.append(s.charAt(i));
             String replace = currentLongest.toString().substring((currentLongest.toString().indexOf(i) + 2));
-            System.out.println("Current longest is " + currentLongest);
+            System.out.println("Replacement is  " + replace);
             currentLongest.setLength(0);
             currentLongest.append(replace);
             replace = " ";
