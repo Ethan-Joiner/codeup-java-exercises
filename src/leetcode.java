@@ -93,24 +93,23 @@ public class leetcode {
 // Find the longest substring with no repeating characters
 public static int lengthOfLongestSubstring(String s) {
     StringBuilder currentLongest = new StringBuilder();
-    int ans = 0;
+    String longest = " ";
     for(int i = 0; i < s.length(); i++){
         if(!currentLongest.toString().contains((Character.toString(s.charAt(i))))){
-            System.out.println("Current longest is " + currentLongest);
             currentLongest.append(s.charAt(i));
-            ans = currentLongest.toString().length();
-            System.out.println("Did not contain - " + currentLongest);
+            if(currentLongest.length() > longest.length()){
+                longest = currentLongest.toString();
+            }
         } else {
-            currentLongest.append(s.charAt(i));
-            String replace = currentLongest.toString().substring((currentLongest.toString().indexOf(i) + 2));
-            System.out.println("Replacement is  " + replace);
+            StringBuilder replace = new StringBuilder(currentLongest.toString().substring((currentLongest.toString().indexOf(i) + 2)));
+            if(!replace.toString().contains(Character.toString(s.charAt(i)))){
+                replace.append(s.charAt(i));
+            }
             currentLongest.setLength(0);
             currentLongest.append(replace);
-            replace = " ";
-            System.out.println("Did contain - " + currentLongest);
         }
     }
-    return ans;     
+    return longest.length();     
 }
 
 
