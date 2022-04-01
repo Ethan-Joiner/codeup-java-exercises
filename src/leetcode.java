@@ -6,7 +6,7 @@ public class leetcode {
         // romanToInt("MCMXCIV");
         // int[] testArray = {3,2,95,4,-3};
         // twoSum(testArray, 6);
-        lengthOfLongestSubstring("pwwkew");
+        lengthOfLongestSubstring("dvdf");
     }
 
     public static int romanToInt(String s) {
@@ -96,12 +96,17 @@ public static int lengthOfLongestSubstring(String s) {
     int ans = 0;
     for(int i = 0; i < s.length(); i++){
         if(!currentLongest.toString().contains((Character.toString(s.charAt(i))))){
+            System.out.println("Current longest is " + currentLongest);
             currentLongest.append(s.charAt(i));
             ans = currentLongest.toString().length();
+            System.out.println("Did not contain - " + currentLongest);
         } else {
-            String replace = currentLongest.toString().substring((currentLongest.toString().indexOf(i + 1)));
+            String replace = currentLongest.toString().substring((currentLongest.toString().indexOf(i) + 2));
+            System.out.println("Current longest is " + currentLongest);
             currentLongest.setLength(0);
             currentLongest.append(replace);
+            replace = " ";
+            System.out.println("Did contain - " + currentLongest);
         }
     }
     return ans;     
