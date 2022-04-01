@@ -92,30 +92,36 @@ public class leetcode {
 
 // Find the longest substring with no repeating characters
 public static int lengthOfLongestSubstring(String s) {
-    if(s.equals("") || s.equals(" ")){
+    if(s.equals("")){
         return 0;
     } else {
     StringBuilder currentLongest = new StringBuilder();
     String longest = " ";
     for(int i = 0; i < s.length(); i++){
         if(!currentLongest.toString().contains((Character.toString(s.charAt(i))))){
+            // System.out.println("Adding " + s.charAt(i) + " to " + currentLongest);
             currentLongest.append(s.charAt(i));
             if(currentLongest.length() > longest.length()){
                 longest = currentLongest.toString();
-                System.out.println("Longest is now " + longest);
+                // System.out.println("Longest is now " + longest);
             }
         } else {
-            StringBuilder replace = new StringBuilder(currentLongest.toString().substring((currentLongest.toString().indexOf(i) + 2)));
+            // System.out.println("Duplicate letter found - " + s.charAt(i));
+            // System.out.println("Currentlongest is " + currentLongest);
+            // System.out.println("Letter exists in currentlongest at " + currentLongest.toString().indexOf(Character.toString(s.charAt(i))));
+            StringBuilder replace = new StringBuilder(currentLongest.toString().substring((currentLongest.toString().indexOf(s.charAt(i)))));
             if(!replace.toString().contains(Character.toString(s.charAt(i)))){
                 replace.append(s.charAt(i));
             }
+            // System.out.println("Replacement string is " + replace);
             currentLongest.setLength(0);
             currentLongest.append(replace);
         }
     }
+    // System.out.println(longest.length());
     return longest.length();     
 }
 }
 
-
+// "qrsvbspk"
 }
