@@ -6,7 +6,7 @@ public class leetcode {
         // romanToInt("MCMXCIV");
         // int[] testArray = {3,2,95,4,-3};
         // twoSum(testArray, 6);
-        lengthOfLongestSubstring("aabaab!bb");
+        // lengthOfLongestSubstring("aabaab!bb");
     }
 
     public static int romanToInt(String s) {
@@ -124,5 +124,14 @@ public static int lengthOfLongestSubstring(String s) {
     return longest.length();     
 }
 }
-// "aabaab!bb"
-}
+
+// Remove all instances of val from nums. Must be done without creating a new array.
+public static int removeElement(int[] nums, int val) {
+    int len = nums.length;
+    for(int i = 0; i < nums.length; i++){
+        if(nums[i] == val){
+            len--;
+        }
+    }
+    return len;    
+}}
