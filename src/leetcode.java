@@ -131,7 +131,9 @@ public static int removeElement(int[] nums, int val) {
     for(int i = 0; i < nums.length; i++){
         if(nums[i] == val){
             len--;
+            nums[i] = 9;
         }
     }
     return len;    
-}}
+}
+}
