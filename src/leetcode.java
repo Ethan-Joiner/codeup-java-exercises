@@ -145,4 +145,28 @@ public int strStr(String haystack, String needle) {
         return haystack.indexOf(needle);
     }
 }
+
+// Int is an array of ints. Find the maximum area.
+public int maxArea(int[] height) {
+    int j = height.length - 1;
+    int area = 0;
+    for(int i = 0; i < height.length; i++){
+        if(height[i] > height[j]){
+            if(height[j] * (j - i) > area){
+                area = height[j] * (j - i);
+            }
+        j--;
+        i--;
+        } else if (height[i] < height[j]){
+            if(height[i] * (j - i) > area){
+                area = height[i] * (j - i);
+            }
+        } else {
+            if(height[i] * (j - i) > area){
+                area = height[i] * (j - i);
+            }
+        }
+    }
+    return area;       
+}
 }
