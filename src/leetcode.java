@@ -4,7 +4,7 @@ public class leetcode {
 
     public static void main(String[] args) {
         // romanToInt("MCMXCIV");
-        int[] testArray = {0,1,0,2,1,0,1,3,2,1,2,1};
+        int[] testArray = {4,2,0,3,2,5};
         // twoSum(testArray, 6);
         // lengthOfLongestSubstring("aabaab!bb");
         trap(testArray);
@@ -176,11 +176,16 @@ public static int trap(int[] height) {
     int currentwater = 0;
     int leftwall = 0;
     int leftwallindex = 0;
-    int rightwall = 0;
     int filler = 0;
+    int oldwall = 0;
+    int oldwallindex = 0;
     for(int i = 0; i < height.length; i++){
         System.out.println("Index " + i);
         if(height[i] >= leftwall){
+            if(oldwall != 0 && leftwall < oldwall && height[i] > leftwall){
+                System.out.println("Oldwall if working");
+                water += (height[i] - oldwall) * (i - (oldwallindex + 1));
+            }
             leftwall = height[i];
             leftwallindex = i;
             water += currentwater;
@@ -190,17 +195,21 @@ public static int trap(int[] height) {
             System.out.println("Total water now " + water);
         } else if (i < height.length - 1 && height[i] < leftwall && height[i] > height[i - 1] && height[i] > height[i + 1]){
             water += currentwater - ((leftwall - height[i]) * (i - (leftwallindex + 1)));
+            oldwall = leftwall;
+            oldwallindex = leftwallindex;
             leftwall = height[i];
+            leftwallindex = i;
+            currentwater = 0;
             System.out.println("Short wall found, new water is + " + water);
+            System.out.println("Oldwall is " + oldwall);
+           
         } else if (height[i] < leftwall){
             filler += height[i];
             currentwater += leftwall - filler; 
             System.out.println("Filler added + " + filler);
             filler = 0;
             System.out.println("Current water added + " + currentwater);
-        } 
-
-        
+        }   
     }
     System.out.println("Ending water = " + water);
     return water;
