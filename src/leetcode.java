@@ -186,7 +186,11 @@ public static int trap(int[] height) {
     } else {
     for(int i = 0; i < height.length; i++){
         System.out.println("Index " + i);
+       
         if(height[i] >= leftwall){
+            if(oldwall != 0 && leftwall < oldwall && height[i] > leftwall && height[i] == oldwall){
+                water += (height[i] - leftwall) * (i - (oldwallindex + 1));
+            }
             if(oldwall != 0 && leftwall < oldwall && height[i] > leftwall){
                 System.out.println("Oldwall if working");
                 water += (height[i] - oldwall) * (i - (oldwallindex + 1));
@@ -207,10 +211,15 @@ public static int trap(int[] height) {
             currentwater = 0;
             System.out.println("Short wall found, new water is + " + water);
             System.out.println("Oldwall is " + oldwall);
+            System.out.println("Leftwall is " + leftwall);
            
          } else
          if (height[i] < leftwall && height[i] > height[i - 1] && i == height.length - 1){
             water += Math.abs(currentwater - ((leftwall - height[i]) * (i - (leftwallindex + 1))));
+            oldwall = leftwall;
+            oldwallindex = leftwallindex;
+            leftwall = height[i];
+            leftwallindex = i;
 
             System.out.println("Short wall found, new water is + " + water);
             System.out.println("Oldwall is " + oldwall);
