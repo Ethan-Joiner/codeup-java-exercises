@@ -137,7 +137,7 @@ public static int removeElement(int[] nums, int val) {
     return len;    
 }
 
-// COMPLETED. Find the first instance of 'needle' in 'haystack'
+// COMPLETED. Find the first instance of 'needle' in 'haystack': Easy
 public int strStr(String haystack, String needle) {
     if(needle == ""){
         return 0;
@@ -146,7 +146,7 @@ public int strStr(String haystack, String needle) {
     }
 }
 
-// COMPLETED. Int is an array of ints. Find the maximum area.
+// COMPLETED. Int is an array of ints. Find the maximum area. : Medium.
 public int maxArea(int[] height) {
     int j = height.length - 1;
     int area = 0;
@@ -168,5 +168,11 @@ public int maxArea(int[] height) {
         }
     }
     return area;       
+}
+// Rainwater trap : Hard
+public int trap(int[] height) {
+    int water = 0;
+    return water;
+        
 }
 }
