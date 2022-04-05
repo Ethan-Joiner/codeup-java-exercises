@@ -137,7 +137,7 @@ public static int removeElement(int[] nums, int val) {
     return len;    
 }
 
-
+// COMPLETED. Find the first instance of 'needle' in 'haystack'
 public int strStr(String haystack, String needle) {
     if(needle == ""){
         return 0;
