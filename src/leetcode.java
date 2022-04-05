@@ -189,7 +189,8 @@ public static int trap(int[] height) {
             System.out.println("Leftwall now " + height[i]);
             System.out.println("Total water now " + water);
         } else if (i < height.length - 1 && height[i] < leftwall && height[i] > height[i - 1] && height[i] > height[i + 1]){
-            water += currentwater - (leftwall - height[i]) * (i - leftwallindex + 1);
+            water += currentwater - ((leftwall - height[i]) * (i - (leftwallindex + 1)));
+            leftwall = height[i];
             System.out.println("Short wall found, new water is + " + water);
         } else if (height[i] < leftwall){
             filler += height[i];
