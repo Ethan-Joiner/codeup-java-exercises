@@ -136,4 +136,13 @@ public static int removeElement(int[] nums, int val) {
     }
     return len;    
 }
+
+
+public int strStr(String haystack, String needle) {
+    if(needle == ""){
+        return 0;
+    } else {
+        return haystack.indexOf(needle);
+    }
+}
 }
