@@ -4,7 +4,7 @@ public class leetcode {
 
     public static void main(String[] args) {
         // romanToInt("MCMXCIV");
-        int[] testArray = {4,2,3};
+        int[] testArray = {0,2,0};
         // twoSum(testArray, 6);
         // lengthOfLongestSubstring("aabaab!bb");
         trap(testArray);
@@ -179,6 +179,11 @@ public static int trap(int[] height) {
     int filler = 0;
     int oldwall = 0;
     int oldwallindex = 0;
+    if(height[0] == height[height.length - 1]){
+        for(int i = 1; i < height.length - 1; i++){
+            water += height[0] - height[i];
+        }
+    } else {
     for(int i = 0; i < height.length; i++){
         System.out.println("Index " + i);
         if(height[i] >= leftwall){
@@ -203,12 +208,14 @@ public static int trap(int[] height) {
             System.out.println("Short wall found, new water is + " + water);
             System.out.println("Oldwall is " + oldwall);
            
-        } else if (height[i] < leftwall && height[i] > height[i - 1] && i == height.length - 1){
-            water += currentwater - ((leftwall - height[i]) * (i - (leftwallindex + 1)));
+         } else
+         if (height[i] < leftwall && height[i] > height[i - 1] && i == height.length - 1){
+            water += Math.abs(currentwater - ((leftwall - height[i]) * (i - (leftwallindex + 1))));
 
             System.out.println("Short wall found, new water is + " + water);
             System.out.println("Oldwall is " + oldwall);
-        } else if (height[i] < leftwall){
+        
+        }  else if (height[i] < leftwall){
             filler += height[i];
             currentwater += leftwall - filler; 
             System.out.println("Filler added + " + filler);
@@ -216,6 +223,7 @@ public static int trap(int[] height) {
             System.out.println("Current water added + " + currentwater);
         }   
     }
+}
     System.out.println("Ending water = " + water);
     return water;
 }
