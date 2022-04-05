@@ -4,7 +4,7 @@ public class leetcode {
 
     public static void main(String[] args) {
         // romanToInt("MCMXCIV");
-        int[] testArray = {4,2,0,3,2,5};
+        int[] testArray = {4,2,3};
         // twoSum(testArray, 6);
         // lengthOfLongestSubstring("aabaab!bb");
         trap(testArray);
@@ -203,6 +203,11 @@ public static int trap(int[] height) {
             System.out.println("Short wall found, new water is + " + water);
             System.out.println("Oldwall is " + oldwall);
            
+        } else if (height[i] < leftwall && height[i] > height[i - 1] && i == height.length - 1){
+            water += currentwater - ((leftwall - height[i]) * (i - (leftwallindex + 1)));
+
+            System.out.println("Short wall found, new water is + " + water);
+            System.out.println("Oldwall is " + oldwall);
         } else if (height[i] < leftwall){
             filler += height[i];
             currentwater += leftwall - filler; 
