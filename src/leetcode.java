@@ -146,7 +146,7 @@ public int strStr(String haystack, String needle) {
     }
 }
 
-// Int is an array of ints. Find the maximum area.
+// COMPLETED. Int is an array of ints. Find the maximum area.
 public int maxArea(int[] height) {
     int j = height.length - 1;
     int area = 0;
