@@ -7,7 +7,7 @@ public class leetcode {
         int[] testArray = {5,5,1,7,1,1,5,2,7,6};
         // twoSum(testArray, 6);
         // lengthOfLongestSubstring("aabaab!bb");
-        trap(testArray);
+        // trap(testArray);
     }
 
     public static int romanToInt(String s) {
@@ -235,5 +235,11 @@ public static int trap(int[] height) {
 }
     System.out.println("Ending water = " + water);
     return water;
+}
+
+
+// Find the index of the target in the array, or the index it would be if it does not exist. 
+public int searchInsert(int[] nums, int target) {
+        
 }
 }
