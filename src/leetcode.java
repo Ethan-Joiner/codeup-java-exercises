@@ -260,6 +260,19 @@ public static int searchInsert(int[] nums, int target) {
         }
         return ans;
     }
+
+// Given a string of words separated by spaces, find the length of the last word
+    public int lengthOfLastWord(String s) {
+        int leng = 0;
+        for(int i = s.length(); i > 0; i--){
+            if(s.charAt(i) != ' '){
+                leng++;
+            } else if (leng > 0 ){
+                break;
+            }
+        }
+        return leng;
+    }
 };
         
 
