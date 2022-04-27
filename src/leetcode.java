@@ -269,7 +269,8 @@ public static int searchInsert(int[] nums, int target) {
             System.out.println("Returning 1");
             return 1;
         }
-        for(int i = s.length() - 1; i > 0; i--){
+        for(int i = s.length() - 1; i >= 0; i--){
+            System.out.println(s.charAt(i));
             if(s.charAt(i) != ' '){
                 leng++;
                 System.out.println("Length increased by 1 to " + leng);
@@ -277,6 +278,7 @@ public static int searchInsert(int[] nums, int target) {
                 break;
             }
         }
+        System.out.println("Nothing is working");
         return leng;
     }
 };
