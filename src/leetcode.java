@@ -8,7 +8,8 @@ public class leetcode {
         // twoSum(testArray, 6);
         // lengthOfLongestSubstring("aabaab!bb");
         // trap(testArray);
-        searchInsert(testArray, 2);
+        // searchInsert(testArray, 2);
+        lengthOfLastWord("a ");
     }
 
     public static int romanToInt(String s) {
@@ -262,11 +263,16 @@ public static int searchInsert(int[] nums, int target) {
     }
 
 // Given a string of words separated by spaces, find the length of the last word
-    public int lengthOfLastWord(String s) {
+    public static int lengthOfLastWord(String s) {
         int leng = 0;
-        for(int i = s.length(); i > 0; i--){
+        if(s.length() == 1 && s != " "){
+            System.out.println("Returning 1");
+            return 1;
+        }
+        for(int i = s.length() - 1; i > 0; i--){
             if(s.charAt(i) != ' '){
                 leng++;
+                System.out.println("Length increased by 1 to " + leng);
             } else if (leng > 0 ){
                 break;
             }
