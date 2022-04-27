@@ -4,10 +4,11 @@ public class leetcode {
 
     public static void main(String[] args) {
         // romanToInt("MCMXCIV");
-        int[] testArray = {5,5,1,7,1,1,5,2,7,6};
+        int[] testArray = {1,3,5,6};
         // twoSum(testArray, 6);
         // lengthOfLongestSubstring("aabaab!bb");
         // trap(testArray);
+        searchInsert(testArray, 2);
     }
 
     public static int romanToInt(String s) {
@@ -239,7 +240,7 @@ public static int trap(int[] height) {
 
 
 // Find the index of the target in the array, or the index it would be if it does not exist. 
-public int searchInsert(int[] nums, int target) {
+public static int searchInsert(int[] nums, int target) {
     int ans = 0;
     if(target > nums[nums.length - 1]){
         return nums.length;
@@ -248,10 +249,14 @@ public int searchInsert(int[] nums, int target) {
         return 0;
     }
     for(int i = 0; i < nums.length; i++){
-        if (i < nums.length - 1 && target < nums[i] && target > nums[i + 1]){
-            ans = i - 1;
+        System.out.println("Index is " + i);
+        if(target == nums[i]){
+            return i;
+        } else
+        if (i < nums.length - 1 && target > nums[i] && target < nums[i + 1]){
+            ans = i + 1;
+            System.out.println("Ans is " + ans);
         } 
-
         }
         return ans;
     }
