@@ -281,6 +281,19 @@ public static int searchInsert(int[] nums, int target) {
         System.out.println("Nothing is working");
         return leng;
     }
+// Given an array of prices, return the maximum profit you can make (highest integer subtracted by lowest integer preceding it)
+    public int maxProfit(int[] prices) {
+        int lowest = prices[0];
+        int highest = 0;
+        for(int i = 1; i < prices.length; i++){
+            if(prices[i] < lowest){
+                lowest = prices[i];
+            } else if(prices[i] > highest){
+                highest = prices[i];
+            }
+        }
+        return highest - lowest;
+    }
 };
         
 
