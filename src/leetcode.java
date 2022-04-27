@@ -4,7 +4,7 @@ public class leetcode {
 
     public static void main(String[] args) {
         // romanToInt("MCMXCIV");
-        int[] testArray = {3,3,5,0,0,3,1,4};
+        int[] testArray = {3,2,6,5,0,3};
         // twoSum(testArray, 6);
         // lengthOfLongestSubstring("aabaab!bb");
         // trap(testArray);
@@ -284,7 +284,38 @@ public static int searchInsert(int[] nums, int target) {
     }
 // Given an array of prices, return the maximum profit you can make (highest integer subtracted by lowest integer preceding it)
     public static int maxProfit(int[] prices) {
-       
+        int lowest = prices[0];
+        int lowestInd = 0;
+        int highest = 0;
+        int highestInd = 0;
+        int ans = 0;
+        for(int i = 1; i < prices.length; i++){
+            System.out.println("Index " + i);
+            if(prices[i] < lowest){
+                System.out.println("Changing lowest");
+                if(i > highestInd && highestInd > 0 && highest - lowest > ans){
+                    ans = highest - lowest;
+                    System.out.println("New ans is " + ans);
+                }
+                lowest = prices[i];
+                highest = 0;
+                lowestInd = i;
+                System.out.println("New lowest is " + lowest);
+            } else if(prices[i] >= highest){
+                highest = prices[i];
+                highestInd = i;
+                System.out.println("Changing highest to " + highest);
+
+            }
+        }
+        if(highestInd > lowestInd && highest > lowest && highest - lowest > ans){
+            ans = highest - lowest;
+        }
+        if(ans > 0){
+            return ans;
+        } else {
+            return 0;
+        }
     }
 };
         
