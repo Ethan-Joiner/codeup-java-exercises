@@ -320,20 +320,34 @@ public static int searchInsert(int[] nums, int target) {
 };
 
 // Merge two lists and sort them
- public class ListNode {
-    int val;
-    ListNode next;
-    ListNode() {}
-    ListNode(int val) { this.val = val; }
-    ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-}
+//  public class ListNode {
+//     int val;
+//     ListNode next;
+//     ListNode() {}
+//     ListNode(int val) { this.val = val; }
+//     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+// }
  
+// class Solution {
+//     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+//         ListNode working = new ListNode[list1.length + list2.length];
+//         System.arraycopy(list1, 0, working, 0, list1.length);
+//         System.arraycopy(list2, 0, working, list1, list2);
+//         return working;
+//     }
+// }
+
+/* Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+An input string is valid if:
+
+Open brackets must be closed by the same type of brackets.
+Open brackets must be closed in the correct order.
+Every close bracket has a corresponding open bracket of the same type.
+*/
 class Solution {
-    public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-        ListNode working = new ListNode[list1.length + list2.length];
-        System.arraycopy(list1, 0, working, 0, list1.length);
-        System.arraycopy(list2, 0, working, list1, list2);
-        return working;
+    public boolean isValid(String s) {
+        
     }
 }
         
