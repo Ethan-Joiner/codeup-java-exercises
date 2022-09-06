@@ -330,8 +330,10 @@ public static int searchInsert(int[] nums, int target) {
  
 class Solution {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-        ListNode ans;
-        return ans;
+        ListNode working = new ListNode[list1.length + list2.length];
+        System.arraycopy(list1, 0, working, 0, list1.length);
+        System.arraycopy(list2, 0, working, list1, list2);
+        return working;
     }
 }
         
