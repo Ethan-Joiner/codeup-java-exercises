@@ -1,4 +1,4 @@
-
+import java.util.ArrayList;
 public class leetcode {
     
 
@@ -346,39 +346,34 @@ Open brackets must be closed by the same type of brackets.
 Open brackets must be closed in the correct order.
 Every close bracket has a corresponding open bracket of the same type.
 */
-public static boolean isValid(String s) {
-    int openPCount = 0;
-    int closePCount = 0;
-    int openBCount = 0;
-    int closeBCount = 0;
-    int openCCount = 0;
-    int closeCCount = 0;
-    boolean ans = true;
-    for(int i = 0; i < s.length(); i++){
-        if(s.charAt(i) == '('){
-            openPCount++;
-        } else if(s.charAt(i) == ')'){
-            closePCount++;
-        } else if(s.charAt(i) == '['){
-            openBCount++;
-        } else if(s.charAt(i) == ']'){
-            closeBCount++;
-        } else if(s.charAt(i) == '{'){
-            openCCount++;
-        } else if(s.charAt(i) == '}'){
-            closeCCount++;
-        }
-        if(closePCount > openPCount || closeBCount > openBCount || closeCCount > openCCount){
-            ans = false;
-            break;
-        }
 
+public static boolean isValid(String s) {
+    StringBuilder open = new StringBuilder();
+    StringBuilder close = new StringBuilder();
+    boolean ans = true;
+for(int i = 0; i < s.length(); i++){
+    if(s.charAt(i) == '(' || s.charAt(i) == '[' || s.charAt(i) == '{'){
+        open.append(s.charAt(i));
+    } else if(s.charAt(i) == ')' || s.charAt(i) == ']' || s.charAt(i) == '}'){
+        close.append(s.charAt(i));
+        if(close.charAt(0) == ')' && open.charAt(open.length() - 1) == '('){
+            open.deleteCharAt(open.length() - 1);
+            close.deleteCharAt(0);
+        } else if(close.charAt(0) == ']' && open.charAt(open.length() - 1) == '['){
+            open.deleteCharAt(open.length() - 1);
+            close.deleteCharAt(0);
+        } else if(close.charAt(0) == '}' && open.charAt(open.length() - 1) == '{'){
+            open.deleteCharAt(open.length() - 1);
+            close.deleteCharAt(0);
+        }
     }
-    if(closePCount != openPCount || closeBCount != openBCount || closeCCount != openCCount){
+    if(open.length() < close.length()){
         ans = false;
+        break;
     }
+}
     return ans;
-};
+}
 }
         
 
