@@ -389,15 +389,18 @@ Every close bracket has a corresponding open bracket of the same type.
 // }
 
 
-}
-// Nonsense problem. Take two lists, reverse the order, add them, reverse again
-class Solution {
-    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        
-        ListNode ans;
-        return ans;
-        
-    }
-}
-        
 
+// Function to see if an int is a palindrome
+public boolean isPalindrome(int x) {
+    String str = Integer.toString(x);
+    boolean ans = true;
+    for(int i = 0; i < str.length() / 2; i++){
+        if(str.charAt(i) != str.charAt(str.length() - 1 - i)){
+            ans = false;
+            break;
+        }
+    }
+    return ans;
+}
+        
+}
