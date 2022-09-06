@@ -10,7 +10,8 @@ public class leetcode {
         // trap(testArray);
         // searchInsert(testArray, 2);
         // lengthOfLastWord("a ");
-        maxProfit(testArray);
+        // maxProfit(testArray);
+        isValid("()");
     }
 
     public static int romanToInt(String s) {
@@ -345,10 +346,21 @@ Open brackets must be closed by the same type of brackets.
 Open brackets must be closed in the correct order.
 Every close bracket has a corresponding open bracket of the same type.
 */
-class Solution {
-    public boolean isValid(String s) {
-        
+public boolean isValid(String s) {
+    int openPCount = 0;
+    int closePCount = 0;
+    int openBCount = 0;
+    int closeBCount = 0;
+    int openCCount = 0;
+    int closeCCount = 0;
+    boolean ans = TRUE;
+    for(int i = 0; i < s.length(); i++){
+        if(s.charAt(i) == '('){
+            openPCount++;
+            System.output.println(openPCount);
+        }
     }
+    
 }
         
 
