@@ -357,10 +357,27 @@ public static boolean isValid(String s) {
     for(int i = 0; i < s.length(); i++){
         if(s.charAt(i) == '('){
             openPCount++;
-            System.out.println(openPCount);
+        } else if(s.charAt(i) == ')'){
+            closePCount++;
+        } else if(s.charAt(i) == '['){
+            openBCount++;
+        } else if(s.charAt(i) == ']'){
+            closeBCount++;
+        } else if(s.charAt(i) == '{'){
+            openCCount++;
+        } else if(s.charAt(i) == '}'){
+            closeCCount++;
         }
+        if(closePCount > openPCount || closeBCount > openBCount || closeCCount > openCCount){
+            ans = false;
+            break;
+        }
+
     }
-    return true;
+    if(closePCount != openPCount || closeBCount != openBCount || closeCCount != openCCount){
+        ans = false;
+    }
+    return ans;
 };
 }
         
