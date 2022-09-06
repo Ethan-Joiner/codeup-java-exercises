@@ -346,18 +346,18 @@ Open brackets must be closed by the same type of brackets.
 Open brackets must be closed in the correct order.
 Every close bracket has a corresponding open bracket of the same type.
 */
-public boolean isValid(String s) {
+public static boolean isValid(String s) {
     int openPCount = 0;
     int closePCount = 0;
     int openBCount = 0;
     int closeBCount = 0;
     int openCCount = 0;
     int closeCCount = 0;
-    boolean ans = TRUE;
+    boolean ans = true;
     for(int i = 0; i < s.length(); i++){
         if(s.charAt(i) == '('){
             openPCount++;
-            System.output.println(openPCount);
+            System.out.println(openPCount);
         }
     }
     
