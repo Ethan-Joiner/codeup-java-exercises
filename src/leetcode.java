@@ -318,7 +318,7 @@ public static int searchInsert(int[] nums, int target) {
             return 0;
         }
     }
-};
+
 
 // Merge two lists and sort them
 //  public class ListNode {
@@ -360,7 +360,8 @@ public static boolean isValid(String s) {
             System.out.println(openPCount);
         }
     }
-    
+    return true;
+};
 }
         
 
