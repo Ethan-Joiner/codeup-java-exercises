@@ -11,7 +11,7 @@ public class leetcode {
         // searchInsert(testArray, 2);
         // lengthOfLastWord("a ");
         // maxProfit(testArray);
-        isValid("()");
+        isValid("([)]");
     }
 
     public static int romanToInt(String s) {
@@ -350,13 +350,19 @@ Every close bracket has a corresponding open bracket of the same type.
 public static boolean isValid(String s) {
     StringBuilder open = new StringBuilder();
     StringBuilder close = new StringBuilder();
-    boolean ans = true;
+    boolean ans = false;
 for(int i = 0; i < s.length(); i++){
+    System.out.println(i);
     if(s.charAt(i) == '(' || s.charAt(i) == '[' || s.charAt(i) == '{'){
         open.append(s.charAt(i));
+        System.out.println(open);
     } else if(s.charAt(i) == ')' || s.charAt(i) == ']' || s.charAt(i) == '}'){
         close.append(s.charAt(i));
-        if(close.charAt(0) == ')' && open.charAt(open.length() - 1) == '('){
+        System.out.println(close);
+        if(open.length() < close.length()){
+            break;
+        }
+        else if(close.charAt(0) == ')' && open.charAt(open.length() - 1) == '('){
             open.deleteCharAt(open.length() - 1);
             close.deleteCharAt(0);
         } else if(close.charAt(0) == ']' && open.charAt(open.length() - 1) == '['){
@@ -365,13 +371,17 @@ for(int i = 0; i < s.length(); i++){
         } else if(close.charAt(0) == '}' && open.charAt(open.length() - 1) == '{'){
             open.deleteCharAt(open.length() - 1);
             close.deleteCharAt(0);
+        } else {
+            close.deleteCharAt(0);
+            break;
         }
     }
-    if(open.length() < close.length()){
-        ans = false;
-        break;
-    }
 }
+System.out.println("Open length = " + open.length() + " - Close Length = " + close.length());
+if(open.length() == close.length()){
+    ans = true;
+}
+System.out.println(ans);
     return ans;
 }
 }
