@@ -390,7 +390,7 @@ Every close bracket has a corresponding open bracket of the same type.
 
 
 
-// Function to see if an int is a palindrome
+// Function to see if an int is a palindrome. Complete
 public boolean isPalindrome(int x) {
     String str = Integer.toString(x);
     boolean ans = true;
