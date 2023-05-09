@@ -20,16 +20,33 @@ public class leetcode {
     }
   // Take in an array of strings and return the longest common substring, else return an empty string
         public static String longestCommonPrefix(String[] strs) {
-            String ans = "";
-            int i = 0;
-            while(true){
-                if(strs[0].charAt(i) == strs[1].charAt(i) && strs[0].charAt(i) == strs[2].charAt(i)){
-                    ans += strs[0].charAt(i);
-                    i++;
-                } else {
-                    break;
-                }              
+            if(strs.length == 0){
+                return "";
             }
+            int loopflag = 1;
+            char current = ' ';
+            String ans = "";
+            int inc = 0;
+            while(loopflag == 1){
+                for(int i = 0; i < strs.length; i++){
+                    if(i == 0){
+                        current = strs[i].charAt(inc);   
+                    } else if(current == strs[i].charAt(inc)) {
+                        if(i == strs.length - 1){
+                            ans += current;
+                            inc++;
+                            System.out.println(ans);
+                        }
+                            continue;
+                    } else {
+                        loopflag = 0;
+                        break;
+                    }
+
+                    }
+            }        
+            
+            System.out.println(ans);
             return ans;
         }
 
