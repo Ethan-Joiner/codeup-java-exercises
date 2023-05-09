@@ -8,7 +8,7 @@ public class leetcode {
     public static void main(String[] args) {
        
         // romanToInt("MCMXCIV");
-        String[] testArray = {""};
+        String[] testArray = {"flower", "flower", "flower", "flower"};
         longestCommonPrefix(testArray);
         // twoSum(testArray, 6);
         // lengthOfLongestSubstring("aabaab!bb");
@@ -20,7 +20,7 @@ public class leetcode {
     }
   // Take in an array of strings and return the longest common substring, else return an empty string
         public static String longestCommonPrefix(String[] strs) {
-            if(strs[0] == ""){
+            if(strs.length < 2 || strs[0].isEmpty()){
                 return strs[0];
             }
             int loopflag = 1;
@@ -31,7 +31,7 @@ public class leetcode {
                 for(int i = 0; i < strs.length; i++){
                     if(i == 0){
                         current = strs[i].charAt(inc);   
-                    } else if(current == strs[i].charAt(inc)) {
+                    } else if(inc != strs[i].length() && current == strs[i].charAt(inc)) {
                         if(i == strs.length - 1){
                             ans += current;
                             inc++;
