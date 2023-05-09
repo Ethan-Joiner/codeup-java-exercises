@@ -6,7 +6,7 @@ public class leetcode {
 
 // Take in an array of strings and return the longest common substring, else return an empty string
     public static String longestCommonPrefix(String[] strs) {
-        String ans = " ";
+        String ans = "test";
         return ans;
     }
     public static void main(String[] args) {
