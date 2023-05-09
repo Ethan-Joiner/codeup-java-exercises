@@ -4,14 +4,12 @@ import java.util.ArrayList;
 public class leetcode {
     
 
-// Take in an array of strings and return the longest common substring, else return an empty string
-    public static String longestCommonPrefix(String[] strs) {
-        String ans = "test";
-        return ans;
-    }
+
     public static void main(String[] args) {
+       
         // romanToInt("MCMXCIV");
-        int[] testArray = {3,2,6,5,0,3};
+        String[] testArray = {"dog", "dollar","donate"};
+        longestCommonPrefix(testArray);
         // twoSum(testArray, 6);
         // lengthOfLongestSubstring("aabaab!bb");
         // trap(testArray);
@@ -20,7 +18,20 @@ public class leetcode {
         // maxProfit(testArray);
         // isValid("([)]");
     }
-  
+  // Take in an array of strings and return the longest common substring, else return an empty string
+        public static String longestCommonPrefix(String[] strs) {
+            String ans = "";
+            int i = 0;
+            while(true){
+                if(strs[0].charAt(i) == strs[1].charAt(i) && strs[0].charAt(i) == strs[2].charAt(i)){
+                    ans += strs[0].charAt(i);
+                    i++;
+                } else {
+                    break;
+                }              
+            }
+            return ans;
+        }
 
     // public static int romanToInt(String s) {
     //     int ans = 0;
