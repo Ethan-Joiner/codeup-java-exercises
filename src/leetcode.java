@@ -34,6 +34,11 @@ public class leetcode {
                     } else if(inc != strs[i].length() && current == strs[i].charAt(inc)) {
                         if(i == strs.length - 1){
                             ans += current;
+                            System.out.println(ans + "= current ans");
+                            System.out.println(strs[0]);
+                            if(ans == strs[0]){
+                                break;
+                            }
                             inc++;
                             System.out.println(ans);
                         }
