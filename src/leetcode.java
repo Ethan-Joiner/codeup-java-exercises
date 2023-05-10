@@ -30,15 +30,21 @@ public class leetcode {
             while(loopflag == 1){
                 for(int i = 0; i < strs.length; i++){
                     if(i == 0){
+                        System.out.println("Restating loop, iteration is " + inc);
+                        System.out.println("Answer length = " + ans.length());
+                        System.out.println("Needed length to exit = " + strs[0].length());
+                        if(ans.length() == strs[0].length()){
+                            loopflag = 0;
+                            break;
+                        }
                         current = strs[i].charAt(inc);   
+
                     } else if(inc != strs[i].length() && current == strs[i].charAt(inc)) {
                         if(i == strs.length - 1){
                             ans += current;
-                            System.out.println(ans + "= current ans");
+                            System.out.println(ans + " = current ans");
                             System.out.println(strs[0]);
-                            if(ans == strs[0]){
-                                break;
-                            }
+                         
                             inc++;
                             System.out.println(ans);
                         }
