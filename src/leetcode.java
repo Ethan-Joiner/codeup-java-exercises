@@ -9,7 +9,7 @@ public class leetcode {
        
         // romanToInt("MCMXCIV");
         String[] testArray = {"flower", "flower", "flower", "flower"};
-        longestCommonPrefix(testArray);
+        // longestCommonPrefix(testArray);
         // twoSum(testArray, 6);
         // lengthOfLongestSubstring("aabaab!bb");
         // trap(testArray);
@@ -18,7 +18,7 @@ public class leetcode {
         // maxProfit(testArray);
         // isValid("([)]");
     }
-  // Take in an array of strings and return the longest common substring, else return an empty string
+  // Take in an array of strings and return the longest common substring, else return an empty string. Poorly constructed solution, try again with sorting and one loop in the future.
         public static String longestCommonPrefix(String[] strs) {
             if(strs.length < 2 || strs[0].isEmpty()){
                 return strs[0];
