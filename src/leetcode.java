@@ -21,7 +21,13 @@ public class leetcode {
     }
     // Given a positive integer n, generate an n x n matrix filled with elements from 1 to n2 in spiral order.
     public int[][] generateMatrix(int n) {
-        int[][] ans;
+        int[][] ans = new int[n][n];
+        ans[0][0] = 1;
+        int i = 1;
+        int row = 0;
+        while(i < (i * i)){
+            ans
+        }
         return ans;
     }
 
