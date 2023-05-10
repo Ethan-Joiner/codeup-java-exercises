@@ -17,7 +17,15 @@ public class leetcode {
         // lengthOfLastWord("a ");
         // maxProfit(testArray);
         // isValid("([)]");
+
     }
+    // Given a positive integer n, generate an n x n matrix filled with elements from 1 to n2 in spiral order.
+    public int[][] generateMatrix(int n) {
+        int[][] ans;
+        return ans;
+    }
+
+
   // Take in an array of strings and return the longest common substring, else return an empty string. Poorly constructed solution, try again with sorting and one loop in the future.
         public static String longestCommonPrefix(String[] strs) {
             if(strs.length < 2 || strs[0].isEmpty()){
