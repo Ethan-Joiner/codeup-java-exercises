@@ -19,14 +19,23 @@ public class leetcode {
         // isValid("([)]");
 
     }
+// Given a positive integer, find the square root without using any inbuilt sqrt functions
+    public int mySqrt(int x) {
+        return x;
+    }
+
+
     // Given a positive integer n, generate an n x n matrix filled with elements from 1 to n2 in spiral order.
     public int[][] generateMatrix(int n) {
         int[][] ans = new int[n][n];
-        ans[0][0] = 1;
-        int i = 1;
-        int row = 0;
-        while(i < (i * i)){
-            ans
+        int whileCounter = 1;
+        int repCounter = 1;
+        int countTowardN = 1;
+        while(whileCounter <= (n * n)){
+            if(countTowardN == 1){
+                ans[countTowardN - 1][countTowardN] = whileCounter;
+            }
+            
         }
         return ans;
     }
