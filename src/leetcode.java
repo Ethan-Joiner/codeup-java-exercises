@@ -21,7 +21,14 @@ public class leetcode {
     }
 // Given a positive integer, find the square root without using any inbuilt sqrt functions
     public int mySqrt(int x) {
-        return x;
+        for(int i = 1; i < x; i++){
+            if(i * i == x){
+                return i;
+            } else if(i * i > x){
+                return i - 1;
+            }
+        }
+        return 0;
     }
 
 
