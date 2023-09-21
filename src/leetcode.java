@@ -20,17 +20,12 @@ public class leetcode {
         mySqrt(1);
 
     }
-// Given a positive integer, find the square root without using any inbuilt sqrt functions
+// Given a positive integer, find the square root without using any inbuilt sqrt functions.
+    // 1 / sqrt is the fraction of the total so there must be a way to make a formula to use it.
     public static int mySqrt(int x) {
-        for(int i = 1; i <= x; i++){
-            if(i * i == x){
-                return i;
-            } else if(i * i > x){
-                return i - 1;
-            }
-        }
-        return 0;
+        return x;
     }
+    
 
 
     // Given a positive integer n, generate an n x n matrix filled with elements from 1 to n2 in spiral order.
