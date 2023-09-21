@@ -8,7 +8,7 @@ public class leetcode {
     public static void main(String[] args) {
        
         // romanToInt("MCMXCIV");
-        String[] testArray = {"flower", "flower", "flower", "flower"};
+        // String[] testArray = {"flower", "flower", "flower", "flower"};
         // longestCommonPrefix(testArray);
         // twoSum(testArray, 6);
         // lengthOfLongestSubstring("aabaab!bb");
@@ -17,11 +17,12 @@ public class leetcode {
         // lengthOfLastWord("a ");
         // maxProfit(testArray);
         // isValid("([)]");
+        mySqrt(1);
 
     }
 // Given a positive integer, find the square root without using any inbuilt sqrt functions
-    public int mySqrt(int x) {
-        for(int i = 1; i < x; i++){
+    public static int mySqrt(int x) {
+        for(int i = 1; i <= x; i++){
             if(i * i == x){
                 return i;
             } else if(i * i > x){
