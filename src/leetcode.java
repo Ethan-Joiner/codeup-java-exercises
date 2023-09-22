@@ -17,7 +17,7 @@ public class leetcode {
         // lengthOfLastWord("a ");
         // maxProfit(testArray);
         // isValid("([)]");
-        mySqrt(1);
+        mySqrt(10);
 
     }
 // Given a positive integer, find the square root without using any inbuilt sqrt functions.
@@ -26,28 +26,29 @@ public class leetcode {
     8 - 3
     5 - 5
 
-    8 - 1
-    7 - 3
-    4 - 5
+    3 - 1
+    2 - 3
     */
     public static int mySqrt(int x) {
         int num = x;
         int incrementer = 1;
         for(int i = 1; i <= x; i += 2){
             if(num - i == 0){
-                System.out.println("Perfect Square. Incrementer is " + incrementer);
+                System.out.println("Perfect Square. Returning " + incrementer);
                 return incrementer;
-            } else if (num - 1 < 0){
-                System.out.println("Imperfect Square. Incrementer is " + incrementer);
+            } else if (num - i < 0){
+                System.out.println("Imperfect Square. Returning " + (incrementer - 1));
                 return incrementer - 1;
             } else {
                 System.out.println("Current value is " + num);
                 System.out.println("i is " + i);
                 System.out.println("Incrementer is " + incrementer);
+                num -= i;
                 incrementer++;
             }
         }
-        return x;
+        System.out.println("Returning " + num);
+        return num;
     }
     
 
