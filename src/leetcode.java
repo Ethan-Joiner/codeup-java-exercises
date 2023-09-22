@@ -21,11 +21,17 @@ public class leetcode {
 
     }
 // Given a positive integer, find the square root without using any inbuilt sqrt functions.
-    // 1 / sqrt is the fraction of the total so there must be a way to make a formula to use it.
+    /*  1 / sqrt is the fraction of the total so there must be a way to make a formula to use it.
+    9 - 1
+    8 - 3
+    5 - 5
+    */
     public static int mySqrt(int x) {
         int num = x;
-        for(int i = 1; i < x; i += 2){
-            if(num - i == 0)
+        for(int i = 1; i <= x; i += 2){
+            if(num - i == 0){
+                return num;
+            } else if ()
         }
         return x;
     }
