@@ -46,7 +46,9 @@ public class leetcode {
 
 // Increment the large integer by one and return the resulting array of digits.
     public int[] plusOne(int[] digits) {
-        
+        int[] ans = new int[0];
+
+        return ans;
     }
     
 
