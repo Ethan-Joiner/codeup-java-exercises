@@ -42,7 +42,8 @@ public class HackerRank {
 		// isAnagram("anagramm", "marganaa");
 		// stringSplit("                        		");
 		// negativeSubArray();
-		factorial(4);
+		// factorial(4);
+		System.out.println(factorial(6));
 	}
     
  // Just a helper method
@@ -879,19 +880,19 @@ public class HackerRank {
 		if(n == 0){
 			return 1;
 		} else {
-			System.out.println(n * factorial(n - 1));
 			return n * factorial(n - 1);
 		}
 	}
 
-	public static int fibonacci(int n) {
-		int ans = 0;
-		return ans;
+	// public static int fibonacci(int n) {
+	// 	return n;
+	// 	}
+		
 
 	}
 
 
-}
+
 
 
 
