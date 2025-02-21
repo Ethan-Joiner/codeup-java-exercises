@@ -875,9 +875,11 @@ public class HackerRank {
 	// }
 
 	public static int factorial(int n) {
-		int ans = 0;
-		return ans;
-
+		if(n == 0){
+			return 1;
+		} else {
+			return factorial(n - 1);
+		}
 	}
 
 	public static int fibonacci(int n) {
