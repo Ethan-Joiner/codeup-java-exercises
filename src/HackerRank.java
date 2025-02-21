@@ -41,7 +41,8 @@ public class HackerRank {
 		// getSmallestAndLargest("welcometojava", 3);
 		// isAnagram("anagramm", "marganaa");
 		// stringSplit("                        		");
-		negativeSubArray();
+		// negativeSubArray();
+		factorial(4);
 	}
     
  // Just a helper method
@@ -878,7 +879,8 @@ public class HackerRank {
 		if(n == 0){
 			return 1;
 		} else {
-			return factorial(n - 1);
+			System.out.println(n * factorial(n - 1));
+			return n * factorial(n - 1);
 		}
 	}
 
