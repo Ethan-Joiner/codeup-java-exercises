@@ -43,7 +43,8 @@ public class HackerRank {
 		// stringSplit("                        		");
 		// negativeSubArray();
 		// factorial(4);
-		System.out.println(factorial(6));
+		// System.out.println(factorial(6));
+		System.out.println(fibonacci(3));
 	}
     
  // Just a helper method
@@ -884,9 +885,14 @@ public class HackerRank {
 		}
 	}
 
-	// public static int fibonacci(int n) {
-	// 	return n;
-	// 	}
+	public static int fibonacci(int n) {
+		int ans = 1;
+		if(n == 0){
+			return n;
+		} else {
+			return ans + fibonacci(n - 1);
+		}
+		}
 		
 
 	}
