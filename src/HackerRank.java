@@ -7,8 +7,11 @@ import java.util.Calendar;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
+import java.util.TreeMap;
 import java.util.regex.Pattern;
 import java.util.HashMap;
+
+import java.util.TreeMap;
 
 
 
@@ -43,8 +46,10 @@ public class HackerRank {
 		// stringSplit("                        		");
 		// negativeSubArray();
 		// factorial(4);
-		// System.out.println(factorial(6));
-		System.out.println(fibonacci(3));
+		// System.out.println(fibonacci(50));
+		// System.out.println(fibonacciLoop(20));
+		HackerRank h = new HackerRank();
+		System.out.println(h.fibonacciBetter(50));
 	}
     
  // Just a helper method
@@ -877,25 +882,63 @@ public class HackerRank {
 	// 	System.out.println(subArrs);
 	// }
 
-	public static int factorial(int n) {
-		if(n == 0){
-			return 1;
-		} else {
-			return n * factorial(n - 1);
-		}
-	}
+	// public static int factorial(int n) {
+	// 	if(n == 0){
+	// 		return 1;
+	// 	} else {
+	// 		return n * factorial(n - 1);
+	// 	}
+	// }
 
 	public static int fibonacci(int n) {
-		int ans = 1;
-		if(n == 0){
-			return n;
+		if(n <= 1){
+			return 1;
 		} else {
-			return ans + fibonacci(n - 1);
+			return fibonacci(n - 1) + fibonacci(n - 2);
 		}
 		}
-		
 
+		TreeMap<Integer, Integer> hist = new TreeMap<>();
+
+		public int fibonacciBetter(int n) {
+			if(n <= 1){
+				return 1;
+			} else {
+				int fib1 = 0;
+				int fib2 = 0;
+	
+				if (hist.containsValue(n - 1)) {
+					fib1 = hist.get(n - 1);
+				} else {
+					fib1 = fibonacci(n - 1);
+					hist.put(n - 1, fib1);
+				}
+	
+				if (hist.containsValue(n - 2)) {
+					fib2 = hist.get(n - 2);
+				} else {
+					fib2 = fibonacci(n - 2);
+					hist.put(n - 2, fib2);
+				}
+	
+				return fib1 + fib2;
+			}
+		}
+	
+
+	public static int fibonacciLoop(int n){
+		int previous = 0;
+		int current = 1; 
+		int total;
+		for(int i = 0; i < n; i++){
+		total = current + previous;
+		previous = current;
+		current = total;
+		System.out.println(total);
+		}
+		return current;
 	}
+}
 
 
 
