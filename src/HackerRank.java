@@ -874,6 +874,18 @@ public class HackerRank {
 	// 	System.out.println(subArrs);
 	// }
 
+	public static int factorial(int n) {
+		int ans = 0;
+		return ans;
+
+	}
+
+	public static int fibonacci(int n) {
+		int ans = 0;
+		return ans;
+
+	}
+
 
 }
 
