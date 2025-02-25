@@ -890,53 +890,60 @@ public class HackerRank {
 	// 	}
 	// }
 
-	public static int fibonacci(int n) {
-		if(n <= 1){
-			return 1;
-		} else {
-			return fibonacci(n - 1) + fibonacci(n - 2);
-		}
-		}
+	// public static int fibonacci(int n) {
+	// 	if(n <= 1){
+	// 		return 1;
+	// 	} else {
+	// 		return fibonacci(n - 1) + fibonacci(n - 2);
+	// 	}
+	// 	}
 
-		TreeMap<Integer, Integer> hist = new TreeMap<>();
+	// 	TreeMap<Integer, Integer> hist = new TreeMap<>();
 
-		public int fibonacciBetter(int n) {
-			if(n <= 1){
-				return 1;
-			} else {
-				int fib1 = 0;
-				int fib2 = 0;
+	// 	public int fibonacciBetter(int n) {
+	// 		if(n <= 1){
+	// 			return 1;
+	// 		} else {
+	// 			int fib1 = 0;
+	// 			int fib2 = 0;
 	
-				if (hist.containsValue(n - 1)) {
-					fib1 = hist.get(n - 1);
-				} else {
-					fib1 = fibonacci(n - 1);
-					hist.put(n - 1, fib1);
-				}
+	// 			if (hist.containsValue(n - 1)) {
+	// 				fib1 = hist.get(n - 1);
+	// 			} else {
+	// 				fib1 = fibonacci(n - 1);
+	// 				hist.put(n - 1, fib1);
+	// 			}
 	
-				if (hist.containsValue(n - 2)) {
-					fib2 = hist.get(n - 2);
-				} else {
-					fib2 = fibonacci(n - 2);
-					hist.put(n - 2, fib2);
-				}
+	// 			if (hist.containsValue(n - 2)) {
+	// 				fib2 = hist.get(n - 2);
+	// 			} else {
+	// 				fib2 = fibonacci(n - 2);
+	// 				hist.put(n - 2, fib2);
+	// 			}
 	
-				return fib1 + fib2;
-			}
-		}
+	// 			return fib1 + fib2;
+	// 		}
+	// 	}
 	
 
-	public static int fibonacciLoop(int n){
-		int previous = 0;
-		int current = 1; 
-		int total;
-		for(int i = 0; i < n; i++){
-		total = current + previous;
-		previous = current;
-		current = total;
-		System.out.println(total);
-		}
-		return current;
+	// public static int fibonacciLoop(int n){
+	// 	int previous = 0;
+	// 	int current = 1; 
+	// 	int total;
+	// 	for(int i = 0; i < n; i++){
+	// 	total = current + previous;
+	// 	previous = current;
+	// 	current = total;
+	// 	System.out.println(total);
+	// 	}
+	// 	return current;
+	// }
+	public static Integer[] two_sum(Integer[] arr, int target){
+		List<Integer> arrayList = new ArrayList<>(Arrays.asList(arr));
+
+		Integer[] answer;
+		return answer;
+
 	}
 }
 
