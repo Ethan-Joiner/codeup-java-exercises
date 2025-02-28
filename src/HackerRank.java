@@ -51,7 +51,7 @@ public class HackerRank {
 		// HackerRank h = new HackerRank();
 		// System.out.println(h.fibonacciBetter(50));
 		// System.out.println(divisibleByK(10, 2));
-		System.out.println(divisibleByKBetter(10, 02));
+		System.out.println(divisibleByKBetter(6, 7));
 	}
     
  // Just a helper method
@@ -900,6 +900,14 @@ public class HackerRank {
 	// 	}
 	// 	}
 
+	public static int addDigits(int n){
+		if( n == 0){
+			return n;
+		} else {
+			return n % 10 + addDigits(n % 10);
+		}
+	}
+
 	// 	TreeMap<Integer, Integer> hist = new TreeMap<>();
 
 	// 	public int fibonacciBetter(int n) {
@@ -948,33 +956,33 @@ public class HackerRank {
 
 	// }
 
-	public static int divisibleByK(int n, int k){
-		int total = 0;
-		int i = 1;
-		while(i <= n){
-			if(i % k == 0){
-				System.out.println(i);
-				total++;
-			}
-			i++;
-		}
-		return total;
-	}
+	// public static int divisibleByK(int n, int k){
+	// 	int total = 0;
+	// 	int i = 1;
+	// 	while(i <= n){
+	// 		if(i % k == 0){
+	// 			System.out.println(i);
+	// 			total++;
+	// 		}
+	// 		i++;
+	// 	}
+	// 	return total;
+	// }
 
-	public static int divisibleByKBetter(int n, int k){
-		int total = 0;
-		int i = k;
-		while(i <= n){
-			if(i % k == 0){
-				System.out.println(i);
-				total++;
-				i += k;
-			} else {
-				i++;
-			}
-		}
-		return total;
-	}
+	// public static int divisibleByKBetter(int n, int k){
+	// 	int total = 0;
+	// 	int i = k;
+	// 	while(i <= n){
+	// 		if(i % k == 0){
+	// 			System.out.println(i);
+	// 			total++;
+	// 			i += k;
+	// 		} 
+	// 	}
+	// 	return total;
+	// }
+
+
 	
 
 	
