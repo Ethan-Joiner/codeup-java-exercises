@@ -48,8 +48,9 @@ public class HackerRank {
 		// factorial(4);
 		// System.out.println(fibonacci(50));
 		// System.out.println(fibonacciLoop(20));
-		HackerRank h = new HackerRank();
-		System.out.println(h.fibonacciBetter(50));
+		// HackerRank h = new HackerRank();
+		// System.out.println(h.fibonacciBetter(50));
+		System.out.println(divisibleByK(10, 2));
 	}
     
  // Just a helper method
@@ -954,7 +955,7 @@ public class HackerRank {
 				System.out.println(i);
 				total++;
 			}
-			
+			i++;
 		}
 		return total;
 	}
