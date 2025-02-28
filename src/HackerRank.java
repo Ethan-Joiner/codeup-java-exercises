@@ -50,7 +50,8 @@ public class HackerRank {
 		// System.out.println(fibonacciLoop(20));
 		// HackerRank h = new HackerRank();
 		// System.out.println(h.fibonacciBetter(50));
-		System.out.println(divisibleByK(10, 2));
+		// System.out.println(divisibleByK(10, 2));
+		System.out.println(divisibleByKBetter(10, 02));
 	}
     
  // Just a helper method
@@ -962,7 +963,7 @@ public class HackerRank {
 
 	public static int divisibleByKBetter(int n, int k){
 		int total = 0;
-		int i = 1;
+		int i = k;
 		while(i <= n){
 			if(i % k == 0){
 				System.out.println(i);
@@ -974,6 +975,7 @@ public class HackerRank {
 		}
 		return total;
 	}
+	
 
 	
 }
