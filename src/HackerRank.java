@@ -959,6 +959,23 @@ public class HackerRank {
 		}
 		return total;
 	}
+
+	public static int divisibleByKBetter(int n, int k){
+		int total = 0;
+		int i = 1;
+		while(i <= n){
+			if(i % k == 0){
+				System.out.println(i);
+				total++;
+				i += k;
+			} else {
+				i++;
+			}
+		}
+		return total;
+	}
+
+	
 }
 
 
