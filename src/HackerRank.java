@@ -938,12 +938,25 @@ public class HackerRank {
 	// 	}
 	// 	return current;
 	// }
-	public static Integer[] two_sum(Integer[] arr, int target){
-		List<Integer> arrayList = new ArrayList<>(Arrays.asList(arr));
+	// public static Integer[] two_sum(Integer[] arr, int target){
+	// 	List<Integer> arrayList = new ArrayList<>(Arrays.asList(arr));
 
-		Integer[] answer;
-		return answer;
+	// 	Integer[] answer;
+	// 	return answer;
 
+	// }
+
+	public static int divisibleByK(int n, int k){
+		int total = 0;
+		int i = 1;
+		while(i <= n){
+			if(i % k == 0){
+				System.out.println(i);
+				total++;
+			}
+			
+		}
+		return total;
 	}
 }
 
