@@ -51,7 +51,9 @@ public class HackerRank {
 		// HackerRank h = new HackerRank();
 		// System.out.println(h.fibonacciBetter(50));
 		// System.out.println(divisibleByK(10, 2));
-		System.out.println(divisibleByKBetter(6, 7));
+		// System.out.println(divisibleByKBetter(6, 7));
+		System.out.println(addDigits(329));
+		// System.out.println(moduloTest(321));
 	}
     
  // Just a helper method
@@ -901,12 +903,16 @@ public class HackerRank {
 	// 	}
 
 	public static int addDigits(int n){
-		if( n == 0){
-			return n;
+		if(n == 0){
+			return 0;
 		} else {
-			return n % 10 + addDigits(n % 10);
+			return n % 10 + addDigits((int) Math.floor(n / 10));
 		}
 	}
+
+	// public static int moduloTest(int n){
+	// 	return n % 10;
+	// }
 
 	// 	TreeMap<Integer, Integer> hist = new TreeMap<>();
 
